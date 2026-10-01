@@ -14,16 +14,15 @@ from playwright.sync_api import sync_playwright
 # CONFIG
 # ============================================================
 
-HOME_URL = "https://xoilacz.vip/"
+HOME_URL = "https://YOUR-AUTHORIZED-DOMAIN.example/"
 
 OUTPUT_FILE = Path("matches.json")
 
-# Không nên quá cao trên GitHub Actions
 MAX_WORKERS = 3
 
-PAGE_TIMEOUT = 15000
+PAGE_TIMEOUT = 20000
 
-WAIT_AFTER_LOAD = 1000
+PLAYER_WAIT_MS = 2000
 
 HEADERS = {
     "User-Agent": (
@@ -36,15 +35,12 @@ HEADERS = {
 
 
 # ============================================================
-# HOME PAGE
+# GET HOME PAGE
 # ============================================================
 
 def get_home_page():
 
-    print(
-        "Downloading home page...",
-        flush=True
-    )
+    print("Downloading home page...", flush=True)
 
     response = requests.get(
         HOME_URL,
@@ -68,24 +64,17 @@ def get_home_page():
 
 def normalize_match_url(url):
 
-    # /link/0
-    # /link/1
-    # /link/2
-    # ...
-
     url = re.sub(
         r"/link/\d+/?$",
         "/",
         url
     )
 
-    url = url.rstrip("/") + "/"
-
-    return url
+    return url.rstrip("/") + "/"
 
 
 # ============================================================
-# FIND EVENTS
+# FIND MATCHES
 # ============================================================
 
 def find_match_urls(html):
@@ -122,6 +111,18 @@ def find_match_urls(html):
 
 
 # ============================================================
+# FLV DETECTOR
+# ============================================================
+
+def is_flv_url(url):
+
+    if not url:
+        return False
+
+    return ".flv" in url.lower()
+
+
+# ============================================================
 # SCRAPE ONE MATCH
 # ============================================================
 
@@ -138,10 +139,6 @@ def scrape_one_match(
 
     try:
 
-        # ----------------------------------------------------
-        # Mỗi worker tự tạo Playwright
-        # ----------------------------------------------------
-
         with sync_playwright() as p:
 
             browser = p.chromium.launch(
@@ -155,7 +152,34 @@ def scrape_one_match(
             page = context.new_page()
 
             # ------------------------------------------------
-            # LOAD PAGE
+            # Capture authorized media requests
+            # ------------------------------------------------
+
+            captured_streams = []
+
+            def handle_request(request):
+
+                url = request.url
+
+                if is_flv_url(url):
+
+                    if url not in captured_streams:
+
+                        captured_streams.append(url)
+
+                        print(
+                            f"[{index}/{total}] "
+                            f"FLV: {url}",
+                            flush=True
+                        )
+
+            page.on(
+                "request",
+                handle_request
+            )
+
+            # ------------------------------------------------
+            # Open match
             # ------------------------------------------------
 
             page.goto(
@@ -165,14 +189,14 @@ def scrape_one_match(
             )
 
             page.wait_for_timeout(
-                WAIT_AFTER_LOAD
+                1000
             )
 
             # ------------------------------------------------
-            # TITLE
+            # Get title
             # ------------------------------------------------
 
-            title = "Unknown Match"
+            title = "Unknown Event"
 
             try:
 
@@ -182,30 +206,30 @@ def scrape_one_match(
 
                 if h1.count() > 0:
 
-                    text = h1.inner_text(
+                    value = h1.inner_text(
                         timeout=2000
                     ).strip()
 
-                    if text:
-                        title = text
+                    if value:
+                        title = value
 
             except Exception:
                 pass
 
-            if title == "Unknown Match":
+            if title == "Unknown Event":
 
                 try:
 
-                    page_title = page.title()
+                    value = page.title()
 
-                    if page_title:
-                        title = page_title.strip()
+                    if value:
+                        title = value.strip()
 
                 except Exception:
                     pass
 
             # ------------------------------------------------
-            # PLAYER LINKS
+            # Get players
             # ------------------------------------------------
 
             elements = page.locator(
@@ -217,6 +241,9 @@ def scrape_one_match(
             for player_index, element in enumerate(
                 elements
             ):
+
+                # Clear streams for this player
+                captured_streams.clear()
 
                 try:
                     name = element.inner_text(
@@ -246,6 +273,37 @@ def scrape_one_match(
                 except Exception:
                     href = ""
 
+                # ------------------------------------------------
+                # Click player
+                # ------------------------------------------------
+
+                try:
+
+                    element.click(
+                        timeout=5000
+                    )
+
+                    page.wait_for_timeout(
+                        PLAYER_WAIT_MS
+                    )
+
+                except Exception as error:
+
+                    print(
+                        f"[{index}/{total}] "
+                        f"Player click failed: "
+                        f"{name} - {error}",
+                        flush=True
+                    )
+
+                # ------------------------------------------------
+                # Save captured streams
+                # ------------------------------------------------
+
+                streams = list(
+                    captured_streams
+                )
+
                 players.append({
                     "index": player_index,
                     "name": name,
@@ -258,12 +316,16 @@ def scrape_one_match(
                         )
                         if href
                         else ""
-                    )
+                    ),
+                    "stream_urls": streams
                 })
 
-            # ------------------------------------------------
-            # CLOSE
-            # ------------------------------------------------
+                print(
+                    f"[{index}/{total}] "
+                    f"PLAYER: {name} "
+                    f"| streams={len(streams)}",
+                    flush=True
+                )
 
             context.close()
             browser.close()
@@ -289,12 +351,12 @@ def scrape_one_match(
         )
 
         print(
-            f"  URL: {match_url}",
+            f"URL: {match_url}",
             flush=True
         )
 
         print(
-            f"  ERROR: {type(error).__name__}: {error}",
+            f"{type(error).__name__}: {error}",
             flush=True
         )
 
@@ -331,15 +393,7 @@ def save_results(results):
 
 def main():
 
-    # --------------------------------------------------------
-    # HOME
-    # --------------------------------------------------------
-
     html = get_home_page()
-
-    # --------------------------------------------------------
-    # EVENTS
-    # --------------------------------------------------------
 
     match_urls = find_match_urls(
         html
@@ -358,10 +412,6 @@ def main():
         )
 
         return
-
-    # --------------------------------------------------------
-    # SCRAPE
-    # --------------------------------------------------------
 
     results = []
 
@@ -399,48 +449,44 @@ def main():
                 result = future.result()
 
                 if result is not None:
-
-                    results.append(
-                        result
-                    )
+                    results.append(result)
 
             except Exception as error:
 
                 print(
-                    "Worker exception:",
-                    error,
+                    f"Worker exception: {error}",
                     flush=True
                 )
-
-    # --------------------------------------------------------
-    # SORT
-    # --------------------------------------------------------
 
     results.sort(
         key=lambda x: x["url"]
     )
 
-    # --------------------------------------------------------
-    # SAVE
-    # --------------------------------------------------------
-
     save_results(
         results
     )
 
-    # --------------------------------------------------------
-    # SUMMARY
-    # --------------------------------------------------------
-
     total_players = sum(
-        len(match["players"])
-        for match in results
+        len(x["players"])
+        for x in results
     )
 
-    events_with_players = sum(
+    players_with_stream = sum(
         1
         for match in results
-        if len(match["players"]) > 0
+        for player in match["players"]
+        if player.get("stream_urls")
+    )
+
+    total_streams = sum(
+        len(
+            player.get(
+                "stream_urls",
+                []
+            )
+        )
+        for match in results
+        for player in match["players"]
     )
 
     print()
@@ -449,23 +495,27 @@ def main():
     print("=" * 70)
 
     print(
-        f"Events found:       {len(match_urls)}"
+        f"Events found:          {len(match_urls)}"
     )
 
     print(
-        f"Events processed:   {len(results)}"
+        f"Events processed:      {len(results)}"
     )
 
     print(
-        f"Events with player: {events_with_players}"
+        f"Total players:         {total_players}"
     )
 
     print(
-        f"Total players:      {total_players}"
+        f"Players with stream:   {players_with_stream}"
     )
 
     print(
-        f"Output file:        {OUTPUT_FILE}"
+        f"Total FLV streams:     {total_streams}"
+    )
+
+    print(
+        f"Output file:           {OUTPUT_FILE}"
     )
 
 
