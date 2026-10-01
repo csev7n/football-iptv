@@ -18,14 +18,12 @@ HOME_URL = "https://xoilacz.vip/"
 
 OUTPUT_FILE = Path("matches.json")
 
-# Số trang chạy đồng thời
-MAX_WORKERS = 5
+# Không nên quá cao trên GitHub Actions
+MAX_WORKERS = 3
 
-# Timeout mỗi trang
 PAGE_TIMEOUT = 15000
 
-# Chờ JavaScript sau khi trang load
-WAIT_AFTER_LOAD = 800
+WAIT_AFTER_LOAD = 1000
 
 HEADERS = {
     "User-Agent": (
@@ -42,7 +40,11 @@ HEADERS = {
 # ============================================================
 
 def get_home_page():
-    print("Downloading home page...", flush=True)
+
+    print(
+        "Downloading home page...",
+        flush=True
+    )
 
     response = requests.get(
         HOME_URL,
@@ -61,19 +63,15 @@ def get_home_page():
 
 
 # ============================================================
-# URL NORMALIZATION
+# NORMALIZE URL
 # ============================================================
 
 def normalize_match_url(url):
-    """
-    /truc-tiep/match/
-    /truc-tiep/match/link/0
-    /truc-tiep/match/link/1
 
-    đều trở thành:
-
-    /truc-tiep/match/
-    """
+    # /link/0
+    # /link/1
+    # /link/2
+    # ...
 
     url = re.sub(
         r"/link/\d+/?$",
@@ -124,168 +122,187 @@ def find_match_urls(html):
 
 
 # ============================================================
-# PLAYWRIGHT WORKER
+# SCRAPE ONE MATCH
 # ============================================================
 
-def scrape_one_match(browser, match_url, index, total):
+def scrape_one_match(
+    match_url,
+    index,
+    total
+):
 
     print(
         f"[{index}/{total}] START {match_url}",
         flush=True
     )
 
-    # Mỗi worker có context riêng
-    context = browser.new_context(
-        user_agent=HEADERS["User-Agent"]
-    )
-
-    page = context.new_page()
-
     try:
 
-        page.goto(
-            match_url,
-            wait_until="domcontentloaded",
-            timeout=PAGE_TIMEOUT
-        )
-
-        # Cho JS có thời gian render player
-        page.wait_for_timeout(
-            WAIT_AFTER_LOAD
-        )
-
         # ----------------------------------------------------
-        # TITLE
+        # Mỗi worker tự tạo Playwright
         # ----------------------------------------------------
 
-        title = "Unknown Match"
+        with sync_playwright() as p:
 
-        try:
+            browser = p.chromium.launch(
+                headless=True
+            )
 
-            h1 = page.locator(
-                "h1"
-            ).first
+            context = browser.new_context(
+                user_agent=HEADERS["User-Agent"]
+            )
 
-            if h1.count() > 0:
+            page = context.new_page()
 
-                text = h1.inner_text(
-                    timeout=2000
-                ).strip()
+            # ------------------------------------------------
+            # LOAD PAGE
+            # ------------------------------------------------
 
-                if text:
-                    title = text
+            page.goto(
+                match_url,
+                wait_until="domcontentloaded",
+                timeout=PAGE_TIMEOUT
+            )
 
-        except Exception:
-            pass
+            page.wait_for_timeout(
+                WAIT_AFTER_LOAD
+            )
 
-        if title == "Unknown Match":
+            # ------------------------------------------------
+            # TITLE
+            # ------------------------------------------------
+
+            title = "Unknown Match"
 
             try:
 
-                page_title = page.title()
+                h1 = page.locator(
+                    "h1"
+                ).first
 
-                if page_title:
-                    title = page_title.strip()
+                if h1.count() > 0:
+
+                    text = h1.inner_text(
+                        timeout=2000
+                    ).strip()
+
+                    if text:
+                        title = text
 
             except Exception:
                 pass
 
-        # ----------------------------------------------------
-        # PLAYERS
-        # ----------------------------------------------------
+            if title == "Unknown Match":
 
-        elements = page.locator(
-            "a.player-link"
-        ).all()
+                try:
 
-        players = []
+                    page_title = page.title()
 
-        for player_index, element in enumerate(
-            elements
-        ):
+                    if page_title:
+                        title = page_title.strip()
 
-            try:
-                name = element.inner_text(
-                    strip=True
-                )
-            except Exception:
-                name = ""
+                except Exception:
+                    pass
 
-            try:
-                server = element.get_attribute(
-                    "title"
-                )
-            except Exception:
-                server = ""
+            # ------------------------------------------------
+            # PLAYER LINKS
+            # ------------------------------------------------
 
-            try:
-                data_link = element.get_attribute(
-                    "data-link"
-                )
-            except Exception:
-                data_link = ""
+            elements = page.locator(
+                "a.player-link"
+            ).all()
 
-            try:
-                href = element.get_attribute(
-                    "href"
-                )
-            except Exception:
-                href = ""
+            players = []
 
-            players.append({
-                "index": player_index,
-                "name": name,
-                "server": server,
-                "data_link": data_link,
-                "href": (
-                    urljoin(
-                        HOME_URL,
-                        href
+            for player_index, element in enumerate(
+                elements
+            ):
+
+                try:
+                    name = element.inner_text(
+                        strip=True
                     )
-                    if href
-                    else ""
-                )
-            })
+                except Exception:
+                    name = ""
 
-        print(
-            f"[{index}/{total}] OK "
-            f"| players={len(players)} "
-            f"| {title}",
-            flush=True
-        )
+                try:
+                    server = element.get_attribute(
+                        "title"
+                    )
+                except Exception:
+                    server = ""
 
-        return {
-            "title": title,
-            "url": match_url,
-            "players": players
-        }
+                try:
+                    data_link = element.get_attribute(
+                        "data-link"
+                    )
+                except Exception:
+                    data_link = ""
+
+                try:
+                    href = element.get_attribute(
+                        "href"
+                    )
+                except Exception:
+                    href = ""
+
+                players.append({
+                    "index": player_index,
+                    "name": name,
+                    "server": server,
+                    "data_link": data_link,
+                    "href": (
+                        urljoin(
+                            HOME_URL,
+                            href
+                        )
+                        if href
+                        else ""
+                    )
+                })
+
+            # ------------------------------------------------
+            # CLOSE
+            # ------------------------------------------------
+
+            context.close()
+            browser.close()
+
+            print(
+                f"[{index}/{total}] OK "
+                f"| players={len(players)} "
+                f"| {title}",
+                flush=True
+            )
+
+            return {
+                "title": title,
+                "url": match_url,
+                "players": players
+            }
 
     except Exception as error:
 
         print(
-            f"[{index}/{total}] ERROR "
-            f"| {match_url} "
-            f"| {error}",
+            f"[{index}/{total}] ERROR",
+            flush=True
+        )
+
+        print(
+            f"  URL: {match_url}",
+            flush=True
+        )
+
+        print(
+            f"  ERROR: {type(error).__name__}: {error}",
             flush=True
         )
 
         return None
 
-    finally:
-
-        try:
-            page.close()
-        except Exception:
-            pass
-
-        try:
-            context.close()
-        except Exception:
-            pass
-
 
 # ============================================================
-# SAVE
+# SAVE JSON
 # ============================================================
 
 def save_results(results):
@@ -307,12 +324,6 @@ def save_results(results):
         encoding="utf-8"
     )
 
-    print(
-        f"Saved {len(results)} matches "
-        f"to {OUTPUT_FILE}",
-        flush=True
-    )
-
 
 # ============================================================
 # MAIN
@@ -321,13 +332,13 @@ def save_results(results):
 def main():
 
     # --------------------------------------------------------
-    # 1. HOME PAGE
+    # HOME
     # --------------------------------------------------------
 
     html = get_home_page()
 
     # --------------------------------------------------------
-    # 2. EVENTS
+    # EVENTS
     # --------------------------------------------------------
 
     match_urls = find_match_urls(
@@ -349,73 +360,68 @@ def main():
         return
 
     # --------------------------------------------------------
-    # 3. PLAYWRIGHT
+    # SCRAPE
     # --------------------------------------------------------
 
     results = []
 
-    with sync_playwright() as p:
+    print(
+        f"Using {MAX_WORKERS} workers...",
+        flush=True
+    )
 
-        browser = p.chromium.launch(
-            headless=True
-        )
+    with ThreadPoolExecutor(
+        max_workers=MAX_WORKERS
+    ) as executor:
 
-        # ----------------------------------------------------
-        # 4. PARALLEL SCRAPING
-        # ----------------------------------------------------
+        futures = {}
 
-        with ThreadPoolExecutor(
-            max_workers=MAX_WORKERS
-        ) as executor:
+        for index, match_url in enumerate(
+            match_urls,
+            1
+        ):
 
-            futures = {}
+            future = executor.submit(
+                scrape_one_match,
+                match_url,
+                index,
+                len(match_urls)
+            )
 
-            for index, match_url in enumerate(
-                match_urls,
-                1
-            ):
+            futures[future] = match_url
 
-                future = executor.submit(
-                    scrape_one_match,
-                    browser,
-                    match_url,
-                    index,
-                    len(match_urls)
-                )
+        for future in as_completed(
+            futures
+        ):
 
-                futures[future] = match_url
+            try:
 
-            for future in as_completed(
-                futures
-            ):
+                result = future.result()
 
-                try:
+                if result is not None:
 
-                    result = future.result()
-
-                    if result is not None:
-                        results.append(result)
-
-                except Exception as error:
-
-                    print(
-                        "Worker error:",
-                        error,
-                        flush=True
+                    results.append(
+                        result
                     )
 
-        browser.close()
+            except Exception as error:
+
+                print(
+                    "Worker exception:",
+                    error,
+                    flush=True
+                )
 
     # --------------------------------------------------------
-    # 5. SORT RESULTS
+    # SORT
     # --------------------------------------------------------
 
     results.sort(
-        key=lambda item: item["url"]
+        key=lambda x: x["url"]
     )
 
     # --------------------------------------------------------
-    # 6. SAVE
+    # SAVE
     # --------------------------------------------------------
 
     save_results(
@@ -423,7 +429,7 @@ def main():
     )
 
     # --------------------------------------------------------
-    # 7. SUMMARY
+    # SUMMARY
     # --------------------------------------------------------
 
     total_players = sum(
@@ -434,7 +440,7 @@ def main():
     events_with_players = sum(
         1
         for match in results
-        if match["players"]
+        if len(match["players"]) > 0
     )
 
     print()
@@ -462,10 +468,6 @@ def main():
         f"Output file:        {OUTPUT_FILE}"
     )
 
-
-# ============================================================
-# ENTRY POINT
-# ============================================================
 
 if __name__ == "__main__":
     main()
