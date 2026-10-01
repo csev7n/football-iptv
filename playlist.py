@@ -6,20 +6,8 @@ INPUT_FILE = Path("matches.json")
 OUTPUT_FILE = Path("playlist.m3u")
 
 
-def load_matches():
-    if not INPUT_FILE.exists():
-        raise FileNotFoundError(
-            f"Không tìm thấy {INPUT_FILE}"
-        )
-
-    with INPUT_FILE.open(
-        "r",
-        encoding="utf-8"
-    ) as f:
-        return json.load(f)
-
-
 def clean_text(value):
+
     if value is None:
         return ""
 
@@ -31,18 +19,20 @@ def clean_text(value):
     )
 
 
-def get_stream_url(player):
-    """
-    Chỉ sử dụng stream_url nếu nguồn dữ liệu
-    của bạn đã cung cấp URL stream được phép sử dụng.
-    """
+def load_data():
 
-    url = player.get("stream_url", "")
+    if not INPUT_FILE.exists():
 
-    if not url:
-        return ""
+        raise FileNotFoundError(
+            f"Không tìm thấy {INPUT_FILE}"
+        )
 
-    return clean_text(url)
+    with INPUT_FILE.open(
+        "r",
+        encoding="utf-8"
+    ) as file:
+
+        return json.load(file)
 
 
 def build_playlist(data):
@@ -51,7 +41,12 @@ def build_playlist(data):
         "#EXTM3U"
     ]
 
-    for match in data.get("matches", []):
+    channel_count = 0
+
+    for match in data.get(
+        "matches",
+        []
+    ):
 
         title = clean_text(
             match.get(
@@ -67,15 +62,7 @@ def build_playlist(data):
 
         for player in players:
 
-            stream_url = get_stream_url(
-                player
-            )
-
-            # Chưa có stream URL thì bỏ qua
-            if not stream_url:
-                continue
-
-            commentator = clean_text(
+            name = clean_text(
                 player.get(
                     "name",
                     ""
@@ -89,40 +76,67 @@ def build_playlist(data):
                 )
             )
 
-            # Tên hiển thị
-            parts = [title]
+            streams = player.get(
+                "stream_urls",
+                []
+            )
 
-            if commentator:
-                parts.append(
-                    commentator
+            if not streams:
+                continue
+
+            for stream_url in streams:
+
+                stream_url = clean_text(
+                    stream_url
                 )
 
-            if server:
-                parts.append(
-                    server
+                if not stream_url:
+                    continue
+
+                # --------------------------------------------
+                # Display name
+                # --------------------------------------------
+
+                parts = [title]
+
+                if name:
+                    parts.append(name)
+
+                if server:
+                    parts.append(server)
+
+                display_name = " - ".join(
+                    parts
                 )
 
-            display_name = " - ".join(
-                parts
-            )
+                # --------------------------------------------
+                # M3U
+                # --------------------------------------------
 
-            lines.append(
-                '#EXTINF:-1 group-title="Live",'
-                + display_name
-            )
+                lines.append(
+                    '#EXTINF:-1 '
+                    'group-title="Live",'
+                    + display_name
+                )
 
-            lines.append(
-                stream_url
-            )
+                lines.append(
+                    stream_url
+                )
 
-    return "\n".join(lines) + "\n"
+                channel_count += 1
+
+    return (
+        "\n".join(lines)
+        + "\n",
+        channel_count
+    )
 
 
 def main():
 
-    data = load_matches()
+    data = load_data()
 
-    playlist = build_playlist(
+    playlist, count = build_playlist(
         data
     )
 
@@ -132,12 +146,27 @@ def main():
     )
 
     print(
-        f"Created {OUTPUT_FILE}"
+        "=" * 70
     )
 
     print(
-        f"Playlist size: "
-        f"{len(playlist)} bytes"
+        "PLAYLIST COMPLETE"
+    )
+
+    print(
+        "=" * 70
+    )
+
+    print(
+        f"Channels: {count}"
+    )
+
+    print(
+        f"Output:   {OUTPUT_FILE}"
+    )
+
+    print(
+        f"Size:     {len(playlist)} bytes"
     )
 
 
