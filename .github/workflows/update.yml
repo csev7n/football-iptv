@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  scraper:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,13 +18,17 @@ jobs:
 
       - name: Install Python packages
         run: |
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
 
       - name: Install Playwright
         run: |
-          playwright install --with-deps chromium
+          python -m playwright install --with-deps chromium
 
       - name: Run scraper
         run: |
           python scraper.py
 
+      - name: Show generated files
+        run: |
+          ls -lah
