@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 
 
-HOME_URL = "https://example.com"
+HOME_URL = "xoilacz.vip"
 
 
 HEADERS = {
