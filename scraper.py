@@ -40,7 +40,10 @@ HEADERS = {
 
 def get_home_page():
 
-    print("Downloading home page...", flush=True)
+    print(
+        "Downloading home page...",
+        flush=True
+    )
 
     response = requests.get(
         HOME_URL,
@@ -123,6 +126,67 @@ def is_flv_url(url):
 
 
 # ============================================================
+# GET PLAYER NAME
+# ============================================================
+
+def get_player_name(element):
+
+    """
+    Lấy tên hiển thị trong:
+
+        <a class="player-link" title="Server 4">
+            <svg>...</svg>
+            FULL HD BRADY
+        </a>
+
+    Kết quả:
+
+        FULL HD BRADY
+
+    Không lấy:
+
+        Server 4
+    """
+
+    try:
+
+        html = element.inner_html()
+
+        soup = BeautifulSoup(
+            html,
+            "html.parser"
+        )
+
+        # Xóa toàn bộ SVG
+        for svg in soup.find_all("svg"):
+            svg.decompose()
+
+        # Lấy phần text còn lại
+        name = soup.get_text(
+            " ",
+            strip=True
+        )
+
+        # Chuẩn hóa khoảng trắng
+        name = re.sub(
+            r"\s+",
+            " ",
+            name
+        ).strip()
+
+        return name
+
+    except Exception as error:
+
+        print(
+            f"Could not read player name: {error}",
+            flush=True
+        )
+
+        return ""
+
+
+# ============================================================
 # SCRAPE ONE MATCH
 # ============================================================
 
@@ -152,7 +216,7 @@ def scrape_one_match(
             page = context.new_page()
 
             # ------------------------------------------------
-            # Capture authorized media requests
+            # Capture media requests
             # ------------------------------------------------
 
             captured_streams = []
@@ -169,7 +233,7 @@ def scrape_one_match(
 
                         print(
                             f"[{index}/{total}] "
-                            f"FLV: {url}",
+                            f"FLV detected",
                             flush=True
                         )
 
@@ -238,44 +302,98 @@ def scrape_one_match(
 
             players = []
 
+            print(
+                f"[{index}/{total}] "
+                f"Players found: {len(elements)}",
+                flush=True
+            )
+
+            # ------------------------------------------------
+            # Process every player
+            # ------------------------------------------------
+
             for player_index, element in enumerate(
                 elements
             ):
 
-                # Clear streams for this player
+                # Clear streams before clicking this player
                 captured_streams.clear()
 
-                try:
-                    name = element.inner_text(
-                        strip=True
-                    )
-                except Exception:
-                    name = ""
+                # --------------------------------------------
+                # NAME
+                # --------------------------------------------
+
+                name = get_player_name(
+                    element
+                )
+
+                # --------------------------------------------
+                # SERVER
+                # --------------------------------------------
 
                 try:
-                    server = element.get_attribute(
-                        "title"
+
+                    server = (
+                        element.get_attribute(
+                            "title"
+                        )
+                        or ""
                     )
+
                 except Exception:
+
                     server = ""
 
+                # --------------------------------------------
+                # DATA LINK
+                # --------------------------------------------
+
                 try:
-                    data_link = element.get_attribute(
-                        "data-link"
+
+                    data_link = (
+                        element.get_attribute(
+                            "data-link"
+                        )
+                        or ""
                     )
+
                 except Exception:
+
                     data_link = ""
 
+                # --------------------------------------------
+                # HREF
+                # --------------------------------------------
+
                 try:
-                    href = element.get_attribute(
-                        "href"
+
+                    href = (
+                        element.get_attribute(
+                            "href"
+                        )
+                        or ""
                     )
+
                 except Exception:
+
                     href = ""
 
-                # ------------------------------------------------
+                # --------------------------------------------
+                # DEBUG
+                # --------------------------------------------
+
+                print(
+                    f"[{index}/{total}] "
+                    f"PLAYER {player_index + 1}: "
+                    f"name='{name}' "
+                    f"| server='{server}' "
+                    f"| data-link='{data_link}'",
+                    flush=True
+                )
+
+                # --------------------------------------------
                 # Click player
-                # ------------------------------------------------
+                # --------------------------------------------
 
                 try:
 
@@ -292,23 +410,33 @@ def scrape_one_match(
                     print(
                         f"[{index}/{total}] "
                         f"Player click failed: "
-                        f"{name} - {error}",
+                        f"{name or server} "
+                        f"- {error}",
                         flush=True
                     )
 
-                # ------------------------------------------------
-                # Save captured streams
-                # ------------------------------------------------
+                # --------------------------------------------
+                # Save streams
+                # --------------------------------------------
 
                 streams = list(
                     captured_streams
                 )
 
+                # --------------------------------------------
+                # Save player
+                # --------------------------------------------
+
                 players.append({
+
                     "index": player_index,
+
                     "name": name,
+
                     "server": server,
+
                     "data_link": data_link,
+
                     "href": (
                         urljoin(
                             HOME_URL,
@@ -317,17 +445,23 @@ def scrape_one_match(
                         if href
                         else ""
                     ),
+
                     "stream_urls": streams
                 })
 
                 print(
                     f"[{index}/{total}] "
-                    f"PLAYER: {name} "
+                    f"PLAYER: {name or server} "
                     f"| streams={len(streams)}",
                     flush=True
                 )
 
+            # ------------------------------------------------
+            # Close browser
+            # ------------------------------------------------
+
             context.close()
+
             browser.close()
 
             print(
@@ -338,8 +472,11 @@ def scrape_one_match(
             )
 
             return {
+
                 "title": title,
+
                 "url": match_url,
+
                 "players": players
             }
 
@@ -370,19 +507,26 @@ def scrape_one_match(
 def save_results(results):
 
     data = {
+
         "generated_at": int(
             time.time()
         ),
-        "match_count": len(results),
+
+        "match_count": len(
+            results
+        ),
+
         "matches": results
     }
 
     OUTPUT_FILE.write_text(
+
         json.dumps(
             data,
             ensure_ascii=False,
             indent=2
         ),
+
         encoding="utf-8"
     )
 
@@ -432,9 +576,13 @@ def main():
         ):
 
             future = executor.submit(
+
                 scrape_one_match,
+
                 match_url,
+
                 index,
+
                 len(match_urls)
             )
 
@@ -449,7 +597,10 @@ def main():
                 result = future.result()
 
                 if result is not None:
-                    results.append(result)
+
+                    results.append(
+                        result
+                    )
 
             except Exception as error:
 
@@ -458,66 +609,115 @@ def main():
                     flush=True
                 )
 
+    # --------------------------------------------------------
+    # Sort
+    # --------------------------------------------------------
+
     results.sort(
         key=lambda x: x["url"]
     )
+
+    # --------------------------------------------------------
+    # Save
+    # --------------------------------------------------------
 
     save_results(
         results
     )
 
+    # --------------------------------------------------------
+    # Statistics
+    # --------------------------------------------------------
+
     total_players = sum(
-        len(x["players"])
+
+        len(
+            x["players"]
+        )
+
         for x in results
     )
 
     players_with_stream = sum(
+
         1
+
         for match in results
+
         for player in match["players"]
-        if player.get("stream_urls")
+
+        if player.get(
+            "stream_urls"
+        )
     )
 
     total_streams = sum(
+
         len(
             player.get(
                 "stream_urls",
                 []
             )
         )
+
         for match in results
+
         for player in match["players"]
     )
 
+    # --------------------------------------------------------
+    # Result
+    # --------------------------------------------------------
+
     print()
-    print("=" * 70)
-    print("SCRAPER COMPLETE")
-    print("=" * 70)
 
     print(
-        f"Events found:          {len(match_urls)}"
+        "=" * 70
     )
 
     print(
-        f"Events processed:      {len(results)}"
+        "SCRAPER COMPLETE"
     )
 
     print(
-        f"Total players:         {total_players}"
+        "=" * 70
     )
 
     print(
-        f"Players with stream:   {players_with_stream}"
+        f"Events found:          "
+        f"{len(match_urls)}"
     )
 
     print(
-        f"Total FLV streams:     {total_streams}"
+        f"Events processed:      "
+        f"{len(results)}"
     )
 
     print(
-        f"Output file:           {OUTPUT_FILE}"
+        f"Total players:         "
+        f"{total_players}"
     )
 
+    print(
+        f"Players with stream:   "
+        f"{players_with_stream}"
+    )
+
+    print(
+        f"Total FLV streams:     "
+        f"{total_streams}"
+    )
+
+    print(
+        f"Output file:           "
+        f"{OUTPUT_FILE}"
+    )
+
+
+# ============================================================
+# ENTRY POINT
+# ============================================================
 
 if __name__ == "__main__":
+
     main()
