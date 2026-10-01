@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "*/30 * * * *"
 
+permissions:
+  contents: write
+
 jobs:
   scraper:
     runs-on: ubuntu-latest
@@ -23,7 +26,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      - name: Install Playwright Chromium
+      - name: Install Playwright
         run: |
           python -m playwright install --with-deps chromium
 
@@ -31,19 +34,25 @@ jobs:
         run: |
           python scraper.py
 
-      - name: Show result
+      - name: Build playlist
         run: |
-          echo "========== matches.json =========="
-          ls -lh matches.json
-          echo "=================================="
+          python playlist.py
 
-      - name: Commit updated playlist data
+      - name: Show generated files
+        run: |
+          ls -lh matches.json
+          ls -lh playlist.m3u
+
+      - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add matches.json
+          git add matches.json playlist.m3u
 
-          git diff --cached --quiet || git commit -m "Update matches"
-
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update IPTV playlist"
+            git push
+          fi
