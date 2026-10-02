@@ -13,7 +13,7 @@ jobs:
       - name: Checkout private repository
         uses: actions/checkout@v4
 
-      - name: Publish playlist
+      - name: Check and publish playlist
         env:
           GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         run: |
@@ -21,12 +21,28 @@ jobs:
 
           API="https://api.github.com/repos/csev7n/xoilacz-iptv/contents/playlist.m3u"
 
-          CONTENT=$(base64 -w 0 playlist.m3u)
+          echo "Downloading current public playlist..."
 
-          SHA=$(curl -s \
+          RESPONSE=$(curl -sS \
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "Accept: application/vnd.github+json" \
-            "$API" | jq -r '.sha // empty')
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "$API")
+
+          SHA=$(echo "$RESPONSE" | jq -r '.sha // empty')
+          PUBLIC_CONTENT=$(echo "$RESPONSE" | jq -r '.content // empty' | tr -d '\n' | base64 -d 2>/dev/null || true)
+
+          echo "Comparing playlists..."
+
+          if [ -n "$PUBLIC_CONTENT" ] && cmp -s playlist.m3u <(printf '%s' "$PUBLIC_CONTENT"); then
+            echo "Playlist has not changed."
+            echo "Nothing to publish."
+            exit 0
+          fi
+
+          echo "Playlist has changed. Publishing new version..."
+
+          CONTENT=$(base64 -w 0 playlist.m3u)
 
           if [ -n "$SHA" ]; then
             curl -sS -L \
@@ -45,3 +61,5 @@ jobs:
               "$API" \
               -d "{\"message\":\"Publish playlist\",\"content\":\"$CONTENT\"}"
           fi
+
+          echo "Playlist published successfully."
