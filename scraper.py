@@ -1,4 +1,5 @@
 import json
+import math
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -7,7 +8,7 @@ from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 
 # ============================================================
@@ -18,11 +19,31 @@ HOME_URL = "https://xoilacz.vip/"
 
 OUTPUT_FILE = Path("matches.json")
 
+# Số Chromium worker chạy song song.
+# GitHub Actions ubuntu-latest thường 3 là mức an toàn.
 MAX_WORKERS = 3
 
-PAGE_TIMEOUT = 20000
+PAGE_TIMEOUT = 20_000
 
-PLAYER_WAIT_MS = 2000
+# Tổng thời gian tối đa chờ FLV sau khi click player.
+PLAYER_WAIT_MS = 2_000
+
+# Khoảng thời gian kiểm tra FLV.
+STREAM_POLL_MS = 100
+
+# Số lần thử mở lại một trận nếu navigation lỗi.
+MATCH_RETRIES = 2
+
+# Không cho phép scraper thành công quá ít trận.
+#
+# Ví dụ:
+# 60 trận tìm thấy
+# 42 trận xử lý được = 70% -> OK
+# 41 trận = 68.3% -> FAIL
+MIN_MATCH_SUCCESS_RATIO = 0.70
+
+# Playlist phải có ít nhất một stream.
+MIN_TOTAL_STREAMS = 1
 
 HEADERS = {
     "User-Agent": (
@@ -40,22 +61,19 @@ HEADERS = {
 
 def get_home_page():
 
-    print(
-        "Downloading home page...",
-        flush=True
-    )
+    print("Downloading home page...", flush=True)
 
     response = requests.get(
         HOME_URL,
         headers=HEADERS,
-        timeout=20
+        timeout=20,
     )
 
     response.raise_for_status()
 
     print(
         f"Home page status: {response.status_code}",
-        flush=True
+        flush=True,
     )
 
     return response.text
@@ -70,7 +88,7 @@ def normalize_match_url(url):
     url = re.sub(
         r"/link/\d+/?$",
         "/",
-        url
+        url,
     )
 
     return url.rstrip("/") + "/"
@@ -84,7 +102,7 @@ def find_match_urls(html):
 
     soup = BeautifulSoup(
         html,
-        "html.parser"
+        "html.parser",
     )
 
     matches = set()
@@ -101,11 +119,11 @@ def find_match_urls(html):
 
         full_url = urljoin(
             HOME_URL,
-            href
+            href,
         )
 
         full_url = normalize_match_url(
-            full_url
+            full_url,
         )
 
         matches.add(full_url)
@@ -131,47 +149,27 @@ def is_flv_url(url):
 
 def get_player_name(element):
 
-    """
-    Lấy tên hiển thị trong:
-
-        <a class="player-link" title="Server 4">
-            <svg>...</svg>
-            FULL HD BRADY
-        </a>
-
-    Kết quả:
-
-        FULL HD BRADY
-
-    Không lấy:
-
-        Server 4
-    """
-
     try:
 
         html = element.inner_html()
 
         soup = BeautifulSoup(
             html,
-            "html.parser"
+            "html.parser",
         )
 
-        # Xóa toàn bộ SVG
         for svg in soup.find_all("svg"):
             svg.decompose()
 
-        # Lấy phần text còn lại
         name = soup.get_text(
             " ",
-            strip=True
+            strip=True,
         )
 
-        # Chuẩn hóa khoảng trắng
         name = re.sub(
             r"\s+",
             " ",
-            name
+            name,
         ).strip()
 
         return name
@@ -180,10 +178,33 @@ def get_player_name(element):
 
         print(
             f"Could not read player name: {error}",
-            flush=True
+            flush=True,
         )
 
         return ""
+
+
+# ============================================================
+# WAIT FOR STREAM
+# ============================================================
+
+def wait_for_stream(
+    captured_streams,
+    max_wait_ms,
+):
+
+    deadline = time.monotonic() + (
+        max_wait_ms / 1000
+    )
+
+    while time.monotonic() < deadline:
+
+        if captured_streams:
+            return
+
+        time.sleep(
+            STREAM_POLL_MS / 1000
+        )
 
 
 # ============================================================
@@ -191,32 +212,28 @@ def get_player_name(element):
 # ============================================================
 
 def scrape_one_match(
+    page,
     match_url,
     index,
-    total
+    total,
 ):
 
     print(
         f"[{index}/{total}] START {match_url}",
-        flush=True
+        flush=True,
     )
 
-    try:
+    last_error = None
 
-        with sync_playwright() as p:
+    for attempt in range(
+        1,
+        MATCH_RETRIES + 1,
+    ):
 
-            browser = p.chromium.launch(
-                headless=True
-            )
-
-            context = browser.new_context(
-                user_agent=HEADERS["User-Agent"]
-            )
-
-            page = context.new_page()
+        try:
 
             # ------------------------------------------------
-            # Capture media requests
+            # STREAM CAPTURE
             # ------------------------------------------------
 
             captured_streams = []
@@ -225,39 +242,38 @@ def scrape_one_match(
 
                 url = request.url
 
-                if is_flv_url(url):
+                if not is_flv_url(url):
+                    return
 
-                    if url not in captured_streams:
+                if url not in captured_streams:
 
-                        captured_streams.append(url)
+                    captured_streams.append(url)
 
-                        print(
-                            f"[{index}/{total}] "
-                            f"FLV detected",
-                            flush=True
-                        )
+                    print(
+                        f"[{index}/{total}] "
+                        f"FLV detected",
+                        flush=True,
+                    )
 
             page.on(
                 "request",
-                handle_request
+                handle_request,
             )
 
             # ------------------------------------------------
-            # Open match
+            # OPEN MATCH
             # ------------------------------------------------
 
             page.goto(
                 match_url,
                 wait_until="domcontentloaded",
-                timeout=PAGE_TIMEOUT
+                timeout=PAGE_TIMEOUT,
             )
 
-            page.wait_for_timeout(
-                1000
-            )
+            page.wait_for_timeout(500)
 
             # ------------------------------------------------
-            # Get title
+            # TITLE
             # ------------------------------------------------
 
             title = "Unknown Event"
@@ -271,7 +287,7 @@ def scrape_one_match(
                 if h1.count() > 0:
 
                     value = h1.inner_text(
-                        timeout=2000
+                        timeout=2000,
                     ).strip()
 
                     if value:
@@ -293,7 +309,7 @@ def scrape_one_match(
                     pass
 
             # ------------------------------------------------
-            # Get players
+            # PLAYERS
             # ------------------------------------------------
 
             elements = page.locator(
@@ -305,18 +321,18 @@ def scrape_one_match(
             print(
                 f"[{index}/{total}] "
                 f"Players found: {len(elements)}",
-                flush=True
+                flush=True,
             )
 
             # ------------------------------------------------
-            # Process every player
+            # PROCESS PLAYERS
             # ------------------------------------------------
 
             for player_index, element in enumerate(
                 elements
             ):
 
-                # Clear streams before clicking this player
+                # Clear previous player's streams.
                 captured_streams.clear()
 
                 # --------------------------------------------
@@ -378,31 +394,27 @@ def scrape_one_match(
 
                     href = ""
 
-                # --------------------------------------------
-                # DEBUG
-                # --------------------------------------------
-
                 print(
                     f"[{index}/{total}] "
                     f"PLAYER {player_index + 1}: "
                     f"name='{name}' "
-                    f"| server='{server}' "
-                    f"| data-link='{data_link}'",
-                    flush=True
+                    f"| server='{server}'",
+                    flush=True,
                 )
 
                 # --------------------------------------------
-                # Click player
+                # CLICK
                 # --------------------------------------------
 
                 try:
 
                     element.click(
-                        timeout=5000
+                        timeout=5000,
                     )
 
-                    page.wait_for_timeout(
-                        PLAYER_WAIT_MS
+                    wait_for_stream(
+                        captured_streams,
+                        PLAYER_WAIT_MS,
                     )
 
                 except Exception as error:
@@ -412,20 +424,18 @@ def scrape_one_match(
                         f"Player click failed: "
                         f"{name or server} "
                         f"- {error}",
-                        flush=True
+                        flush=True,
                     )
 
                 # --------------------------------------------
-                # Save streams
+                # UNIQUE STREAMS
                 # --------------------------------------------
 
                 streams = list(
-                    captured_streams
+                    dict.fromkeys(
+                        captured_streams
+                    )
                 )
-
-                # --------------------------------------------
-                # Save player
-                # --------------------------------------------
 
                 players.append({
 
@@ -440,64 +450,224 @@ def scrape_one_match(
                     "href": (
                         urljoin(
                             HOME_URL,
-                            href
+                            href,
                         )
                         if href
                         else ""
                     ),
 
-                    "stream_urls": streams
+                    "stream_urls": streams,
                 })
 
                 print(
                     f"[{index}/{total}] "
                     f"PLAYER: {name or server} "
                     f"| streams={len(streams)}",
-                    flush=True
+                    flush=True,
                 )
 
             # ------------------------------------------------
-            # Close browser
+            # REMOVE EVENT LISTENER
             # ------------------------------------------------
 
-            context.close()
+            try:
 
-            browser.close()
+                page.remove_listener(
+                    "request",
+                    handle_request,
+                )
 
-            print(
-                f"[{index}/{total}] OK "
-                f"| players={len(players)} "
-                f"| {title}",
-                flush=True
-            )
+            except Exception:
+                pass
 
-            return {
+            # ------------------------------------------------
+            # RESULT
+            # ------------------------------------------------
+
+            result = {
 
                 "title": title,
 
                 "url": match_url,
 
-                "players": players
+                "players": players,
             }
 
-    except Exception as error:
+            print(
+                f"[{index}/{total}] OK "
+                f"| players={len(players)} "
+                f"| {title}",
+                flush=True,
+            )
+
+            return result
+
+        except PlaywrightTimeoutError as error:
+
+            last_error = error
+
+            print(
+                f"[{index}/{total}] "
+                f"TIMEOUT "
+                f"(attempt {attempt}/{MATCH_RETRIES})",
+                flush=True,
+            )
+
+        except Exception as error:
+
+            last_error = error
+
+            print(
+                f"[{index}/{total}] "
+                f"ERROR "
+                f"(attempt {attempt}/{MATCH_RETRIES})",
+                flush=True,
+            )
+
+            print(
+                f"{type(error).__name__}: {error}",
+                flush=True,
+            )
+
+        finally:
+
+            try:
+
+                page.remove_listener(
+                    "request",
+                    handle_request,
+                )
+
+            except Exception:
+                pass
+
+        # ----------------------------------------------------
+        # RESET PAGE BEFORE RETRY
+        # ----------------------------------------------------
+
+        try:
+            page.goto(
+                "about:blank",
+                wait_until="domcontentloaded",
+                timeout=5000,
+            )
+        except Exception:
+            pass
+
+    print(
+        f"[{index}/{total}] FAILED "
+        f"after {MATCH_RETRIES} attempts",
+        flush=True,
+    )
+
+    if last_error:
 
         print(
-            f"[{index}/{total}] ERROR",
-            flush=True
+            f"Last error: "
+            f"{type(last_error).__name__}: "
+            f"{last_error}",
+            flush=True,
         )
 
-        print(
-            f"URL: {match_url}",
-            flush=True
+    return None
+
+
+# ============================================================
+# WORKER
+#
+# Mỗi worker tạo Chromium MỘT LẦN,
+# sau đó xử lý nhiều trận.
+# ============================================================
+
+def scrape_batch(
+    batch,
+    worker_id,
+    total,
+):
+
+    results = []
+
+    print(
+        f"[WORKER {worker_id}] "
+        f"Starting with {len(batch)} matches",
+        flush=True,
+    )
+
+    with sync_playwright() as p:
+
+        browser = p.chromium.launch(
+            headless=True,
         )
 
-        print(
-            f"{type(error).__name__}: {error}",
-            flush=True
+        context = browser.new_context(
+            user_agent=HEADERS["User-Agent"],
         )
 
-        return None
+        page = context.new_page()
+
+        try:
+
+            for index, match_url in batch:
+
+                result = scrape_one_match(
+                    page,
+                    match_url,
+                    index,
+                    total,
+                )
+
+                if result is not None:
+
+                    results.append(result)
+
+        finally:
+
+            context.close()
+            browser.close()
+
+    print(
+        f"[WORKER {worker_id}] "
+        f"Finished "
+        f"| success={len(results)}",
+        flush=True,
+    )
+
+    return results
+
+
+# ============================================================
+# SPLIT WORK
+# ============================================================
+
+def split_batches(
+    match_urls,
+    workers,
+):
+
+    indexed = list(
+        enumerate(
+            match_urls,
+            1,
+        )
+    )
+
+    workers = min(
+        workers,
+        len(indexed),
+    )
+
+    batches = [
+        []
+        for _ in range(workers)
+    ]
+
+    for position, item in enumerate(indexed):
+
+        batches[
+            position % workers
+        ].append(item)
+
+    return batches
 
 
 # ============================================================
@@ -516,7 +686,7 @@ def save_results(results):
             results
         ),
 
-        "matches": results
+        "matches": results,
     }
 
     OUTPUT_FILE.write_text(
@@ -524,118 +694,29 @@ def save_results(results):
         json.dumps(
             data,
             ensure_ascii=False,
-            indent=2
+            indent=2,
         ),
 
-        encoding="utf-8"
+        encoding="utf-8",
     )
 
 
 # ============================================================
-# MAIN
+# STATISTICS
 # ============================================================
 
-def main():
-
-    html = get_home_page()
-
-    match_urls = find_match_urls(
-        html
-    )
-
-    print(
-        f"Found {len(match_urls)} unique events",
-        flush=True
-    )
-
-    if not match_urls:
-
-        print(
-            "No events found.",
-            flush=True
-        )
-
-        return
-
-    results = []
-
-    print(
-        f"Using {MAX_WORKERS} workers...",
-        flush=True
-    )
-
-    with ThreadPoolExecutor(
-        max_workers=MAX_WORKERS
-    ) as executor:
-
-        futures = {}
-
-        for index, match_url in enumerate(
-            match_urls,
-            1
-        ):
-
-            future = executor.submit(
-
-                scrape_one_match,
-
-                match_url,
-
-                index,
-
-                len(match_urls)
-            )
-
-            futures[future] = match_url
-
-        for future in as_completed(
-            futures
-        ):
-
-            try:
-
-                result = future.result()
-
-                if result is not None:
-
-                    results.append(
-                        result
-                    )
-
-            except Exception as error:
-
-                print(
-                    f"Worker exception: {error}",
-                    flush=True
-                )
-
-    # --------------------------------------------------------
-    # Sort
-    # --------------------------------------------------------
-
-    results.sort(
-        key=lambda x: x["url"]
-    )
-
-    # --------------------------------------------------------
-    # Save
-    # --------------------------------------------------------
-
-    save_results(
-        results
-    )
-
-    # --------------------------------------------------------
-    # Statistics
-    # --------------------------------------------------------
+def get_statistics(results):
 
     total_players = sum(
 
         len(
-            x["players"]
+            match.get(
+                "players",
+                [],
+            )
         )
 
-        for x in results
+        for match in results
     )
 
     players_with_stream = sum(
@@ -644,7 +725,10 @@ def main():
 
         for match in results
 
-        for player in match["players"]
+        for player in match.get(
+            "players",
+            [],
+        )
 
         if player.get(
             "stream_urls"
@@ -656,46 +740,191 @@ def main():
         len(
             player.get(
                 "stream_urls",
-                []
+                [],
             )
         )
 
         for match in results
 
-        for player in match["players"]
+        for player in match.get(
+            "players",
+            [],
+        )
+    )
+
+    return (
+        total_players,
+        players_with_stream,
+        total_streams,
+    )
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+def main():
+
+    started_at = time.monotonic()
+
+    # --------------------------------------------------------
+    # HOME
+    # --------------------------------------------------------
+
+    html = get_home_page()
+
+    # --------------------------------------------------------
+    # FIND EVENTS
+    # --------------------------------------------------------
+
+    match_urls = find_match_urls(
+        html
+    )
+
+    total_matches = len(
+        match_urls
+    )
+
+    print(
+        f"Found {total_matches} unique events",
+        flush=True,
+    )
+
+    if not match_urls:
+
+        raise RuntimeError(
+            "No events found. "
+            "Refusing to overwrite/publish playlist."
+        )
+
+    # --------------------------------------------------------
+    # WORKERS
+    # --------------------------------------------------------
+
+    worker_count = min(
+        MAX_WORKERS,
+        total_matches,
+    )
+
+    print(
+        f"Using {worker_count} workers...",
+        flush=True,
+    )
+
+    batches = split_batches(
+        match_urls,
+        worker_count,
+    )
+
+    results = []
+
+    # --------------------------------------------------------
+    # PARALLEL SCRAPE
+    # --------------------------------------------------------
+
+    with ThreadPoolExecutor(
+        max_workers=worker_count
+    ) as executor:
+
+        futures = {}
+
+        for worker_id, batch in enumerate(
+            batches,
+            1,
+        ):
+
+            future = executor.submit(
+                scrape_batch,
+                batch,
+                worker_id,
+                total_matches,
+            )
+
+            futures[future] = worker_id
+
+        for future in as_completed(
+            futures
+        ):
+
+            worker_id = futures[future]
+
+            try:
+
+                worker_results = (
+                    future.result()
+                )
+
+                results.extend(
+                    worker_results
+                )
+
+            except Exception as error:
+
+                print(
+                    f"[WORKER {worker_id}] "
+                    f"FATAL ERROR: "
+                    f"{type(error).__name__}: "
+                    f"{error}",
+                    flush=True,
+                )
+
+    # --------------------------------------------------------
+    # SORT
+    # --------------------------------------------------------
+
+    results.sort(
+        key=lambda item: item["url"]
+    )
+
+    successful_matches = len(
+        results
+    )
+
+    success_ratio = (
+        successful_matches / total_matches
     )
 
     # --------------------------------------------------------
-    # Result
+    # STATISTICS
+    # --------------------------------------------------------
+
+    (
+        total_players,
+        players_with_stream,
+        total_streams,
+    ) = get_statistics(
+        results
+    )
+
+    elapsed = (
+        time.monotonic()
+        - started_at
+    )
+
+    # --------------------------------------------------------
+    # QUALITY GATE
     # --------------------------------------------------------
 
     print()
+    print("=" * 70)
+    print("SCRAPER VALIDATION")
+    print("=" * 70)
 
     print(
-        "=" * 70
+        f"Events found:          {total_matches}"
     )
 
     print(
-        "SCRAPER COMPLETE"
+        f"Events processed:      {successful_matches}"
     )
 
     print(
-        "=" * 70
+        f"Success ratio:         "
+        f"{success_ratio:.1%}"
     )
 
     print(
-        f"Events found:          "
-        f"{len(match_urls)}"
-    )
-
-    print(
-        f"Events processed:      "
-        f"{len(results)}"
-    )
-
-    print(
-        f"Total players:         "
-        f"{total_players}"
+        f"Total players:         {total_players}"
     )
 
     print(
@@ -709,9 +938,54 @@ def main():
     )
 
     print(
-        f"Output file:           "
-        f"{OUTPUT_FILE}"
+        f"Elapsed:               "
+        f"{elapsed:.1f}s"
     )
+
+    print("=" * 70)
+
+    if success_ratio < MIN_MATCH_SUCCESS_RATIO:
+
+        raise RuntimeError(
+            "SCRAPER QUALITY CHECK FAILED: "
+            f"only {successful_matches}/{total_matches} "
+            f"events processed "
+            f"({success_ratio:.1%}), "
+            f"minimum required is "
+            f"{MIN_MATCH_SUCCESS_RATIO:.1%}. "
+            "Refusing to publish."
+        )
+
+    if total_streams < MIN_TOTAL_STREAMS:
+
+        raise RuntimeError(
+            "SCRAPER QUALITY CHECK FAILED: "
+            f"only {total_streams} FLV streams found. "
+            "Refusing to publish."
+        )
+
+    # --------------------------------------------------------
+    # SAVE
+    # --------------------------------------------------------
+
+    save_results(
+        results
+    )
+
+    print()
+    print("=" * 70)
+    print("SCRAPER COMPLETE")
+    print("=" * 70)
+
+    print(
+        f"Output file: {OUTPUT_FILE}"
+    )
+
+    print(
+        "Quality gate: PASS"
+    )
+
+    print("=" * 70)
 
 
 # ============================================================
@@ -719,5 +993,4 @@ def main():
 # ============================================================
 
 if __name__ == "__main__":
-
     main()
