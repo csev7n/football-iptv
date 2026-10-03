@@ -7,12 +7,21 @@ on:
     # Chạy mỗi 30 phút
     - cron: "*/30 * * * *"
 
+# Không cho nhiều lần Update IPTV chạy chồng nhau.
+# Nếu một run cũ vẫn đang chạy khi run mới bắt đầu,
+# run cũ sẽ bị hủy.
+concurrency:
+  group: update-iptv
+  cancel-in-progress: true
+
 permissions:
   contents: write
   actions: write
 
 jobs:
+
   update:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -21,14 +30,14 @@ jobs:
       # CHECKOUT
       # ==================================================
 
-      - name: Checkout repository
+      - name: Checkout private repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
 
       # ==================================================
-      # PYTHON
+      # SETUP PYTHON
       # ==================================================
 
       - name: Setup Python
@@ -39,30 +48,36 @@ jobs:
 
 
       # ==================================================
-      # DEPENDENCIES
+      # INSTALL DEPENDENCIES
       # ==================================================
 
       - name: Install dependencies
         run: |
+          set -euo pipefail
+
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
 
       # ==================================================
-      # PLAYWRIGHT
+      # INSTALL PLAYWRIGHT
       # ==================================================
 
       - name: Install Playwright Chromium
         run: |
+          set -euo pipefail
+
           python -m playwright install --with-deps chromium
 
 
       # ==================================================
-      # SCRAPER
+      # RUN SCRAPER
       # ==================================================
 
       - name: Run scraper
         run: |
+          set -euo pipefail
+
           echo "======================================"
           echo "START SCRAPER"
           echo "======================================"
@@ -71,13 +86,15 @@ jobs:
 
 
       # ==================================================
-      # CHECK JSON
+      # VALIDATE matches.json
       # ==================================================
 
-      - name: Check matches.json
+      - name: Validate matches.json
         run: |
+          set -euo pipefail
+
           echo "======================================"
-          echo "CHECK matches.json"
+          echo "VALIDATE matches.json"
           echo "======================================"
 
           if [ ! -f matches.json ]; then
@@ -85,15 +102,38 @@ jobs:
             exit 1
           fi
 
+          python - <<'PY'
+          import json
+
+          with open("matches.json", "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          matches = data.get("matches")
+
+          if not isinstance(matches, list):
+              raise SystemExit(
+                  "ERROR: 'matches' is not a list"
+              )
+
+          if not matches:
+              raise SystemExit(
+                  "ERROR: matches.json contains 0 matches"
+              )
+
+          print(f"Matches: {len(matches)}")
+          PY
+
           ls -lh matches.json
 
 
       # ==================================================
-      # PLAYLIST
+      # BUILD PLAYLIST
       # ==================================================
 
       - name: Build playlist
         run: |
+          set -euo pipefail
+
           echo "======================================"
           echo "BUILD PLAYLIST"
           echo "======================================"
@@ -102,13 +142,15 @@ jobs:
 
 
       # ==================================================
-      # CHECK PLAYLIST
+      # VALIDATE PLAYLIST
       # ==================================================
 
-      - name: Check playlist.m3u
+      - name: Validate playlist
         run: |
+          set -euo pipefail
+
           echo "======================================"
-          echo "CHECK playlist.m3u"
+          echo "VALIDATE playlist.m3u"
           echo "======================================"
 
           if [ ! -f playlist.m3u ]; then
@@ -116,22 +158,40 @@ jobs:
             exit 1
           fi
 
+          if ! grep -q '^#EXTM3U' playlist.m3u; then
+            echo "ERROR: playlist.m3u is not a valid M3U playlist"
+            exit 1
+          fi
+
+          CHANNEL_COUNT=$(grep -c '^#EXTINF:' playlist.m3u || true)
+
+          echo "Channels: $CHANNEL_COUNT"
+
+          if [ "$CHANNEL_COUNT" -lt 1 ]; then
+            echo "ERROR: playlist contains 0 channels"
+            exit 1
+          fi
+
+          echo ""
+          echo "Playlist size:"
           ls -lh playlist.m3u
 
           echo ""
-          echo "First 20 lines:"
-          head -n 20 playlist.m3u
+          echo "First 10 entries:"
+          grep '^#EXTINF:' playlist.m3u | head -n 10
 
 
       # ==================================================
-      # GIT COMMIT
+      # COMMIT + PUSH
       # ==================================================
 
-      - name: Commit changes
+      - name: Commit and push changes
         id: commit
         run: |
+          set -euo pipefail
+
           echo "======================================"
-          echo "COMMIT CHANGES"
+          echo "COMMIT AND PUSH"
           echo "======================================"
 
           git config user.name \
@@ -144,19 +204,28 @@ jobs:
           git add playlist.m3u
 
           if git diff --cached --quiet; then
-            echo "No changes."
+
+            echo "No changes detected."
             echo "changed=false" >> "$GITHUB_OUTPUT"
+
           else
-            git commit -m "Update IPTV playlist"
+
+            echo "Changes detected."
+
+            git commit \
+              -m "Update IPTV playlist"
+
             git push
 
             echo "changed=true" >> "$GITHUB_OUTPUT"
+
             echo "Changes pushed successfully."
+
           fi
 
 
       # ==================================================
-      # TRIGGER PUBLISH WORKFLOW
+      # TRIGGER PUBLISH
       # ==================================================
 
       - name: Trigger Publish IPTV
@@ -164,17 +233,36 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         run: |
+          set -euo pipefail
+
           echo "======================================"
           echo "TRIGGER PUBLISH IPTV"
           echo "======================================"
 
-          curl -fsSL \
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "ERROR: PUBLISH_TOKEN is not configured"
+            exit 1
+          fi
+
+          API="https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/publish.yml/dispatches"
+
+          RESPONSE=$(curl -sS \
+            -w "\n%{http_code}" \
             -X POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/publish.yml/dispatches" \
-            -d "{\"ref\":\"${GITHUB_REF_NAME}\"}"
+            "$API" \
+            -d "{\"ref\":\"${GITHUB_REF_NAME}\"}")
 
-          echo ""
-          echo "Publish workflow triggered successfully."
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n 1)
+
+          if [ "$HTTP_CODE" != "204" ]; then
+            echo "ERROR: Failed to trigger Publish IPTV"
+            echo "HTTP status: $HTTP_CODE"
+            echo "$RESPONSE"
+            exit 1
+          fi
+
+          echo "Publish IPTV triggered successfully."
+          echo "HTTP status: $HTTP_CODE"
