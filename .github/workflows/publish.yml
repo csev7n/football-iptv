@@ -3,11 +3,18 @@ name: Publish IPTV Playlist
 on:
   workflow_dispatch:
 
+# Không cho nhiều Publish chạy cùng lúc.
+concurrency:
+  group: publish-iptv
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
 jobs:
+
   publish:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -26,14 +33,30 @@ jobs:
       # CHECK PLAYLIST
       # ==================================================
 
-      - name: Check playlist
+      - name: Validate playlist
         run: |
+          set -euo pipefail
+
           echo "======================================"
-          echo "CHECK PLAYLIST"
+          echo "VALIDATE PLAYLIST"
           echo "======================================"
 
           if [ ! -f playlist.m3u ]; then
             echo "ERROR: playlist.m3u not found"
+            exit 1
+          fi
+
+          if ! grep -q '^#EXTM3U' playlist.m3u; then
+            echo "ERROR: Invalid M3U playlist"
+            exit 1
+          fi
+
+          CHANNEL_COUNT=$(grep -c '^#EXTINF:' playlist.m3u || true)
+
+          echo "Channels: $CHANNEL_COUNT"
+
+          if [ "$CHANNEL_COUNT" -lt 1 ]; then
+            echo "ERROR: Playlist contains 0 channels"
             exit 1
           fi
 
@@ -50,14 +73,22 @@ jobs:
         run: |
           set -euo pipefail
 
+          echo "======================================"
+          echo "PUBLISH IPTV PLAYLIST"
+          echo "======================================"
+
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "ERROR: PUBLISH_TOKEN is not configured"
+            exit 1
+          fi
+
           API="https://api.github.com/repos/csev7n/xoilacz-iptv/contents/playlist.m3u"
 
-          echo "======================================"
-          echo "GET CURRENT PUBLIC PLAYLIST"
-          echo "======================================"
+          echo ""
+          echo "Getting current public playlist..."
 
           RESPONSE=$(curl -fsSL \
-            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             "$API")
@@ -71,9 +102,8 @@ jobs:
             base64 -d 2>/dev/null || true
           )
 
-          echo "======================================"
-          echo "COMPARE PLAYLIST"
-          echo "======================================"
+          echo ""
+          echo "Comparing playlists..."
 
           if [ -n "$PUBLIC_CONTENT" ] && \
              cmp -s playlist.m3u <(printf '%s' "$PUBLIC_CONTENT"); then
@@ -89,46 +119,87 @@ jobs:
 
 
           # ==================================================
-          # ENCODE PLAYLIST
+          # ENCODE
           # ==================================================
 
           CONTENT=$(base64 -w 0 playlist.m3u)
 
 
           # ==================================================
-          # UPDATE PUBLIC REPOSITORY
+          # UPDATE EXISTING FILE
           # ==================================================
 
           if [ -n "$SHA" ]; then
 
             echo "Updating existing playlist..."
 
-            curl -fsSL \
+            RESPONSE=$(curl -sS \
+              -w "\n%{http_code}" \
               -X PUT \
               -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
               -H "X-GitHub-Api-Version: 2022-11-28" \
               "$API" \
-              -d "{\"message\":\"Update playlist\",\"content\":\"$CONTENT\",\"sha\":\"$SHA\"}"
+              -d "$(jq -n \
+                --arg message "Update playlist" \
+                --arg content "$CONTENT" \
+                --arg sha "$SHA" \
+                '{
+                  message: $message,
+                  content: $content,
+                  sha: $sha
+                }'
+              )")
 
           else
 
             echo "Creating playlist..."
 
-            curl -fsSL \
+            RESPONSE=$(curl -sS \
+              -w "\n%{http_code}" \
               -X PUT \
               -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
               -H "X-GitHub-Api-Version: 2022-11-28" \
               "$API" \
-              -d "{\"message\":\"Publish playlist\",\"content\":\"$CONTENT\"}"
+              -d "$(jq -n \
+                --arg message "Publish playlist" \
+                --arg content "$CONTENT" \
+                '{
+                  message: $message,
+                  content: $content
+                }'
+              )")
 
           fi
 
+
+          # ==================================================
+          # CHECK API RESPONSE
+          # ==================================================
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n 1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+
+          echo ""
+          echo "GitHub API status: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" != "200" ] && \
+             [ "$HTTP_CODE" != "201" ]; then
+
+            echo "ERROR: Failed to publish playlist."
+            echo "$BODY"
+
+            exit 1
+          fi
 
           echo ""
           echo "======================================"
           echo "PUBLISH SUCCESS"
           echo "======================================"
 
+          echo "Public repository:"
+          echo "https://github.com/csev7n/xoilacz-iptv"
+
+          echo ""
           echo "Playlist published successfully."
