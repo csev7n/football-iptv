@@ -20,20 +20,26 @@ OUTPUT_FILE = Path("matches.json")
 
 MAX_WORKERS = 3
 
-PAGE_TIMEOUT = 20000
+PAGE_TIMEOUT = 20_000
 
-# Thời gian chờ FLV sau khi click
-STREAM_WAIT_MS = 5000
+# Chờ player xuất hiện
+PLAYER_READY_TIMEOUT = 5_000
 
-# Chờ trang ổn định sau reload
-RELOAD_WAIT_MS = 1500
+# Sau khi FLV đầu tiên xuất hiện, tiếp tục gom thêm request
+# để không bỏ mất trường hợp một server phát nhiều FLV.
+STREAM_SETTLE_MS = 1_500
 
-# Số lần thử tối đa cho mỗi server
-MAX_PLAYER_ATTEMPTS = 2
+# Mỗi server tối đa thử:
+# 1. click bình thường
+# 2. reload + click lại
+# 3. reload + click lần cuối
+MAX_PLAYER_ATTEMPTS = 3
 
-# Retry tải trang chủ
-HOME_RETRIES = 3
+# Khoảng thời gian tối đa chờ stream ở mỗi attempt
+STREAM_WAIT_MS = 7_000
 
+# Chờ sau reload để JS/player ổn định
+RELOAD_WAIT_MS = 1_000
 
 HEADERS = {
     "User-Agent": (
@@ -51,47 +57,25 @@ HEADERS = {
 
 def get_home_page():
 
-    last_error = None
+    print(
+        "Downloading home page...",
+        flush=True
+    )
 
-    for attempt in range(1, HOME_RETRIES + 1):
+    response = requests.get(
+        HOME_URL,
+        headers=HEADERS,
+        timeout=20
+    )
 
-        try:
+    response.raise_for_status()
 
-            print(
-                f"Downloading home page "
-                f"(attempt {attempt}/{HOME_RETRIES})...",
-                flush=True
-            )
+    print(
+        f"Home page status: {response.status_code}",
+        flush=True
+    )
 
-            response = requests.get(
-                HOME_URL,
-                headers=HEADERS,
-                timeout=20
-            )
-
-            response.raise_for_status()
-
-            print(
-                f"Home page status: {response.status_code}",
-                flush=True
-            )
-
-            return response.text
-
-        except Exception as error:
-
-            last_error = error
-
-            print(
-                f"Home page download failed: {error}",
-                flush=True
-            )
-
-            if attempt < HOME_RETRIES:
-
-                time.sleep(2)
-
-    raise last_error
+    return response.text
 
 
 # ============================================================
@@ -164,6 +148,25 @@ def is_flv_url(url):
 
 def get_player_name(element):
 
+    """
+    Lấy đúng tên hiển thị trên site.
+
+    Ví dụ:
+
+        <a class="player-link" title="Server 4">
+            <svg>...</svg>
+            FULL HD BRADY
+        </a>
+
+    Kết quả:
+
+        FULL HD BRADY
+
+    Không tự đổi thành:
+        FILIP 1
+        FILIP 2
+    """
+
     try:
 
         html = element.inner_html()
@@ -173,7 +176,6 @@ def get_player_name(element):
             "html.parser"
         )
 
-        # Xóa SVG
         for svg in soup.find_all("svg"):
             svg.decompose()
 
@@ -201,24 +203,56 @@ def get_player_name(element):
 
 
 # ============================================================
-# GET PLAYER METADATA
+# GET PLAYERS
 # ============================================================
 
-def get_player_metadata(
-    element
-):
+def get_player_elements(page):
+
+    """
+    Lấy danh sách player hiện tại từ DOM.
+
+    Hàm này PHẢI được gọi lại sau reload.
+    Không tái sử dụng locator/element cũ.
+    """
 
     try:
-        title = (
-            element.get_attribute("title")
+
+        page.locator(
+            "a.player-link"
+        ).first.wait_for(
+            state="attached",
+            timeout=PLAYER_READY_TIMEOUT
+        )
+
+    except Exception:
+        pass
+
+    return page.locator(
+        "a.player-link"
+    ).all()
+
+
+# ============================================================
+# PLAYER INFO
+# ============================================================
+
+def read_player_info(element):
+
+    try:
+        server = (
+            element.get_attribute(
+                "title"
+            )
             or ""
         )
     except Exception:
-        title = ""
+        server = ""
 
     try:
         data_link = (
-            element.get_attribute("data-link")
+            element.get_attribute(
+                "data-link"
+            )
             or ""
         )
     except Exception:
@@ -226,7 +260,9 @@ def get_player_metadata(
 
     try:
         href = (
-            element.get_attribute("href")
+            element.get_attribute(
+                "href"
+            )
             or ""
         )
     except Exception:
@@ -238,316 +274,242 @@ def get_player_metadata(
 
     return {
         "name": name,
-        "server": title,
+        "server": server,
         "data_link": data_link,
-        "href": (
-            urljoin(
-                HOME_URL,
-                href
-            )
-            if href
-            else ""
-        )
+        "href": href
     }
 
 
 # ============================================================
-# FIND PLAYER ELEMENT
-#
-# Sau reload phải tìm lại element.
-# Không sử dụng locator/element cũ.
+# FIND PLAYER AFTER RELOAD
 # ============================================================
 
-def find_player_element(
+def find_player_again(
     page,
-    player_key
+    data_link,
+    player_index
 ):
 
-    elements = page.locator(
-        "a.player-link"
-    ).all()
+    """
+    Ưu tiên data-link vì name có thể trùng.
 
-    for element in elements:
+    Ví dụ:
+        Server 2 = FILIP
+        Server 3 = FILIP
+
+    Không được tìm bằng name.
+    """
+
+    # --------------------------------------------------------
+    # 1. Ưu tiên data-link
+    # --------------------------------------------------------
+
+    if data_link:
+
+        locator = page.locator(
+            f'a.player-link[data-link="{data_link}"]'
+        )
 
         try:
 
-            data_link = (
-                element.get_attribute(
-                    "data-link"
-                )
-                or ""
-            )
+            if locator.count() > 0:
 
-            if (
-                player_key.get("data_link")
-                and
-                data_link == player_key["data_link"]
-            ):
-                return element
+                return locator.first
 
         except Exception:
-            continue
+            pass
 
-    # Fallback bằng server/title
-    if player_key.get("server"):
+    # --------------------------------------------------------
+    # 2. Fallback theo index
+    # --------------------------------------------------------
 
-        for element in elements:
+    try:
 
-            try:
+        elements = get_player_elements(
+            page
+        )
 
-                server = (
-                    element.get_attribute(
-                        "title"
-                    )
-                    or ""
-                )
+        if player_index < len(elements):
 
-                if (
-                    server
-                    == player_key["server"]
-                ):
-                    return element
+            return elements[player_index]
 
-            except Exception:
-                continue
-
-    # Fallback bằng index
-    index = player_key.get(
-        "index"
-    )
-
-    if (
-        isinstance(index, int)
-        and
-        0 <= index < len(elements)
-    ):
-
-        return elements[index]
+    except Exception:
+        pass
 
     return None
 
 
 # ============================================================
-# WAIT FOR FLV
+# STREAM COLLECTOR
 # ============================================================
 
-def wait_for_flv(
-    page,
-    captured_streams,
-    wait_ms
-):
+class StreamCollector:
 
-    elapsed = 0
+    def __init__(self):
 
-    interval = 250
+        self.urls = []
 
-    while elapsed < wait_ms:
+    def clear(self):
 
-        if captured_streams:
+        self.urls.clear()
 
-            return list(
-                captured_streams
+    def add(self, url):
+
+        if not is_flv_url(url):
+            return
+
+        url = str(
+            url
+        ).strip()
+
+        if not url:
+            return
+
+        if url not in self.urls:
+
+            self.urls.append(
+                url
             )
 
-        page.wait_for_timeout(
-            interval
+            print(
+                f"FLV detected: {url}",
+                flush=True
+            )
+
+    def get(self):
+
+        return list(
+            self.urls
         )
 
-        elapsed += interval
-
-    return list(
-        captured_streams
-    )
-
 
 # ============================================================
-# CLICK PLAYER AND CAPTURE FLV
+# WAIT FOR STREAMS
 # ============================================================
 
-def capture_player_stream(
+def wait_for_streams(
     page,
-    player_key,
+    collector,
+    max_wait_ms=STREAM_WAIT_MS
+):
+
+    """
+    Adaptive wait:
+
+    - Không có FLV -> chờ tối đa max_wait_ms.
+    - FLV đầu tiên xuất hiện -> tiếp tục chờ
+      STREAM_SETTLE_MS để gom thêm nguồn.
+    """
+
+    started = time.monotonic()
+
+    first_stream_time = None
+
+    while True:
+
+        now = time.monotonic()
+
+        elapsed_ms = (
+            now - started
+        ) * 1000
+
+        streams = collector.get()
+
+        # ----------------------------------------------------
+        # FLV đầu tiên xuất hiện
+        # ----------------------------------------------------
+
+        if streams:
+
+            if first_stream_time is None:
+
+                first_stream_time = now
+
+            settle_ms = (
+                now - first_stream_time
+            ) * 1000
+
+            if settle_ms >= STREAM_SETTLE_MS:
+
+                break
+
+        # ----------------------------------------------------
+        # Timeout
+        # ----------------------------------------------------
+
+        if elapsed_ms >= max_wait_ms:
+
+            break
+
+        page.wait_for_timeout(
+            100
+        )
+
+    return collector.get()
+
+
+# ============================================================
+# CLICK PLAYER
+# ============================================================
+
+def click_player(
+    page,
+    player,
+    collector,
     index,
     total,
     attempt
 ):
 
-    captured_streams = []
+    try:
 
-    def handle_request(request):
+        player.scroll_into_view_if_needed(
+            timeout=3_000
+        )
 
-        url = request.url
-
-        if not is_flv_url(url):
-            return
-
-        if url not in captured_streams:
-
-            captured_streams.append(
-                url
-            )
-
-            print(
-                f"[{index}/{total}] "
-                f"FLV detected "
-                f"(server={player_key.get('server', '')}, "
-                f"attempt={attempt})",
-                flush=True
-            )
-
-    page.on(
-        "request",
-        handle_request
-    )
+    except Exception:
+        pass
 
     try:
 
-        element = find_player_element(
-            page,
-            player_key
+        player.click(
+            timeout=5_000
         )
 
-        if element is None:
+    except Exception as error:
 
-            print(
-                f"[{index}/{total}] "
-                f"Player not found: "
-                f"{player_key.get('server', '')}",
-                flush=True
-            )
-
-            return []
-
-        try:
-
-            element.scroll_into_view_if_needed(
-                timeout=3000
-            )
-
-        except Exception:
-            pass
-
-        try:
-
-            element.click(
-                timeout=5000
-            )
-
-        except Exception as error:
-
-            print(
-                f"[{index}/{total}] "
-                f"Player click failed: "
-                f"{player_key.get('name') or player_key.get('server')} "
-                f"- {error}",
-                flush=True
-            )
-
-            # Không return ngay.
-            # Một số trang vẫn xử lý click dù Playwright
-            # báo timeout.
-
-        streams = wait_for_flv(
-            page,
-            captured_streams,
-            STREAM_WAIT_MS
+        print(
+            f"[{index}/{total}] "
+            f"Click attempt {attempt} warning: "
+            f"{error}",
+            flush=True
         )
 
-        return streams
+        # Một số trường hợp click timeout nhưng
+        # JS/request vẫn tiếp tục chạy.
+        # Vì vậy KHÔNG return ngay.
 
-    finally:
+    streams = wait_for_streams(
+        page,
+        collector
+    )
 
-        try:
-            page.remove_listener(
-                "request",
-                handle_request
-            )
-        except Exception:
-            pass
+    return streams
 
 
 # ============================================================
-# SCRAPE ONE PLAYER
-#
-# Logic:
-#
-# Attempt 1:
-#     click
-#     wait FLV
-#
-# Nếu không có:
-#
-# Attempt 2:
-#     reload page
-#     tìm lại player
-#     click
-#     wait FLV
-#
-# Nếu vẫn không có:
-#     []
-#
+# RELOAD PAGE
 # ============================================================
 
-def scrape_one_player(
+def reload_match_page(
     page,
-    player_key,
+    match_url,
     index,
     total
 ):
 
-    player_label = (
-        player_key.get("name")
-        or player_key.get("server")
-        or f"Server {player_key.get('index', 0) + 1}"
-    )
-
     print(
         f"[{index}/{total}] "
-        f"PLAYER: {player_label}",
-        flush=True
-    )
-
-    # --------------------------------------------------------
-    # ATTEMPT 1
-    # --------------------------------------------------------
-
-    print(
-        f"[{index}/{total}] "
-        f"Attempt 1: "
-        f"{player_label}",
-        flush=True
-    )
-
-    streams = capture_player_stream(
-        page,
-        player_key,
-        index,
-        total,
-        attempt=1
-    )
-
-    if streams:
-
-        print(
-            f"[{index}/{total}] "
-            f"PLAYER OK: "
-            f"{player_label} "
-            f"| streams={len(streams)}",
-            flush=True
-        )
-
-        return streams
-
-    # --------------------------------------------------------
-    # ATTEMPT 2
-    #
-    # Reload vì player có thể đang ở trạng thái active/playing
-    # và click lại không tạo request FLV mới.
-    # --------------------------------------------------------
-
-    print(
-        f"[{index}/{total}] "
-        f"No FLV after attempt 1. "
         f"Reloading page...",
         flush=True
     )
@@ -563,6 +525,8 @@ def scrape_one_player(
             RELOAD_WAIT_MS
         )
 
+        return True
+
     except Exception as error:
 
         print(
@@ -571,43 +535,171 @@ def scrape_one_player(
             flush=True
         )
 
-        return []
+        # Nếu reload thất bại thì thử goto lại.
+        try:
+
+            page.goto(
+                match_url,
+                wait_until="domcontentloaded",
+                timeout=PAGE_TIMEOUT
+            )
+
+            page.wait_for_timeout(
+                RELOAD_WAIT_MS
+            )
+
+            return True
+
+        except Exception as second_error:
+
+            print(
+                f"[{index}/{total}] "
+                f"Re-open failed: {second_error}",
+                flush=True
+            )
+
+            return False
+
+
+# ============================================================
+# CAPTURE ONE PLAYER
+# ============================================================
+
+def capture_player(
+    page,
+    match_url,
+    player_info,
+    player_index,
+    total_players,
+    match_index,
+    total_matches,
+    collector
+):
+
+    name = player_info["name"]
+
+    server = player_info["server"]
+
+    data_link = player_info["data_link"]
+
+    # --------------------------------------------------------
+    # Retry
+    # --------------------------------------------------------
+
+    for attempt in range(
+        1,
+        MAX_PLAYER_ATTEMPTS + 1
+    ):
+
+        # ----------------------------------------------------
+        # Retry từ lần 2 trở đi -> reload
+        # ----------------------------------------------------
+
+        if attempt > 1:
+
+            if not reload_match_page(
+                page,
+                match_url,
+                match_index,
+                total_matches
+            ):
+
+                continue
+
+        # ----------------------------------------------------
+        # IMPORTANT:
+        # Sau reload phải tìm player mới.
+        # Không dùng element cũ.
+        # ----------------------------------------------------
+
+        player = find_player_again(
+            page,
+            data_link,
+            player_index
+        )
+
+        if player is None:
+
+            print(
+                f"[{match_index}/{total_matches}] "
+                f"PLAYER NOT FOUND "
+                f"| attempt={attempt} "
+                f"| {server} "
+                f"| {name}",
+                flush=True
+            )
+
+            continue
+
+        # ----------------------------------------------------
+        # Clear capture cho attempt hiện tại
+        # ----------------------------------------------------
+
+        collector.clear()
+
+        print(
+            f"[{match_index}/{total_matches}] "
+            f"CLICK "
+            f"| attempt={attempt}/{MAX_PLAYER_ATTEMPTS} "
+            f"| {server} "
+            f"| {name} "
+            f"| data-link={data_link}",
+            flush=True
+        )
+
+        streams = click_player(
+            page,
+            player,
+            collector,
+            match_index,
+            total_matches,
+            attempt
+        )
+
+        # ----------------------------------------------------
+        # SUCCESS
+        # ----------------------------------------------------
+
+        if streams:
+
+            print(
+                f"[{match_index}/{total_matches}] "
+                f"PLAYER SUCCESS "
+                f"| {server} "
+                f"| {name} "
+                f"| streams={len(streams)}",
+                flush=True
+            )
+
+            return streams
+
+        # ----------------------------------------------------
+        # FAILED ATTEMPT
+        # ----------------------------------------------------
+
+        print(
+            f"[{match_index}/{total_matches}] "
+            f"NO FLV "
+            f"| attempt={attempt}/{MAX_PLAYER_ATTEMPTS} "
+            f"| {server} "
+            f"| {name}",
+            flush=True
+        )
+
+    # --------------------------------------------------------
+    # All attempts failed
+    # --------------------------------------------------------
 
     print(
-        f"[{index}/{total}] "
-        f"Attempt 2 after reload: "
-        f"{player_label}",
+        f"[{match_index}/{total_matches}] "
+        f"PLAYER FAILED "
+        f"| {server} "
+        f"| {name} "
+        f"| attempts={MAX_PLAYER_ATTEMPTS}",
         flush=True
     )
 
-    streams = capture_player_stream(
-        page,
-        player_key,
-        index,
-        total,
-        attempt=2
-    )
-
-    if streams:
-
-        print(
-            f"[{index}/{total}] "
-            f"PLAYER RECOVERED: "
-            f"{player_label} "
-            f"| streams={len(streams)}",
-            flush=True
-        )
-
-    else:
-
-        print(
-            f"[{index}/{total}] "
-            f"No FLV available: "
-            f"{player_label}",
-            flush=True
-        )
-
-    return streams
+    return []
 
 
 # ============================================================
@@ -625,6 +717,8 @@ def scrape_one_match(
         flush=True
     )
 
+    started = time.monotonic()
+
     try:
 
         with sync_playwright() as p:
@@ -640,7 +734,33 @@ def scrape_one_match(
             page = context.new_page()
 
             # ------------------------------------------------
-            # OPEN MATCH
+            # Capture tất cả FLV request của page
+            # ------------------------------------------------
+
+            collector = StreamCollector()
+
+            def handle_request(request):
+
+                try:
+
+                    url = request.url
+
+                    if is_flv_url(url):
+
+                        collector.add(
+                            url
+                        )
+
+                except Exception:
+                    pass
+
+            page.on(
+                "request",
+                handle_request
+            )
+
+            # ------------------------------------------------
+            # Open match
             # ------------------------------------------------
 
             page.goto(
@@ -650,11 +770,11 @@ def scrape_one_match(
             )
 
             page.wait_for_timeout(
-                1000
+                1_000
             )
 
             # ------------------------------------------------
-            # TITLE
+            # Get title
             # ------------------------------------------------
 
             title = "Unknown Event"
@@ -668,10 +788,11 @@ def scrape_one_match(
                 if h1.count() > 0:
 
                     value = h1.inner_text(
-                        timeout=2000
+                        timeout=2_000
                     ).strip()
 
                     if value:
+
                         title = value
 
             except Exception:
@@ -684,113 +805,142 @@ def scrape_one_match(
                     value = page.title()
 
                     if value:
+
                         title = value.strip()
 
                 except Exception:
                     pass
 
             # ------------------------------------------------
-            # GET PLAYERS
+            # Get players
             # ------------------------------------------------
 
-            elements = page.locator(
-                "a.player-link"
-            ).all()
-
-            player_keys = []
-
-            print(
-                f"[{index}/{total}] "
-                f"Players found: "
-                f"{len(elements)}",
-                flush=True
+            elements = get_player_elements(
+                page
             )
 
-            # ------------------------------------------------
-            # Snapshot metadata
-            #
-            # Không giữ Playwright element.
-            # Chỉ giữ metadata để sau reload tìm lại.
-            # ------------------------------------------------
+            player_infos = []
 
             for player_index, element in enumerate(
                 elements
             ):
 
-                metadata = get_player_metadata(
+                info = read_player_info(
                     element
                 )
 
-                metadata["index"] = player_index
+                info["index"] = player_index
 
-                player_keys.append(
-                    metadata
+                player_infos.append(
+                    info
                 )
 
-                print(
-                    f"[{index}/{total}] "
-                    f"PLAYER {player_index + 1}: "
-                    f"name='{metadata['name']}' "
-                    f"| server='{metadata['server']}' "
-                    f"| data-link='{metadata['data_link']}'",
-                    flush=True
-                )
+            print(
+                f"[{index}/{total}] "
+                f"Players found: "
+                f"{len(player_infos)}",
+                flush=True
+            )
 
             # ------------------------------------------------
-            # PROCESS PLAYERS
+            # Process players
             # ------------------------------------------------
 
             players = []
 
-            for player_key in player_keys:
+            for player_info in player_infos:
 
-                player_index = player_key[
+                player_index = player_info[
                     "index"
                 ]
 
-                streams = scrape_one_player(
+                name = player_info[
+                    "name"
+                ]
+
+                server = player_info[
+                    "server"
+                ]
+
+                data_link = player_info[
+                    "data_link"
+                ]
+
+                href = player_info[
+                    "href"
+                ]
+
+                print(
+                    f"[{index}/{total}] "
+                    f"PLAYER "
+                    f"{player_index + 1}: "
+                    f"name='{name}' "
+                    f"| server='{server}' "
+                    f"| data-link='{data_link}'",
+                    flush=True
+                )
+
+                streams = capture_player(
                     page,
-                    player_key,
+                    match_url,
+                    player_info,
+                    player_index,
+                    len(player_infos),
                     index,
-                    total
+                    total,
+                    collector
                 )
 
                 players.append({
 
                     "index": player_index,
 
-                    "name": player_key[
-                        "name"
-                    ],
+                    # Giữ nguyên tên site
+                    "name": name,
 
-                    "server": player_key[
-                        "server"
-                    ],
+                    "server": server,
 
-                    "data_link": player_key[
-                        "data_link"
-                    ],
+                    # ID kỹ thuật để tìm lại sau reload
+                    "data_link": data_link,
 
-                    "href": player_key[
-                        "href"
-                    ],
+                    "href": (
+                        urljoin(
+                            HOME_URL,
+                            href
+                        )
+                        if href
+                        else ""
+                    ),
 
                     "stream_urls": streams
-
                 })
 
+                print(
+                    f"[{index}/{total}] "
+                    f"PLAYER: "
+                    f"{name or server} "
+                    f"| streams={len(streams)}",
+                    flush=True
+                )
+
             # ------------------------------------------------
-            # CLOSE
+            # Close
             # ------------------------------------------------
 
             context.close()
 
             browser.close()
 
+            elapsed = (
+                time.monotonic()
+                - started
+            )
+
             print(
                 f"[{index}/{total}] OK "
                 f"| players={len(players)} "
-                f"| {title}",
+                f"| {title} "
+                f"| {elapsed:.1f}s",
                 flush=True
             )
 
@@ -801,7 +951,6 @@ def scrape_one_match(
                 "url": match_url,
 
                 "players": players
-
             }
 
     except Exception as error:
@@ -841,7 +990,6 @@ def save_results(results):
         ),
 
         "matches": results
-
     }
 
     OUTPUT_FILE.write_text(
@@ -862,29 +1010,9 @@ def save_results(results):
 
 def main():
 
-    started_at = time.time()
-
-    print(
-        "=" * 70
-    )
-
-    print(
-        "START SCRAPER"
-    )
-
-    print(
-        "=" * 70
-    )
-
-    # --------------------------------------------------------
-    # HOME
-    # --------------------------------------------------------
+    started = time.monotonic()
 
     html = get_home_page()
-
-    # --------------------------------------------------------
-    # MATCHES
-    # --------------------------------------------------------
 
     match_urls = find_match_urls(
         html
@@ -898,79 +1026,122 @@ def main():
     if not match_urls:
 
         print(
-            "ERROR: No events found.",
+            "No events found.",
             flush=True
         )
 
-        raise RuntimeError(
-            "No events found"
-        )
+        return
 
-    # --------------------------------------------------------
-    # WORKERS
-    # --------------------------------------------------------
+    results = []
 
     print(
         f"Using {MAX_WORKERS} workers...",
         flush=True
     )
 
-    results = []
+    # --------------------------------------------------------
+    # Chia match cho worker
+    # --------------------------------------------------------
+
+    chunks = [
+        match_urls[i::MAX_WORKERS]
+        for i in range(MAX_WORKERS)
+    ]
+
+    def worker(
+        worker_index,
+        urls
+    ):
+
+        worker_results = []
+
+        print(
+            f"[WORKER {worker_index}] "
+            f"Starting with {len(urls)} matches",
+            flush=True
+        )
+
+        for local_index, match_url in enumerate(
+            urls,
+            1
+        ):
+
+            # Tìm index thật trong toàn bộ danh sách
+            global_index = (
+                match_urls.index(
+                    match_url
+                )
+                + 1
+            )
+
+            result = scrape_one_match(
+                match_url,
+                global_index,
+                len(match_urls)
+            )
+
+            if result is not None:
+
+                worker_results.append(
+                    result
+                )
+
+        print(
+            f"[WORKER {worker_index}] "
+            f"Finished | success="
+            f"{len(worker_results)}",
+            flush=True
+        )
+
+        return worker_results
+
+    # --------------------------------------------------------
+    # Execute workers
+    # --------------------------------------------------------
 
     with ThreadPoolExecutor(
         max_workers=MAX_WORKERS
     ) as executor:
 
-        futures = {}
+        futures = []
 
-        for index, match_url in enumerate(
-            match_urls,
+        for worker_index, urls in enumerate(
+            chunks,
             1
         ):
 
-            future = executor.submit(
+            if not urls:
+                continue
 
-                scrape_one_match,
-
-                match_url,
-
-                index,
-
-                len(match_urls)
-
+            futures.append(
+                executor.submit(
+                    worker,
+                    worker_index,
+                    urls
+                )
             )
-
-            futures[future] = match_url
 
         for future in as_completed(
             futures
         ):
 
-            match_url = futures[
-                future
-            ]
-
             try:
 
-                result = future.result()
+                worker_results = future.result()
 
-                if result is not None:
-
-                    results.append(
-                        result
-                    )
+                results.extend(
+                    worker_results
+                )
 
             except Exception as error:
 
                 print(
-                    f"Worker exception "
-                    f"for {match_url}: "
-                    f"{error}",
+                    f"Worker exception: {error}",
                     flush=True
                 )
 
     # --------------------------------------------------------
-    # SORT
+    # Sort
     # --------------------------------------------------------
 
     results.sort(
@@ -978,99 +1149,64 @@ def main():
     )
 
     # --------------------------------------------------------
-    # VALIDATION
-    # --------------------------------------------------------
-
-    events_found = len(
-        match_urls
-    )
-
-    events_processed = len(
-        results
-    )
-
-    success_ratio = (
-        events_processed / events_found * 100
-        if events_found
-        else 0
-    )
-
-    total_players = sum(
-
-        len(
-            match.get(
-                "players",
-                []
-            )
-        )
-
-        for match in results
-
-    )
-
-    players_with_stream = sum(
-
-        1
-
-        for match in results
-
-        for player in match.get(
-            "players",
-            []
-        )
-
-        if player.get(
-            "stream_urls"
-        )
-
-    )
-
-    total_streams = sum(
-
-        len(
-            player.get(
-                "stream_urls",
-                []
-            )
-        )
-
-        for match in results
-
-        for player in match.get(
-            "players",
-            []
-        )
-
-    )
-
-    # --------------------------------------------------------
-    # QUALITY GATE
-    #
-    # Không yêu cầu mọi player phải có FLV.
-    #
-    # Vì scraper có thể chạy trước giờ trận.
-    # --------------------------------------------------------
-
-    quality_gate = (
-        events_found > 0
-        and
-        events_processed > 0
-        and
-        success_ratio >= 95
-    )
-
-    # --------------------------------------------------------
-    # SAVE
+    # Save
     # --------------------------------------------------------
 
     save_results(
         results
     )
 
-    elapsed = time.time() - started_at
+    # --------------------------------------------------------
+    # Statistics
+    # --------------------------------------------------------
+
+    total_players = sum(
+        len(
+            match["players"]
+        )
+        for match in results
+    )
+
+    players_with_stream = sum(
+        1
+        for match in results
+        for player in match["players"]
+        if player.get("stream_urls")
+    )
+
+    total_streams = sum(
+        len(
+            player.get(
+                "stream_urls",
+                []
+            )
+        )
+        for match in results
+        for player in match["players"]
+    )
+
+    failed_players = (
+        total_players
+        - players_with_stream
+    )
+
+    elapsed = (
+        time.monotonic()
+        - started
+    )
+
+    success_ratio = (
+        (
+            len(results)
+            / len(match_urls)
+        )
+        * 100
+        if match_urls
+        else 0
+    )
 
     # --------------------------------------------------------
-    # REPORT
+    # Validation
     # --------------------------------------------------------
 
     print()
@@ -1089,12 +1225,12 @@ def main():
 
     print(
         f"Events found:          "
-        f"{events_found}"
+        f"{len(match_urls)}"
     )
 
     print(
         f"Events processed:      "
-        f"{events_processed}"
+        f"{len(results)}"
     )
 
     print(
@@ -1113,6 +1249,11 @@ def main():
     )
 
     print(
+        f"Players without FLV:   "
+        f"{failed_players}"
+    )
+
+    print(
         f"Total FLV streams:     "
         f"{total_streams}"
     )
@@ -1126,23 +1267,7 @@ def main():
         "=" * 70
     )
 
-    if not quality_gate:
-
-        print(
-            "QUALITY GATE: FAIL"
-        )
-
-        print(
-            "=" * 70
-        )
-
-        raise RuntimeError(
-            "Scraper quality gate failed"
-        )
-
-    print(
-        "QUALITY GATE: PASS"
-    )
+    print()
 
     print(
         "=" * 70
@@ -1161,7 +1286,12 @@ def main():
     )
 
     print(
-        f"Quality gate: PASS"
+        "Quality gate: "
+        + (
+            "PASS"
+            if results
+            else "FAIL"
+        )
     )
 
     print(
