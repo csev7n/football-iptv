@@ -10,11 +10,11 @@ from urllib.parse import unquote
 
 INPUT_FILE = Path("matches.json")
 OUTPUT_FILE = Path("playlist.m3u")
-
 TEMP_FILE = Path("playlist.m3u.tmp")
 
 GROUP_TITLE = "Football"
 
+# Không cho phép tạo playlist nếu không có channel
 MIN_CHANNELS = 1
 
 
@@ -29,127 +29,257 @@ def normalize_text(value):
 
     value = str(value)
 
+    # URL decode nếu có
+    value = unquote(value)
+
+    # Chuẩn hóa khoảng trắng
     value = re.sub(
         r"\s+",
         " ",
-        value,
-    ).strip()
+        value
+    )
 
-    return value
+    return value.strip()
 
 
 # ============================================================
-# PARSE DATE/TIME FROM URL
+# CLEAN TEAM TITLE
+#
+# Ví dụ:
+#
+# PHÁT TRỰC TIẾP CROATIA VS ANH VÀO LÚC ,
+#
+# =>
+#
+# CROATIA VS ANH
+#
 # ============================================================
 
-def parse_match_url(url):
+def clean_team_title(title):
 
-    url = unquote(
-        str(url or "")
-    )
+    title = normalize_text(title)
 
-    slug = (
-        url
-        .rstrip("/")
-        .split("/")[-1]
-    )
+    if not title:
+        return ""
 
-    # --------------------------------------------------------
-    # TIME + DATE
-    #
-    # luc-2300-ngay-01-10-2026
-    # --------------------------------------------------------
+    # ========================================================
+    # REMOVE PREFIXES
+    # ========================================================
 
-    match_time = re.search(
-        r"-luc-(\d{4})-ngay-(\d{2})-(\d{2})-(\d{4})",
-        slug,
-        re.IGNORECASE,
-    )
+    prefix_patterns = [
 
-    time_text = ""
-    date_text = ""
+        r"PHÁT\s+TRỰC\s+TIẾP",
 
-    if match_time:
+        r"XEM\s+TRỰC\s+TIẾP",
 
-        hhmm = match_time.group(1)
+        r"ĐANG\s+TRỰC\s+TIẾP",
 
-        hour = hhmm[:2]
-        minute = hhmm[2:]
+        r"TRỰC\s+TIẾP",
 
-        time_text = f"{hour}:{minute}"
+        r"LIVE",
 
-        day = match_time.group(2)
-        month = match_time.group(3)
+        r"STREAM",
 
-        date_text = (
-            f"{day}/{month}"
+    ]
+
+    for pattern in prefix_patterns:
+
+        title = re.sub(
+            rf"^\s*{pattern}\s*[:\-–—|]*\s*",
+            "",
+            title,
+            flags=re.IGNORECASE,
         )
 
-    # --------------------------------------------------------
-    # TEAMS
-    # --------------------------------------------------------
+    # ========================================================
+    # REMOVE LEADING SYMBOLS / EMOJI
+    # ========================================================
 
-    teams_part = re.split(
-        r"-luc-\d{4}-ngay-",
-        slug,
+    title = re.sub(
+        r"^[^A-Za-zÀ-ỹ0-9]+",
+        "",
+        title,
+    )
+
+    # ========================================================
+    # REMOVE EVERYTHING AFTER:
+    #
+    # VÀO LÚC
+    #
+    # Ví dụ:
+    #
+    # CROATIA VS ANH VÀO LÚC 23:00
+    #
+    # =>
+    #
+    # CROATIA VS ANH
+    # ========================================================
+
+    title = re.split(
+        r"\s+VÀO\s+LÚC\b",
+        title,
+        maxsplit=1,
         flags=re.IGNORECASE,
     )[0]
 
-    teams_part = re.sub(
-        r"-vs-",
-        " vs ",
-        teams_part,
+    # ========================================================
+    # REMOVE "VÀO ..."
+    #
+    # Fallback cho một số title khác
+    # ========================================================
+
+    title = re.split(
+        r"\s+VÀO\s+",
+        title,
+        maxsplit=1,
+        flags=re.IGNORECASE,
+    )[0]
+
+    # ========================================================
+    # REMOVE TIME
+    #
+    # 23:00
+    # 23h00
+    # 23h
+    # ========================================================
+
+    title = re.sub(
+        r"\b\d{1,2}\s*[:hH]\s*\d{2}\b",
+        "",
+        title,
+    )
+
+    title = re.sub(
+        r"\b\d{1,2}\s*[hH]\b",
+        "",
+        title,
+    )
+
+    # ========================================================
+    # REMOVE DATE
+    #
+    # 03/10
+    # 03-10
+    # 03/10/2026
+    # ========================================================
+
+    title = re.sub(
+        r"\b\d{1,2}[/-]\d{1,2}(?:[/-]\d{4})?\b",
+        "",
+        title,
+    )
+
+    # ========================================================
+    # REMOVE "NGÀY ..."
+    # ========================================================
+
+    title = re.sub(
+        r"\s+NGÀY\s+"
+        r"\d{1,2}[/-]\d{1,2}"
+        r"(?:[/-]\d{4})?.*$",
+        "",
+        title,
         flags=re.IGNORECASE,
     )
 
-    teams_part = teams_part.replace(
-        "-",
-        " ",
+    # ========================================================
+    # REMOVE COMMON TRAILING WORDS
+    #
+    # Một số title có thể có:
+    #
+    # - HÔM NAY
+    # - TỐI NAY
+    # - HD
+    #
+    # Không xóa HD vì có thể là một phần tên đội.
+    # ========================================================
+
+    title = re.sub(
+        r"\s+(?:HÔM\s+NAY|TỐI\s+NAY)\s*$",
+        "",
+        title,
+        flags=re.IGNORECASE,
     )
 
-    teams_part = normalize_text(
-        teams_part
+    # ========================================================
+    # REMOVE TRAILING PUNCTUATION
+    # ========================================================
+
+    title = re.sub(
+        r"[\s,.:;|–—\-]+$",
+        "",
+        title,
     )
 
-    if teams_part:
+    # ========================================================
+    # NORMALIZE VS
+    #
+    # Các dạng:
+    #
+    # vs
+    # VS
+    # vs.
+    # -vs-
+    #
+    # =>
+    #
+    # VS
+    # ========================================================
 
-        teams_part = teams_part.title()
-
-    return (
-        time_text,
-        date_text,
-        teams_part,
+    title = re.sub(
+        r"\s*[-–—]?\s*VS\.?\s*[-–—]?\s*",
+        " VS ",
+        title,
+        flags=re.IGNORECASE,
     )
+
+    # ========================================================
+    # NORMALIZE SPACES AGAIN
+    # ========================================================
+
+    title = normalize_text(
+        title
+    )
+
+    # ========================================================
+    # UPPERCASE
+    # ========================================================
+
+    title = title.upper()
+
+    return title
 
 
 # ============================================================
-# PARSE DATE/TIME FROM TITLE
+# PARSE TITLE
 #
-# Hỗ trợ một số dạng thường gặp:
+# TITLE LÀ NGUỒN CHÍNH
 #
-# 23:00
-# 23h00
-# 23h
-# ngày 01/10
-# 01/10/2026
+# Trả về:
+#
+# time_text
+# date_text
+# teams
+#
 # ============================================================
 
-def parse_match_title(title):
+def parse_title(title):
 
     title = normalize_text(
         title
     )
 
     if not title:
+
         return (
             "",
             "",
             "",
         )
 
-    # --------------------------------------------------------
+    # ========================================================
     # TIME
-    # --------------------------------------------------------
+    # ========================================================
 
     time_text = ""
 
@@ -164,27 +294,64 @@ def parse_match_title(title):
             time_match.group(1)
         )
 
-        minute = time_match.group(2)
+        minute = int(
+            time_match.group(2)
+        )
 
-        if 0 <= hour <= 23:
+        if (
+            0 <= hour <= 23
+            and 0 <= minute <= 59
+        ):
 
             time_text = (
-                f"{hour:02d}:{minute}"
+                f"{hour:02d}:{minute:02d}"
             )
 
-    # --------------------------------------------------------
+    # ========================================================
+    # TIME WITHOUT MINUTE
+    #
+    # Ví dụ:
+    #
+    # 23h
+    #
+    # ========================================================
+
+    if not time_text:
+
+        time_match = re.search(
+            r"\b(\d{1,2})\s*[hH]\b",
+            title,
+        )
+
+        if time_match:
+
+            hour = int(
+                time_match.group(1)
+            )
+
+            if 0 <= hour <= 23:
+
+                time_text = (
+                    f"{hour:02d}:00"
+                )
+
+    # ========================================================
     # DATE
-    # --------------------------------------------------------
+    #
+    # 03/10
+    # 03-10
+    # 03/10/2026
+    # ========================================================
 
     date_text = ""
 
     date_match = re.search(
-        r"\b(?:ngày\s*)?"
+        r"\b(?:NGÀY\s*)?"
         r"(\d{1,2})[/-]"
         r"(\d{1,2})"
         r"(?:[/-](\d{4}))?\b",
         title,
-        re.IGNORECASE,
+        flags=re.IGNORECASE,
     )
 
     if date_match:
@@ -206,47 +373,12 @@ def parse_match_title(title):
                 f"{day:02d}/{month:02d}"
             )
 
-    # --------------------------------------------------------
+    # ========================================================
     # TEAM NAME
-    #
-    # Cố gắng loại bỏ phần giờ/ngày khỏi title.
-    # Nếu không xác định được thì trả lại title.
-    # --------------------------------------------------------
+    # ========================================================
 
-    teams = title
-
-    # Xóa các cụm thời gian
-    teams = re.sub(
-        r"\b\d{1,2}\s*[:hH]\s*\d{2}\b",
-        "",
-        teams,
-    )
-
-    teams = re.sub(
-        r"\b\d{1,2}\s*[hH]\b",
-        "",
-        teams,
-    )
-
-    # Xóa ngày tháng
-    teams = re.sub(
-        r"\b(?:ngày\s*)?"
-        r"\d{1,2}[/-]\d{1,2}"
-        r"(?:[/-]\d{4})?\b",
-        "",
-        teams,
-        flags=re.IGNORECASE,
-    )
-
-    # Xóa một số dấu phân cách thừa
-    teams = re.sub(
-        r"\s*[-|•]\s*$",
-        "",
-        teams,
-    )
-
-    teams = normalize_text(
-        teams
+    teams = clean_team_title(
+        title
     )
 
     return (
@@ -257,18 +389,124 @@ def parse_match_title(title):
 
 
 # ============================================================
-# MATCH INFORMATION
+# PARSE MATCH URL
 #
-# Ưu tiên title.
-# URL làm fallback.
+# FALLBACK KHI TITLE KHÔNG CÓ THÔNG TIN
+#
+# Ví dụ:
+#
+# croatia-vs-anh-luc-2300-ngay-03-10-2026
+#
+# =>
+#
+# 23:00
+# 03/10
+# CROATIA VS ANH
+#
+# ============================================================
+
+def parse_match_url(url):
+
+    url = unquote(
+        str(url or "")
+    )
+
+    slug = (
+        url
+        .rstrip("/")
+        .split("/")[-1]
+    )
+
+    # ========================================================
+    # TIME + DATE
+    # ========================================================
+
+    time_text = ""
+    date_text = ""
+
+    match_time = re.search(
+        r"-luc-(\d{4})-ngay-(\d{2})-(\d{2})-(\d{4})",
+        slug,
+        flags=re.IGNORECASE,
+    )
+
+    if match_time:
+
+        hhmm = match_time.group(1)
+
+        hour = hhmm[:2]
+        minute = hhmm[2:]
+
+        time_text = (
+            f"{hour}:{minute}"
+        )
+
+        day = match_time.group(2)
+        month = match_time.group(3)
+
+        date_text = (
+            f"{day}/{month}"
+        )
+
+    # ========================================================
+    # TEAM NAME
+    # ========================================================
+
+    teams_part = re.split(
+        r"-luc-\d{4}-ngay-",
+        slug,
+        maxsplit=1,
+        flags=re.IGNORECASE,
+    )[0]
+
+    # --------------------------------------------------------
+    # "-vs-" => " VS "
+    # --------------------------------------------------------
+
+    teams_part = re.sub(
+        r"-vs-",
+        " VS ",
+        teams_part,
+        flags=re.IGNORECASE,
+    )
+
+    # --------------------------------------------------------
+    # Các dấu "-" còn lại => space
+    # --------------------------------------------------------
+
+    teams_part = teams_part.replace(
+        "-",
+        " ",
+    )
+
+    teams_part = normalize_text(
+        teams_part
+    )
+
+    # --------------------------------------------------------
+    # Uppercase
+    # --------------------------------------------------------
+
+    teams_part = teams_part.upper()
+
+    return (
+        time_text,
+        date_text,
+        teams_part,
+    )
+
+
+# ============================================================
+# GET MATCH INFORMATION
+#
+# QUAN TRỌNG:
+#
+# 1. TITLE TRƯỚC
+# 2. URL SAU
+#
 # ============================================================
 
 def get_match_info(match):
-
-    url = match.get(
-        "url",
-        "",
-    )
 
     title = normalize_text(
         match.get(
@@ -277,9 +515,28 @@ def get_match_info(match):
         )
     )
 
-    # --------------------------------------------------------
-    # Parse URL
-    # --------------------------------------------------------
+    url = normalize_text(
+        match.get(
+            "url",
+            "",
+        )
+    )
+
+    # ========================================================
+    # TITLE
+    # ========================================================
+
+    (
+        title_time,
+        title_date,
+        title_teams,
+    ) = parse_title(
+        title
+    )
+
+    # ========================================================
+    # URL FALLBACK
+    # ========================================================
 
     (
         url_time,
@@ -289,21 +546,9 @@ def get_match_info(match):
         url
     )
 
-    # --------------------------------------------------------
-    # Parse TITLE
-    # --------------------------------------------------------
-
-    (
-        title_time,
-        title_date,
-        title_teams,
-    ) = parse_match_title(
-        title
-    )
-
-    # --------------------------------------------------------
-    # Prefer title information
-    # --------------------------------------------------------
+    # ========================================================
+    # ƯU TIÊN TITLE
+    # ========================================================
 
     time_text = (
         title_time
@@ -315,8 +560,6 @@ def get_match_info(match):
         or url_date
     )
 
-    # Nếu parser title trả về title quá rộng
-    # thì URL teams vẫn là fallback an toàn.
     teams = (
         title_teams
         or url_teams
@@ -338,6 +581,10 @@ def get_player_name(
     player_index,
 ):
 
+    # ========================================================
+    # NAME
+    # ========================================================
+
     name = normalize_text(
         player.get(
             "name",
@@ -347,6 +594,10 @@ def get_player_name(
 
     if name:
         return name
+
+    # ========================================================
+    # SERVER
+    # ========================================================
 
     server = normalize_text(
         player.get(
@@ -358,13 +609,22 @@ def get_player_name(
     if server:
         return server
 
+    # ========================================================
+    # FALLBACK
+    # ========================================================
+
     return (
         f"Server {player_index + 1}"
     )
 
 
 # ============================================================
-# BUILD TITLE
+# BUILD CHANNEL TITLE
+#
+# Ví dụ:
+#
+# 23:00 - 03/10 - CROATIA VS ANH - FABIO
+#
 # ============================================================
 
 def build_title(
@@ -389,29 +649,36 @@ def build_title(
     parts = []
 
     if time_text:
+
         parts.append(
             time_text
         )
 
     if date_text:
+
         parts.append(
             date_text
         )
 
     if teams:
+
         parts.append(
             teams
         )
 
     if player_name:
+
         parts.append(
             player_name
         )
 
-    if parts:
-        return " - ".join(parts)
+    if not parts:
 
-    return "Football"
+        return "FOOTBALL"
+
+    return " - ".join(
+        parts
+    )
 
 
 # ============================================================
@@ -470,23 +737,16 @@ def build_playlist(data):
     ]
 
     channel_count = 0
-
     duplicate_count = 0
+    non_flv_count = 0
+
+    # Dùng set để loại stream trùng
+    seen_streams = set()
 
     matches = data.get(
         "matches",
         [],
     )
-
-    # --------------------------------------------------------
-    # Exact URL deduplication.
-    #
-    # IMPORTANT:
-    # Hai URL khác nhau vẫn được giữ.
-    # Chỉ loại khi URL hoàn toàn giống nhau.
-    # --------------------------------------------------------
-
-    seen_streams = set()
 
     for match in matches:
 
@@ -516,11 +776,19 @@ def build_playlist(data):
             ):
                 continue
 
+            # =================================================
+            # CHANNEL TITLE
+            # =================================================
+
             title = build_title(
                 match,
                 player,
                 player_index,
             )
+
+            # =================================================
+            # STREAMS
+            # =================================================
 
             for stream_url in streams:
 
@@ -531,9 +799,19 @@ def build_playlist(data):
                 if not stream_url:
                     continue
 
-                # ------------------------------------------------
-                # Exact duplicate
-                # ------------------------------------------------
+                # =================================================
+                # CHỈ NHẬN FLV
+                # =================================================
+
+                if ".flv" not in stream_url.lower():
+
+                    non_flv_count += 1
+
+                    continue
+
+                # =================================================
+                # LOẠI STREAM TRÙNG
+                # =================================================
 
                 if stream_url in seen_streams:
 
@@ -545,9 +823,9 @@ def build_playlist(data):
                     stream_url
                 )
 
-                # ------------------------------------------------
+                # =================================================
                 # EXTINF
-                # ------------------------------------------------
+                # =================================================
 
                 lines.append(
                     f'#EXTINF:-1 '
@@ -561,17 +839,20 @@ def build_playlist(data):
 
                 channel_count += 1
 
-    # --------------------------------------------------------
+    # ========================================================
     # QUALITY GATE
-    # --------------------------------------------------------
+    # ========================================================
 
     if channel_count < MIN_CHANNELS:
 
         raise RuntimeError(
             "Playlist validation failed: "
-            f"only {channel_count} channels found. "
-            "Refusing to create/publish an empty playlist."
+            f"only {channel_count} channels found."
         )
+
+    # ========================================================
+    # FINAL PLAYLIST
+    # ========================================================
 
     playlist = (
         "\n".join(lines)
@@ -582,25 +863,27 @@ def build_playlist(data):
         playlist,
         channel_count,
         duplicate_count,
+        non_flv_count,
     )
 
 
 # ============================================================
 # ATOMIC WRITE
+#
+# Ghi file tạm trước.
+# Chỉ thay playlist.m3u sau khi ghi hoàn tất.
 # ============================================================
 
 def write_playlist(
     playlist,
 ):
 
-    # Ghi ra file tạm trước.
     TEMP_FILE.write_text(
         playlist,
         encoding="utf-8",
         newline="\n",
     )
 
-    # Chỉ replace khi ghi thành công.
     TEMP_FILE.replace(
         OUTPUT_FILE
     )
@@ -616,6 +899,10 @@ def main():
     print("BUILD IPTV PLAYLIST")
     print("=" * 70)
 
+    # ========================================================
+    # LOAD DATA
+    # ========================================================
+
     data = load_data()
 
     matches = data.get(
@@ -626,40 +913,57 @@ def main():
     if not matches:
 
         raise RuntimeError(
-            "matches.json contains 0 matches. "
-            "Refusing to publish."
+            "matches.json contains 0 matches."
         )
+
+    # ========================================================
+    # BUILD
+    # ========================================================
 
     (
         playlist,
         channel_count,
         duplicate_count,
+        non_flv_count,
     ) = build_playlist(
         data
     )
+
+    # ========================================================
+    # WRITE
+    # ========================================================
 
     write_playlist(
         playlist
     )
 
+    # ========================================================
+    # STATISTICS
+    # ========================================================
+
+    print()
     print(
-        f"Matches:          {len(matches)}"
+        f"Matches:             {len(matches)}"
     )
 
     print(
-        f"Channels:         {channel_count}"
+        f"Channels:            {channel_count}"
     )
 
     print(
-        f"Duplicates skip:  {duplicate_count}"
+        f"Duplicate streams:   {duplicate_count}"
     )
 
     print(
-        f"Output:           {OUTPUT_FILE}"
+        f"Non-FLV skipped:      {non_flv_count}"
     )
 
     print(
-        "Playlist validation: PASS"
+        f"Output:               {OUTPUT_FILE}"
+    )
+
+    print(
+        "Playlist validation:  PASS"
     )
 
     print("=" * 70)
@@ -670,4 +974,5 @@ def main():
 # ============================================================
 
 if __name__ == "__main__":
+
     main()
