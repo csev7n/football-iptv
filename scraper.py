@@ -18,54 +18,51 @@ HOME_URL = "https://xoilacz.vip/"
 
 OUTPUT_FILE = Path("matches.json")
 
-# Số trận chạy song song
+# Không tăng quá cao vì mỗi worker tạo Chromium riêng.
 MAX_WORKERS = 3
 
-# Timeout mỗi trang
 PAGE_TIMEOUT = 20000
 
 # ------------------------------------------------------------
-# SERVER DISCOVERY
+# PLAYER DISCOVERY
+# ------------------------------------------------------------
+
+PLAYER_DISCOVERY_TIMEOUT_MS = 5000
+
+# ------------------------------------------------------------
+# STREAM CAPTURE
+# ------------------------------------------------------------
+
+# Chờ tối đa sau khi click một server.
+# Quan trọng:
+# đây là MAX timeout, không phải thời gian luôn phải chờ.
 #
-# Website có thể render player chậm.
-# Chúng ta không chốt server ngay khi thấy lần đầu.
+# Nếu FLV xuất hiện sau 0.5s -> kết thúc ngay.
+# Nếu FLV xuất hiện sau 2s -> kết thúc ngay.
+# Nếu không có -> tối đa 3000ms.
 # ------------------------------------------------------------
 
-SERVER_DISCOVERY_TIMEOUT_MS = 12000
+CLICK_STREAM_TIMEOUT_MS = 3000
 
-# Nếu số lượng player không đổi trong khoảng này
-# thì có thể kết thúc discovery sớm.
-SERVER_STABLE_MS = 2500
-
-# Poll DOM
-SERVER_DISCOVERY_POLL_MS = 250
-
+# Khoảng polling network/player.
+POLL_MS = 100
 
 # ------------------------------------------------------------
-# PLAYER / STREAM
+# RETRY
 # ------------------------------------------------------------
 
-# Sau khi mở trang, quan sát auto-load FLV
-AUTO_STREAM_WAIT_MS = 8000
+# Click lại tối đa 1 lần.
+# Không retry nhiều lần để tránh làm scraper chậm.
+MAX_CLICK_RETRIES = 1
 
-# Sau click player, chờ FLV
-CLICK_STREAM_WAIT_MS = 10000
-
-# Poll
-PLAYER_STATE_POLL_MS = 100
-
-# Retry click
-MAX_CLICK_RETRIES = 2
-
-# Reload recovery
+# Reload chỉ dùng khi thật sự cần.
 MAX_RELOAD_RETRIES = 1
 
-# Sau reload chờ DOM
-RELOAD_SETTLE_MS = 1500
-
+# Sau reload chỉ chờ ngắn để bắt auto-load.
+RELOAD_AUTO_WAIT_MS = 2000
 
 # ------------------------------------------------------------
-# HTTP
+# NETWORK
 # ------------------------------------------------------------
 
 HEADERS = {
@@ -79,13 +76,10 @@ HEADERS = {
 
 
 # ============================================================
-# BASIC HTTP
+# BASIC
 # ============================================================
 
 def get_home_page():
-    """
-    Download trang chủ để lấy danh sách trận.
-    """
 
     print(
         "Downloading home page...",
@@ -108,19 +102,7 @@ def get_home_page():
     return response.text
 
 
-# ============================================================
-# URL NORMALIZATION
-# ============================================================
-
 def normalize_match_url(url):
-    """
-    Chuẩn hóa:
-
-        /truc-tiep/foo/link/123
-            ↓
-        /truc-tiep/foo/
-
-    """
 
     url = re.sub(
         r"/link/\d+/?$",
@@ -131,14 +113,7 @@ def normalize_match_url(url):
     return url.rstrip("/") + "/"
 
 
-# ============================================================
-# FIND MATCH URLS
-# ============================================================
-
 def find_match_urls(html):
-    """
-    Tìm tất cả URL trận.
-    """
 
     soup = BeautifulSoup(
         html,
@@ -169,14 +144,7 @@ def find_match_urls(html):
     return sorted(matches)
 
 
-# ============================================================
-# FLV
-# ============================================================
-
 def is_flv_url(url):
-    """
-    Kiểm tra URL có phải FLV hay không.
-    """
 
     if not url:
         return False
@@ -185,13 +153,10 @@ def is_flv_url(url):
 
 
 # ============================================================
-# PLAYER NAME
+# PLAYER INFORMATION
 # ============================================================
 
 def get_player_name(element):
-    """
-    Lấy tên BLV từ player element.
-    """
 
     try:
 
@@ -202,7 +167,6 @@ def get_player_name(element):
             "html.parser"
         )
 
-        # SVG icon không phải text tên
         for svg in soup.find_all("svg"):
             svg.decompose()
 
@@ -222,17 +186,10 @@ def get_player_name(element):
         return ""
 
 
-# ============================================================
-# PLAYER INFO
-# ============================================================
-
 def get_player_info(
     element,
     index
 ):
-    """
-    Đọc toàn bộ metadata hiện có của player.
-    """
 
     try:
         name = get_player_name(
@@ -279,10 +236,7 @@ def get_player_info(
         "server": server,
         "data_link": data_link,
         "href": (
-            urljoin(
-                HOME_URL,
-                href
-            )
+            urljoin(HOME_URL, href)
             if href
             else ""
         ),
@@ -290,70 +244,31 @@ def get_player_info(
     }
 
 
-# ============================================================
-# PLAYER FINGERPRINT
-# ============================================================
-
 def make_player_fingerprint(info):
+
     """
-    Fingerprint giúp tìm lại player sau reload.
+    Fingerprint dùng để tìm lại element sau reload.
 
-    QUAN TRỌNG:
+    KHÔNG dùng fingerprint làm identity.
 
-    Fingerprint KHÔNG phải unique ID.
-
-    Có thể xảy ra:
-
-        Minh Anh / Server A
-        Minh Anh / Server A
-        Minh Anh / Server A
-
-    hoàn toàn giống nhau.
-
-    Khi đó occurrence sẽ phân biệt chúng.
+    Hai server có thể hoàn toàn giống nhau,
+    vì vậy instance_id + DOM occurrence vẫn là
+    identity chính.
     """
 
     return (
-        str(
-            info.get(
-                "name",
-                ""
-            )
-        ).strip(),
-
-        str(
-            info.get(
-                "server",
-                ""
-            )
-        ).strip(),
-
-        str(
-            info.get(
-                "data_link",
-                ""
-            )
-        ).strip(),
-
-        str(
-            info.get(
-                "href",
-                ""
-            )
-        ).strip()
+        str(info.get("name", "")).strip(),
+        str(info.get("server", "")).strip(),
+        str(info.get("data_link", "")).strip(),
+        str(info.get("href", "")).strip()
     )
 
 
 # ============================================================
-# PLAYER ELEMENTS
+# PLAYER DOM
 # ============================================================
 
 def get_player_elements(page):
-    """
-    Lấy tất cả player-link hiện tại.
-
-    Mỗi element = một server instance.
-    """
 
     try:
 
@@ -366,14 +281,7 @@ def get_player_elements(page):
         return []
 
 
-# ============================================================
-# CURRENT PLAYERS
-# ============================================================
-
 def get_current_players(page):
-    """
-    Đọc toàn bộ player hiện tại.
-    """
 
     players = []
 
@@ -393,170 +301,19 @@ def get_current_players(page):
             )
 
         except Exception:
-
             continue
 
     return players
 
 
-# ============================================================
-# INSTANCE
-# ============================================================
-
-def create_instance(
-    info,
-    instance_id
-):
-    """
-    Tạo một server instance.
-
-    Một DOM player = một instance.
-
-    Không bao giờ gộp theo name.
-    """
-
-    return {
-        "instance_id": instance_id,
-
-        # Index tại thời điểm discovery đầu tiên.
-        "original_index": info["index"],
-
-        "name": info["name"],
-
-        "server": info["server"],
-
-        "data_link": info["data_link"],
-
-        "href": info["href"],
-
-        # FLV của RIÊNG instance này.
-        "stream_urls": [],
-
-        # Internal
-        "_fingerprint": make_player_fingerprint(
-            info
-        ),
-
-        "_occurrence": 0,
-
-        "_attempts": 0,
-
-        "_mapped": False
-    }
-
-
-# ============================================================
-# BUILD REGISTRY
-# ============================================================
-
-def build_server_registry(players):
-    """
-    Tạo registry canonical.
-
-    Ví dụ:
-
-        Minh Anh
-        Minh Anh
-        Minh Anh
-        Quang Huy
-
-    sẽ thành:
-
-        instance-0
-        instance-1
-        instance-2
-        instance-3
-    """
-
-    registry = []
-
-    occurrence_map = {}
-
-    for index, info in enumerate(players):
-
-        fingerprint = make_player_fingerprint(
-            info
-        )
-
-        occurrence = occurrence_map.get(
-            fingerprint,
-            0
-        )
-
-        occurrence_map[
-            fingerprint
-        ] = occurrence + 1
-
-        instance = create_instance(
-            info,
-            instance_id=f"instance-{index}"
-        )
-
-        instance[
-            "_occurrence"
-        ] = occurrence
-
-        registry.append(
-            instance
-        )
-
-    return registry
-
-
-# ============================================================
-# DISCOVERY SIGNATURE
-# ============================================================
-
-def make_players_signature(players):
-    """
-    Signature của DOM player list.
-
-    Dùng để biết DOM có thay đổi hay không.
-    """
-
-    return tuple(
-        make_player_fingerprint(player)
-        for player in players
-    )
-
-
-# ============================================================
-# SERVER DISCOVERY
-# ============================================================
-
-def discover_players(
+def wait_for_players(
     page,
-    timeout_ms=SERVER_DISCOVERY_TIMEOUT_MS
+    timeout_ms=PLAYER_DISCOVERY_TIMEOUT_MS
 ):
-    """
-    Chờ website render player.
-
-    Không chốt ngay lần đầu.
-
-    Ví dụ:
-
-        2
-        3
-        4
-        5
-        5
-        5
-
-    → lấy snapshot 5.
-
-    Đây là phần quan trọng để tránh mất server
-    do DOM render chậm.
-    """
 
     started = time.monotonic()
 
-    best_players = []
-
-    best_count = 0
-
-    last_signature = None
-
-    stable_since = None
+    last_count = -1
 
     while True:
 
@@ -564,89 +321,103 @@ def discover_players(
             page
         )
 
-        count = len(players)
-
-        signature = make_players_signature(
-            players
-        )
-
-        now = time.monotonic()
-
-        # ----------------------------------------------------
-        # Log khi DOM thay đổi
-        # ----------------------------------------------------
-
-        if signature != last_signature:
+        if len(players) != last_count:
 
             print(
-                f"[DISCOVERY] "
-                f"players={count}",
+                f"[DOM] players={len(players)}",
                 flush=True
             )
 
-            last_signature = signature
+            last_count = len(players)
 
-            stable_since = now
+        if players:
 
-        # ----------------------------------------------------
-        # Giữ snapshot nhiều player nhất.
-        #
-        # Nếu lần sau DOM giảm tạm thời,
-        # không làm mất server đã phát hiện.
-        # ----------------------------------------------------
+            return players
 
-        if count > best_count:
-
-            best_count = count
-
-            best_players = players
-
-            print(
-                f"[DISCOVERY] "
-                f"NEW MAX PLAYERS={count}",
-                flush=True
-            )
-
-        # ----------------------------------------------------
-        # Nếu DOM ổn định đủ lâu và đã có player
-        # → có thể kết thúc sớm.
-        # ----------------------------------------------------
-
-        if (
-            best_count > 0
-            and stable_since is not None
-        ):
-
-            stable_ms = (
-                now - stable_since
-            ) * 1000
-
-            if stable_ms >= SERVER_STABLE_MS:
-
-                break
-
-        # ----------------------------------------------------
-        # Timeout
-        # ----------------------------------------------------
-
-        elapsed_ms = (
-            now - started
+        elapsed = (
+            time.monotonic()
+            - started
         ) * 1000
 
-        if elapsed_ms >= timeout_ms:
+        if elapsed >= timeout_ms:
+
+            return players
+
+        try:
+
+            page.wait_for_timeout(
+                POLL_MS
+            )
+
+        except Exception:
 
             break
 
-        page.wait_for_timeout(
-            SERVER_DISCOVERY_POLL_MS
+    return []
+
+
+# ============================================================
+# SERVER INSTANCE
+# ============================================================
+
+def make_instance(
+    info,
+    instance_id
+):
+
+    return {
+        # ----------------------------------------------------
+        # CANONICAL IDENTITY
+        # ----------------------------------------------------
+
+        "instance_id": instance_id,
+
+        "original_index": info["index"],
+
+        # ----------------------------------------------------
+        # PUBLIC DATA
+        # ----------------------------------------------------
+
+        "name": info["name"],
+        "server": info["server"],
+        "data_link": info["data_link"],
+        "href": info["href"],
+
+        # ----------------------------------------------------
+        # STREAM
+        # ----------------------------------------------------
+
+        "stream_urls": [],
+
+        # ----------------------------------------------------
+        # STATE
+        # ----------------------------------------------------
+
+        "status": "discovered",
+
+        # Internal
+        "_fingerprint": make_player_fingerprint(
+            info
+        ),
+
+        "_attempts": 0
+    }
+
+
+def build_server_registry(players):
+
+    registry = []
+
+    for index, player in enumerate(players):
+
+        registry.append(
+            make_instance(
+                player,
+                instance_id=f"instance-{index}"
+            )
         )
 
-    print(
-        f"[DISCOVERY] FINAL players={len(best_players)}",
-        flush=True
-    )
-
-    return best_players
+    return registry
 
 
 # ============================================================
@@ -658,37 +429,39 @@ def find_element_for_instance(
     registry,
     instance
 ):
-    """
-    Tìm lại đúng DOM element của instance.
-
-    Thứ tự:
-
-    1. fingerprint
-    2. occurrence
-    3. original index
-
-    Quan trọng:
-
-    Không bao giờ tìm đơn giản bằng name.
-    """
 
     elements = get_player_elements(
         page
     )
 
     if not elements:
-
         return None
 
     target_fingerprint = instance[
         "_fingerprint"
     ]
 
-    target_occurrence = instance[
-        "_occurrence"
-    ]
+    # --------------------------------------------------------
+    # Tính occurrence của fingerprint
+    # --------------------------------------------------------
 
-    matching = []
+    target_occurrence = 0
+
+    for other in registry:
+
+        if other["instance_id"] == instance[
+            "instance_id"
+        ]:
+            break
+
+        if (
+            other["_fingerprint"]
+            == target_fingerprint
+        ):
+
+            target_occurrence += 1
+
+    matching_elements = []
 
     for index, element in enumerate(elements):
 
@@ -699,15 +472,13 @@ def find_element_for_instance(
                 index
             )
 
-            fingerprint = (
-                make_player_fingerprint(
-                    info
-                )
+            fingerprint = make_player_fingerprint(
+                info
             )
 
             if fingerprint == target_fingerprint:
 
-                matching.append(
+                matching_elements.append(
                     element
                 )
 
@@ -719,22 +490,20 @@ def find_element_for_instance(
     # Fingerprint + occurrence
     # --------------------------------------------------------
 
-    if matching:
+    if matching_elements:
 
         if target_occurrence < len(
-            matching
+            matching_elements
         ):
 
-            return matching[
+            return matching_elements[
                 target_occurrence
             ]
 
-        # Nếu occurrence vượt quá,
-        # lấy cuối cùng làm fallback.
-        return matching[-1]
+        return matching_elements[-1]
 
     # --------------------------------------------------------
-    # Fallback original index
+    # Original index fallback
     # --------------------------------------------------------
 
     original_index = instance[
@@ -753,13 +522,10 @@ def find_element_for_instance(
 
 
 # ============================================================
-# FIND ACTIVE PLAYER
+# ACTIVE PLAYER
 # ============================================================
 
 def get_active_player_index(page):
-    """
-    Tìm player đang có class playing.
-    """
 
     elements = get_player_elements(
         page
@@ -805,29 +571,25 @@ class ActivePlayerTracker:
 
         self.timeline = []
 
-        self.last_index = None
-
     def snapshot(self):
-        """
-        Chụp active player hiện tại.
-        """
 
         index = get_active_player_index(
             self.page
         )
 
+        if index is None:
+            return
+
         now = time.monotonic()
 
-        if index is None:
+        # Không ghi lặp liên tục cùng index.
+        if (
+            self.timeline
+            and self.timeline[-1]["index"]
+            == index
+        ):
 
             return
-
-        # Không ghi duplicate liên tục.
-        if index == self.last_index:
-
-            return
-
-        self.last_index = index
 
         event = {
             "time": now,
@@ -853,13 +615,10 @@ class ActivePlayerTracker:
                 flush=True
             )
 
-    def run_for(
+    def observe(
         self,
         duration_ms
     ):
-        """
-        Theo dõi active player trong khoảng thời gian.
-        """
 
         started = time.monotonic()
 
@@ -867,19 +626,18 @@ class ActivePlayerTracker:
 
             self.snapshot()
 
-            elapsed_ms = (
+            elapsed = (
                 time.monotonic()
                 - started
             ) * 1000
 
-            if elapsed_ms >= duration_ms:
-
+            if elapsed >= duration_ms:
                 break
 
             try:
 
                 self.page.wait_for_timeout(
-                    PLAYER_STATE_POLL_MS
+                    POLL_MS
                 )
 
             except Exception:
@@ -890,10 +648,6 @@ class ActivePlayerTracker:
         self,
         event_time
     ):
-        """
-        Tìm active instance gần nhất trước
-        thời điểm FLV request.
-        """
 
         candidate = None
 
@@ -908,12 +662,9 @@ class ActivePlayerTracker:
                 break
 
         if candidate is None:
-
             return None
 
-        index = candidate[
-            "index"
-        ]
+        index = candidate["index"]
 
         if (
             0 <= index < len(self.registry)
@@ -939,24 +690,15 @@ class FLVCollector:
 
         self.page = page
 
-        # Tất cả FLV event
         self.events = []
 
-        # Tất cả URL đã nhìn thấy
         self.all_streams = set()
 
-        # Session hiện tại
         self.current_session = None
 
         self.session_counter = 0
 
-        # ----------------------------------------------------
-        # Listener được gắn TRƯỚC page.goto()
-        #
-        # Điều này rất quan trọng vì stream có thể
-        # xuất hiện cực sớm.
-        # ----------------------------------------------------
-
+        # Listener phải được cài trước goto.
         page.on(
             "request",
             self.on_request
@@ -973,18 +715,17 @@ class FLVCollector:
 
     def start_session(
         self,
-        instance_id
+        instance
     ):
-        """
-        Tạo session TRƯỚC khi click.
-        """
 
         self.session_counter += 1
 
         session = {
             "id": self.session_counter,
 
-            "instance_id": instance_id,
+            "instance_id": instance[
+                "instance_id"
+            ],
 
             "started_at": time.monotonic(),
 
@@ -1015,14 +756,11 @@ class FLVCollector:
         url = request.url
 
         if not is_flv_url(url):
-
             return
 
         now = time.monotonic()
 
         session_id = None
-
-        instance_id = None
 
         if self.current_session:
 
@@ -1030,22 +768,11 @@ class FLVCollector:
                 self.current_session["id"]
             )
 
-            instance_id = (
-                self.current_session[
-                    "instance_id"
-                ]
-            )
-
         event = {
             "type": "request",
-
             "url": url,
-
             "time": now,
-
-            "session_id": session_id,
-
-            "instance_id": instance_id
+            "session_id": session_id
         }
 
         self.events.append(
@@ -1062,21 +789,18 @@ class FLVCollector:
         )
 
         # ----------------------------------------------------
-        # Nếu đang click một instance,
-        # map trực tiếp vào session đó.
+        # Click session có owner rõ ràng.
         # ----------------------------------------------------
 
         if self.current_session:
 
-            streams = (
+            if url not in (
+                self.current_session["streams"]
+            ):
+
                 self.current_session[
                     "streams"
-                ]
-            )
-
-            if url not in streams:
-
-                streams.append(url)
+                ].append(url)
 
     # ========================================================
     # RESPONSE
@@ -1090,10 +814,7 @@ class FLVCollector:
         url = response.url
 
         if not is_flv_url(url):
-
             return
-
-        now = time.monotonic()
 
         try:
 
@@ -1118,68 +839,53 @@ class FLVCollector:
 
         self.events.append({
             "type": "response",
-
             "url": url,
-
-            "time": now,
-
+            "time": time.monotonic(),
             "status": status,
-
-            "content_type": content_type,
-
-            "session_id": (
-                self.current_session["id"]
-                if self.current_session
-                else None
-            ),
-
-            "instance_id": (
-                self.current_session[
-                    "instance_id"
-                ]
-                if self.current_session
-                else None
-            )
+            "content_type": content_type
         })
 
     # ========================================================
-    # WAIT SESSION
+    # WAIT FOR CLICK SESSION
     # ========================================================
 
-    def wait_for_session(
+    def wait_for_stream(
         self,
         session,
         tracker,
         timeout_ms
     ):
-        """
-        Chờ FLV sau click.
-
-        Dừng ngay khi thấy FLV.
-        """
 
         started = time.monotonic()
 
         while True:
 
+            # Ghi active state.
             tracker.snapshot()
 
+            # FLV xuất hiện -> KẾT THÚC NGAY.
             if session["streams"]:
 
                 return True
 
-            elapsed_ms = (
+            elapsed = (
                 time.monotonic()
                 - started
             ) * 1000
 
-            if elapsed_ms >= timeout_ms:
+            if elapsed >= timeout_ms:
 
                 break
 
-            self.page.wait_for_timeout(
-                PLAYER_STATE_POLL_MS
-            )
+            try:
+
+                self.page.wait_for_timeout(
+                    POLL_MS
+                )
+
+            except Exception:
+
+                break
 
         return bool(
             session["streams"]
@@ -1187,40 +893,7 @@ class FLVCollector:
 
 
 # ============================================================
-# APPLY SESSION STREAMS
-# ============================================================
-
-def apply_session_streams(
-    instance,
-    streams
-):
-    """
-    Ghi stream vào đúng instance.
-    """
-
-    added = 0
-
-    for url in streams:
-
-        if url not in instance[
-            "stream_urls"
-        ]:
-
-            instance[
-                "stream_urls"
-            ].append(url)
-
-            added += 1
-
-    if added > 0:
-
-        instance["_mapped"] = True
-
-    return added
-
-
-# ============================================================
-# AUTO STREAM RESOLUTION
+# AUTO STREAM MAPPING
 # ============================================================
 
 def resolve_auto_streams(
@@ -1228,18 +901,10 @@ def resolve_auto_streams(
     tracker,
     registry
 ):
+
     """
-    Xử lý FLV tự động load khi không có click session.
-
-    Ví dụ:
-
-        active instance-2
-              ↓
-          request X.flv
-              ↓
-        instance-2
-
-    Chỉ xử lý event không thuộc click session.
+    FLV request không thuộc click session
+    được map theo active-player timeline.
     """
 
     assignments = {}
@@ -1247,29 +912,19 @@ def resolve_auto_streams(
     for event in collector.events:
 
         if event["type"] != "request":
-
             continue
 
-        # Click session đã map chính xác.
+        # Click stream đã có owner.
         if event.get("session_id") is not None:
-
             continue
 
         url = event["url"]
 
-        instance = (
-            tracker.resolve_instance_at(
-                event["time"]
-            )
+        instance = tracker.resolve_instance_at(
+            event["time"]
         )
 
         if instance is None:
-
-            print(
-                "[AUTO] Cannot determine "
-                f"owner for FLV: {url}",
-                flush=True
-            )
 
             continue
 
@@ -1305,166 +960,29 @@ def resolve_auto_streams(
             []
         )
 
-        if not streams:
+        for url in streams:
 
-            continue
+            if url not in instance[
+                "stream_urls"
+            ]:
 
-        added = apply_session_streams(
-            instance,
-            streams
-        )
+                instance[
+                    "stream_urls"
+                ].append(url)
 
-        if added:
+        if streams:
+
+            instance["status"] = (
+                "stream_found"
+            )
 
             print(
                 "[AUTO MAP] "
                 f"{instance_id} "
                 f"{instance['name'] or instance['server']} "
-                f"→ {added} FLV",
+                f"→ {len(streams)} FLV",
                 flush=True
             )
-
-
-# ============================================================
-# MERGE DISCOVERED SERVERS
-# ============================================================
-
-def merge_discovered_servers(
-    registry,
-    players
-):
-    """
-    Merge server mới sau reload.
-
-    Registry cũ là canonical.
-
-    Không xóa stream cũ.
-
-    Nếu website xuất hiện server mới,
-    server đó được thêm vào.
-    """
-
-    # --------------------------------------------------------
-    # Đếm occurrence trong snapshot mới.
-    # --------------------------------------------------------
-
-    occurrence_map = {}
-
-    added = []
-
-    for info in players:
-
-        fingerprint = make_player_fingerprint(
-            info
-        )
-
-        occurrence = occurrence_map.get(
-            fingerprint,
-            0
-        )
-
-        occurrence_map[
-            fingerprint
-        ] = occurrence + 1
-
-        # ----------------------------------------------------
-        # Tìm instance hiện có bằng:
-        #
-        # fingerprint + occurrence
-        # ----------------------------------------------------
-
-        existing = None
-
-        for instance in registry:
-
-            if (
-                instance["_fingerprint"]
-                == fingerprint
-                and
-                instance["_occurrence"]
-                == occurrence
-            ):
-
-                existing = instance
-
-                break
-
-        if existing is not None:
-
-            # ------------------------------------------------
-            # Cập nhật metadata nhưng giữ stream.
-            # ------------------------------------------------
-
-            if info.get("name"):
-
-                existing["name"] = info[
-                    "name"
-                ]
-
-            if info.get("server"):
-
-                existing["server"] = info[
-                    "server"
-                ]
-
-            if info.get("data_link"):
-
-                existing[
-                    "data_link"
-                ] = info[
-                    "data_link"
-                ]
-
-            if info.get("href"):
-
-                existing["href"] = info[
-                    "href"
-                ]
-
-            continue
-
-        # ----------------------------------------------------
-        # Server mới
-        # ----------------------------------------------------
-
-        new_index = len(registry)
-
-        new_instance = create_instance(
-            info,
-            instance_id=f"instance-{new_index}"
-        )
-
-        new_instance[
-            "_occurrence"
-        ] = occurrence
-
-        registry.append(
-            new_instance
-        )
-
-        added.append(
-            new_instance
-        )
-
-    if added:
-
-        print(
-            f"[DISCOVERY MERGE] "
-            f"Added {len(added)} new server(s)",
-            flush=True
-        )
-
-        for instance in added:
-
-            print(
-                "[NEW SERVER] "
-                f"{instance['instance_id']} | "
-                f"{instance['name'] or '-'} | "
-                f"{instance['server'] or '-'}",
-                flush=True
-            )
-
-    return added
 
 
 # ============================================================
@@ -1476,14 +994,11 @@ def click_player(
     element,
     label
 ):
-    """
-    Click server.
-    """
 
     try:
 
         element.scroll_into_view_if_needed(
-            timeout=3000
+            timeout=2000
         )
 
     except Exception:
@@ -1493,7 +1008,7 @@ def click_player(
     try:
 
         element.click(
-            timeout=7000
+            timeout=5000
         )
 
         print(
@@ -1515,7 +1030,7 @@ def click_player(
 
 
 # ============================================================
-# PROCESS INSTANCE
+# PROCESS ONE INSTANCE
 # ============================================================
 
 def process_instance(
@@ -1523,21 +1038,8 @@ def process_instance(
     collector,
     tracker,
     registry,
-    instance,
-    match_index,
-    total_matches
+    instance
 ):
-    """
-    Xử lý MỘT server.
-
-    Session được tạo trước click.
-
-    Nếu FLV xuất hiện:
-        map ngay.
-
-    Nếu không:
-        retry.
-    """
 
     label = (
         instance["name"]
@@ -1549,46 +1051,34 @@ def process_instance(
     )
 
     # --------------------------------------------------------
-    # Đã có stream
+    # Already have stream.
     # --------------------------------------------------------
 
     if instance["stream_urls"]:
 
-        print(
-            f"[{match_index}/{total_matches}] "
-            f"SKIP "
-            f"{instance['instance_id']} "
-            f"{label} "
-            f"(already mapped)",
-            flush=True
+        instance["status"] = (
+            "stream_found"
         )
 
         return True
 
     # --------------------------------------------------------
-    # Retry
+    # Try click.
     # --------------------------------------------------------
 
     for attempt in range(
         MAX_CLICK_RETRIES + 1
     ):
 
-        instance[
-            "_attempts"
-        ] += 1
+        instance["_attempts"] += 1
 
         print(
-            f"[{match_index}/{total_matches}] "
-            f"PROCESS "
+            f"[PROCESS] "
             f"{instance['instance_id']} "
             f"{label} "
             f"attempt={attempt + 1}",
             flush=True
         )
-
-        # ----------------------------------------------------
-        # Tìm element hiện tại.
-        # ----------------------------------------------------
 
         element = find_element_for_instance(
             page,
@@ -1599,46 +1089,49 @@ def process_instance(
         if element is None:
 
             print(
-                "[PROCESS] Cannot find "
+                f"[NOT FOUND] "
                 f"{instance['instance_id']}",
                 flush=True
+            )
+
+            instance["status"] = (
+                "not_found"
             )
 
             return False
 
         # ----------------------------------------------------
-        # Reset tracker state để tránh resolve
-        # nhầm active player cũ.
-        # ----------------------------------------------------
-
-        tracker.last_index = None
-
-        # ----------------------------------------------------
-        # Session PHẢI tạo trước click.
+        # Session BEFORE click.
         # ----------------------------------------------------
 
         session = collector.start_session(
-            instance["instance_id"]
+            instance
         )
 
-        click_ok = click_player(
+        clicked = click_player(
             page,
             element,
             label
         )
 
-        if click_ok:
+        if clicked:
 
-            collector.wait_for_session(
-                session,
-                tracker,
-                CLICK_STREAM_WAIT_MS
+            got_stream = (
+                collector.wait_for_stream(
+                    session,
+                    tracker,
+                    CLICK_STREAM_TIMEOUT_MS
+                )
             )
+
+        else:
+
+            got_stream = False
 
         collector.end_session()
 
         # ----------------------------------------------------
-        # Unique streams
+        # Save stream.
         # ----------------------------------------------------
 
         streams = list(
@@ -1649,27 +1142,47 @@ def process_instance(
 
         if streams:
 
-            added = apply_session_streams(
-                instance,
-                streams
+            for url in streams:
+
+                if url not in instance[
+                    "stream_urls"
+                ]:
+
+                    instance[
+                        "stream_urls"
+                    ].append(url)
+
+            instance["status"] = (
+                "stream_found"
             )
 
             print(
                 "[MAP] "
                 f"{instance['instance_id']} "
                 f"{label} "
-                f"→ {added} new FLV",
+                f"→ {len(streams)} FLV",
                 flush=True
             )
 
             return True
 
+        # ----------------------------------------------------
+        # No stream.
+        #
+        # Retry tối đa 1 lần.
+        # ----------------------------------------------------
+
         print(
-            "[NO FLV] "
+            "[PENDING] "
             f"{instance['instance_id']} "
-            f"{label}",
+            f"{label} "
+            f"has no FLV yet",
             flush=True
         )
+
+    instance["status"] = (
+        "pending"
+    )
 
     return False
 
@@ -1682,12 +1195,9 @@ def reload_match(
     page,
     match_url
 ):
-    """
-    Reload trang để recovery.
-    """
 
     print(
-        "[RECOVERY] Reload page...",
+        "[RECOVERY] Reload...",
         flush=True
     )
 
@@ -1697,9 +1207,15 @@ def reload_match(
         timeout=PAGE_TIMEOUT
     )
 
-    page.wait_for_timeout(
-        RELOAD_SETTLE_MS
-    )
+    try:
+
+        page.wait_for_timeout(
+            500
+        )
+
+    except Exception:
+
+        pass
 
 
 # ============================================================
@@ -1755,9 +1271,6 @@ def print_registry(
     registry,
     prefix=""
 ):
-    """
-    In registry để debug.
-    """
 
     print(
         f"{prefix}SERVER REGISTRY",
@@ -1766,34 +1279,22 @@ def print_registry(
 
     for instance in registry:
 
-        label = (
-            instance["name"]
-            or instance["server"]
-            or "-"
-        )
-
         print(
             f"{prefix}"
             f"{instance['instance_id']} | "
-            f"occurrence={instance['_occurrence']} | "
             f"index={instance['original_index']} | "
             f"name={instance['name']!r} | "
             f"server={instance['server']!r} | "
-            f"streams={len(instance['stream_urls'])}",
+            f"data-link={instance['data_link']!r}",
             flush=True
         )
 
 
 # ============================================================
-# OUTPUT PLAYER
+# OUTPUT
 # ============================================================
 
 def output_player(instance):
-    """
-    Chuyển internal instance thành format cũ.
-
-    playlist.py không cần sửa.
-    """
 
     return {
         "index": instance[
@@ -1827,21 +1328,14 @@ def output_player(instance):
 
 
 # ============================================================
-# MATCH STATUS
+# MATCH QUALITY
 # ============================================================
 
-def get_match_status(registry):
-    """
-    Phân loại:
-
-        READY
-        PARTIAL
-        NO_STREAM
-    """
+def classify_match(registry):
 
     total = len(registry)
 
-    mapped = sum(
+    with_stream = sum(
         1
         for instance in registry
         if instance["stream_urls"]
@@ -1849,17 +1343,17 @@ def get_match_status(registry):
 
     if total == 0:
 
-        return "NO_SERVERS"
+        return "no_server"
 
-    if mapped == 0:
+    if with_stream == total:
 
-        return "NO_STREAM"
+        return "ready"
 
-    if mapped < total:
+    if with_stream == 0:
 
-        return "PARTIAL"
+        return "no_stream"
 
-    return "READY"
+    return "partial"
 
 
 # ============================================================
@@ -1869,37 +1363,25 @@ def get_match_status(registry):
 def scrape_one_match(
     match_url,
     index,
-    total
+    total_matches
 ):
-    """
-    Scrape một trận.
-
-    Không sử dụng global registry.
-    Mỗi worker có registry riêng.
-    """
-
-    print()
-    print(
-        "=" * 70
-    )
 
     print(
-        f"[{index}/{total}] START",
+        f"[{index}/{total_matches}] START "
+        f"{match_url}",
         flush=True
     )
 
-    print(
-        match_url,
-        flush=True
-    )
-
-    print(
-        "=" * 70
-    )
+    browser = None
+    context = None
 
     try:
 
         with sync_playwright() as p:
+
+            # ------------------------------------------------
+            # Browser
+            # ------------------------------------------------
 
             browser = p.chromium.launch(
                 headless=True
@@ -1913,21 +1395,26 @@ def scrape_one_match(
 
             page = context.new_page()
 
-            # =================================================
-            # IMPORTANT
+            # ------------------------------------------------
+            # IMPORTANT:
             #
-            # Collector được tạo TRƯỚC goto.
-            #
-            # Vì FLV auto-load có thể xuất hiện rất sớm.
-            # =================================================
+            # Collector phải được tạo TRƯỚC goto.
+            # ------------------------------------------------
 
             collector = FLVCollector(
                 page
             )
 
-            # =================================================
+            registry = []
+
+            tracker = ActivePlayerTracker(
+                page,
+                registry
+            )
+
+            # ------------------------------------------------
             # GOTO
-            # =================================================
+            # ------------------------------------------------
 
             page.goto(
                 match_url,
@@ -1935,80 +1422,55 @@ def scrape_one_match(
                 timeout=PAGE_TIMEOUT
             )
 
-            # =================================================
-            # SERVER DISCOVERY
-            # =================================================
+            # ------------------------------------------------
+            # DISCOVERY
+            # ------------------------------------------------
 
-            players = discover_players(
+            players = wait_for_players(
                 page
             )
 
             if not players:
 
                 print(
-                    f"[{index}/{total}] "
-                    "NO SERVERS FOUND",
+                    f"[{index}/{total_matches}] "
+                    "NO PLAYERS",
                     flush=True
                 )
 
-                title = get_match_title(
-                    page
-                )
+                return None
 
-                result = {
-                    "title": title,
-
-                    "url": match_url,
-
-                    "players": []
-                }
-
-                context.close()
-                browser.close()
-
-                return result
-
-            # =================================================
-            # BUILD CANONICAL REGISTRY
-            # =================================================
+            # ------------------------------------------------
+            # Canonical registry
+            # ------------------------------------------------
 
             registry = build_server_registry(
                 players
             )
 
+            tracker.registry = registry
+
             print_registry(
                 registry,
-                prefix=f"[{index}/{total}] "
+                prefix=(
+                    f"[{index}/{total_matches}] "
+                )
             )
 
-            # =================================================
-            # ACTIVE TRACKER
+            # ------------------------------------------------
+            # AUTO-LOAD OBSERVATION
             #
-            # Tracker được tạo sau registry.
-            # =================================================
+            # Không chờ quá lâu.
+            # Chỉ quan sát 2 giây.
+            # ------------------------------------------------
 
-            tracker = ActivePlayerTracker(
-                page,
-                registry
+            tracker.observe(
+                RELOAD_AUTO_WAIT_MS
             )
 
-            # =================================================
-            # AUTO LOAD OBSERVATION
-            # =================================================
-
-            print(
-                f"[{index}/{total}] "
-                "Watching auto-load streams...",
-                flush=True
-            )
-
-            tracker.run_for(
-                AUTO_STREAM_WAIT_MS
-            )
-
-            # =================================================
-            # MAP AUTO FLV
-            # =================================================
+            # ------------------------------------------------
+            # Map auto FLV.
+            # ------------------------------------------------
 
             resolve_auto_streams(
                 collector,
@@ -2016,13 +1478,11 @@ def scrape_one_match(
                 registry
             )
 
-            # =================================================
-            # CLICK MISSING SERVERS
-            # =================================================
+            # ------------------------------------------------
+            # CLICK ONLY MISSING
+            # ------------------------------------------------
 
-            for instance in list(
-                registry
-            ):
+            for instance in registry:
 
                 if instance[
                     "stream_urls"
@@ -2035,148 +1495,37 @@ def scrape_one_match(
                     collector,
                     tracker,
                     registry,
-                    instance,
-                    index,
-                    total
-                )
-
-            # =================================================
-            # RECOVERY
-            # =================================================
-
-            for recovery_round in range(
-                1,
-                MAX_RELOAD_RETRIES + 1
-            ):
-
-                missing = [
                     instance
-                    for instance in registry
-                    if not instance[
-                        "stream_urls"
-                    ]
-                ]
-
-                if not missing:
-
-                    break
-
-                print()
-                print(
-                    f"[{index}/{total}] "
-                    f"RECOVERY ROUND "
-                    f"{recovery_round}"
                 )
 
-                print(
-                    f"Missing streams: "
-                    f"{len(missing)}",
-                    flush=True
-                )
+            # ------------------------------------------------
+            # AUTO MAP AGAIN
+            #
+            # Một số click có thể kích hoạt
+            # player khác sau đó.
+            # ------------------------------------------------
 
-                try:
+            tracker.observe(
+                500
+            )
 
-                    reload_match(
-                        page,
-                        match_url
-                    )
+            resolve_auto_streams(
+                collector,
+                tracker,
+                registry
+            )
 
-                except Exception as error:
-
-                    print(
-                        "[RECOVERY ERROR] "
-                        f"{type(error).__name__}: "
-                        f"{error}",
-                        flush=True
-                    )
-
-                    break
-
-                # ------------------------------------------------
-                # Discovery lại DOM.
-                # ------------------------------------------------
-
-                fresh_players = discover_players(
-                    page
-                )
-
-                if not fresh_players:
-
-                    print(
-                        "[RECOVERY] "
-                        "No players after reload",
-                        flush=True
-                    )
-
-                    continue
-
-                # ------------------------------------------------
-                # Merge server mới.
-                # ------------------------------------------------
-
-                merge_discovered_servers(
-                    registry,
-                    fresh_players
-                )
-
-                # ------------------------------------------------
-                # Tracker mới cho timeline mới.
-                # ------------------------------------------------
-
-                tracker = ActivePlayerTracker(
-                    page,
-                    registry
-                )
-
-                # ------------------------------------------------
-                # Auto-load sau reload.
-                # ------------------------------------------------
-
-                tracker.run_for(
-                    AUTO_STREAM_WAIT_MS
-                )
-
-                resolve_auto_streams(
-                    collector,
-                    tracker,
-                    registry
-                )
-
-                # ------------------------------------------------
-                # Retry missing.
-                # ------------------------------------------------
-
-                for instance in list(
-                    registry
-                ):
-
-                    if instance[
-                        "stream_urls"
-                    ]:
-
-                        continue
-
-                    process_instance(
-                        page,
-                        collector,
-                        tracker,
-                        registry,
-                        instance,
-                        index,
-                        total
-                    )
-
-            # =================================================
-            # FINAL VALIDATION
-            # =================================================
-
-            mapped = [
-                instance
-                for instance in registry
-                if instance[
-                    "stream_urls"
-                ]
-            ]
+            # ------------------------------------------------
+            # RECOVERY
+            #
+            # Chỉ reload nếu:
+            #
+            # 1. Có server missing
+            # 2. Đã thử click
+            # 3. Có khả năng player thực sự bị lỗi
+            #
+            # Không reload chỉ vì trận chưa bắt đầu.
+            # ------------------------------------------------
 
             missing = [
                 instance
@@ -2185,6 +1534,132 @@ def scrape_one_match(
                     "stream_urls"
                 ]
             ]
+
+            reload_count = 0
+
+            if missing:
+
+                # Chỉ recovery một lần.
+                while (
+                    reload_count
+                    < MAX_RELOAD_RETRIES
+                ):
+
+                    reload_count += 1
+
+                    print(
+                        f"[{index}/{total_matches}] "
+                        f"RECOVERY: "
+                        f"{len(missing)} missing",
+                        flush=True
+                    )
+
+                    try:
+
+                        reload_match(
+                            page,
+                            match_url
+                        )
+
+                    except Exception as error:
+
+                        print(
+                            f"[RECOVERY ERROR] "
+                            f"{error}",
+                            flush=True
+                        )
+
+                        break
+
+                    # ------------------------------------------------
+                    # DOM sau reload
+                    # ------------------------------------------------
+
+                    fresh_players = (
+                        wait_for_players(page)
+                    )
+
+                    if not fresh_players:
+
+                        break
+
+                    # ------------------------------------------------
+                    # Timeline mới.
+                    # ------------------------------------------------
+
+                    tracker.timeline = []
+
+                    # ------------------------------------------------
+                    # Quan sát auto-load ngắn.
+                    # ------------------------------------------------
+
+                    tracker.observe(
+                        RELOAD_AUTO_WAIT_MS
+                    )
+
+                    resolve_auto_streams(
+                        collector,
+                        tracker,
+                        registry
+                    )
+
+                    # ------------------------------------------------
+                    # Click lại ONLY missing.
+                    # ------------------------------------------------
+
+                    for instance in registry:
+
+                        if instance[
+                            "stream_urls"
+                        ]:
+
+                            continue
+
+                        process_instance(
+                            page,
+                            collector,
+                            tracker,
+                            registry,
+                            instance
+                        )
+
+                    missing = [
+                        instance
+                        for instance in registry
+                        if not instance[
+                            "stream_urls"
+                        ]
+                    ]
+
+                    if not missing:
+
+                        break
+
+            # ------------------------------------------------
+            # FINAL AUTO MAP
+            # ------------------------------------------------
+
+            resolve_auto_streams(
+                collector,
+                tracker,
+                registry
+            )
+
+            # ------------------------------------------------
+            # CLASSIFY
+            # ------------------------------------------------
+
+            status = classify_match(
+                registry
+            )
+
+            mapped = sum(
+                1
+                for instance in registry
+                if instance[
+                    "stream_urls"
+                ]
+            )
 
             total_streams = sum(
                 len(
@@ -2195,51 +1670,18 @@ def scrape_one_match(
                 for instance in registry
             )
 
-            status = get_match_status(
-                registry
-            )
-
-            # =================================================
-            # PRINT RESULT
-            # =================================================
-
-            print()
             print(
-                "=" * 70
+                f"[{index}/{total_matches}] "
+                f"RESULT: "
+                f"{status.upper()} "
+                f"{mapped}/{len(registry)} servers "
+                f"| {total_streams} FLV",
+                flush=True
             )
 
-            print(
-                f"[{index}/{total}] "
-                "MATCH VALIDATION"
-            )
-
-            print(
-                f"Status:             {status}"
-            )
-
-            print(
-                f"Servers discovered: {len(registry)}"
-            )
-
-            print(
-                f"Servers mapped:     {len(mapped)}"
-            )
-
-            print(
-                f"Servers missing:    {len(missing)}"
-            )
-
-            print(
-                f"Total FLV streams:  {total_streams}"
-            )
-
-            print(
-                "=" * 70
-            )
-
-            # =================================================
-            # DETAIL
-            # =================================================
+            # ------------------------------------------------
+            # Detailed mapping
+            # ------------------------------------------------
 
             for instance in registry:
 
@@ -2257,9 +1699,10 @@ def scrape_one_match(
                 ]:
 
                     print(
-                        "[MAPPED] "
-                        f"{instance['instance_id']} | "
-                        f"{label} | "
+                        f"[MAPPED] "
+                        f"{instance['instance_id']} "
+                        f"{label} "
+                        f"→ "
                         f"{len(instance['stream_urls'])} FLV",
                         flush=True
                     )
@@ -2267,15 +1710,15 @@ def scrape_one_match(
                 else:
 
                     print(
-                        "[MISSING STREAM] "
-                        f"{instance['instance_id']} | "
+                        f"[PENDING] "
+                        f"{instance['instance_id']} "
                         f"{label}",
                         flush=True
                     )
 
-            # =================================================
-            # OUTPUT
-            # =================================================
+            # ------------------------------------------------
+            # Output
+            # ------------------------------------------------
 
             result_players = [
                 output_player(instance)
@@ -2294,16 +1737,12 @@ def scrape_one_match(
                 "players": result_players
             }
 
-            context.close()
-            browser.close()
-
             return result
 
     except Exception as error:
 
-        print()
         print(
-            f"[{index}/{total}] ERROR",
+            f"[{index}/{total_matches}] ERROR",
             flush=True
         )
 
@@ -2319,15 +1758,34 @@ def scrape_one_match(
 
         return None
 
+    finally:
+
+        try:
+
+            if context:
+
+                context.close()
+
+        except Exception:
+
+            pass
+
+        try:
+
+            if browser:
+
+                browser.close()
+
+        except Exception:
+
+            pass
+
 
 # ============================================================
 # SAVE
 # ============================================================
 
 def save_results(results):
-    """
-    Ghi matches.json.
-    """
 
     data = {
         "generated_at": int(
@@ -2373,7 +1831,6 @@ def main():
         html
     )
 
-    print()
     print(
         f"Found {len(match_urls)} unique events",
         flush=True
@@ -2386,12 +1843,10 @@ def main():
             flush=True
         )
 
-        raise RuntimeError(
-            "No match URLs found."
-        )
+        return
 
     # ========================================================
-    # PARALLEL SCRAPE
+    # WORKERS
     # ========================================================
 
     results = []
@@ -2419,9 +1874,7 @@ def main():
                 len(match_urls)
             )
 
-            futures[
-                future
-            ] = match_url
+            futures[future] = match_url
 
         for future in as_completed(
             futures
@@ -2444,14 +1897,13 @@ def main():
             except Exception as error:
 
                 print(
-                    "[WORKER ERROR] "
-                    f"{match_url}",
+                    f"Worker exception: "
+                    f"{error}",
                     flush=True
                 )
 
                 print(
-                    f"{type(error).__name__}: "
-                    f"{error}",
+                    f"URL: {match_url}",
                     flush=True
                 )
 
@@ -2476,9 +1928,7 @@ def main():
     # ========================================================
 
     total_players = sum(
-        len(
-            match["players"]
-        )
+        len(match["players"])
         for match in results
     )
 
@@ -2500,10 +1950,28 @@ def main():
         for player in match["players"]
     )
 
-    incomplete_matches = sum(
+    ready_matches = sum(
+        1
+        for match in results
+        if match["players"]
+        and all(
+            player.get(
+                "stream_urls"
+            )
+            for player in match["players"]
+        )
+    )
+
+    partial_matches = sum(
         1
         for match in results
         if any(
+            player.get(
+                "stream_urls"
+            )
+            for player in match["players"]
+        )
+        and any(
             not player.get(
                 "stream_urls"
             )
@@ -2511,32 +1979,21 @@ def main():
         )
     )
 
-    ready_matches = sum(
-        1
-        for match in results
-        if (
-            match["players"]
-            and all(
-                player.get(
-                    "stream_urls"
-                )
-                for player in match["players"]
-            )
-        )
-    )
-
     no_stream_matches = sum(
         1
         for match in results
-        if (
-            match["players"]
-            and not any(
-                player.get(
-                    "stream_urls"
-                )
-                for player in match["players"]
+        if match["players"]
+        and not any(
+            player.get(
+                "stream_urls"
             )
+            for player in match["players"]
         )
+    )
+
+    incomplete_matches = (
+        partial_matches
+        + no_stream_matches
     )
 
     elapsed = (
@@ -2545,21 +2002,13 @@ def main():
     )
 
     # ========================================================
-    # GLOBAL VALIDATION
+    # VALIDATION
     # ========================================================
 
     print()
-    print(
-        "=" * 70
-    )
-
-    print(
-        "SCRAPER VALIDATION"
-    )
-
-    print(
-        "=" * 70
-    )
+    print("=" * 70)
+    print("SCRAPER VALIDATION")
+    print("=" * 70)
 
     print(
         f"Events found:          "
@@ -2572,8 +2021,8 @@ def main():
     )
 
     print(
-        f"Total server instances:"
-        f" {total_players}"
+        f"Total server instances: "
+        f"{total_players}"
     )
 
     print(
@@ -2593,7 +2042,7 @@ def main():
 
     print(
         f"Partial matches:       "
-        f"{incomplete_matches - no_stream_matches}"
+        f"{partial_matches}"
     )
 
     print(
@@ -2606,18 +2055,15 @@ def main():
         f"{elapsed:.1f}s"
     )
 
-    print(
-        "=" * 70
-    )
+    print("=" * 70)
 
     # ========================================================
     # QUALITY GATE
-    # ========================================================
     #
-    # Chỉ FAIL nếu scraper không xử lý đủ số trận.
+    # Chỉ fail nếu không scrape được toàn bộ events.
     #
-    # PARTIAL / NO_STREAM không làm workflow fail,
-    # vì có thể trận chưa bắt đầu.
+    # Partial không phải fatal:
+    # server có thể chưa có FLV vì trận chưa bắt đầu.
     # ========================================================
 
     if len(results) != len(
@@ -2638,17 +2084,13 @@ def main():
         flush=True
     )
 
-    print(
-        "=" * 70
-    )
+    print("=" * 70)
 
     print(
         "SCRAPER COMPLETE"
     )
 
-    print(
-        "=" * 70
-    )
+    print("=" * 70)
 
     print(
         f"Output file: "
@@ -2659,9 +2101,7 @@ def main():
         "Quality gate: PASS"
     )
 
-    print(
-        "=" * 70
-    )
+    print("=" * 70)
 
 
 # ============================================================
