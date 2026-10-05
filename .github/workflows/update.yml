@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
   schedule:
-    # Chạy mỗi 30 phút
-    - cron: "*/30 * * * *"
+    # Chạy mỗi giờ
+    - cron: "17 * * * *"
 
 # Không cho nhiều lần Update IPTV chạy chồng nhau.
 # Nếu một run cũ vẫn đang chạy khi run mới bắt đầu,
