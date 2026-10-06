@@ -3,10 +3,7 @@ name: Update IPTV
 on:
   workflow_dispatch:
 
-  schedule:
-    # Chạy mỗi giờ tại phút 17
-    - cron: "17 * * * *"
-
+ 
 # ==================================================
 # CONCURRENCY
 # ==================================================
