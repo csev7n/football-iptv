@@ -4,15 +4,17 @@ on:
   workflow_dispatch:
 
   schedule:
-    # Chạy mỗi giờ
+    # Chạy mỗi giờ tại phút 17
     - cron: "17 * * * *"
 
-# Không cho nhiều lần Update IPTV chạy chồng nhau.
-# Nếu một run cũ vẫn đang chạy khi run mới bắt đầu,
-# run cũ sẽ bị hủy.
+# ==================================================
+# CONCURRENCY
+# ==================================================
+# Không hủy run đang chạy.
+# Nếu một run cũ vẫn đang chạy, run mới sẽ chờ.
 concurrency:
   group: update-iptv
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -24,7 +26,55 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    timeout-minutes: 30
+
     steps:
+
+      # ==================================================
+      # SCHEDULE DIAGNOSTICS
+      # ==================================================
+
+      - name: Schedule diagnostics
+        run: |
+          set -euo pipefail
+
+          echo "======================================"
+          echo "SCHEDULE DIAGNOSTICS"
+          echo "======================================"
+
+          echo "Event:"
+          echo "${{ github.event_name }}"
+
+          echo ""
+          echo "Schedule:"
+          echo "${{ github.event.schedule }}"
+
+          echo ""
+          echo "Run ID:"
+          echo "${{ github.run_id }}"
+
+          echo ""
+          echo "Run number:"
+          echo "${{ github.run_number }}"
+
+          echo ""
+          echo "Repository:"
+          echo "${{ github.repository }}"
+
+          echo ""
+          echo "Branch:"
+          echo "${{ github.ref_name }}"
+
+          echo ""
+          echo "Current UTC:"
+          date -u '+%Y-%m-%d %H:%M:%S UTC'
+
+          echo ""
+          echo "Current Vietnam:"
+          TZ=Asia/Ho_Chi_Minh date '+%Y-%m-%d %H:%M:%S ICT'
+
+          echo ""
+          echo "======================================"
 
       # ==================================================
       # CHECKOUT
@@ -35,7 +85,6 @@ jobs:
         with:
           fetch-depth: 0
 
-
       # ==================================================
       # SETUP PYTHON
       # ==================================================
@@ -45,7 +94,6 @@ jobs:
         with:
           python-version: "3.12"
           cache: "pip"
-
 
       # ==================================================
       # INSTALL DEPENDENCIES
@@ -58,7 +106,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-
       # ==================================================
       # INSTALL PLAYWRIGHT
       # ==================================================
@@ -68,7 +115,6 @@ jobs:
           set -euo pipefail
 
           python -m playwright install --with-deps chromium
-
 
       # ==================================================
       # RUN SCRAPER
@@ -82,8 +128,16 @@ jobs:
           echo "START SCRAPER"
           echo "======================================"
 
+          START_TIME=$(date +%s)
+
           python scraper.py
 
+          END_TIME=$(date +%s)
+          DURATION=$((END_TIME - START_TIME))
+
+          echo ""
+          echo "Scraper completed successfully."
+          echo "Duration: ${DURATION}s"
 
       # ==================================================
       # VALIDATE matches.json
@@ -104,9 +158,21 @@ jobs:
 
           python - <<'PY'
           import json
+          import sys
 
-          with open("matches.json", "r", encoding="utf-8") as f:
-              data = json.load(f)
+          path = "matches.json"
+
+          try:
+              with open(path, "r", encoding="utf-8") as f:
+                  data = json.load(f)
+          except Exception as exc:
+              print(f"ERROR: Failed to parse {path}: {exc}")
+              sys.exit(1)
+
+          if not isinstance(data, dict):
+              raise SystemExit(
+                  "ERROR: matches.json root must be an object"
+              )
 
           matches = data.get("matches")
 
@@ -121,10 +187,12 @@ jobs:
               )
 
           print(f"Matches: {len(matches)}")
+          print("matches.json validation: OK")
           PY
 
+          echo ""
+          echo "File:"
           ls -lh matches.json
-
 
       # ==================================================
       # BUILD PLAYLIST
@@ -139,7 +207,6 @@ jobs:
           echo "======================================"
 
           python playlist.py
-
 
       # ==================================================
       # VALIDATE PLAYLIST
@@ -178,8 +245,10 @@ jobs:
 
           echo ""
           echo "First 10 entries:"
-          grep '^#EXTINF:' playlist.m3u | head -n 10
+          grep '^#EXTINF:' playlist.m3u | head -n 10 || true
 
+          echo ""
+          echo "Playlist validation: OK"
 
       # ==================================================
       # COMMIT + PUSH
@@ -223,7 +292,6 @@ jobs:
 
           fi
 
-
       # ==================================================
       # TRIGGER PUBLISH
       # ==================================================
@@ -264,5 +332,6 @@ jobs:
             exit 1
           fi
 
+          echo ""
           echo "Publish IPTV triggered successfully."
           echo "HTTP status: $HTTP_CODE"
