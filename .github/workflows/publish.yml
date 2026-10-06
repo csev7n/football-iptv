@@ -3,10 +3,13 @@ name: Publish IPTV Playlist
 on:
   workflow_dispatch:
 
-# Không cho nhiều Publish chạy cùng lúc.
+# ==================================================
+# CONCURRENCY
+# ==================================================
+# Không hủy publish đang chạy.
 concurrency:
   group: publish-iptv
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -16,6 +19,8 @@ jobs:
   publish:
 
     runs-on: ubuntu-latest
+
+    timeout-minutes: 10
 
     steps:
 
@@ -27,7 +32,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-
 
       # ==================================================
       # CHECK PLAYLIST
@@ -60,8 +64,12 @@ jobs:
             exit 1
           fi
 
+          echo ""
+          echo "Playlist size:"
           ls -lh playlist.m3u
 
+          echo ""
+          echo "Playlist validation: OK"
 
       # ==================================================
       # PUBLISH TO PUBLIC REPOSITORY
@@ -117,13 +125,11 @@ jobs:
           echo "Playlist has changed."
           echo "Publishing new version..."
 
-
           # ==================================================
           # ENCODE
           # ==================================================
 
           CONTENT=$(base64 -w 0 playlist.m3u)
-
 
           # ==================================================
           # UPDATE EXISTING FILE
@@ -173,7 +179,6 @@ jobs:
 
           fi
 
-
           # ==================================================
           # CHECK API RESPONSE
           # ==================================================
@@ -187,6 +192,7 @@ jobs:
           if [ "$HTTP_CODE" != "200" ] && \
              [ "$HTTP_CODE" != "201" ]; then
 
+            echo ""
             echo "ERROR: Failed to publish playlist."
             echo "$BODY"
 
