@@ -748,7 +748,16 @@ def build_playlist(data):
         [],
     )
 
-    for match in matches:
+    # ========================================================
+    # COLLECT CHANNELS
+    #
+    # Chưa xuất playlist ngay.
+    # Thu thập toàn bộ channel trước để có thể SORT.
+    # ========================================================
+
+    channels = []
+
+    for match_index, match in enumerate(matches):
 
         players = match.get(
             "players",
@@ -760,6 +769,108 @@ def build_playlist(data):
             list,
         ):
             continue
+
+        # ====================================================
+        # LẤY NGÀY + GIỜ CỦA TRẬN
+        # ====================================================
+
+        (
+            time_text,
+            date_text,
+            teams,
+        ) = get_match_info(
+            match
+        )
+
+        # ====================================================
+        # TẠO SORT KEY
+        #
+        # Ưu tiên:
+        #
+        # 1. Ngày/tháng
+        # 2. Giờ/phút
+        #
+        # Ví dụ:
+        #
+        # 08/10 21:00
+        # 08/10 21:45
+        # 09/10 01:00
+        #
+        # ====================================================
+
+        sort_date = (
+            9999,
+            99,
+        )
+
+        if date_text:
+
+            date_match = re.match(
+                r"^(\d{2})/(\d{2})$",
+                date_text,
+            )
+
+            if date_match:
+
+                day = int(
+                    date_match.group(1)
+                )
+
+                month = int(
+                    date_match.group(2)
+                )
+
+                sort_date = (
+                    month,
+                    day,
+                )
+
+        sort_time = (
+            99,
+            99,
+        )
+
+        if time_text:
+
+            time_match = re.match(
+                r"^(\d{2}):(\d{2})$",
+                time_text,
+            )
+
+            if time_match:
+
+                hour = int(
+                    time_match.group(1)
+                )
+
+                minute = int(
+                    time_match.group(2)
+                )
+
+                sort_time = (
+                    hour,
+                    minute,
+                )
+
+        # ====================================================
+        # SORT KEY
+        #
+        # month → day → hour → minute
+        #
+        # Nếu cùng thời gian thì giữ thứ tự ban đầu.
+        # ====================================================
+
+        sort_key = (
+            sort_date[0],
+            sort_date[1],
+            sort_time[0],
+            sort_time[1],
+            match_index,
+        )
+
+        # ====================================================
+        # PLAYERS / STREAMS
+        # ====================================================
 
         for player_index, player in enumerate(
             players
@@ -824,20 +935,60 @@ def build_playlist(data):
                 )
 
                 # =================================================
-                # EXTINF
+                # LƯU CHANNEL
+                #
+                # Chưa ghi vào playlist.
+                # Đợi sort xong mới ghi.
                 # =================================================
 
-                lines.append(
-                    f'#EXTINF:-1 '
-                    f'group-title="{GROUP_TITLE}",'
-                    f'{title}'
-                )
-
-                lines.append(
-                    stream_url
+                channels.append(
+                    (
+                        sort_key,
+                        title,
+                        stream_url,
+                    )
                 )
 
                 channel_count += 1
+
+    # ========================================================
+    # SORT CHANNELS
+    #
+    # NGÀY → GIỜ
+    #
+    # Ví dụ:
+    #
+    # 08/10 21:00
+    # 08/10 21:45
+    # 08/10 23:50
+    # 09/10 01:00
+    # 09/10 11:00
+    #
+    # ========================================================
+
+    channels.sort(
+        key=lambda item: item[0]
+    )
+
+    # ========================================================
+    # BUILD FINAL PLAYLIST
+    # ========================================================
+
+    for (
+        sort_key,
+        title,
+        stream_url,
+    ) in channels:
+
+        lines.append(
+            f'#EXTINF:-1 '
+            f'group-title="{GROUP_TITLE}",'
+            f'{title}'
+        )
+
+        lines.append(
+            stream_url
+        )
 
     # ========================================================
     # QUALITY GATE
