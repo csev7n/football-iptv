@@ -607,7 +607,7 @@ class FLVCollector:
             status = None
 			
         if status not in (200, 206):
-		    return
+            return
 
         try:
             content_type = response.headers.get(
