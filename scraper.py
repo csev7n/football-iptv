@@ -606,7 +606,7 @@ class FLVCollector:
         except Exception:
             status = None
 			
-		if status not in (200, 206):
+        if status not in (200, 206):
 		    return
 
         try:
