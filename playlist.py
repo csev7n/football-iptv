@@ -76,9 +76,9 @@ def clean_team_title(title):
 
         r"TRỰC\s+TIẾP",
 
-        r"LIVE",
+        r"LIVE\b",
 
-        r"STREAM",
+        r"STREAM\b",
 
     ]
 
