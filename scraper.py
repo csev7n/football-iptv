@@ -4,6 +4,7 @@ import time
 import os
 import tempfile
 import uuid
+import hashlib
 
 from collections import deque
 
@@ -627,7 +628,10 @@ class FLVCollector:
 
         request = response.request
         request_id = id(request)
-        request_event = self.request_events.get(request_id)
+        request_event = self.request_events.pop(
+            request_id,
+            None,
+        )
 
         self.events.append({
             "type": "response",
@@ -669,7 +673,10 @@ class FLVCollector:
         request_id = id(request)
 
         # Tìm sự kiện request gốc để đối chiếu chủ sở hữu.
-        request_event = self.request_events.get(request_id)
+        request_event = self.request_events.pop(
+            request_id,
+            None,
+        )
 
         self.events.append({
             "type": "requestfailed",
@@ -1567,14 +1574,42 @@ def map_new_auto_requests(
     # Các event hiện chưa lưu bằng chứng đủ tin cậy để
     # liên kết auto-play request với server cụ thể.
     # Không suy luận chủ sở hữu từ trạng thái hiện tại.
+    active = get_active_instance(
+        page,
+        registry,
+    )
+
+    if active is None:
+        print(
+            "[RECOVERY AUTO MAP] "
+            "Không xác định được server playing.",
+            flush=True,
+        )
+        return False
+
+    urls = list(dict.fromkeys(
+        event["url"]
+        for event in events
+        if event.get("url")
+    ))
+
+    if not urls:
+        return False
+
+    assign_streams(
+        active,
+        urls,
+        source="reload-auto-play",
+    )
+
     print(
-        f"[AUTO MAP] Có {len(events)} request mới, "
-        "nhưng chưa xác minh được chủ sở hữu; "
-        "không gán URL.",
+        f"[RECOVERY AUTO MAP] "
+        f"{active['instance_id']} "
+        f"urls={len(urls)}",
         flush=True,
     )
 
-    return False
+    return True
 
 
 # ------------------------------------------------------------
@@ -1799,7 +1834,9 @@ def scrape_one_match(
                 return None
 
             # Dùng ID theo URL trận để dễ đọc log.
-            match_id = f"match-{index}"
+            match_id = hashlib.md5(
+                match_url.encode("utf-8")
+            ).hexdigest()[:12]
 
             registry = build_server_registry(
                 players,
