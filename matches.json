@@ -1,131 +1,7 @@
 {
-  "generated_at": 1792000290,
-  "match_count": 75,
+  "generated_at": 1792002081,
+  "match_count": 72,
   "matches": [
-    {
-      "title": "PHÁT TRỰC TIẾP AJMAN VS ERBIL SC VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/ajman-vs-erbil-sc-luc-2300-ngay-14-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "29c54c57df6b:server:0:f4e02325",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/ajman-vs-erbil-sc-luc-2300-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel3.flv?wsSecret=02f84cd9daa8a2bc6f33f36ae57eb874&wsABSTime=1792043312"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP AL-ETTIFAQ VS KAZMA VÀO LÚC 01:00, NGÀY 15/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/al-ettifaq-vs-kazma-luc-0100-ngay-15-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "2cf470693e15:server:0:436182f8",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/al-ettifaq-vs-kazma-luc-0100-ngay-15-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel25.flv?wsSecret=5eab8126d0e046b643b79c7f5a87174c&wsABSTime=1792043312"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP AL-JAZIRA(UAE) VS ARKADAG FK VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/al-jazirauae-vs-arkadag-fk-luc-2300-ngay-14-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "3abae2147b4c:server:0:19012492",
-          "index": 0,
-          "name": "ASTRA",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/al-jazirauae-vs-arkadag-fk-luc-2300-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel11.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "3abae2147b4c:server:1:581a42d3",
-          "index": 1,
-          "name": "HD ASTRA",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcd.tv/truc-tiep/al-jazirauae-vs-arkadag-fk-luc-2300-ngay-14-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001792000117-0-0-5ccaf04ef292bc3ec3c72c63d685bd19"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP AL KUWAIT SC VS AL KHALDIYA VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/al-kuwait-sc-vs-al-khaldiya-luc-0115-ngay-15-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "06945287d8b3:server:0:ccd5e00c",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/al-kuwait-sc-vs-al-khaldiya-luc-0115-ngay-15-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel27.flv?wsSecret=7e2fc7ecbf59a6353398f68753b86013&wsABSTime=1792043319"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP AL-MUHARRAQ VS GOL GOHAR FC VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/al-muharraq-vs-gol-gohar-fc-luc-2300-ngay-14-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "cdc70f930fa1:server:0:c3d6a5b8",
-          "index": 0,
-          "name": "RIO",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/al-muharraq-vs-gol-gohar-fc-luc-2300-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel16.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "cdc70f930fa1:server:1:a9e5ce20",
-          "index": 1,
-          "name": "HD RIO",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcd.tv/truc-tiep/al-muharraq-vs-gol-gohar-fc-luc-2300-ngay-14-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001792000125-0-0-447b2beff71652329949a66a2eacbd35"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
     {
       "title": "PHÁT TRỰC TIẾP AL-RAED SFC VS JEDDAH SPORTS CLUB VÀO LÚC 00:00, NGÀY 15/10/2026",
       "url": "https://xoilacz.io/truc-tiep/al-raed-sfc-vs-jeddah-sports-club-luc-0000-ngay-15-10-2026/",
@@ -133,46 +9,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e9492c9b80c2:server:0:79db8261",
+          "instance_id": "e9492c9b80c2:server:0:b664a2eb",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/al-raed-sfc-vs-jeddah-sports-club-luc-0000-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel87.flv?wsSecret=b4cbb4a5862f71441168a1338e68186b&wsABSTime=1792043320"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP AL TAAWOUN VS AL-RAYYAN SPORTS CLUB VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/al-taawoun-vs-al-rayyan-sports-club-luc-2300-ngay-14-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "305da35adefb:server:0:c45d7ffb",
-          "index": 0,
-          "name": "MAX",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/al-taawoun-vs-al-rayyan-sports-club-luc-2300-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel6.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "305da35adefb:server:1:0235c9cf",
-          "index": 1,
-          "name": "HD MAX",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcd.tv/truc-tiep/al-taawoun-vs-al-rayyan-sports-club-luc-2300-ngay-14-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001792000131-0-0-bf97590cc6f1eb45dace44563cc78447"
+            "https://live1.quickscoreboardz.com/live/channel87.flv?wsSecret=49aaa4972c33f77eb4bb848ab4ca8d5e&wsABSTime=1792045114"
           ],
           "status": "stream_found"
         }
@@ -185,14 +29,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7f0a395dc53c:server:0:3160de19",
+          "instance_id": "7f0a395dc53c:server:0:14b28857",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/al-waab-sc-vs-umm-salal-luc-2130-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel35.flv?wsSecret=436107609010d56cb26c74317b3f4422&wsABSTime=1792043327"
+            "https://live1.quickscoreboardz.com/live/channel35.flv?wsSecret=d095c60d6a87c1d1b3403cb5c93d12b4&wsABSTime=1792045114"
           ],
           "status": "stream_found"
         }
@@ -205,7 +49,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "809c06355161:server:0:3e3ddb9e",
+          "instance_id": "809c06355161:server:0:b1c6e3ab",
           "index": 0,
           "name": "VIC",
           "server": "Server 1",
@@ -217,14 +61,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "809c06355161:server:1:0575ec9a",
+          "instance_id": "809c06355161:server:1:19492390",
           "index": 1,
           "name": "HD VIC",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/alexander-zverev-vs-alex-de-minaur-luc-1700-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001792000133-0-0-88772abae6203bf6343510d07e476377"
+            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001792001919-0-0-228a50b97482eab818cbefa48cd46c4f"
           ],
           "status": "stream_found"
         }
@@ -237,14 +81,54 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "077deceb633d:server:0:361c5a30",
+          "instance_id": "077deceb633d:server:0:23b82d4c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/anadolu-efes1976-vs-bayern-munchen-luc-0030-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=2a45bb43ef3ce3fd7a7245e6403ac9cc&wsABSTime=1792043333"
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=be10173e6e2e092132ce37288ab4fdb0&wsABSTime=1792045121"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP ANKARA KECIORENGUCU VS IĞDIR FK VÀO LÚC 00:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/ankara-keciorengucu-vs-igdir-fk-luc-0000-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "1dd4433a49de:server:0:c0c21655",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/ankara-keciorengucu-vs-igdir-fk-luc-0000-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel15.flv?wsSecret=0884c44146331483432fba142c5d2319&wsABSTime=1792045121"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP ANTALYASPOR VS KAYSERISPOR VÀO LÚC 00:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/antalyaspor-vs-kayserispor-luc-0000-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "ae681dcbfe06:server:0:c755d1b2",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/antalyaspor-vs-kayserispor-luc-0000-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel24.flv?wsSecret=879d5c495a5700ad62491b46aa0d5281&wsABSTime=1792045122"
           ],
           "status": "stream_found"
         }
@@ -257,7 +141,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "de3e3f9d0c76:server:0:5175122d",
+          "instance_id": "de3e3f9d0c76:server:0:f71c511f",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -269,34 +153,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "de3e3f9d0c76:server:1:c969e1cd",
+          "instance_id": "de3e3f9d0c76:server:1:e4fa2a4d",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/anubis-gaming-vs-solary-luc-2300-ngay-14-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792000140-0-0-f526e0c35790eb166ad2bc35ca0d914c"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP ARIS LIMASSOL VS ETHNIKOS ACHNAS FC VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/aris-limassol-vs-ethnikos-achnas-fc-luc-2300-ngay-14-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "b4843d46b139:server:0:384c1b4a",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/aris-limassol-vs-ethnikos-achnas-fc-luc-2300-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=17128c11256ccef3d13039d794e63a15&wsABSTime=1792043335"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792001933-0-0-50bc265e2568409398923b064720a059"
           ],
           "status": "stream_found"
         }
@@ -309,7 +173,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "21d2ecc5686c:server:0:14715da8",
+          "instance_id": "21d2ecc5686c:server:0:b7c81d5d",
           "index": 0,
           "name": "VIC",
           "server": "Server 1",
@@ -321,14 +185,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "21d2ecc5686c:server:1:a4cb6a50",
+          "instance_id": "21d2ecc5686c:server:1:c26a742a",
           "index": 1,
           "name": "HD VIC",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/arthur-gea-vs-alejandro-davidovich-fokina-luc-1330-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001792000145-0-0-3957e7733a3de8b35578f478cbdb5517"
+            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001792001933-0-0-4ecd08eec8de1712d8917b4dbef9cdaf"
           ],
           "status": "stream_found"
         }
@@ -341,31 +205,31 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a2ee7510ad38:server:0:08f91409",
+          "instance_id": "a2ee7510ad38:server:0:57b125c4",
           "index": 0,
           "name": "NICK",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/as-roma-vs-real-madrid-luc-0200-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=1a2ec4e07b6901006cf9b798ece9650c&wsABSTime=1792043342"
+            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=29ead1f1f650a819f5cd317b4e2d2834&wsABSTime=1792045129"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "a2ee7510ad38:server:1:06b315cf",
+          "instance_id": "a2ee7510ad38:server:1:57dd05cf",
           "index": 1,
           "name": "FELIX",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/as-roma-vs-real-madrid-luc-0200-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001792000148-0-0-8c62208aa3c0153087866a94bc6813dc"
+            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001792001935-0-0-7e66c2067404faf040f544ae7ea3b4eb"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "a2ee7510ad38:server:2:1a52db4f",
+          "instance_id": "a2ee7510ad38:server:2:a03f1897",
           "index": 2,
           "name": "FELIX",
           "server": "Server 3",
@@ -377,14 +241,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "a2ee7510ad38:server:3:4d589b39",
+          "instance_id": "a2ee7510ad38:server:3:4f22de06",
           "index": 3,
           "name": "FULL HD NICK",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcd.tv/truc-tiep/as-roma-vs-real-madrid-luc-0200-ngay-15-10-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001792000150-0-0-cd46f97d3315b932d70c3765983b8405"
+            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001792001937-0-0-eef27810738ba71aec34a9e00b38f422"
           ],
           "status": "stream_found"
         }
@@ -397,7 +261,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7e83787f69bb:server:0:17088086",
+          "instance_id": "7e83787f69bb:server:0:b9c981cb",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -409,34 +273,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "7e83787f69bb:server:1:43875b71",
+          "instance_id": "7e83787f69bb:server:1:eca25e1c",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/bc-thong-tin-vs-vietinbank-luc-1430-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792000148-0-0-d19fc9b98c75dbccf6a77f64a2ffece9"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP BOHEMIANS PRAHA 1905 VS FK MLADÁ BOLESLAV VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/bohemians-praha-1905-vs-fk-mlada-boleslav-luc-2200-ngay-29-08-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "64b1ed0206d9:server:0:b7a3bf75",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/bohemians-praha-1905-vs-fk-mlada-boleslav-luc-2200-ngay-29-08-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=87fa3601f511105a1d595b973f4a36c8&wsABSTime=1792043347"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792001940-0-0-fd6d96b52c932459de5d91faa10c4ba6"
           ],
           "status": "stream_found"
         }
@@ -449,7 +293,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e38346d86be6:server:0:bdcff8e3",
+          "instance_id": "e38346d86be6:server:0:93605c28",
           "index": 0,
           "name": "KOBE",
           "server": "Server 1",
@@ -461,14 +305,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "e38346d86be6:server:1:21e14b96",
+          "instance_id": "e38346d86be6:server:1:a83b64b7",
           "index": 1,
           "name": "HD KOBE",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/boston-celtics-vs-charlotte-hornets-luc-0630-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001792000155-0-0-59d5b1905e0bb06e0d30e39a6c0371e3"
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001792001941-0-0-58b6bb77a829171a5e1518c0d44054f3"
           ],
           "status": "stream_found"
         }
@@ -481,14 +325,26 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2259d7fdbe79:server:0:65d2de5e",
+          "instance_id": "2259d7fdbe79:server:0:d442d423",
           "index": 0,
-          "name": "HD 1",
+          "name": "TOMMY",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/brisbane-bullets-vs-sem-phoenix-luc-1530-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792000152-0-0-a71e44fe1a3410d9c4b22de6b47b007e"
+            "https://live2.jorvakstreamcache.com/live/channel29.flv"
+          ],
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "2259d7fdbe79:server:1:1e0bfeea",
+          "index": 1,
+          "name": "HD TOMMY",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://xoilaczcd.tv/truc-tiep/brisbane-bullets-vs-sem-phoenix-luc-1530-ngay-15-10-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001792001944-0-0-b96bc5c31d8b01e290881c69b0a6ab20"
           ],
           "status": "stream_found"
         }
@@ -501,14 +357,34 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2e004fb30a39:server:0:f8758bde",
+          "instance_id": "2e004fb30a39:server:0:49ba389b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/bruno-oliveira-natan-rodrigues-vs-luis-miguel-eduardo-ribeiro-luc-0400-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=d888bf99f301f8caa465110d21a413bf&wsABSTime=1792043353"
+            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=cc2cc4fe093ff4e37b652d7f3910a52f&wsABSTime=1792045142"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP BRYNE VS RAUFOSS IL VÀO LÚC 00:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/bryne-vs-raufoss-il-luc-0000-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "6a9d3afd0570:server:0:ea40c92c",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/bryne-vs-raufoss-il-luc-0000-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel88.flv?wsSecret=be378675469eab7c10ea38a85d2bd1e5&wsABSTime=1792045143"
           ],
           "status": "stream_found"
         }
@@ -521,14 +397,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "749b271a5b01:server:0:c48e52f5",
+          "instance_id": "749b271a5b01:server:0:15457edf",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/chang-ching-hui-yang-ching-tun-vs-rachel-allessya-rose-febi-setianingrum-luc-0100-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel63.flv?wsSecret=eeaa8b03f3a641eb064c1ef896c8b1e8&wsABSTime=1792043356"
+            "https://live1.quickscoreboardz.com/live/channel63.flv?wsSecret=7d8f35aa6331572678243bcb055bce7f&wsABSTime=1792045146"
           ],
           "status": "stream_found"
         }
@@ -541,14 +417,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "980f6ba2a464:server:0:2bb47d0d",
+          "instance_id": "980f6ba2a464:server:0:bbf139ab",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/chen-yan-fei-hsieh-pei-shan-vs-treesa-jolly-gayatri-gopichand-pullela-luc-0000-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel61.flv?wsSecret=15edc1df720277064bb68485a1958983&wsABSTime=1792043358"
+            "https://live1.quickscoreboardz.com/live/channel61.flv?wsSecret=754553d178c76374a3a5115dc3dc5120&wsABSTime=1792045149"
           ],
           "status": "stream_found"
         }
@@ -561,46 +437,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "91023fc66d5c:server:0:fe3eb3a6",
+          "instance_id": "91023fc66d5c:server:0:bbcd7a15",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/chen-zhi-ray-lin-yu-chieh-vs-chia-weijie-teo-ee-yi-luc-0050-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel61.flv?wsSecret=cb05b3d370058c68fb90457b17f6c758&wsABSTime=1792043360"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP CHERTANOVO MOSCOW VS TEKSTILSHCHIK IVANOVO VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/chertanovo-moscow-vs-tekstilshchik-ivanovo-luc-2300-ngay-14-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "2742929e068e:server:0:6f6b3ee3",
-          "index": 0,
-          "name": "TOM",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/chertanovo-moscow-vs-tekstilshchik-ivanovo-luc-2300-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel4.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "2742929e068e:server:1:2355ecf9",
-          "index": 1,
-          "name": "HD TOM",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcd.tv/truc-tiep/chertanovo-moscow-vs-tekstilshchik-ivanovo-luc-2300-ngay-14-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001792000168-0-0-890c6294918d1352f71062069be72f67"
+            "https://live1.quickscoreboardz.com/live/channel61.flv?wsSecret=754553d178c76374a3a5115dc3dc5120&wsABSTime=1792045149"
           ],
           "status": "stream_found"
         }
@@ -613,14 +457,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "dfb733b2f474:server:0:c40eb24f",
+          "instance_id": "dfb733b2f474:server:0:2b8f3b7b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/christian-faust-kjaer-rasmus-kjaer-vs-wei-chong-man-kai-wun-tee-luc-2310-ngay-14-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel61.flv?wsSecret=47854ca4284cdc0944f795a8d1c657d0&wsABSTime=1792043365"
+            "https://live1.quickscoreboardz.com/live/channel61.flv?wsSecret=495759b67123cd90101a1081615aed01&wsABSTime=1792045152"
           ],
           "status": "stream_found"
         }
@@ -633,7 +477,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "6ddb84cbe1f3:server:0:98d5d2dd",
+          "instance_id": "6ddb84cbe1f3:server:0:852541ab",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -645,14 +489,34 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "6ddb84cbe1f3:server:1:faee1d36",
+          "instance_id": "6ddb84cbe1f3:server:1:b12b9637",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/cloud9-vs-karmine-corp-luc-0100-ngay-16-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792000172-0-0-68d48514e3a8d36d15a6c4ae5efd9a0f"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792001961-0-0-89f6c696962278d5b45217e94bae2135"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP CSKA MOSCOW VS FK ROSTOV VÀO LÚC 00:45, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/cska-moscow-vs-fk-rostov-luc-0045-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "5fea44e9ca65:server:0:43bdd96e",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/cska-moscow-vs-fk-rostov-luc-0045-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=484f3b349878707c89cbcbf512643e73&wsABSTime=1792045156"
           ],
           "status": "stream_found"
         }
@@ -665,14 +529,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b0b6640dd37c:server:0:61c7e805",
+          "instance_id": "b0b6640dd37c:server:0:a31380f6",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/dallas-mavericks-vs-new-orleans-pelicans-luc-0700-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=d1571bfae0ff6601e204ba418dc77a18&wsABSTime=1792043370"
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=c4e0e7505d9d813a3444bd581ec7b354&wsABSTime=1792045161"
           ],
           "status": "stream_found"
         }
@@ -685,14 +549,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "361c23100f7f:server:0:d879eff6",
+          "instance_id": "361c23100f7f:server:0:45200a16",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/devika-sihag-vs-pornpawee-chochuwong-luc-0010-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel62.flv?wsSecret=8b5a9d19ba5d7b3d7798e25ed2667051&wsABSTime=1792043371"
+            "https://live1.quickscoreboardz.com/live/channel62.flv?wsSecret=12de89c3f50e42aee114c80f8d61d255&wsABSTime=1792045162"
           ],
           "status": "stream_found"
         }
@@ -705,31 +569,31 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5c43efb3e1b5:server:0:3555416c",
+          "instance_id": "5c43efb3e1b5:server:0:a5118818",
           "index": 0,
           "name": "NICK",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/feyenoord-vs-como-luc-2345-ngay-14-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=ebca05f05c020905236adf4bf1e1e7f5&wsABSTime=1792043373"
+            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=259a8e62b345188410560193738bd30d&wsABSTime=1792045163"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "5c43efb3e1b5:server:1:87a523ad",
+          "instance_id": "5c43efb3e1b5:server:1:ca45f0e8",
           "index": 1,
           "name": "JOHAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/feyenoord-vs-como-luc-2345-ngay-14-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001792000179-0-0-ed06d6083455c896ac4d6dc86b241bee"
+            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001792001969-0-0-dfb884d61da2ef325f9f8e1bc678be21"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "5c43efb3e1b5:server:2:1adf29d2",
+          "instance_id": "5c43efb3e1b5:server:2:9f107f7f",
           "index": 2,
           "name": "JOHAN",
           "server": "Server 3",
@@ -741,14 +605,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "5c43efb3e1b5:server:3:e0044214",
+          "instance_id": "5c43efb3e1b5:server:3:986e3be5",
           "index": 3,
           "name": "FULL HD NICK",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcd.tv/truc-tiep/feyenoord-vs-como-luc-2345-ngay-14-10-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001792000180-0-0-426b30c6fc442f19e243445e2c395367"
+            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001792001970-0-0-cc2b3716526944c98be5bee5c820aec3"
           ],
           "status": "stream_found"
         }
@@ -761,14 +625,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2cce7a11ecdd:server:0:b42f1133",
+          "instance_id": "2cce7a11ecdd:server:0:868c0b13",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/francisco-comesana-vs-felipe-meligeni-alves-luc-0440-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel50.flv?wsSecret=f201b743286dc6f43934772984bb7656&wsABSTime=1792043376"
+            "https://live1.quickscoreboardz.com/live/channel50.flv?wsSecret=335a7cd5eb4202960e4f30b31a46843d&wsABSTime=1792045165"
           ],
           "status": "stream_found"
         }
@@ -781,7 +645,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "863901c800fc:server:0:64dd7146",
+          "instance_id": "863901c800fc:server:0:46a01c61",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -793,14 +657,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "863901c800fc:server:1:f3accfb4",
+          "instance_id": "863901c800fc:server:1:134f7b6e",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/furia-esports-vs-mvk-esports-luc-0600-ngay-16-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792000183-0-0-6536232969c8946b1e5e2a91155f22fe"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792001974-0-0-bb7a501de521a27381b6168d6ce97825"
           ],
           "status": "stream_found"
         }
@@ -813,14 +677,74 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7592f6e576c3:server:0:c754175e",
+          "instance_id": "7592f6e576c3:server:0:5bf0d90f",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/furia-vs-betboom-luc-2300-ngay-14-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=c1e27c24b1852d4fe6a310d177a36184&wsABSTime=1792043382"
+            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=4b79e73243aab63ab92c66426509d19d&wsABSTime=1792045171"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP HAUGESUND VS LYN OSLO VÀO LÚC 00:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/haugesund-vs-lyn-oslo-luc-0000-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "5dba83f4ce66:server:0:6c3e727e",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/haugesund-vs-lyn-oslo-luc-0000-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel89.flv?wsSecret=18b348215462c64c61efebcfda24b3a1&wsABSTime=1792045172"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP HB TORSHAVN U19 VS FC FLORA TALLINN U19 VÀO LÚC 01:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/hb-torshavn-u19-vs-fc-flora-tallinn-u19-luc-0100-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "cbc7d5585280:server:0:bc8db9b5",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/hb-torshavn-u19-vs-fc-flora-tallinn-u19-luc-0100-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=8d16f901cf6ad1fb52c34f9db7aceb44&wsABSTime=1792045176"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP HODD VS RANHEIM IL VÀO LÚC 00:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/hodd-vs-ranheim-il-luc-0000-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "28ecb1228f4d:server:0:eba02d51",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/hodd-vs-ranheim-il-luc-0000-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=d507edbe02e6c7b245e42a58aaa7debe&wsABSTime=1792045178"
           ],
           "status": "stream_found"
         }
@@ -833,14 +757,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "3eedf9fe900b:server:0:af8e7d65",
+          "instance_id": "3eedf9fe900b:server:0:083136d5",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/hugo-gaston-vs-pierre-hugues-herbert-luc-0040-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel57.flv?wsSecret=e415de68587cff24d137820535f9bccb&wsABSTime=1792043383"
+            "https://live1.quickscoreboardz.com/live/channel57.flv?wsSecret=67a88f923bb0a54b9f664897e79c2c62&wsABSTime=1792045179"
           ],
           "status": "stream_found"
         }
@@ -853,14 +777,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f7929c902b5d:server:0:fc6b20fc",
+          "instance_id": "f7929c902b5d:server:0:4ea61aca",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/iraklis-b-c-vs-wurzburg-luc-2330-ngay-14-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=0a95ca1f06022d2053065818bfc7362f&wsABSTime=1792043385"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=a0cc61802f1aa0d52bc3b0c64da8ce41&wsABSTime=1792045183"
           ],
           "status": "stream_found"
         }
@@ -873,7 +797,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2368045affc0:server:0:da30cdba",
+          "instance_id": "2368045affc0:server:0:18457e0f",
           "index": 0,
           "name": "LUCAS",
           "server": "Server 1",
@@ -885,34 +809,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "2368045affc0:server:1:824912eb",
+          "instance_id": "2368045affc0:server:1:4c5edc1b",
           "index": 1,
           "name": "HD LUCAS",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/iva-jovic-vs-maja-chwalinska-luc-1130-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-31.flv?auth_key=3000001792000193-0-0-62095433c044619e8371fb59566133cc"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP KIM ASTRUP SORENSEN/ANDERS SKAARUP RASMUSSEN VS FAJAR ALFIAN/MUHAMMAD SHOHIBUL FIKRI VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/kim-astrup-sorensen-anders-skaarup-rasmussen-vs-fajar-alfian-muhammad-shohibul-fikri-luc-2220-ngay-14-10-2026/",
-      "sport_name": "badminton",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "bb3f755fd4a8:server:0:540f27d2",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/kim-astrup-sorensen-anders-skaarup-rasmussen-vs-fajar-alfian-muhammad-shohibul-fikri-luc-2220-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel61.flv?wsSecret=b2ead948541a3388e22e7ed9960e644f&wsABSTime=1792043389"
+            "https://live2.domaincdn.cc/livecdn/channel-31.flv?auth_key=3000001792001991-0-0-d1970faac427efed2e671227514e8e07"
           ],
           "status": "stream_found"
         }
@@ -925,7 +829,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0729d64bbb56:server:0:114893e6",
+          "instance_id": "0729d64bbb56:server:0:fc09ac95",
           "index": 0,
           "name": "ROY",
           "server": "Server 1",
@@ -937,43 +841,43 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0729d64bbb56:server:1:c540090d",
+          "instance_id": "0729d64bbb56:server:1:9eb1a14a",
           "index": 1,
           "name": "HD ROY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/lask-linz-vs-liverpool-luc-2345-ngay-14-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792000197-0-0-a486bfc6d8ad9b894353addfca0d8776"
+            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792001991-0-0-1d932e7bc399f1ba4cb50b7bd43e63c6"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "0729d64bbb56:server:2:dc4567cc",
+          "instance_id": "0729d64bbb56:server:2:e3920e6e",
           "index": 2,
           "name": "FABIO",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://xoilaczcd.tv/truc-tiep/lask-linz-vs-liverpool-luc-2345-ngay-14-10-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=936708853bce7bf20c90ff9aa9d18620&wsABSTime=1792043398"
+            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=7ef99b3fda5df78a30fef7b0762c47ce&wsABSTime=1792045192"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "0729d64bbb56:server:3:b326979f",
+          "instance_id": "0729d64bbb56:server:3:77983a5d",
           "index": 3,
           "name": "HD FABIO",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcd.tv/truc-tiep/lask-linz-vs-liverpool-luc-2345-ngay-14-10-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001792000199-0-0-f5cfeac98a9ae4ad70a02ba8eb6b61c9"
+            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001792001992-0-0-4a3753e78b5128ea2d5e23920d4c3608"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "0729d64bbb56:server:4:00377208",
+          "instance_id": "0729d64bbb56:server:4:b08011ea",
           "index": 4,
           "name": "HIRO",
           "server": "Server 5",
@@ -985,14 +889,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0729d64bbb56:server:5:955cb11d",
+          "instance_id": "0729d64bbb56:server:5:70a630e3",
           "index": 5,
           "name": "HD HIRO",
           "server": "Server 6",
           "data_link": "5",
           "href": "https://xoilaczcd.tv/truc-tiep/lask-linz-vs-liverpool-luc-2345-ngay-14-10-2026/link/5",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=7ed5649bf5073a7b6f7e5f91711145fe&wsABSTime=1792043401"
+            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=a48a29dd32e1648f90848af762154693&wsABSTime=1792045194"
           ],
           "status": "stream_found"
         }
@@ -1005,34 +909,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c0fa1b405297:server:0:07bafa52",
+          "instance_id": "c0fa1b405297:server:0:16058d29",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/le-mans-vs-rostock-seawolves-luc-0100-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=fca928ae589ddfa159217e27bbcc6374&wsABSTime=1792043395"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP LEGACY VS PARIVISION VÀO LÚC 21:45, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/legacy-vs-parivision-luc-2030-ngay-14-10-2026/",
-      "sport_name": "esports",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "ee45187c26dd:server:0:2db5bb47",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/legacy-vs-parivision-luc-2030-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=6ae03eba6dccd25a92c00ae52645db58&wsABSTime=1792043396"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=06555bcf387e3a9b146d3c9edd7482a0&wsABSTime=1792045189"
           ],
           "status": "stream_found"
         }
@@ -1045,14 +929,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "233754106150:server:0:0b9f3b70",
+          "instance_id": "233754106150:server:0:a631393d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/les-lions-de-geneve-vs-bakken-bears-luc-0130-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=8e3875550b65d746d1a3ed5a42a28112&wsABSTime=1792043402"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=2eca1c80d75ddde68539945a3a972ff1&wsABSTime=1792045192"
           ],
           "status": "stream_found"
         }
@@ -1065,14 +949,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "73ba58795491:server:0:49fb7176",
+          "instance_id": "73ba58795491:server:0:c2283180",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/lisboa-e-benfica-vs-denizli-basket-luc-0200-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=a655ee2115d410838996d6654f15daa6&wsABSTime=1792043403"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=9b6348e609b46c891e79fc2d7ccb3f5e&wsABSTime=1792045196"
           ],
           "status": "stream_found"
         }
@@ -1085,14 +969,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "fd97a948b7fc:server:0:58b25e46",
+          "instance_id": "fd97a948b7fc:server:0:a6fd1396",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/lokomotiv-kuban-vs-avtodor-saratov-luc-0000-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=889420e34a1cc569d2b708e3081663bb&wsABSTime=1792043403"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=089f72dd8b755d23e8b30a3a4b6d7e55&wsABSTime=1792045196"
           ],
           "status": "stream_found"
         }
@@ -1105,7 +989,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "08eb8649fec5:server:0:c103b1f4",
+          "instance_id": "08eb8649fec5:server:0:91a8c67e",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -1117,14 +1001,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "08eb8649fec5:server:1:e516c4b8",
+          "instance_id": "08eb8649fec5:server:1:49994417",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/los-angeles-clippers-vs-denver-nuggets-luc-0930-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001792000214-0-0-e8d1263ad8f7d25d35cef5d2dbaafe00"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001792002004-0-0-9fefb0d4fdab33f6f64ae82962d6b1ee"
           ],
           "status": "stream_found"
         }
@@ -1137,14 +1021,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "1d0e8ff952d4:server:0:ea3817da",
+          "instance_id": "1d0e8ff952d4:server:0:17354f1e",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/lp-vs-galorys-luc-0400-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=7d22fd22520cfe934aec55ed88dc9058&wsABSTime=1792043410"
+            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=b92566a500257cedcb6f8c8d55b58297&wsABSTime=1792045203"
           ],
           "status": "stream_found"
         }
@@ -1157,7 +1041,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0e073817b835:server:0:4ecc5f0c",
+          "instance_id": "0e073817b835:server:0:faf10b52",
           "index": 0,
           "name": "ROY",
           "server": "Server 1",
@@ -1169,43 +1053,43 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0e073817b835:server:1:5ce74043",
+          "instance_id": "0e073817b835:server:1:12647b3b",
           "index": 1,
           "name": "HD ROY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/manchester-city-vs-psg-luc-0200-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792000216-0-0-c5aa2f24cc6a4b6e371359717f3e6256"
+            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792002008-0-0-b4f0e5c61fad2159d8c980ae6fad96ce"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "0e073817b835:server:2:31480386",
+          "instance_id": "0e073817b835:server:2:4b7f9e29",
           "index": 2,
           "name": "ASTRA",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://xoilaczcd.tv/truc-tiep/manchester-city-vs-psg-luc-0200-ngay-15-10-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=2485be0bce38a076e1f1bf00e453447b&wsABSTime=1792043417"
+            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=a7306e9c135f78178687167ef3127f20&wsABSTime=1792045209"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "0e073817b835:server:3:2100237f",
+          "instance_id": "0e073817b835:server:3:c1ae3d70",
           "index": 3,
           "name": "HD ASTRA",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcd.tv/truc-tiep/manchester-city-vs-psg-luc-0200-ngay-15-10-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001792000218-0-0-fc02f4cdfe50544eba1de559ae29874c"
+            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001792002010-0-0-d163f68ee81e9a22f7272a50ddeb20cc"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "0e073817b835:server:4:1a74beef",
+          "instance_id": "0e073817b835:server:4:a2f2ba38",
           "index": 4,
           "name": "RIO",
           "server": "Server 5",
@@ -1217,19 +1101,19 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0e073817b835:server:5:eefbb8d6",
+          "instance_id": "0e073817b835:server:5:3b140af8",
           "index": 5,
           "name": "HD RIO",
           "server": "Server 6",
           "data_link": "5",
           "href": "https://xoilaczcd.tv/truc-tiep/manchester-city-vs-psg-luc-0200-ngay-15-10-2026/link/5",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel16.flv?wsSecret=2f4e8cac984af9a0754f1b05f7b4107b&wsABSTime=1792043419"
+            "https://live1.quickscoreboardz.com/live/channel16.flv?wsSecret=0eb36eefc332b7f0c5d7fff1780fabf5&wsABSTime=1792045212"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "0e073817b835:server:6:257db545",
+          "instance_id": "0e073817b835:server:6:fed17cba",
           "index": 6,
           "name": "BRADY",
           "server": "Server 7",
@@ -1241,14 +1125,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0e073817b835:server:7:c2333c6a",
+          "instance_id": "0e073817b835:server:7:36a30f81",
           "index": 7,
           "name": "HD BRADY",
           "server": "Server 8",
           "data_link": "7",
           "href": "https://xoilaczcd.tv/truc-tiep/manchester-city-vs-psg-luc-0200-ngay-15-10-2026/link/7",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001792000221-0-0-2ef4eb11cb7a68436dcf4f967060e077"
+            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001792002013-0-0-cd6a339c3e1640bd626721566a32eab4"
           ],
           "status": "stream_found"
         }
@@ -1261,14 +1145,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "989e59dcd778:server:0:84725140",
+          "instance_id": "989e59dcd778:server:0:25574a75",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/mateus-alves-marcelo-zormann-da-silva-vs-juan-estevez-lucio-ratti-luc-0230-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel58.flv?wsSecret=cb6c2967130a0bd4c8904da847d7a380&wsABSTime=1792043416"
+            "https://live1.quickscoreboardz.com/live/channel58.flv?wsSecret=63f34cf7ec78de9a2151343597ef7ad3&wsABSTime=1792045206"
           ],
           "status": "stream_found"
         }
@@ -1281,7 +1165,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "ba08d374c1c2:server:0:d08ce2b6",
+          "instance_id": "ba08d374c1c2:server:0:4ccbabab",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -1293,14 +1177,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "ba08d374c1c2:server:1:8db594c5",
+          "instance_id": "ba08d374c1c2:server:1:37deab8c",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/meycauayan-vs-pasay-voyagers-luc-1800-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001792000223-0-0-7b6a77bfc0cff5318447c30a0299cfc0"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001792002014-0-0-b356193f5c14ebe7f65714fcb04595a1"
           ],
           "status": "stream_found"
         }
@@ -1313,7 +1197,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5f494b2103d8:server:0:842566ea",
+          "instance_id": "5f494b2103d8:server:0:9b35a92c",
           "index": 0,
           "name": "LUCAS",
           "server": "Server 1",
@@ -1325,14 +1209,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "5f494b2103d8:server:1:1c20aa2b",
+          "instance_id": "5f494b2103d8:server:1:f0a73e34",
           "index": 1,
           "name": "HD LUCAS",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/mia-pohankova-vs-maria-sakkari-luc-1000-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-31.flv?auth_key=3000001792000228-0-0-e4d70eb39afcc4e5b55a3ab1467426bb"
+            "https://live2.domaincdn.cc/livecdn/channel-31.flv?auth_key=3000001792002018-0-0-9f24803c7cd9a47d57c39dff5dc2fd1a"
           ],
           "status": "stream_found"
         }
@@ -1345,7 +1229,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8dae83632063:server:0:27849823",
+          "instance_id": "8dae83632063:server:0:16d1e096",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -1357,14 +1241,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "8dae83632063:server:1:fd04bb9d",
+          "instance_id": "8dae83632063:server:1:40187b77",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/miami-heat-vs-brooklyn-nets-luc-0630-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001792000228-0-0-4c2e819b4590c8b854e47f19474a3b69"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001792002020-0-0-f103401e443b515cc211ba5006f09a6e"
           ],
           "status": "stream_found"
         }
@@ -1377,14 +1261,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c32695ca7e53:server:0:8cb04cc4",
+          "instance_id": "c32695ca7e53:server:0:c4841a1d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/mika-brunold-vs-benjamin-bonzi-luc-2330-ngay-14-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel56.flv?wsSecret=6f5c3f83bc8c0e04544b2bb337973b58&wsABSTime=1792043425"
+            "https://live1.quickscoreboardz.com/live/channel56.flv?wsSecret=6edbca905ff19124528561379f44ca9f&wsABSTime=1792045216"
           ],
           "status": "stream_found"
         }
@@ -1397,7 +1281,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b63f4d09cde4:server:0:e61234f1",
+          "instance_id": "b63f4d09cde4:server:0:a73dcf1f",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -1409,14 +1293,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "b63f4d09cde4:server:1:014e6011",
+          "instance_id": "b63f4d09cde4:server:1:03fe3007",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/milwaukee-bucks-vs-chicago-bulls-luc-0700-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001792000235-0-0-a22d3b4e0a6b4308ab3f53a7d36d8ebd"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001792002024-0-0-6aa0f91b3265d9bf9f5af88e6b23b4e9"
           ],
           "status": "stream_found"
         }
@@ -1429,46 +1313,34 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a7f84555e847:server:0:9e8298b1",
+          "instance_id": "a7f84555e847:server:0:f21833f0",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/minnesota-timberwolves-vs-detroit-pistons-luc-0700-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=cf7090f92df42ee89c543bdbeaa42c44&wsABSTime=1792043430"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=c9449c5f6b6b18e7cf78c587ce0c1a94&wsABSTime=1792045221"
           ],
           "status": "stream_found"
         }
       ]
     },
     {
-      "title": "PHÁT TRỰC TIẾP NIZHNIY NOVGOROD VS SHINNIK YAROSLAVL VÀO LÚC 23:15, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/nizhniy-novgorod-vs-shinnik-yaroslavl-luc-2315-ngay-14-10-2026/",
+      "title": "PHÁT TRỰC TIẾP MOSS VS EGERSUNDS IK VÀO LÚC 00:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/moss-vs-egersunds-ik-luc-0000-ngay-15-10-2026/",
       "sport_name": "football",
       "status": "ready",
       "players": [
         {
-          "instance_id": "a70391230b31:server:0:92ca6972",
+          "instance_id": "7dafe78ab6f1:server:0:32e70abe",
           "index": 0,
-          "name": "KEN",
+          "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/nizhniy-novgorod-vs-shinnik-yaroslavl-luc-2315-ngay-14-10-2026/",
+          "href": "https://xoilaczcd.tv/truc-tiep/moss-vs-egersunds-ik-luc-0000-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel18.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "a70391230b31:server:1:be28fbe1",
-          "index": 1,
-          "name": "HD KEN",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcd.tv/truc-tiep/nizhniy-novgorod-vs-shinnik-yaroslavl-luc-2315-ngay-14-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-18.flv?auth_key=3000001792000238-0-0-579417bb3607d00a3d866b7a59d2c646"
+            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=49c8a11ebc147421123e09110992cedd&wsABSTime=1792045222"
           ],
           "status": "stream_found"
         }
@@ -1481,7 +1353,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d39ad82d2d2f:server:0:f97431a1",
+          "instance_id": "d39ad82d2d2f:server:0:62e7794b",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -1493,14 +1365,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "d39ad82d2d2f:server:1:badf54d2",
+          "instance_id": "d39ad82d2d2f:server:1:16c42ede",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/nu-chieri-76-vs-nu-imoco-volley-luc-0130-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792000242-0-0-7dd26f32a5781a56465d65d665b54363"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792002033-0-0-8367ca2a8a5d7d5786272d038b46590b"
           ],
           "status": "stream_found"
         }
@@ -1513,7 +1385,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "967a42c14ce1:server:0:076ce672",
+          "instance_id": "967a42c14ce1:server:0:20a63192",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -1525,14 +1397,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "967a42c14ce1:server:1:ace6115f",
+          "instance_id": "967a42c14ce1:server:1:ff285c0e",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/nu-ha-noi-tasco-vs-nu-hcdg-lao-cai-luc-1200-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792000242-0-0-7dd26f32a5781a56465d65d665b54363"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792002033-0-0-8367ca2a8a5d7d5786272d038b46590b"
           ],
           "status": "stream_found"
         }
@@ -1545,7 +1417,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c4c3de56ffd9:server:0:94aaed21",
+          "instance_id": "c4c3de56ffd9:server:0:08e51c22",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -1557,14 +1429,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "c4c3de56ffd9:server:1:4aaa8b23",
+          "instance_id": "c4c3de56ffd9:server:1:a4efa44a",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/nu-hung-yen-vs-nu-lpb-ninh-binh-luc-1700-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792000245-0-0-dd76196bd684f14b75abe3a1fab1d43d"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792002034-0-0-60234ab58a92cc1992c16cf14872d6b2"
           ],
           "status": "stream_found"
         }
@@ -1577,34 +1449,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "4256c6e9d969:server:0:d03c5fd2",
+          "instance_id": "4256c6e9d969:server:0:c58d21f4",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/nu-manisa-bb-vs-nu-besiktas-luc-2300-ngay-14-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=9f4506094d9fd2cccc5a0da9c0dae221&wsABSTime=1792043446"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP NỮ UJPEST VS NỮ NYIREGYHAZA VÀO LÚC 00:00, NGÀY 15/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/nu-ujpest-vs-nu-nyiregyhaza-luc-0000-ngay-15-10-2026/",
-      "sport_name": "volleyball",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "46b7d45362b0:server:0:038b24ed",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/nu-ujpest-vs-nu-nyiregyhaza-luc-0000-ngay-15-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=dc269d6d5f49854ef46addd307f017b3&wsABSTime=1792043444"
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=e037941039aa56be9fb445f3ec0a366f&wsABSTime=1792045235"
           ],
           "status": "stream_found"
         }
@@ -1617,7 +1469,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "bbf957d9a8ec:server:0:b32c3ddc",
+          "instance_id": "bbf957d9a8ec:server:0:0004287d",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -1629,14 +1481,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "bbf957d9a8ec:server:1:cae92c08",
+          "instance_id": "bbf957d9a8ec:server:1:84eae573",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/nu-vtv-bd-long-an-vs-nu-xmls-thanh-hoa-luc-1930-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792000252-0-0-46303ca401b938747adf64a4f69d9ecb"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792002041-0-0-5e8eee17fbbe4500d3df62003621043c"
           ],
           "status": "stream_found"
         }
@@ -1649,46 +1501,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7f0395a72404:server:0:dab9a573",
+          "instance_id": "7f0395a72404:server:0:b840f315",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/nur-mohd-azriyn-ayub-azriyn-tan-wee-kiong-vs-goh-sze-fei-nur-izzuddin-rumsani-luc-0010-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel63.flv?wsSecret=7726db16606a15b528e8bc1265d26f8e&wsABSTime=1792043451"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP PAIDE LINNAMEESKOND VS TARTU TAMMEKA VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/paide-linnameeskond-vs-tartu-tammeka-luc-2300-ngay-14-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "e530a2207b33:server:0:f5195ffc",
-          "index": 0,
-          "name": "XMEN",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/paide-linnameeskond-vs-tartu-tammeka-luc-2300-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel13.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "e530a2207b33:server:1:97927805",
-          "index": 1,
-          "name": "HD XMEN",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcd.tv/truc-tiep/paide-linnameeskond-vs-tartu-tammeka-luc-2300-ngay-14-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-13.flv?auth_key=3000001792000256-0-0-0335a64fee675b9df9a35ac2d6b38c35"
+            "https://live1.quickscoreboardz.com/live/channel63.flv?wsSecret=1d1f798cacdbff7e4f35d9f8fa364d2f&wsABSTime=1792045236"
           ],
           "status": "stream_found"
         }
@@ -1701,14 +1521,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0c7ed0e2227e:server:0:9615fd71",
+          "instance_id": "0c7ed0e2227e:server:0:56927b21",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/piratas-de-bogota-vs-motilones-del-norte-luc-0830-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=522ba336e90eddb2e6cc2a9a83fe79c8&wsABSTime=1792043454"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=8bfe884bb31da36b36abefb4744fca8f&wsABSTime=1792045241"
           ],
           "status": "stream_found"
         }
@@ -1721,14 +1541,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c8e53ea257da:server:0:ad16c9a1",
+          "instance_id": "c8e53ea257da:server:0:4e0671ff",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/puckchamp-vs-inner-circle-x-insanity-luc-1700-ngay-13-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel77.flv?wsSecret=196d580d15d05b6c791654758a542f1e&wsABSTime=1792043457"
+            "https://live1.quickscoreboardz.com/live/channel77.flv?wsSecret=f3b169c807158661759ee93f9a59e895&wsABSTime=1792045244"
           ],
           "status": "stream_found"
         }
@@ -1741,14 +1561,26 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5b6d69da4ecf:server:0:a35e6f42",
+          "instance_id": "5b6d69da4ecf:server:0:91e90dc1",
           "index": 0,
-          "name": "HD 1",
+          "name": "KOBE",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/quezon-toda-aksyon-vs-abra-weavers-luc-1600-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=24558ac395437fcc938cac741d05340a&wsABSTime=1792043458"
+            "https://live2.jorvakstreamcache.com/live/channel27.flv"
+          ],
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "5b6d69da4ecf:server:1:31af7616",
+          "index": 1,
+          "name": "HD KOBE",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://xoilaczcd.tv/truc-tiep/quezon-toda-aksyon-vs-abra-weavers-luc-1600-ngay-15-10-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001792002048-0-0-30ca647688668741c33569401df16968"
           ],
           "status": "stream_found"
         }
@@ -1761,14 +1593,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d9380e61a04c:server:0:dfe81988",
+          "instance_id": "d9380e61a04c:server:0:eae99b72",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/rodrigo-pacheco-mendez-vs-hugo-dellien-luc-0330-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel59.flv?wsSecret=c16514907aa95d70e26c71d46908ba65&wsABSTime=1792043460"
+            "https://live1.quickscoreboardz.com/live/channel59.flv?wsSecret=f769d2199a8fbb50b368937f3252300e&wsABSTime=1792045247"
           ],
           "status": "stream_found"
         }
@@ -1781,14 +1613,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f6ea31f29bb4:server:0:748001c4",
+          "instance_id": "f6ea31f29bb4:server:0:a1abef12",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/rune-eaters-vs-pcific-luc-0200-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=510765cbee30cde9a29d951fee6fc1fa&wsABSTime=1792043464"
+            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=1aba7039f6bd961e43c4fcb12f759d60&wsABSTime=1792045249"
           ],
           "status": "stream_found"
         }
@@ -1801,14 +1633,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e2f00462b3ce:server:0:966b6884",
+          "instance_id": "e2f00462b3ce:server:0:119e2ecf",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/rutaparna-panda-swetaparna-panda-vs-bao-lijing-cao-zihan-luc-0100-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel62.flv?wsSecret=feae2d254debe891a9198e3dfe04d1c3&wsABSTime=1792043465"
+            "https://live1.quickscoreboardz.com/live/channel62.flv?wsSecret=f40b9c707fab612f94a62224474dedb4&wsABSTime=1792045251"
           ],
           "status": "stream_found"
         }
@@ -1821,14 +1653,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "39c65e87a544:server:0:8edc2c9b",
+          "instance_id": "39c65e87a544:server:0:c08e4f1c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/san-antonio-spurs-vs-phoenix-suns-luc-0700-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=eb816b245255db7f19ff2f32d3866b7b&wsABSTime=1792043467"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=580c6a65754ac7b8e5cfa830cf2ca63a&wsABSTime=1792045253"
           ],
           "status": "stream_found"
         }
@@ -1841,14 +1673,66 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "14af74f05997:server:0:8a5284e9",
+          "instance_id": "14af74f05997:server:0:9af44ea9",
           "index": 0,
-          "name": "HD 1",
+          "name": "ALAN",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/seoul-thunders-vs-changwon-lg-sakers-luc-1700-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792000270-0-0-050952c3fa1bb2bb212ad94ab2c6cd62"
+            "https://live2.jorvakstreamcache.com/live/channel25.flv"
+          ],
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "14af74f05997:server:1:55191a69",
+          "index": 1,
+          "name": "HD ALAN",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://xoilaczcd.tv/truc-tiep/seoul-thunders-vs-changwon-lg-sakers-luc-1700-ngay-15-10-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001792002061-0-0-d0004a78f7818f2f8309628721a250bd"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP SOGNDAL VS ODD GRENLAND VÀO LÚC 00:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/sogndal-vs-odd-grenland-luc-0000-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "bb7a3b8a1e50:server:0:1c903d74",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/sogndal-vs-odd-grenland-luc-0000-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=e36cc019bb90dfc4cfea198477ef9cb1&wsABSTime=1792045257"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP STABAEK VS SANDNES ULF VÀO LÚC 00:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/stabaek-vs-sandnes-ulf-luc-0000-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "030c32ddf15f:server:0:251cb445",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/stabaek-vs-sandnes-ulf-luc-0000-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel90.flv?wsSecret=5def67a886aea07ee517236c6cd21dfe&wsABSTime=1792045259"
           ],
           "status": "stream_found"
         }
@@ -1861,34 +1745,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "59ddee3092eb:server:0:47fbadd1",
+          "instance_id": "59ddee3092eb:server:0:15a316ec",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/stromsgodset-vs-kongsvinger-luc-0000-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel8.flv?wsSecret=aa966f6f742433ae5debdcefcd8fbe5b&wsABSTime=1792043471"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP TALLINNA FC B VS NOMME JK KALJU II VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/tallinna-fc-b-vs-nomme-jk-kalju-ii-luc-2300-ngay-14-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "1b03a7291d6e:server:0:bb01aab5",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/tallinna-fc-b-vs-nomme-jk-kalju-ii-luc-2300-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=6af1f49276eeeb19bb76305305f1f3d1&wsABSTime=1792043473"
+            "https://live1.quickscoreboardz.com/live/channel8.flv?wsSecret=e981d7459a0db46d11ef2e5a0409b645&wsABSTime=1792045263"
           ],
           "status": "stream_found"
         }
@@ -1901,14 +1765,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a098ff04432b:server:0:d7f23d4d",
+          "instance_id": "a098ff04432b:server:0:f695c802",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/tasmania-jewels-w-vs-nu-melbourne-boomers-luc-1500-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=60922e67a2df486576f8157938d33902&wsABSTime=1792043476"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=3349da341af504c6e1b770c85dfedf7b&wsABSTime=1792045264"
           ],
           "status": "stream_found"
         }
@@ -1921,7 +1785,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "1a5a20c082ee:server:0:a59bacba",
+          "instance_id": "1a5a20c082ee:server:0:94cff2c6",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -1933,54 +1797,94 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "1a5a20c082ee:server:1:c18c5b59",
+          "instance_id": "1a5a20c082ee:server:1:872c01e2",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcd.tv/truc-tiep/team-we-vs-hanjin-brion-luc-1600-ngay-15-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792000283-0-0-35a3fd5de4a1e84f61e10f6a315723e5"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792002071-0-0-91f7a05189eecb0e97cea093874e3b9f"
           ],
           "status": "stream_found"
         }
       ]
     },
     {
-      "title": "PHÁT TRỰC TIẾP UNICS KAZAN VS URALMASH VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/unics-kazan-vs-uralmash-luc-2300-ngay-14-10-2026/",
-      "sport_name": "basketball",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "c6441a52e0ec:server:0:f6166e4e",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/unics-kazan-vs-uralmash-luc-2300-ngay-14-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=b42185218776dc9c7eaa3160dba39f64&wsABSTime=1792043480"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP ZALGIRIS VILNIUS U19 VS THOR AKUREYRI U19 VÀO LÚC 23:00, NGÀY 14/10/2026",
-      "url": "https://xoilacz.io/truc-tiep/zalgiris-vilnius-u19-vs-thor-akureyri-u19-luc-2300-ngay-14-10-2026/",
+      "title": "PHÁT TRỰC TIẾP TIGRE (R) VS ARGENTINOS JRS (R) VÀO LÚC 01:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/tigre-r-vs-argentinos-jrs-r-luc-0100-ngay-15-10-2026/",
       "sport_name": "football",
       "status": "ready",
       "players": [
         {
-          "instance_id": "55f965cb71b4:server:0:44404bf1",
+          "instance_id": "7527b277da15:server:0:84b61ce9",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
-          "href": "https://xoilaczcd.tv/truc-tiep/zalgiris-vilnius-u19-vs-thor-akureyri-u19-luc-2300-ngay-14-10-2026/",
+          "href": "https://xoilaczcd.tv/truc-tiep/tigre-r-vs-argentinos-jrs-r-luc-0100-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel1.flv?wsSecret=18fb1f61df7146b9c1b7b0d497fbe6f1&wsABSTime=1792043482"
+            "https://live1.quickscoreboardz.com/live/channel85.flv?wsSecret=0e1d57bcd4fc1a4d3c1436d8a17f8807&wsABSTime=1792045269"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP UD SANTAREM VS GIL VICENTE VÀO LÚC 01:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/ud-santarem-vs-gil-vicente-luc-0100-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "0fb5df0e0718:server:0:17240f65",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/ud-santarem-vs-gil-vicente-luc-0100-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel20.flv?wsSecret=e0476697e82df2bb5a88bda40b4124f5&wsABSTime=1792045270"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP UNA STRASSEN U19 VS CARDIFF METROPOLITAN U19 VÀO LÚC 00:30, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/una-strassen-u19-vs-cardiff-metropolitan-u19-luc-0030-ngay-15-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "abc85f404658:server:0:682d76a4",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/una-strassen-u19-vs-cardiff-metropolitan-u19-luc-0030-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel17.flv?wsSecret=d77ecc8939dc57eff9096b667c975725&wsABSTime=1792045273"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP YUGRA SURGUT VS TEMP SUMZ REVDA VÀO LÚC 21:00, NGÀY 15/10/2026",
+      "url": "https://xoilacz.io/truc-tiep/yugra-surgut-vs-temp-sumz-revda-luc-2100-ngay-15-10-2026/",
+      "sport_name": "basketball",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "571e05987e10:server:0:54faa1dc",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcd.tv/truc-tiep/yugra-surgut-vs-temp-sumz-revda-luc-2100-ngay-15-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=83691ccbe0ec36592fa4380468802f6f&wsABSTime=1792045276"
           ],
           "status": "stream_found"
         }
@@ -1993,14 +1897,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c308c76403bd:server:0:29dac2e0",
+          "instance_id": "c308c76403bd:server:0:21827584",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcd.tv/truc-tiep/zero-tenacity-vs-mena-warriors-luc-0200-ngay-15-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=285c577cea4a8dc27eb61009ac16f517&wsABSTime=1792043485"
+            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=88a29f54bef2f78c2f40bf8bd5a91b40&wsABSTime=1792045277"
           ],
           "status": "stream_found"
         }
