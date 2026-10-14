@@ -751,9 +751,7 @@ def build_playlist(data):
     duplicate_count = 0
     non_flv_count = 0
 
-    # Dùng set để loại stream trùng
-    seen_streams = set()
-
+    
     matches = data.get(
         "matches",
         [],
@@ -770,6 +768,9 @@ def build_playlist(data):
 
     for match_index, match in enumerate(matches):
 
+        # Chỉ chống trùng trong cùng trận
+        match_seen_streams = set()
+        
         players = match.get(
             "players",
             [],
@@ -935,13 +936,13 @@ def build_playlist(data):
                 # LOẠI STREAM TRÙNG
                 # =================================================
 
-                if stream_url in seen_streams:
+                if stream_url in match_seen_streams:
 
                     duplicate_count += 1
 
                     continue
 
-                seen_streams.add(
+                match_seen_streams.add(
                     stream_url
                 )
 
