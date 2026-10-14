@@ -113,6 +113,38 @@ def unique_append(items, value):
     if value and value not in items:
         items.append(value)
 
+def get_sport_name(page):
+    try:
+        html = page.content()
+
+        patterns = [
+            r'var\s+sportName\s*=\s*"([^"]+)"',
+            r"var\s+sportName\s*=\s*'([^']+)'",
+        ]
+
+        for pattern in patterns:
+            match = re.search(
+                pattern,
+                html,
+                re.IGNORECASE,
+            )
+
+            if match:
+                sport = match.group(1).strip().lower()
+
+                if sport in (
+                    "lol",
+                    "dota2",
+                    "csgo",
+                ):
+                    sport = "esports"
+
+                return sport
+
+    except Exception:
+        pass
+
+    return "other"
 
 # ============================================================
 # PLAYER INFORMATION
@@ -1832,7 +1864,9 @@ def scrape_one_match(
                     flush=True,
                 )
                 return None
-
+                
+            sport_name = get_sport_name(page)
+            
             # Dùng ID theo URL trận để dễ đọc log.
             match_id = hashlib.md5(
                 match_url.encode("utf-8")
@@ -1938,6 +1972,7 @@ def scrape_one_match(
             return {
                 "title": get_match_title(page),
                 "url": match_url,
+                "sport_name": sport_name,
                 "status": status,
                 "players": [
                     output_player(instance)
