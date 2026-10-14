@@ -12,11 +12,9 @@ INPUT_FILE = Path("matches.json")
 OUTPUT_FILE = Path("playlist.m3u")
 TEMP_FILE = Path("playlist.m3u.tmp")
 
-GROUP_TITLE = "Football"
 
 # Không cho phép tạo playlist nếu không có channel
 MIN_CHANNELS = 1
-
 
 # ============================================================
 # NORMALIZE TEXT
@@ -571,6 +569,19 @@ def get_match_info(match):
         teams,
     )
 
+def get_group_title(match):
+
+    sport = normalize_text(
+        match.get(
+            "sport_name",
+            "",
+        )
+    ).lower()
+
+    if not sport:
+        return "Other"
+
+    return sport.title()
 
 # ============================================================
 # PLAYER NAME
@@ -944,6 +955,7 @@ def build_playlist(data):
                 channels.append(
                     (
                         sort_key,
+                        get_group_title(match),
                         title,
                         stream_url,
                     )
@@ -976,13 +988,14 @@ def build_playlist(data):
 
     for (
         sort_key,
+        group_title,
         title,
         stream_url,
     ) in channels:
 
         lines.append(
             f'#EXTINF:-1 '
-            f'group-title="{GROUP_TITLE}",'
+            f'group-title="{group_title}",'
             f'{title}'
         )
 
