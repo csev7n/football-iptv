@@ -109,12 +109,24 @@ def get_home_page():
 
             final_url = page.url
             allowed_host = urlparse(final_url).hostname
-
-            # Không tiếp tục nếu bị chuyển sang domain khác.
-            if allowed_host != urlparse(HOME_URL).hostname:
+            
+            if not allowed_host:
                 raise RuntimeError(
-                    f"Unexpected redirect: {HOME_URL} -> {final_url}"
+                    f"Cannot determine final hostname: {final_url}"
                 )
+                
+            print(
+                f"[HOME] Source URL: {HOME_URL}",
+                flush=True,
+            )
+            print(
+                f"[HOME] Accepted final URL: {final_url}",
+                flush=True,
+            )
+            print(
+                f"[HOME] Active hostname: {allowed_host}",
+                flush=True,
+            )
 
             found = set()
             start_time = time.monotonic()
