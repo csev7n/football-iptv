@@ -88,21 +88,71 @@ def get_home_page():
             5000
         )
 
+        # Thu thập HTML ban đầu và kiểm tra link.
         final_url = page.url
-
+        initial_html = page.content()
+        
+        initial_matches = find_match_urls(
+            initial_html,
+            final_url,
+        )
+        # Cuộn trang và thu thập link mới liên tục.
+        scroll_matches = set(initial_matches)
+        start_time = time.monotonic()
+        stable_rounds = 0
+        previous_count = len(scroll_matches)
+        
+        while time.monotonic() - start_time < 120:
+            page.evaluate("""
+                window.scrollBy(
+                    0,
+                    Math.max(500, window.innerHeight * 0.8)
+                );
+            """)
+            
+            page.wait_for_timeout(1500)
+            
+            current_html = page.content()
+            
+            current_matches = find_match_urls(
+                current_html,
+                final_url,
+            )
+            
+            scroll_matches.update(current_matches)
+            
+            current_count = len(scroll_matches)
+            
+            print(
+                f"[HOME SCROLL] Unique matches={current_count}",
+                flush=True,
+            )
+            
+            if current_count == previous_count:
+                stable_rounds += 1
+            else:
+                stable_rounds = 0
+                
+            if stable_rounds >= 8:
+                break
+            
+            previous_count = current_count
+        
+        html = page.content()
+        
         print(
             f"[HOME] Final URL: {final_url}",
             flush=True,
         )
-
-        html = page.content()
-
-        browser.close()
-
-        return (
-            html,
-            final_url,
+        
+        print(
+            f"[HOME] Total discovered: {len(scroll_matches)}",
+            flush=True,
         )
+        
+        browser.close()
+        
+        return html, final_url, sorted(scroll_matches)
 
 
 def normalize_match_url(url):
@@ -150,6 +200,66 @@ def find_match_urls(html, base_url):
 
     return result
 
+def discover_matches_with_scroll(page, base_url, max_seconds=120):
+    found = set()
+    started = time.monotonic()
+    stable_rounds = 0
+    previous_count = 0
+    allowed_host = urlparse(base_url).hostname
+
+    while time.monotonic() - started < max_seconds:
+        # Lấy link từ DOM hiện tại.
+        hrefs = page.locator(
+            'a[href]'
+        ).evaluate_all(
+            "(els) => els.map(el => el.href)"
+        )
+
+        for href in hrefs:
+            if not href:
+                continue
+
+            parsed = urlparse(href)
+
+            if parsed.scheme not in ("http", "https"):
+                continue
+
+            if parsed.hostname != allowed_host:
+                continue
+
+            if "/truc-tiep/" not in parsed.path.lower():
+                continue
+
+            found.add(normalize_match_url(href))
+
+        print(
+            f"[DISCOVERY SCROLL] "
+            f"unique={len(found)} "
+            f"stable={stable_rounds}",
+            flush=True,
+        )
+
+        if len(found) == previous_count:
+            stable_rounds += 1
+        else:
+            stable_rounds = 0
+
+        # Dừng khi không còn phát hiện link mới qua nhiều vòng.
+        if stable_rounds >= 8:
+            break
+
+        previous_count = len(found)
+
+        page.evaluate("""
+            window.scrollBy(
+                0,
+                Math.max(500, window.innerHeight * 0.8)
+            );
+        """)
+
+        page.wait_for_timeout(1000)
+
+    return sorted(found)
 
 def is_flv_url(url):
     if not url:
@@ -2120,7 +2230,7 @@ def save_results(results):
 def main():
     started = time.time()
 
-    html, final_home_url = get_home_page()
+    html, final_home_url, match_urls = get_home_page()
 
     print(
         f"[HOME URL] {final_home_url}",
