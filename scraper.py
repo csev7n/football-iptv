@@ -68,20 +68,66 @@ def get_home_page():
 
             def track_api_request(request):
                 request_url = request.url
-                hostname = urlparse(request_url).hostname or ""
+                parsed = urlparse(request_url)
+                hostname = parsed.hostname or ""
+                path = parsed.path.lower()
 
+                # Chỉ theo dõi các API có khả năng chứa dữ liệu trận đấu.
+                # Loại URL ảnh đội bóng, ảnh giải đấu và tài nguyên tĩnh.
                 if (
-                    "apiscoreflow.com" in hostname
-                    or "sportpulseapiz.com" in hostname
+                    hostname == "fb-api.apiscoreflow.com"
+                    and "/football/" in path
+                    and not any(
+                        item in path
+                        for item in (
+                            "/odds-live-changes/",
+                            "/image/",
+                            ".css",
+                            ".js",
+                        )
+                    )
                 ):
                     api_requests.add(request_url)
-
                     print(
-                        f"[API REQUEST] {request.method} {request_url}",
+                        f"[MATCH API CANDIDATE] {request.method} {request_url}",
                         flush=True,
                     )
 
             page.on("request", track_api_request)
+            
+            def track_api_response(response):
+                request_url = response.url
+                parsed = urlparse(request_url)
+                hostname = parsed.hostname or ""
+                path = parsed.path.lower()
+                
+                if (
+                    hostname == "fb-api.apiscoreflow.com"
+                    and "/football/" in path
+                    and response.status == 200
+                    and "/odds-live-changes/" not in path
+                ):
+                    try:
+                        body = response.text()
+                        print(
+                            f"[MATCH API RESPONSE] "
+                            f"status={response.status} "
+                            f"url={request_url} "
+                            f"body_length={len(body)}",
+                            flush=True,
+                        )
+                        
+                        print(
+                            f"[MATCH API BODY PREVIEW] {body[:1000]}",
+                            flush=True,
+                        )
+                    except Exception as error:
+                        print(
+                            f"[MATCH API BODY ERROR] {request_url}: {error}",
+                            flush=True,
+                        )
+                        
+            page.on("response", track_api_response)
 
             # Theo dõi các API và request dữ liệu mà trang tải.
             def log_data_response(response):
