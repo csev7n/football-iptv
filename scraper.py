@@ -63,16 +63,26 @@ def get_home_page():
                 user_agent=HEADERS["User-Agent"],
             )
 
-            page.goto(
+            response = page.goto(
                 HOME_URL,
                 wait_until="domcontentloaded",
                 timeout=30000,
             )
-
+            
+            print(f"[HOME] Requested URL: {HOME_URL}", flush=True)
+            print(f"[HOME] Final URL: {page.url}", flush=True)
             print(
-                f"[HOME] Current URL: {page.url}",
+                f"[HOME] HTTP status: "
+                f"{response.status if response else 'unknown'}",
                 flush=True,
             )
+            
+            if response:
+                print(
+                    f"[HOME] Response headers: "
+                    f"{response.headers}",
+                    flush=True,
+                )
 
             try:
                 page.wait_for_load_state(
