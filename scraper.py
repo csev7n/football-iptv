@@ -129,7 +129,7 @@ def normalize_match_url(url):
 def find_match_urls(
     html,
     base_url,
-)
+):
     soup = BeautifulSoup(html, "html.parser")
     matches = set()
 
