@@ -63,6 +63,16 @@ def get_home_page():
                 user_agent=HEADERS["User-Agent"],
             )
 
+            def log_navigation_response(response):
+                if response.request.is_navigation_request():
+                    print(
+                        f"[NAVIGATION] HTTP {response.status} "
+                        f"{response.url}",
+                        flush=True,
+                    )
+
+            page.on("response", log_navigation_response)
+            
             response = page.goto(
                 HOME_URL,
                 wait_until="domcontentloaded",
