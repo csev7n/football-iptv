@@ -75,43 +75,27 @@ def get_home_page():
             timeout=30000,
         )
 
-        try:
-            page.wait_for_load_state(
-                "networkidle",
-                timeout=10000,
-            )
-        except Exception:
-            pass
+        print(
+            f"[HOME] Current URL: {page.url}",
+            flush=True,
+        )
 
-        page.wait_for_timeout(3000)
+        page.wait_for_load_state(
+            "networkidle"
+        )
 
-        last_height = 0
-
-        for _ in range(5):
-
-            height = page.evaluate(
-                "document.body.scrollHeight"
-            )
-
-            if height == last_height:
-                break
-
-            page.evaluate(
-                "window.scrollTo(0, document.body.scrollHeight)"
-            )
-
-            page.wait_for_timeout(1500)
-
-            last_height = height
+        page.wait_for_timeout(
+            5000
+        )
 
         final_url = page.url
-
-        html = page.content()
 
         print(
             f"[HOME] Final URL: {final_url}",
             flush=True,
         )
+
+        html = page.content()
 
         browser.close()
 
@@ -153,6 +137,9 @@ def find_match_urls(
         # Chỉ lấy trận thuộc hostname nguồn đã cấu hình.
         # if parsed.netloc.lower() != allowed_host:
         #     continue
+        allowed_host = urlparse(
+            base_url
+        ).netloc.lower()
 
         matches.add(normalize_match_url(full_url))
 
@@ -161,6 +148,10 @@ def find_match_urls(
             f"[MATCH] {match}",
             flush=True,
         )
+    print(
+        f"[HOME PARSE] extracted={len(matches)}",
+        flush=True,
+    )
     return sorted(matches)
 
 
@@ -2135,14 +2126,18 @@ def main():
 
     html, final_home_url = get_home_page()
 
+    print(
+        f"[HOME URL] {final_home_url}",
+        flush=True,
+    )
+
     match_urls = find_match_urls(
         html,
-        final_home_url,
     )
 
     print(
-    f"[HOME] Found {len(match_urls)} links",
-    flush=True,
+        f"[HOME] Found {len(match_urls)} links",
+        flush=True,
     )
 
     for url in match_urls:
