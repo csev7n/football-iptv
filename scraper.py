@@ -100,30 +100,42 @@ def get_home_page():
                 parsed = urlparse(request_url)
                 hostname = parsed.hostname or ""
                 path = parsed.path.lower()
-                
+
+                target_paths = (
+                    "/football/competition/featured",
+                    "/football/match/detail_live",
+                    "/football/odds/",
+                )
+
                 if (
                     hostname == "fb-api.apiscoreflow.com"
-                    and "/football/" in path
+                    and any(item in path for item in target_paths)
                     and response.status == 200
-                    and "/odds-live-changes/" not in path
                 ):
                     try:
                         body = response.text()
+
                         print(
-                            f"[MATCH API RESPONSE] "
-                            f"status={response.status} "
-                            f"url={request_url} "
-                            f"body_length={len(body)}",
+                            f"\n[API INSPECT] URL: {request_url}",
                             flush=True,
                         )
-                        
                         print(
-                            f"[MATCH API BODY PREVIEW] {body[:1000]}",
+                            f"[API INSPECT] Content-Type: "
+                            f"{response.headers.get('content-type', 'unknown')}",
                             flush=True,
                         )
+                        print(
+                            f"[API INSPECT] Body length: {len(body)}",
+                            flush=True,
+                        )
+                        print(
+                            f"[API INSPECT] Body preview: {body[:2500]}",
+                            flush=True,
+                        )
+
                     except Exception as error:
                         print(
-                            f"[MATCH API BODY ERROR] {request_url}: {error}",
+                            f"[API INSPECT ERROR] {request_url}: {error}",
                             flush=True,
                         )
                         
