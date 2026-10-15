@@ -53,106 +53,125 @@ PLAYER_SELECTOR = "a.player-link"
 # ============================================================
 
 def get_home_page():
-
-    print(
-        "[HOME] Loading homepage...",
-        flush=True,
-    )
+    print("[HOME] Loading homepage...", flush=True)
 
     with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
 
-        browser = p.chromium.launch(
-            headless=True,
-        )
-
-        page = browser.new_page(
-            user_agent=HEADERS["User-Agent"],
-        )
-
-        page.goto(
-            HOME_URL,
-            wait_until="domcontentloaded",
-            timeout=30000,
-        )
-
-        print(
-            f"[HOME] Current URL: {page.url}",
-            flush=True,
-        )
-
-        page.wait_for_load_state(
-            "networkidle"
-        )
-
-        page.wait_for_timeout(
-            5000
-        )
-
-        # Thu thập HTML ban đầu và kiểm tra link.
-        final_url = page.url
-        initial_html = page.content()
-        
-        initial_matches = find_match_urls(
-            initial_html,
-            final_url,
-        )
-        # Cuộn trang và thu thập link mới liên tục.
-        scroll_matches = set(initial_matches)
-        start_time = time.monotonic()
-        stable_rounds = 0
-        previous_count = len(scroll_matches)
-        
-        while time.monotonic() - start_time < 120:
-            page.evaluate("""
-                window.scrollBy(
-                    0,
-                    Math.max(500, window.innerHeight * 0.8)
-                );
-            """)
-            
-            page.wait_for_timeout(1500)
-            
-            current_html = page.content()
-            
-            current_matches = find_match_urls(
-                current_html,
-                final_url,
+        try:
+            page = browser.new_page(
+                user_agent=HEADERS["User-Agent"],
             )
-            
-            scroll_matches.update(current_matches)
-            
-            current_count = len(scroll_matches)
-            
+
+            page.goto(
+                HOME_URL,
+                wait_until="domcontentloaded",
+                timeout=30000,
+            )
+
             print(
-                f"[HOME SCROLL] Unique matches={current_count}",
+                f"[HOME] Current URL: {page.url}",
                 flush=True,
             )
-            
-            if current_count == previous_count:
-                stable_rounds += 1
-            else:
-                stable_rounds = 0
-                
-            if stable_rounds >= 8:
-                break
-            
-            previous_count = current_count
-        
-        html = page.content()
-        
-        print(
-            f"[HOME] Final URL: {final_url}",
-            flush=True,
-        )
-        
-        print(
-            f"[HOME] Total discovered: {len(scroll_matches)}",
-            flush=True,
-        )
-        
-        browser.close()
-        
-        return html, final_url, sorted(scroll_matches)
+
+            try:
+                page.wait_for_load_state(
+                    "networkidle",
+                    timeout=10000,
+                )
+            except Exception:
+                print(
+                    "[HOME] Network still active; continue.",
+                    flush=True,
+                )
+
+            page.wait_for_timeout(3000)
+
+            final_url = page.url
+            allowed_host = urlparse(final_url).hostname
+
+            # Không tiếp tục nếu bị chuyển sang domain khác.
+            if allowed_host != urlparse(HOME_URL).hostname:
+                raise RuntimeError(
+                    f"Unexpected redirect: {HOME_URL} -> {final_url}"
+                )
+
+            found = set()
+            start_time = time.monotonic()
+            stable_rounds = 0
+            previous_count = -1
+            max_seconds = 120
+
+            while time.monotonic() - start_time < max_seconds:
+                # Thu thập URL trực tiếp từ DOM hiện tại.
+                hrefs = page.locator(
+                    'a[href]'
+                ).evaluate_all(
+                    "(els) => els.map(el => el.href)"
+                )
+
+                for href in hrefs:
+                    if not href:
+                        continue
+
+                    parsed = urlparse(href)
+
+                    if parsed.scheme not in ("http", "https"):
+                        continue
+
+                    if parsed.hostname != allowed_host:
+                        continue
+
+                    if "/truc-tiep/" not in parsed.path.lower():
+                        continue
+
+                    found.add(normalize_match_url(href))
+
+                height = page.evaluate(
+                    "document.documentElement.scrollHeight"
+                )
+
+                print(
+                    f"[HOME SCROLL] height={height} "
+                    f"unique={len(found)}",
+                    flush=True,
+                )
+
+                if len(found) == previous_count:
+                    stable_rounds += 1
+                else:
+                    stable_rounds = 0
+
+                # Chờ đủ nhiều vòng không có link mới.
+                if stable_rounds >= 8:
+                    break
+
+                previous_count = len(found)
+
+                page.evaluate("""
+                    window.scrollBy(
+                        0,
+                        Math.max(500, window.innerHeight * 0.8)
+                    );
+                """)
+
+                page.wait_for_timeout(1500)
+
+            html = page.content()
+
+            print(
+                f"[HOME] Final URL: {page.url}",
+                flush=True,
+            )
+            print(
+                f"[HOME] Total discovered: {len(found)}",
+                flush=True,
+            )
+
+            return html, final_url, sorted(found)
+
+        finally:
+            browser.close()
 
 
 def normalize_match_url(url):
@@ -2230,6 +2249,7 @@ def save_results(results):
 def main():
     started = time.time()
 
+    # Đã bao gồm URL thu thập qua các vòng cuộn.
     html, final_home_url, match_urls = get_home_page()
 
     print(
@@ -2237,13 +2257,16 @@ def main():
         flush=True,
     )
 
-    match_urls = find_match_urls(
+    # Bổ sung link từ HTML cuối cùng, không ghi đè danh sách cũ.
+    final_matches = find_match_urls(
         html,
         final_home_url,
     )
 
+    match_urls = sorted(set(match_urls) | set(final_matches))
+
     print(
-        f"[HOME] Found {len(match_urls)} links",
+        f"[HOME] Found {len(match_urls)} unique links",
         flush=True,
     )
 
@@ -2253,14 +2276,18 @@ def main():
             or "viettel" in url.lower()
         ):
             print(
-              f"[FOUND TARGET] {url}",
-              flush=True,
+                f"[FOUND TARGET] {url}",
+                flush=True,
             )
-    
+
     print(
         f"[MAIN] Found {len(match_urls)} unique matches.",
         flush=True,
     )
+
+    if not match_urls:
+        print("[MAIN] No matches found.", flush=True)
+        return
 
     if not match_urls:
         print("[MAIN] No matches found.", flush=True)
