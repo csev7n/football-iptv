@@ -63,6 +63,26 @@ def get_home_page():
                 user_agent=HEADERS["User-Agent"],
             )
 
+            # Ghi nhận các request API để điều tra nguồn dữ liệu trận đấu.
+            api_requests = set()
+
+            def track_api_request(request):
+                request_url = request.url
+                hostname = urlparse(request_url).hostname or ""
+
+                if (
+                    "apiscoreflow.com" in hostname
+                    or "sportpulseapiz.com" in hostname
+                ):
+                    api_requests.add(request_url)
+
+                    print(
+                        f"[API REQUEST] {request.method} {request_url}",
+                        flush=True,
+                    )
+
+            page.on("request", track_api_request)
+
             # Theo dõi các API và request dữ liệu mà trang tải.
             def log_data_response(response):
                 url = response.url.lower()
@@ -208,6 +228,18 @@ def get_home_page():
                 """)
 
                 page.wait_for_timeout(1500)
+
+            print(
+                f"[API SUMMARY] Total unique API requests: "
+                f"{len(api_requests)}",
+                flush=True,
+            )
+            
+            for api_url in sorted(api_requests):
+                print(
+                    f"[API URL] {api_url}",
+                    flush=True,
+                )
 
             html = page.content()
 
