@@ -53,20 +53,72 @@ PLAYER_SELECTOR = "a.player-link"
 # ============================================================
 
 def get_home_page():
-    print("[HOME] Downloading...", flush=True)
-
-    response = requests.get(
-        HOME_URL,
-        headers=HEADERS,
-        timeout=20,
-    )
-    response.raise_for_status()
 
     print(
-        f"[HOME] HTTP {response.status_code}",
+        "[HOME] Loading homepage...",
         flush=True,
     )
-    return response.text
+
+    with sync_playwright() as p:
+
+        browser = p.chromium.launch(
+            headless=True,
+        )
+
+        page = browser.new_page(
+            user_agent=HEADERS["User-Agent"],
+        )
+
+        page.goto(
+            HOME_URL,
+            wait_until="domcontentloaded",
+            timeout=30000,
+        )
+
+        try:
+            page.wait_for_load_state(
+                "networkidle",
+                timeout=10000,
+            )
+        except Exception:
+            pass
+
+        page.wait_for_timeout(3000)
+
+        last_height = 0
+
+        for _ in range(5):
+
+            height = page.evaluate(
+                "document.body.scrollHeight"
+            )
+
+            if height == last_height:
+                break
+
+            page.evaluate(
+                "window.scrollTo(0, document.body.scrollHeight)"
+            )
+
+            page.wait_for_timeout(1500)
+
+            last_height = height
+
+        final_url = page.url
+
+        html = page.content()
+
+        print(
+            f"[HOME] Final URL: {final_url}",
+            flush=True,
+        )
+
+        browser.close()
+
+        return (
+            html,
+            final_url,
+        )
 
 
 def normalize_match_url(url):
@@ -74,11 +126,14 @@ def normalize_match_url(url):
     return url.rstrip("/") + "/"
 
 
-def find_match_urls(html):
+def find_match_urls(
+    html,
+    base_url,
+)
     soup = BeautifulSoup(html, "html.parser")
     matches = set()
 
-    allowed_host = urlparse(HOME_URL).netloc.lower()
+    
 
     for anchor in soup.select("a[href]"):
         href = anchor.get("href")
@@ -86,18 +141,26 @@ def find_match_urls(html):
         if not href or "/truc-tiep/" not in href:
             continue
 
-        full_url = urljoin(HOME_URL, href)
+        full_url = urljoin(
+            base_url,
+            href,
+        )
         parsed = urlparse(full_url)
 
         if parsed.scheme not in ("http", "https"):
             continue
 
         # Chỉ lấy trận thuộc hostname nguồn đã cấu hình.
-        if parsed.netloc.lower() != allowed_host:
-            continue
+        # if parsed.netloc.lower() != allowed_host:
+        #     continue
 
         matches.add(normalize_match_url(full_url))
 
+    for match in sorted(matches):
+    print(
+        f"[MATCH] {match}",
+        flush=True,
+    )
     return sorted(matches)
 
 
@@ -2070,10 +2133,28 @@ def save_results(results):
 def main():
     started = time.time()
 
-    html = get_home_page()
+    html, final_home_url = get_home_page()
 
-    match_urls = find_match_urls(html)
+    match_urls = find_match_urls(
+        html,
+        final_home_url,
+    )
 
+    print(
+    f"[HOME] Found {len(match_urls)} links",
+    flush=True,
+    )
+
+    for url in match_urls:
+        if (
+            "persib" in url.lower()
+            or "viettel" in url.lower()
+        ):
+            print(
+              f"[FOUND TARGET] {url}",
+              flush=True,
+            )
+    
     print(
         f"[MAIN] Found {len(match_urls)} unique matches.",
         flush=True,
