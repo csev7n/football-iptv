@@ -63,6 +63,26 @@ def get_home_page():
                 user_agent=HEADERS["User-Agent"],
             )
 
+            # Theo dõi các API và request dữ liệu mà trang tải.
+            def log_data_response(response):
+                url = response.url.lower()
+
+                if any(key in url for key in (
+                    "api",
+                    "match",
+                    "event",
+                    "fixture",
+                    "schedule",
+                    "truc-tiep",
+                )):
+                    print(
+                        f"[DATA RESPONSE] HTTP {response.status} "
+                        f"{response.url}",
+                        flush=True,
+                    )
+
+            page.on("response", log_data_response)
+
             def log_navigation_response(response):
                 if response.request.is_navigation_request():
                     print(
