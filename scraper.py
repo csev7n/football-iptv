@@ -110,49 +110,45 @@ def normalize_match_url(url):
     return url.rstrip("/") + "/"
 
 
-def find_match_urls(
-    html,
-    base_url,
-):
+def find_match_urls(html, base_url):
     soup = BeautifulSoup(html, "html.parser")
     matches = set()
 
-    
+    allowed_host = urlparse(base_url).hostname
 
     for anchor in soup.select("a[href]"):
         href = anchor.get("href")
 
-        if not href or "/truc-tiep/" not in href:
+        if not href:
             continue
 
-        full_url = urljoin(
-            base_url,
-            href,
-        )
+        full_url = urljoin(base_url, href)
         parsed = urlparse(full_url)
 
         if parsed.scheme not in ("http", "https"):
             continue
 
-        # Chỉ lấy trận thuộc hostname nguồn đã cấu hình.
-        # if parsed.netloc.lower() != allowed_host:
-        #     continue
-        allowed_host = urlparse(
-            base_url
-        ).netloc.lower()
+        # Chỉ lấy URL thuộc domain trang chủ đã xác minh.
+        if parsed.hostname != allowed_host:
+            continue
+
+        # Chấp nhận đường dẫn trận trực tiếp.
+        if "/truc-tiep/" not in parsed.path.lower():
+            continue
 
         matches.add(normalize_match_url(full_url))
 
-    for match in sorted(matches):
-        print(
-            f"[MATCH] {match}",
-            flush=True,
-        )
+    result = sorted(matches)
+
     print(
-        f"[HOME PARSE] extracted={len(matches)}",
+        f"[DISCOVERY] DOM found {len(result)} unique matches",
         flush=True,
     )
-    return sorted(matches)
+
+    for match in result:
+        print(f"[MATCH] {match}", flush=True)
+
+    return result
 
 
 def is_flv_url(url):
@@ -2133,6 +2129,7 @@ def main():
 
     match_urls = find_match_urls(
         html,
+        final_home_url,
     )
 
     print(
