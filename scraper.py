@@ -157,10 +157,10 @@ def find_match_urls(
         matches.add(normalize_match_url(full_url))
 
     for match in sorted(matches):
-    print(
-        f"[MATCH] {match}",
-        flush=True,
-    )
+        print(
+            f"[MATCH] {match}",
+            flush=True,
+        )
     return sorted(matches)
 
 
