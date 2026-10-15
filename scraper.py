@@ -53,267 +53,72 @@ PLAYER_SELECTOR = "a.player-link"
 # ============================================================
 
 def get_home_page():
-    print("[HOME] Loading homepage...", flush=True)
+
+    print(
+        "[HOME] Loading homepage...",
+        flush=True,
+    )
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+
+        browser = p.chromium.launch(
+            headless=True,
+        )
+
+        page = browser.new_page(
+            user_agent=HEADERS["User-Agent"],
+        )
+
+        page.goto(
+            HOME_URL,
+            wait_until="domcontentloaded",
+            timeout=30000,
+        )
 
         try:
-            page = browser.new_page(
-                user_agent=HEADERS["User-Agent"],
+            page.wait_for_load_state(
+                "networkidle",
+                timeout=10000,
+            )
+        except Exception:
+            pass
+
+        page.wait_for_timeout(3000)
+
+        last_height = 0
+
+        for _ in range(5):
+
+            height = page.evaluate(
+                "document.body.scrollHeight"
             )
 
-            # Ghi nhận các request API để điều tra nguồn dữ liệu trận đấu.
-            api_requests = set()
+            if height == last_height:
+                break
 
-            def track_api_request(request):
-                request_url = request.url
-                parsed = urlparse(request_url)
-                hostname = parsed.hostname or ""
-                path = parsed.path.lower()
-
-                # Chỉ theo dõi các API có khả năng chứa dữ liệu trận đấu.
-                # Loại URL ảnh đội bóng, ảnh giải đấu và tài nguyên tĩnh.
-                if (
-                    hostname == "fb-api.apiscoreflow.com"
-                    and "/football/" in path
-                    and not any(
-                        item in path
-                        for item in (
-                            "/odds-live-changes/",
-                            "/image/",
-                            ".css",
-                            ".js",
-                        )
-                    )
-                ):
-                    api_requests.add(request_url)
-                    print(
-                        f"[MATCH API CANDIDATE] {request.method} {request_url}",
-                        flush=True,
-                    )
-
-            page.on("request", track_api_request)
-            
-            def track_api_response(response):
-                request_url = response.url
-                parsed = urlparse(request_url)
-                hostname = parsed.hostname or ""
-                path = parsed.path.lower()
-
-                target_paths = (
-                    "/football/competition/featured",
-                    "/football/match/detail_live",
-                    "/football/odds/",
-                )
-
-                if (
-                    hostname == "fb-api.apiscoreflow.com"
-                    and any(item in path for item in target_paths)
-                    and response.status == 200
-                ):
-                    try:
-                        body = response.text()
-
-                        print(
-                            f"\n[API INSPECT] URL: {request_url}",
-                            flush=True,
-                        )
-                        print(
-                            f"[API INSPECT] Content-Type: "
-                            f"{response.headers.get('content-type', 'unknown')}",
-                            flush=True,
-                        )
-                        print(
-                            f"[API INSPECT] Body length: {len(body)}",
-                            flush=True,
-                        )
-                        print(
-                            f"[API INSPECT] Body preview: {body[:2500]}",
-                            flush=True,
-                        )
-
-                    except Exception as error:
-                        print(
-                            f"[API INSPECT ERROR] {request_url}: {error}",
-                            flush=True,
-                        )
-                        
-            page.on("response", track_api_response)
-
-            # Theo dõi các API và request dữ liệu mà trang tải.
-            def log_data_response(response):
-                url = response.url.lower()
-
-                if any(key in url for key in (
-                    "api",
-                    "match",
-                    "event",
-                    "fixture",
-                    "schedule",
-                    "truc-tiep",
-                )):
-                    print(
-                        f"[DATA RESPONSE] HTTP {response.status} "
-                        f"{response.url}",
-                        flush=True,
-                    )
-
-            page.on("response", log_data_response)
-
-            def log_navigation_response(response):
-                if response.request.is_navigation_request():
-                    print(
-                        f"[NAVIGATION] HTTP {response.status} "
-                        f"{response.url}",
-                        flush=True,
-                    )
-
-            page.on("response", log_navigation_response)
-            
-            response = page.goto(
-                HOME_URL,
-                wait_until="domcontentloaded",
-                timeout=30000,
-            )
-            
-            print(f"[HOME] Requested URL: {HOME_URL}", flush=True)
-            print(f"[HOME] Final URL: {page.url}", flush=True)
-            print(
-                f"[HOME] HTTP status: "
-                f"{response.status if response else 'unknown'}",
-                flush=True,
-            )
-            
-            if response:
-                print(
-                    f"[HOME] Response headers: "
-                    f"{response.headers}",
-                    flush=True,
-                )
-
-            try:
-                page.wait_for_load_state(
-                    "networkidle",
-                    timeout=10000,
-                )
-            except Exception:
-                print(
-                    "[HOME] Network still active; continue.",
-                    flush=True,
-                )
-
-            page.wait_for_timeout(3000)
-
-            final_url = page.url
-            allowed_host = urlparse(final_url).hostname
-            
-            if not allowed_host:
-                raise RuntimeError(
-                    f"Cannot determine final hostname: {final_url}"
-                )
-                
-            print(
-                f"[HOME] Source URL: {HOME_URL}",
-                flush=True,
-            )
-            print(
-                f"[HOME] Accepted final URL: {final_url}",
-                flush=True,
-            )
-            print(
-                f"[HOME] Active hostname: {allowed_host}",
-                flush=True,
+            page.evaluate(
+                "window.scrollTo(0, document.body.scrollHeight)"
             )
 
-            found = set()
-            start_time = time.monotonic()
-            stable_rounds = 0
-            previous_count = -1
-            max_seconds = 120
+            page.wait_for_timeout(1500)
 
-            while time.monotonic() - start_time < max_seconds:
-                # Thu thập URL trực tiếp từ DOM hiện tại.
-                hrefs = page.locator(
-                    'a[href]'
-                ).evaluate_all(
-                    "(els) => els.map(el => el.href)"
-                )
+            last_height = height
 
-                for href in hrefs:
-                    if not href:
-                        continue
+        final_url = page.url
 
-                    parsed = urlparse(href)
+        html = page.content()
 
-                    if parsed.scheme not in ("http", "https"):
-                        continue
+        print(
+            f"[HOME] Final URL: {final_url}",
+            flush=True,
+        )
 
-                    if parsed.hostname != allowed_host:
-                        continue
+        browser.close()
 
-                    if "/truc-tiep/" not in parsed.path.lower():
-                        continue
-
-                    found.add(normalize_match_url(href))
-
-                height = page.evaluate(
-                    "document.documentElement.scrollHeight"
-                )
-
-                print(
-                    f"[HOME SCROLL] height={height} "
-                    f"unique={len(found)}",
-                    flush=True,
-                )
-
-                if len(found) == previous_count:
-                    stable_rounds += 1
-                else:
-                    stable_rounds = 0
-
-                # Chờ đủ nhiều vòng không có link mới.
-                if stable_rounds >= 8:
-                    break
-
-                previous_count = len(found)
-
-                page.evaluate("""
-                    window.scrollBy(
-                        0,
-                        Math.max(500, window.innerHeight * 0.8)
-                    );
-                """)
-
-                page.wait_for_timeout(1500)
-
-            print(
-                f"[API SUMMARY] Total unique API requests: "
-                f"{len(api_requests)}",
-                flush=True,
-            )
-            
-            for api_url in sorted(api_requests):
-                print(
-                    f"[API URL] {api_url}",
-                    flush=True,
-                )
-
-            html = page.content()
-
-            print(
-                f"[HOME] Final URL: {page.url}",
-                flush=True,
-            )
-            print(
-                f"[HOME] Total discovered: {len(found)}",
-                flush=True,
-            )
-
-            return html, final_url, sorted(found)
-
-        finally:
-            browser.close()
+        return (
+            html,
+            final_url,
+        )
 
 
 def normalize_match_url(url):
@@ -321,106 +126,43 @@ def normalize_match_url(url):
     return url.rstrip("/") + "/"
 
 
-def find_match_urls(html, base_url):
+def find_match_urls(
+    html,
+    base_url,
+):
     soup = BeautifulSoup(html, "html.parser")
     matches = set()
 
-    allowed_host = urlparse(base_url).hostname
+    
 
     for anchor in soup.select("a[href]"):
         href = anchor.get("href")
 
-        if not href:
+        if not href or "/truc-tiep/" not in href:
             continue
 
-        full_url = urljoin(base_url, href)
+        full_url = urljoin(
+            base_url,
+            href,
+        )
         parsed = urlparse(full_url)
 
         if parsed.scheme not in ("http", "https"):
             continue
 
-        # Chỉ lấy URL thuộc domain trang chủ đã xác minh.
-        if parsed.hostname != allowed_host:
-            continue
-
-        # Chấp nhận đường dẫn trận trực tiếp.
-        if "/truc-tiep/" not in parsed.path.lower():
-            continue
+        # Chỉ lấy trận thuộc hostname nguồn đã cấu hình.
+        # if parsed.netloc.lower() != allowed_host:
+        #     continue
 
         matches.add(normalize_match_url(full_url))
 
-    result = sorted(matches)
-
-    print(
-        f"[DISCOVERY] DOM found {len(result)} unique matches",
-        flush=True,
-    )
-
-    for match in result:
-        print(f"[MATCH] {match}", flush=True)
-
-    return result
-
-def discover_matches_with_scroll(page, base_url, max_seconds=120):
-    found = set()
-    started = time.monotonic()
-    stable_rounds = 0
-    previous_count = 0
-    allowed_host = urlparse(base_url).hostname
-
-    while time.monotonic() - started < max_seconds:
-        # Lấy link từ DOM hiện tại.
-        hrefs = page.locator(
-            'a[href]'
-        ).evaluate_all(
-            "(els) => els.map(el => el.href)"
-        )
-
-        for href in hrefs:
-            if not href:
-                continue
-
-            parsed = urlparse(href)
-
-            if parsed.scheme not in ("http", "https"):
-                continue
-
-            if parsed.hostname != allowed_host:
-                continue
-
-            if "/truc-tiep/" not in parsed.path.lower():
-                continue
-
-            found.add(normalize_match_url(href))
-
+    for match in sorted(matches):
         print(
-            f"[DISCOVERY SCROLL] "
-            f"unique={len(found)} "
-            f"stable={stable_rounds}",
+            f"[MATCH] {match}",
             flush=True,
         )
+    return sorted(matches)
 
-        if len(found) == previous_count:
-            stable_rounds += 1
-        else:
-            stable_rounds = 0
-
-        # Dừng khi không còn phát hiện link mới qua nhiều vòng.
-        if stable_rounds >= 8:
-            break
-
-        previous_count = len(found)
-
-        page.evaluate("""
-            window.scrollBy(
-                0,
-                Math.max(500, window.innerHeight * 0.8)
-            );
-        """)
-
-        page.wait_for_timeout(1000)
-
-    return sorted(found)
 
 def is_flv_url(url):
     if not url:
@@ -2391,25 +2133,16 @@ def save_results(results):
 def main():
     started = time.time()
 
-    # Đã bao gồm URL thu thập qua các vòng cuộn.
-    html, final_home_url, match_urls = get_home_page()
+    html, final_home_url = get_home_page()
 
-    print(
-        f"[HOME URL] {final_home_url}",
-        flush=True,
-    )
-
-    # Bổ sung link từ HTML cuối cùng, không ghi đè danh sách cũ.
-    final_matches = find_match_urls(
+    match_urls = find_match_urls(
         html,
         final_home_url,
     )
 
-    match_urls = sorted(set(match_urls) | set(final_matches))
-
     print(
-        f"[HOME] Found {len(match_urls)} unique links",
-        flush=True,
+    f"[HOME] Found {len(match_urls)} links",
+    flush=True,
     )
 
     for url in match_urls:
@@ -2418,18 +2151,14 @@ def main():
             or "viettel" in url.lower()
         ):
             print(
-                f"[FOUND TARGET] {url}",
-                flush=True,
+              f"[FOUND TARGET] {url}",
+              flush=True,
             )
-
+    
     print(
         f"[MAIN] Found {len(match_urls)} unique matches.",
         flush=True,
     )
-
-    if not match_urls:
-        print("[MAIN] No matches found.", flush=True)
-        return
 
     if not match_urls:
         print("[MAIN] No matches found.", flush=True)
