@@ -67,32 +67,50 @@ def load_more_matches(page):
 
         buttons = page.locator(
             "a.btn-loadmore"
-        ).all()
-
-        if not buttons:
-            break
-
-        clicked = 0
-
-        for button in buttons:
-
+        )
+        
+        button_count = buttons.count()
+        
+        print(
+            f"[LOADMORE] buttons={button_count}",
+            flush=True,
+        )
+        
+        for i in range(button_count):
+            
             try:
-
+                
+                button = page.locator(
+                    "a.btn-loadmore"
+                ).nth(i)
+                
                 if not button.is_visible():
                     continue
-
+                    
+                sport = (
+                    button.get_attribute(
+                        "data-sport"
+                    ) or "unknown"
+                )
+                
                 button.scroll_into_view_if_needed()
-
+                
                 button.click(
                     timeout=3000
                 )
-
+                
                 page.wait_for_timeout(
-                    1000
+                    1500
                 )
-
+                
+                print(
+                    f"[LOADMORE CLICK] "
+                    f"sport={sport}",
+                    flush=True,
+                )
+                
                 clicked += 1
-
+                
             except Exception:
                 continue
 
