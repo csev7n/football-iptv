@@ -56,75 +56,84 @@ PLAYER_SELECTOR = "a.player-link"
 
 def load_more_matches(page):
 
+    sports = set()
+
+    buttons = page.locator(
+        "a.btn-loadmore"
+    ).all()
+
+    for button in buttons:
+
+        try:
+
+            sport = button.get_attribute(
+                "data-sport"
+            )
+
+            if sport:
+                sports.add(
+                    sport.strip()
+                )
+
+        except Exception:
+        continue
+
+    sports = sorted(
+        sports
+    )
+    
     print(
-        "[LOADMORE] Start",
+        f"[LOADMORE] Sports={sports}",
         flush=True,
     )
 
-    for click_round in range(MAX_LOADMORE_CLICKS):
-
-        # Đếm số lần bấm thành công trong vòng hiện tại
-        clicked = 0
-
-        buttons = page.locator(
-            "a.btn-loadmore"
-        )
-
-        button_count = buttons.count()
+    for sport in sports:
 
         print(
-            f"[LOADMORE] buttons={button_count}",
+            f"[LOADMORE] sport={sport}",
             flush=True,
         )
 
-        for i in range(button_count):
+        for click_index in range(
+            MAX_LOADMORE_CLICKS
+        ):
+
+            selector = (
+                f"a.btn-loadmore-"
+                f"{sport}"
+            )
+
+            button = page.locator(
+                selector
+            )
 
             try:
-                button = page.locator(
-                    "a.btn-loadmore"
-                ).nth(i)
 
-                if not button.is_visible():
-                    continue
+                if button.count() == 0:
+                    break
 
-                sport = (
-                    button.get_attribute("data-sport")
-                    or "unknown"
-                )
+                if not button.first.is_visible():
+                    break
 
-                button.scroll_into_view_if_needed()
+                button.first.scroll_into_view_if_needed()
 
-                button.click(
+                button.first.click(
                     timeout=3000
                 )
 
-                page.wait_for_timeout(1500)
+                page.wait_for_timeout(
+                    1500
+                )
 
                 print(
-                    f"[LOADMORE CLICK] sport={sport}",
+                    f"[LOADMORE CLICK] "
+                    f"sport={sport} "
+                    f"round={click_index + 1}",
                     flush=True,
                 )
 
-                clicked += 1
-
-            except Exception as e:
-                print(
-                    f"[LOADMORE] Click failed "
-                    f"index={i}: {e}",
-                    flush=True,
-                )
-                continue
-
-        print(
-            f"[LOADMORE] Round "
-            f"{click_round + 1} "
-            f"clicked={clicked}",
-            flush=True,
-        )
-
-        # Không bấm được nút nào thì dừng
-        if clicked == 0:
-            break
+            except Exception:
+                break
 
 def get_home_page():
 
