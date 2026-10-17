@@ -59,8 +59,30 @@ def activate_tabs_and_load_more(page):
     all_match_urls = set()
 
     def collect_match_urls(tab_id):
-        """Thu thập URL trận từ DOM hiện tại."""
-        anchors = page.locator("a[href*='/truc-tiep/']")
+        tab = page.locator(f"#{tab_id}")
+        target = (
+            tab.get_attribute("data-target")
+            or "#" + (tab.get_attribute("aria-controls") or "")
+        )
+
+        if not target or target == "#":
+            print(
+                f"[COLLECT] tab={tab_id}: no panel target",
+                flush=True,
+            )
+            return
+
+        panel = page.locator(target)
+
+        if panel.count() == 0:
+            print(
+                f"[COLLECT] tab={tab_id}: "
+                f"panel={target} not found",
+                flush=True,
+            )
+            return
+
+        anchors = panel.locator("a[href*='/truc-tiep/']")
         count = anchors.count()
         collected = 0
 
@@ -68,7 +90,7 @@ def activate_tabs_and_load_more(page):
             try:
                 href = anchors.nth(i).get_attribute("href")
 
-                if not href or "/truc-tiep/" not in href:
+                if not href:
                     continue
 
                 full_url = urljoin(page.url, href)
@@ -91,6 +113,7 @@ def activate_tabs_and_load_more(page):
 
         print(
             f"[COLLECT] tab={tab_id} "
+            f"panel={target} "
             f"dom_links={count} "
             f"collected={collected} "
             f"total_unique={len(all_match_urls)}",
