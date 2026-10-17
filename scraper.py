@@ -176,9 +176,52 @@ def load_more_matches(page):
             )
 
             if count == 0:
+                print(
+                    f"[LOADMORE] No button for {sport}",
+                    flush=True,
+                )
                 break
 
             clicked = False
+
+            for i in range(count):
+                current = button.nth(i)
+
+                try:
+                    print(
+                        f"[LOADMORE DEBUG] "
+                        f"sport={sport} "
+                        f"visible={current.is_visible()} "
+                        f"enabled={current.is_enabled()} "
+                        f"text={current.inner_text()}",
+                        flush=True,
+                    )
+
+                    current.scroll_into_view_if_needed()
+                    current.click(timeout=5000)
+
+                    page.wait_for_timeout(2000)
+
+                    print(
+                        f"[LOADMORE CLICK] "
+                        f"sport={sport} "
+                        f"round={click_index + 1}",
+                        flush=True,
+                    )
+
+                    clicked = True
+                    break
+
+                except Exception as e:
+                    print(
+                        f"[LOADMORE ERROR] "
+                        f"sport={sport}: "
+                        f"{type(e).__name__}: {e}",
+                        flush=True,
+                    )
+
+            if not clicked:
+                break
 
             for i in range(count):
                 try:
