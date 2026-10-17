@@ -89,6 +89,17 @@ def activate_all_tabs(page):
             page.wait_for_timeout(
                 2000
             )
+            
+            link_count = page.locator(
+                "a[href*='/truc-tiep/']"
+            ).count()
+            
+            print(
+                f"[TAB CONTENT] "
+                f"{tab_id} "
+                f"links={link_count}",
+                flush=True,
+            )
 
             print(
                 f"[TAB] {tab_id}",
@@ -235,6 +246,9 @@ def get_home_page():
 
             last_height = height
 
+        activate_all_tabs(
+            page
+        )
         
         load_more_matches(
             page
