@@ -235,9 +235,6 @@ def get_home_page():
 
             last_height = height
 
-        activate_all_tabs(
-            page
-        )
         
         load_more_matches(
             page
