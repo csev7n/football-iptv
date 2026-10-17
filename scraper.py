@@ -173,6 +173,8 @@ def get_home_page():
         
         html = page.content()
 
+        # Lấy URL cuối cùng sau khi chuyển hướng
+        final_url = page.url
         print(
             f"[HOME] Final URL: {final_url}",
             flush=True,
