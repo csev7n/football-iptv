@@ -32,6 +32,8 @@ AUTO_PLAY_WAIT_MS = 5000
 CLICK_STREAM_TIMEOUT_MS = 6000
 POLL_MS = 100
 
+MAX_LOADMORE_CLICKS = 5
+
 MAX_CLICK_RETRIES = 1
 MAX_RELOAD_RETRIES = 1
 RELOAD_AUTO_WAIT_MS = 2000
@@ -51,6 +53,58 @@ PLAYER_SELECTOR = "a.player-link"
 # ============================================================
 # BASIC
 # ============================================================
+
+def load_more_matches(page):
+
+    print(
+        "[LOADMORE] Start",
+        flush=True,
+    )
+
+    for click_round in range(
+        MAX_LOADMORE_CLICKS
+    ):
+
+        buttons = page.locator(
+            "a.btn-loadmore"
+        ).all()
+
+        if not buttons:
+            break
+
+        clicked = 0
+
+        for button in buttons:
+
+            try:
+
+                if not button.is_visible():
+                    continue
+
+                button.scroll_into_view_if_needed()
+
+                button.click(
+                    timeout=3000
+                )
+
+                page.wait_for_timeout(
+                    1000
+                )
+
+                clicked += 1
+
+            except Exception:
+                continue
+
+        print(
+            f"[LOADMORE] Round "
+            f"{click_round + 1} "
+            f"clicked={clicked}",
+            flush=True,
+        )
+
+        if clicked == 0:
+            break
 
 def get_home_page():
 
@@ -104,8 +158,19 @@ def get_home_page():
 
             last_height = height
 
-        final_url = page.url
-
+        load_more_matches(
+            page
+        )
+        
+        total_links = page.locator(
+            "a[href*='/truc-tiep/']"
+        ).count()
+        print(
+            f"[HOME] Match links after loadmore: "
+            f"{total_links}",
+            flush=True,
+        )
+        
         html = page.content()
 
         print(
