@@ -101,20 +101,9 @@ def activate_tabs_and_load_more(page):
 
                 normalized = normalize_match_url(full_url)
                 
-                if "tiamo-hirakata-vs-grulla-morioka" in normalized.lower():
-                    print(
-                        f"[TARGET FOUND] tab={tab_id} "
-                        f"url={normalized}",
-                        flush=True,
-                    )
 
                 if normalized:
                     all_match_urls.add(normalized)
-                    if "tiamo-hirakata-vs-grulla-morioka" in normalized.lower():
-                        print(
-                            f"[TARGET ADDED] {normalized}",
-                            flush=True,
-                        )
                     collected += 1
 
             except Exception as error:
@@ -279,18 +268,6 @@ def activate_tabs_and_load_more(page):
         flush=True,
     )
     
-    target = "tiamo-hirakata-vs-grulla-morioka"
-    
-    found = [
-        url for url in all_match_urls
-        if target in url.lower()
-    ]
-    
-    print(
-        f"[TARGET SUMMARY] count={len(found)} urls={found}",
-        flush=True,
-    )
-
     return results
 
 def get_home_page():
