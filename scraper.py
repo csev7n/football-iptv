@@ -61,57 +61,58 @@ def load_more_matches(page):
         flush=True,
     )
 
-    for click_round in range(
-        MAX_LOADMORE_CLICKS
-    ):
+    for click_round in range(MAX_LOADMORE_CLICKS):
+
+        # Đếm số lần bấm thành công trong vòng hiện tại
+        clicked = 0
 
         buttons = page.locator(
             "a.btn-loadmore"
         )
-        
+
         button_count = buttons.count()
-        
+
         print(
             f"[LOADMORE] buttons={button_count}",
             flush=True,
         )
-        
+
         for i in range(button_count):
-            
+
             try:
-                
                 button = page.locator(
                     "a.btn-loadmore"
                 ).nth(i)
-                
+
                 if not button.is_visible():
                     continue
-                    
+
                 sport = (
-                    button.get_attribute(
-                        "data-sport"
-                    ) or "unknown"
+                    button.get_attribute("data-sport")
+                    or "unknown"
                 )
-                
+
                 button.scroll_into_view_if_needed()
-                
+
                 button.click(
                     timeout=3000
                 )
-                
-                page.wait_for_timeout(
-                    1500
-                )
-                
+
+                page.wait_for_timeout(1500)
+
                 print(
-                    f"[LOADMORE CLICK] "
-                    f"sport={sport}",
+                    f"[LOADMORE CLICK] sport={sport}",
                     flush=True,
                 )
-                
+
                 clicked += 1
-                
-            except Exception:
+
+            except Exception as e:
+                print(
+                    f"[LOADMORE] Click failed "
+                    f"index={i}: {e}",
+                    flush=True,
+                )
                 continue
 
         print(
@@ -121,6 +122,7 @@ def load_more_matches(page):
             flush=True,
         )
 
+        # Không bấm được nút nào thì dừng
         if clicked == 0:
             break
 
