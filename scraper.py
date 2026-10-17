@@ -266,42 +266,51 @@ def normalize_match_url(url):
     return url.rstrip("/") + "/"
 
 
-def find_match_urls(
-    html,
-    base_url,
-):
+def find_match_urls(html, base_url):
     soup = BeautifulSoup(html, "html.parser")
+
+    raw_count = 0
+    matching_href_count = 0
+    valid_url_count = 0
     matches = set()
 
-    
-
     for anchor in soup.select("a[href]"):
+        raw_count += 1
+
         href = anchor.get("href")
 
         if not href or "/truc-tiep/" not in href:
             continue
 
-        full_url = urljoin(
-            base_url,
-            href,
-        )
+        matching_href_count += 1
+
+        full_url = urljoin(base_url, href)
         parsed = urlparse(full_url)
 
         if parsed.scheme not in ("http", "https"):
             continue
 
-        # Chỉ lấy trận thuộc hostname nguồn đã cấu hình.
-        # if parsed.netloc.lower() != allowed_host:
-        #     continue
+        valid_url_count += 1
 
-        matches.add(normalize_match_url(full_url))
+        normalized = normalize_match_url(full_url)
 
-    for match in sorted(matches):
-        print(
-            f"[MATCH] {match}",
-            flush=True,
-        )
-    return sorted(matches)
+        if normalized:
+            matches.add(normalized)
+
+    results = sorted(matches)
+
+    print(
+        f"[MATCH STATS] all_anchors={raw_count} "
+        f"matching_hrefs={matching_href_count} "
+        f"valid_urls={valid_url_count} "
+        f"unique_matches={len(results)}",
+        flush=True,
+    )
+
+    for match in results:
+        print(f"[MATCH] {match}", flush=True)
+
+    return results
 
 
 def is_flv_url(url):
