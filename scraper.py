@@ -54,26 +54,22 @@ PLAYER_SELECTOR = "a.player-link"
 # BASIC
 # ============================================================
 
-def activate_all_tabs(page):
+def activate_tabs_and_load_more(page):
 
-    tabs = page.locator(
-        "button.nav-link"
-    )
-
-    count = tabs.count()
+    tabs = page.locator("button.nav-link")
+    tab_count = tabs.count()
 
     print(
-        f"[TABS] Found {count} tabs",
+        f"[TABS] Found {tab_count} tabs",
         flush=True,
     )
 
-    for i in range(count):
+    for tab_index in range(tab_count):
 
         try:
-
             tab = page.locator(
                 "button.nav-link"
-            ).nth(i)
+            ).nth(tab_index)
 
             tab_id = (
                 tab.get_attribute("id")
@@ -81,178 +77,109 @@ def activate_all_tabs(page):
             )
 
             tab.scroll_into_view_if_needed()
+            tab.click(timeout=5000)
+            page.wait_for_timeout(1500)
 
-            tab.click(
-                timeout=3000
-            )
-
-            page.wait_for_timeout(
-                2000
-            )
-            
-            link_count = page.locator(
-                "a[href*='/truc-tiep/']"
-            ).count()
-            
             print(
-                f"[TAB CONTENT] "
-                f"{tab_id} "
-                f"links={link_count}",
+                f"[TAB] Active={tab_id}",
                 flush=True,
             )
 
+            # Chỉ lấy nút tải thêm thuộc tab đang hiển thị.
+            buttons = page.locator(
+                "a.btn-loadmore:visible"
+            )
+
+            button_count = buttons.count()
+
             print(
-                f"[TAB] {tab_id}",
+                f"[LOADMORE] tab={tab_id} "
+                f"visible_buttons={button_count}",
                 flush=True,
             )
 
-        except Exception as error:
-
-            print(
-                f"[TAB FAILED] {error}",
-                flush=True,
-            )
-
-def load_more_matches(page):
-
-    sports = set()
-
-    buttons = page.locator(
-        "a.btn-loadmore"
-    )
-
-    for i in range(buttons.count()):
-        try:
-            button = buttons.nth(i)
-
-            sport = button.get_attribute(
-                "data-sport"
-            )
-
-            if sport:
-                sports.add(sport.strip())
-
-        except Exception as e:
-            print(
-                f"[LOADMORE] Read button failed: {e}",
-                flush=True,
-            )
-
-    sports = sorted(sports)
-
-    print(
-        f"[LOADMORE] Sports={sports}",
-        flush=True,
-    )
-
-    for sport in sports:
-
-        print(
-            f"[LOADMORE] sport={sport}",
-            flush=True,
-        )
-
-        for click_index in range(MAX_LOADMORE_CLICKS):
-
-            button = page.locator(
-                "a.btn-loadmore"
-            ).filter(
-                has=page.locator(
-                    f"[data-sport='{sport}']"
-                )
-            )
-
-            # Chọn chính xác bằng thuộc tính data-sport
-            button = page.locator(
-                f"a.btn-loadmore[data-sport='{sport}']"
-            )
-
-            count = button.count()
-
-            print(
-                f"[LOADMORE DEBUG] sport={sport} "
-                f"count={count}",
-                flush=True,
-            )
-
-            if count == 0:
-                print(
-                    f"[LOADMORE] No button for {sport}",
-                    flush=True,
-                )
-                break
-
-            clicked = False
-
-            for i in range(count):
-                current = button.nth(i)
-
+            for button_index in range(button_count):
                 try:
-                    print(
-                        f"[LOADMORE DEBUG] "
-                        f"sport={sport} "
-                        f"visible={current.is_visible()} "
-                        f"enabled={current.is_enabled()} "
-                        f"text={current.inner_text()}",
-                        flush=True,
+                    button = page.locator(
+                        "a.btn-loadmore:visible"
+                    ).nth(button_index)
+
+                    if not button.is_visible():
+                        continue
+
+                    sport = (
+                        button.get_attribute("data-sport")
+                        or "unknown"
                     )
 
-                    current.scroll_into_view_if_needed()
-                    current.click(timeout=5000)
+                    for click_index in range(
+                        MAX_LOADMORE_CLICKS
+                    ):
+                        current_buttons = page.locator(
+                            "a.btn-loadmore:visible"
+                        )
 
-                    page.wait_for_timeout(2000)
+                        # Tìm lại nút sau mỗi lần DOM cập nhật.
+                        candidates = []
 
-                    print(
-                        f"[LOADMORE CLICK] "
-                        f"sport={sport} "
-                        f"round={click_index + 1}",
-                        flush=True,
-                    )
+                        for j in range(current_buttons.count()):
+                            candidate = current_buttons.nth(j)
 
-                    clicked = True
-                    break
+                            if (
+                                candidate.get_attribute("data-sport")
+                                or "unknown"
+                            ) == sport:
+                                candidates.append(j)
+
+                        if not candidates:
+                            break
+
+                        current = current_buttons.nth(
+                            candidates[0]
+                        )
+
+                        try:
+                            current.scroll_into_view_if_needed()
+                            current.click(timeout=5000)
+
+                            page.wait_for_timeout(1500)
+
+                            print(
+                                f"[LOADMORE CLICK] "
+                                f"tab={tab_id} "
+                                f"sport={sport} "
+                                f"round={click_index + 1}",
+                                flush=True,
+                            )
+
+                        except Exception as e:
+                            print(
+                                f"[LOADMORE ERROR] "
+                                f"tab={tab_id} "
+                                f"sport={sport}: {e}",
+                                flush=True,
+                            )
+                            break
 
                 except Exception as e:
                     print(
                         f"[LOADMORE ERROR] "
-                        f"sport={sport}: "
-                        f"{type(e).__name__}: {e}",
+                        f"tab={tab_id}: {e}",
                         flush=True,
                     )
 
-            if not clicked:
-                break
+            print(
+                f"[TAB CONTENT] {tab_id} "
+                f"visible_links="
+                f"{page.locator('a[href*=\"/truc-tiep/\"]:visible').count()}",
+                flush=True,
+            )
 
-            for i in range(count):
-                try:
-                    current = button.nth(i)
-
-                    if not current.is_visible():
-                        continue
-
-                    current.scroll_into_view_if_needed()
-                    current.click(timeout=3000)
-
-                    page.wait_for_timeout(1500)
-
-                    print(
-                        f"[LOADMORE CLICK] sport={sport} "
-                        f"round={click_index + 1}",
-                        flush=True,
-                    )
-
-                    clicked = True
-                    break
-
-                except Exception as e:
-                    print(
-                        f"[LOADMORE] Click failed "
-                        f"sport={sport}: {e}",
-                        flush=True,
-                    )
-
-            if not clicked:
-                break
+        except Exception as e:
+            print(
+                f"[TAB FAILED] {tab_id}: {e}",
+                flush=True,
+            )
 
 def get_home_page():
 
@@ -306,13 +233,7 @@ def get_home_page():
 
             last_height = height
 
-        activate_all_tabs(
-            page
-        )
-        
-        load_more_matches(
-            page
-        )
+        activate_tabs_and_load_more(page)
         
         total_links = page.locator(
             "a[href*='/truc-tiep/']"
