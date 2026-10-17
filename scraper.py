@@ -54,6 +54,54 @@ PLAYER_SELECTOR = "a.player-link"
 # BASIC
 # ============================================================
 
+def activate_all_tabs(page):
+
+    tabs = page.locator(
+        "button.nav-link"
+    )
+
+    count = tabs.count()
+
+    print(
+        f"[TABS] Found {count} tabs",
+        flush=True,
+    )
+
+    for i in range(count):
+
+        try:
+
+            tab = page.locator(
+                "button.nav-link"
+            ).nth(i)
+
+            tab_id = (
+                tab.get_attribute("id")
+                or "unknown"
+            )
+
+            tab.scroll_into_view_if_needed()
+
+            tab.click(
+                timeout=3000
+            )
+
+            page.wait_for_timeout(
+                2000
+            )
+
+            print(
+                f"[TAB] {tab_id}",
+                flush=True,
+            )
+
+        except Exception as error:
+
+            print(
+                f"[TAB FAILED] {error}",
+                flush=True,
+            )
+
 def load_more_matches(page):
 
     sports = set()
@@ -187,6 +235,10 @@ def get_home_page():
 
             last_height = height
 
+        activate_all_tabs(
+            page
+        )
+        
         load_more_matches(
             page
         )
