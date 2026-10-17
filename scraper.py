@@ -160,11 +160,7 @@ def activate_tabs_and_load_more(page):
                 f"[TAB] Active={tab_id}",
                 flush=True,
             )
-            
-            # DEBUG: kiểm tra riêng nội dung của tab tennis
-            if tab_id == "tennis-tab":
-                debug_tab_links(page, tab_id)
-
+                        
             # Thu thập các trận đã có trước khi click Load More.
             collect_match_urls(tab_id)
 
