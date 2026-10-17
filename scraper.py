@@ -119,28 +119,27 @@ def load_more_matches(page):
 
     buttons = page.locator(
         "a.btn-loadmore"
-    ).all()
+    )
 
-    for button in buttons:
-
+    for i in range(buttons.count()):
         try:
+            button = buttons.nth(i)
 
             sport = button.get_attribute(
                 "data-sport"
             )
 
             if sport:
-                sports.add(
-                    sport.strip()
-                )
+                sports.add(sport.strip())
 
-        except Exception:
-            continue
+        except Exception as e:
+            print(
+                f"[LOADMORE] Read button failed: {e}",
+                flush=True,
+            )
 
-    sports = sorted(
-        sports
-    )
-    
+    sports = sorted(sports)
+
     print(
         f"[LOADMORE] Sports={sports}",
         flush=True,
@@ -153,45 +152,63 @@ def load_more_matches(page):
             flush=True,
         )
 
-        for click_index in range(
-            MAX_LOADMORE_CLICKS
-        ):
-
-            selector = (
-                f"a.btn-loadmore-"
-                f"{sport}"
-            )
+        for click_index in range(MAX_LOADMORE_CLICKS):
 
             button = page.locator(
-                selector
+                "a.btn-loadmore"
+            ).filter(
+                has=page.locator(
+                    f"[data-sport='{sport}']"
+                )
             )
 
-            try:
+            # Chọn chính xác bằng thuộc tính data-sport
+            button = page.locator(
+                f"a.btn-loadmore[data-sport='{sport}']"
+            )
 
-                if button.count() == 0:
+            count = button.count()
+
+            print(
+                f"[LOADMORE DEBUG] sport={sport} "
+                f"count={count}",
+                flush=True,
+            )
+
+            if count == 0:
+                break
+
+            clicked = False
+
+            for i in range(count):
+                try:
+                    current = button.nth(i)
+
+                    if not current.is_visible():
+                        continue
+
+                    current.scroll_into_view_if_needed()
+                    current.click(timeout=3000)
+
+                    page.wait_for_timeout(1500)
+
+                    print(
+                        f"[LOADMORE CLICK] sport={sport} "
+                        f"round={click_index + 1}",
+                        flush=True,
+                    )
+
+                    clicked = True
                     break
 
-                if not button.first.is_visible():
-                    break
+                except Exception as e:
+                    print(
+                        f"[LOADMORE] Click failed "
+                        f"sport={sport}: {e}",
+                        flush=True,
+                    )
 
-                button.first.scroll_into_view_if_needed()
-
-                button.first.click(
-                    timeout=3000
-                )
-
-                page.wait_for_timeout(
-                    1500
-                )
-
-                print(
-                    f"[LOADMORE CLICK] "
-                    f"sport={sport} "
-                    f"round={click_index + 1}",
-                    flush=True,
-                )
-
-            except Exception:
+            if not clicked:
                 break
 
 def get_home_page():
