@@ -76,7 +76,7 @@ def load_more_matches(page):
                 )
 
         except Exception:
-        continue
+            continue
 
     sports = sorted(
         sports
