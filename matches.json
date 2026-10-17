@@ -1,7 +1,27 @@
 {
-  "generated_at": 1792228932,
-  "match_count": 90,
+  "generated_at": 1792230735,
+  "match_count": 88,
   "matches": [
+    {
+      "title": "PHÁT TRỰC TIẾP ABAHANI LIMITED VS CHATTOGRAM CITY FC VÀO LÚC 15:45, NGÀY 17/10/2026",
+      "url": "https://globaldispatchespodcast.com/truc-tiep/abahani-limited-vs-chattogram-city-fc-luc-1545-ngay-17-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "dcf5665fb5d2:server:0:88c9faba",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://globaldispatchespodcast.com/truc-tiep/abahani-limited-vs-chattogram-city-fc-luc-1545-ngay-17-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel20.flv?wsSecret=63fcdd9117ee5346c0d79ad9f5a2cf66&wsABSTime=1792273709"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
     {
       "title": "PHÁT TRỰC TIẾP ALEXANDER ZVEREV VS ALEJANDRO DAVIDOVICH FOKINA VÀO LÚC 15:30, NGÀY 17/10/2026",
       "url": "https://globaldispatchespodcast.com/truc-tiep/alexander-zverev-vs-alejandro-davidovich-fokina-luc-1530-ngay-17-10-2026/",
@@ -9,7 +29,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e7f231d027e9:server:0:963f649c",
+          "instance_id": "e7f231d027e9:server:0:88079516",
           "index": 0,
           "name": "VIC",
           "server": "Server 1",
@@ -21,14 +41,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "e7f231d027e9:server:1:4324529a",
+          "instance_id": "e7f231d027e9:server:1:199f9fb3",
           "index": 1,
           "name": "HD VIC",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/alexander-zverev-vs-alejandro-davidovich-fokina-luc-1530-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001792228711-0-0-57b873f0ed1fcb5949e8b484455a5d08"
+            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001792230516-0-0-36c9463129b4bfd38cccdf2aa98c148f"
           ],
           "status": "stream_found"
         }
@@ -41,14 +61,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "25182ce6096e:server:0:bccb93ca",
+          "instance_id": "25182ce6096e:server:0:056d164c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/an-se-young-vs-nozomi-okuhara-luc-1950-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=bf6c03a064d2f2b220b0ba1aa1d877e9&wsABSTime=1792271903"
+            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=265f20bed168dffd7fdddaefd52981d5&wsABSTime=1792273709"
           ],
           "status": "stream_found"
         }
@@ -61,34 +81,54 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "bfc10501d059:server:0:28a73d58",
+          "instance_id": "bfc10501d059:server:0:1ef6df8c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/anders-antonsen-vs-christo-popov-luc-2130-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=bf6c03a064d2f2b220b0ba1aa1d877e9&wsABSTime=1792271903"
+            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=fe0ee6adacb8aaf31df222f165965981&wsABSTime=1792273716"
           ],
           "status": "stream_found"
         }
       ]
     },
     {
-      "title": "PHÁT TRỰC TIẾP BAO LIJING/CAO ZIHAN VS PEARLY TAN/THINAAH MURALITHARAN VÀO LÚC 17:20, NGÀY 17/10/2026",
+      "title": "PHÁT TRỰC TIẾP BANGLADESH POLICE VS ARAMBAGH KS VÀO LÚC 15:45, NGÀY 17/10/2026",
+      "url": "https://globaldispatchespodcast.com/truc-tiep/bangladesh-police-vs-arambagh-ks-luc-1545-ngay-17-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "8a9af8376933:server:0:58b30415",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://globaldispatchespodcast.com/truc-tiep/bangladesh-police-vs-arambagh-ks-luc-1545-ngay-17-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel22.flv?wsSecret=bb7d516ef64641af47fecc9f345d008f&wsABSTime=1792273718"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP BAO LIJING/CAO ZIHAN VS PEARLY TAN/THINAAH MURALITHARAN VÀO LÚC 17:40, NGÀY 17/10/2026",
       "url": "https://globaldispatchespodcast.com/truc-tiep/bao-lijing-cao-zihan-vs-pearly-tan-thinaah-muralitharan-luc-1720-ngay-17-10-2026/",
       "sport_name": "badminton",
       "status": "ready",
       "players": [
         {
-          "instance_id": "52c84f1338b8:server:0:c00430c3",
+          "instance_id": "52c84f1338b8:server:0:2330ce63",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/bao-lijing-cao-zihan-vs-pearly-tan-thinaah-muralitharan-luc-1720-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=af78c7057229fc909cbcc06b77a2800e&wsABSTime=1792271911"
+            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=fd9e7391e1d4530fbf1ed108a5de3f1a&wsABSTime=1792273719"
           ],
           "status": "stream_found"
         }
@@ -101,14 +141,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a933b51988a9:server:0:0f55a119",
+          "instance_id": "a933b51988a9:server:0:a2a2140b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/bayswater-city-vs-marconi-stallions-luc-1530-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel17.flv?wsSecret=a039afd1d4828c6acd61a2bd17137b97&wsABSTime=1792271911"
+            "https://live1.quickscoreboardz.com/live/channel17.flv?wsSecret=e09448d82eeae99286b6c1c7e7ccfe21&wsABSTime=1792273724"
           ],
           "status": "stream_found"
         }
@@ -121,14 +161,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d5b1a764eacd:server:0:b36e59df",
+          "instance_id": "d5b1a764eacd:server:0:07d5df32",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/bc-samara-vs-uralmash-luc-2000-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=bd75b6fa15053dc4590aa918ca2a4d28&wsABSTime=1792271914"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=8c105573cfb71d16d1cfc6860d5de5ad&wsABSTime=1792273725"
           ],
           "status": "stream_found"
         }
@@ -141,14 +181,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "abce8ab3a87b:server:0:e88856b2",
+          "instance_id": "abce8ab3a87b:server:0:ba12e025",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/bhosale-rutuja-lara-salden-vs-dominika-salkova-anna-siskova-luc-2240-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel50.flv?wsSecret=bb357533fcafa3b2c3d968c5a41fd0b9&wsABSTime=1792271918"
+            "https://live1.quickscoreboardz.com/live/channel50.flv?wsSecret=3a3c2b9a34287c24c8df9e5ff113575c&wsABSTime=1792273727"
           ],
           "status": "stream_found"
         }
@@ -161,7 +201,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "4447077e4648:server:0:8375923c",
+          "instance_id": "4447077e4648:server:0:dd8e3adc",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -173,14 +213,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "4447077e4648:server:1:6d1fe3d1",
+          "instance_id": "4447077e4648:server:1:699d8a7d",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/bnk-fearx-vs-team-we-luc-1600-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792228726-0-0-1985543bf33c3291c26ba08b9c8cc186"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792230536-0-0-6d9cdd9f0ee3e0438e6a8c89e9a87322"
           ],
           "status": "stream_found"
         }
@@ -193,31 +233,31 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8cd12f981032:server:0:7be8e34d",
+          "instance_id": "8cd12f981032:server:0:a1389183",
           "index": 0,
           "name": "NICK",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/brentford-vs-liverpool-luc-2100-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=2f3e2df675272ad06fcffe303d79a059&wsABSTime=1792271922"
+            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=44345126cf09c810605140a8b7013055&wsABSTime=1792273732"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "8cd12f981032:server:1:f7df31bf",
+          "instance_id": "8cd12f981032:server:1:054459a6",
           "index": 1,
           "name": "HD NICK",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/brentford-vs-liverpool-luc-2100-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001792228729-0-0-ae9104ac8a62aaae53f4e8df8e0d8ce4"
+            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001792230540-0-0-3a3b66d664232b5ebc64c47aec7b2a50"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "8cd12f981032:server:2:e235005b",
+          "instance_id": "8cd12f981032:server:2:2ff69b10",
           "index": 2,
           "name": "RIO",
           "server": "Server 3",
@@ -229,38 +269,38 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "8cd12f981032:server:3:d4bf4e06",
+          "instance_id": "8cd12f981032:server:3:d2a4318c",
           "index": 3,
           "name": "HD RIO",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://globaldispatchespodcast.com/truc-tiep/brentford-vs-liverpool-luc-2100-ngay-17-10-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001792228731-0-0-514e304d5188bd8bc065f9b4ce32757d"
+            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001792230541-0-0-543bb08725858fcf6a807aa71bf458d5"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "8cd12f981032:server:4:33d17278",
+          "instance_id": "8cd12f981032:server:4:7e0c3472",
           "index": 4,
           "name": "BRADY",
           "server": "Server 5",
           "data_link": "4",
           "href": "https://globaldispatchespodcast.com/truc-tiep/brentford-vs-liverpool-luc-2100-ngay-17-10-2026/link/4",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel15.flv?wsSecret=d462930fb0e652c1f8c6f3875dd7bcbb&wsABSTime=1792271931"
+            "https://live1.quickscoreboardz.com/live/channel15.flv?wsSecret=7bcd32f8b3c9ea95c11886d5060a7a0a&wsABSTime=1792273742"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "8cd12f981032:server:5:721dc952",
+          "instance_id": "8cd12f981032:server:5:8505adf8",
           "index": 5,
           "name": "HD BRADY",
           "server": "Server 6",
           "data_link": "5",
           "href": "https://globaldispatchespodcast.com/truc-tiep/brentford-vs-liverpool-luc-2100-ngay-17-10-2026/link/5",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001792228732-0-0-4469dfe68a1ea1cac3f34a24b423d937"
+            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001792230543-0-0-52b9421fa95e37b062181d0fac026345"
           ],
           "status": "stream_found"
         }
@@ -273,14 +313,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "478f32ee590d:server:0:e5f580f9",
+          "instance_id": "478f32ee590d:server:0:bcfe06fa",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/bursaspor-vs-bahcesehir-koleji-luc-1930-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=fc2c3e1393c04ef8b56d3600ac43c88b&wsABSTime=1792271926"
+            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=2ae84178560486031394b38a0a91d34d&wsABSTime=1792273734"
           ],
           "status": "stream_found"
         }
@@ -293,14 +333,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f245b27f0f52:server:0:7c490b20",
+          "instance_id": "f245b27f0f52:server:0:95c54b70",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/buyukcekmece-vs-fenerbahce-koleji-luc-2200-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=a2b46821779fbe0ab462733f8cc1f7fd&wsABSTime=1792271928"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=53bfe6f2c43bc335348faf4cababac97&wsABSTime=1792273738"
           ],
           "status": "stream_found"
         }
@@ -313,14 +353,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7a7b93157a2a:server:0:c68bcd84",
+          "instance_id": "7a7b93157a2a:server:0:ee1bad40",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/caxias-do-sul-vs-cruzeiro-luc-0400-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=c879b67a4d23c8ae1f5f7fb328d2119f&wsABSTime=1792271933"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=01494dea6e1ad1caf364fa096a255e30&wsABSTime=1792273741"
           ],
           "status": "stream_found"
         }
@@ -333,7 +373,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "da0f761a7ffd:server:0:73d589fd",
+          "instance_id": "da0f761a7ffd:server:0:17a7ca9d",
           "index": 0,
           "name": "ASTRA",
           "server": "Server 1",
@@ -345,14 +385,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "da0f761a7ffd:server:1:101863ec",
+          "instance_id": "da0f761a7ffd:server:1:c5a336b4",
           "index": 1,
           "name": "HD ASTRA",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/central-coast-mariners-vs-newcastle-jets-luc-1540-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001792228740-0-0-534ad106a6f18efbb28b3f7848cb7e3a"
+            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001792230551-0-0-2edbced2bb2a88daff0684a33730cb59"
           ],
           "status": "stream_found"
         }
@@ -365,14 +405,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d008da7942e3:server:0:e3303456",
+          "instance_id": "d008da7942e3:server:0:a1645911",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/clement-chidekh-vs-gilles-arnaud-bailly-luc-1840-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel57.flv?wsSecret=8120e029fe4d6fe44472a43cb3c8b9e5&wsABSTime=1792271936"
+            "https://live1.quickscoreboardz.com/live/channel57.flv?wsSecret=64ef881011d5967dbb6521646718bffa&wsABSTime=1792273745"
           ],
           "status": "stream_found"
         }
@@ -385,7 +425,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "666c40646d30:server:0:0d859f48",
+          "instance_id": "666c40646d30:server:0:0019f63e",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -397,14 +437,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "666c40646d30:server:1:f702a5a9",
+          "instance_id": "666c40646d30:server:1:130a5da2",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/cuneo-volley-vs-perugia-luc-2300-ngay-18-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792228746-0-0-ecc41c5b175e6bc70845d26e01ae63ba"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792230554-0-0-196b7e59bdf88bd0ab4dab7d93f2b3a5"
           ],
           "status": "stream_found"
         }
@@ -417,46 +457,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7c0f0f71288e:server:0:5cae617a",
+          "instance_id": "7c0f0f71288e:server:0:caab778f",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/cyberhero-vs-inner-circle-x-insanity-luc-0200-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=a7a5c82b511b5644967be173904e5ba0&wsABSTime=1792271942"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP DAEGU KOGAS VS CHANGWON LG SAKERS VÀO LÚC 14:30, NGÀY 17/10/2026",
-      "url": "https://globaldispatchespodcast.com/truc-tiep/daegu-kogas-vs-changwon-lg-sakers-luc-1430-ngay-17-10-2026/",
-      "sport_name": "basketball",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "c2016bf62760:server:0:cf17d290",
-          "index": 0,
-          "name": "KOBE",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/daegu-kogas-vs-changwon-lg-sakers-luc-1430-ngay-17-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel27.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "c2016bf62760:server:1:062a4a75",
-          "index": 1,
-          "name": "HD KOBE",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/daegu-kogas-vs-changwon-lg-sakers-luc-1430-ngay-17-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001792228750-0-0-b91166d38706445119204780d8b132fc"
+            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=a132b389c0cdc8fdd5e20b91d4e58d01&wsABSTime=1792273753"
           ],
           "status": "stream_found"
         }
@@ -469,14 +477,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0b3c31d542de:server:0:9e754fd4",
+          "instance_id": "0b3c31d542de:server:0:c2d36df0",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/dalian-kewei-vs-guizhou-guiyang-athletic-luc-1500-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=c0f876cc612e9e522054bd7b035f7aaf&wsABSTime=1792271948"
+            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=1d36c28c8b0e818237b3943e61f97592&wsABSTime=1792273753"
           ],
           "status": "stream_found"
         }
@@ -489,14 +497,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b8c1fe961f72:server:0:0ab8bfa3",
+          "instance_id": "b8c1fe961f72:server:0:225266c1",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/dayana-yastremska-vs-kamilla-rakhimova-luc-1400-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel52.flv?wsSecret=ba3e8fe970187630fbffa55e7e711566&wsABSTime=1792271950"
+            "https://live1.quickscoreboardz.com/live/channel52.flv?wsSecret=7e0e8f99bd442878a8e4af37d4813b49&wsABSTime=1792273756"
           ],
           "status": "stream_found"
         }
@@ -509,14 +517,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "56f619c2aa1f:server:0:91324db9",
+          "instance_id": "56f619c2aa1f:server:0:30226ce2",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/eastern-district-vs-eastern-aa-luc-1500-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=934722b5a8461a9ef145f881bd12e7f3&wsABSTime=1792271952"
+            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=e9e31f328b3ae83ad6874795d406841f&wsABSTime=1792273760"
           ],
           "status": "stream_found"
         }
@@ -529,14 +537,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "3a4b01bd6a80:server:0:36743957",
+          "instance_id": "3a4b01bd6a80:server:0:8f38e754",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/ence-vs-phantom-luc-1900-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=a63a7d20c4f7cd7eda79e94ca9b7ad2d&wsABSTime=1792271955"
+            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=6072c30126bb07815c3d7f16157a1b6e&wsABSTime=1792273760"
           ],
           "status": "stream_found"
         }
@@ -549,14 +557,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "bff4d6ce82fc:server:0:29c59229",
+          "instance_id": "bff4d6ce82fc:server:0:c45fc550",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/enisey-vs-cska-moscow-luc-1600-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=8f6e2fdb782e3f7b1dc8d416510bc628&wsABSTime=1792271957"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=28a3ff080b9791911a58f644c20acab7&wsABSTime=1792273763"
           ],
           "status": "stream_found"
         }
@@ -569,7 +577,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a35df82d0a49:server:0:7b38102c",
+          "instance_id": "a35df82d0a49:server:0:fac4f5d5",
           "index": 0,
           "name": "ROY",
           "server": "Server 1",
@@ -581,43 +589,43 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "a35df82d0a49:server:1:a19e9aad",
+          "instance_id": "a35df82d0a49:server:1:7087758f",
           "index": 1,
           "name": "HD ROY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/everton-vs-chelsea-luc-1830-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792228765-0-0-5c51f9839320d41775a272d408d8886a"
+            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792230574-0-0-c1327260b14eb964ab8c2617de0f5b65"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "a35df82d0a49:server:2:b1be6dbd",
+          "instance_id": "a35df82d0a49:server:2:973cfcca",
           "index": 2,
           "name": "FILIP",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://globaldispatchespodcast.com/truc-tiep/everton-vs-chelsea-luc-1830-ngay-17-10-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel19.flv?wsSecret=904ef737eead3c13911123a9524e53ca&wsABSTime=1792271966"
+            "https://live1.quickscoreboardz.com/live/channel19.flv?wsSecret=d81e7ac9e4faf247c6d569c2b13e0350&wsABSTime=1792273775"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "a35df82d0a49:server:3:718b4b2d",
+          "instance_id": "a35df82d0a49:server:3:f0b43b1f",
           "index": 3,
           "name": "HD FILIP",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://globaldispatchespodcast.com/truc-tiep/everton-vs-chelsea-luc-1830-ngay-17-10-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-19.flv?auth_key=3000001792228766-0-0-0a35d246c0b7f06f02cdd92e1f223886"
+            "https://live2.domaincdn.cc/livecdn/channel-19.flv?auth_key=3000001792230576-0-0-6c69542920fa1ed56544f49b19ddcd2e"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "a35df82d0a49:server:4:9454b7d6",
+          "instance_id": "a35df82d0a49:server:4:21e7164e",
           "index": 4,
           "name": "MAX",
           "server": "Server 5",
@@ -629,14 +637,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "a35df82d0a49:server:5:2ad91815",
+          "instance_id": "a35df82d0a49:server:5:b632d89b",
           "index": 5,
           "name": "HD MAX",
           "server": "Server 6",
           "data_link": "5",
           "href": "https://globaldispatchespodcast.com/truc-tiep/everton-vs-chelsea-luc-1830-ngay-17-10-2026/link/5",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=767ae8ed4acc063125988e7c9ec7249e&wsABSTime=1792271967"
+            "https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=59dc0117b47b29a01bad8bfd5889ba3e&wsABSTime=1792273777"
           ],
           "status": "stream_found"
         }
@@ -649,14 +657,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "39510fe5f531:server:0:ea40c22b",
+          "instance_id": "39510fe5f531:server:0:9a939894",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/fajar-alfian-muhammad-shohibul-fikri-vs-wang-chang-liang-weikeng-luc-1620-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=088be2ebbc567ae6c613c1940412ff2e&wsABSTime=1792271961"
+            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=bf4e8f5cf076f6724b97c50f9f2a3cab&wsABSTime=1792273768"
           ],
           "status": "stream_found"
         }
@@ -669,34 +677,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f8b35828655b:server:0:48b32bc4",
+          "instance_id": "f8b35828655b:server:0:7fb30f1a",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/falcons-vs-betboom-luc-0000-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=ef79b0ffac111d83a86a3a029b224e06&wsABSTime=1792271964"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP FENG YANZHE/HUANG DONGPING VS HOO PANG RON/LAI PEI JING VÀO LÚC 15:40, NGÀY 17/10/2026",
-      "url": "https://globaldispatchespodcast.com/truc-tiep/feng-yanzhe-huang-dongping-vs-hoo-pang-ron-lai-pei-jing-luc-1540-ngay-17-10-2026/",
-      "sport_name": "badminton",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "04122c41da96:server:0:b7622e38",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/feng-yanzhe-huang-dongping-vs-hoo-pang-ron-lai-pei-jing-luc-1540-ngay-17-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=56c15551c217275cff94bd71c339b0b7&wsABSTime=1792271968"
+            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=eb79de7cc0ed155e807ee5432ed25c4c&wsABSTime=1792273770"
           ],
           "status": "stream_found"
         }
@@ -709,14 +697,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5066ece60cd5:server:0:9513deee",
+          "instance_id": "5066ece60cd5:server:0:ee0ec902",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/formosa-dreamers-vs-new-taipei-kings-luc-1600-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=108e3e4edef01a080ba7a3d6846aea62&wsABSTime=1792271969"
+            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=92b96345d455c4fa71a0f74de425623c&wsABSTime=1792273775"
           ],
           "status": "stream_found"
         }
@@ -729,14 +717,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7d0af2f547e1:server:0:b296835f",
+          "instance_id": "7d0af2f547e1:server:0:19385775",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/francisco-comesana-vs-thiago-seyboth-wild-luc-0310-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel52.flv?wsSecret=1653b41ca7d3bc3e02bed6344ac4629b&wsABSTime=1792271971"
+            "https://live1.quickscoreboardz.com/live/channel52.flv?wsSecret=166ea979c616153c8e18251bb3e95ee5&wsABSTime=1792273777"
           ],
           "status": "stream_found"
         }
@@ -749,7 +737,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8f36c6745aa3:server:0:f72d6cb9",
+          "instance_id": "8f36c6745aa3:server:0:6b308816",
           "index": 0,
           "name": "MAX",
           "server": "Server 1",
@@ -761,38 +749,38 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "8f36c6745aa3:server:1:0b7abda8",
+          "instance_id": "8f36c6745aa3:server:1:85bd01f9",
           "index": 1,
           "name": "TOM",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/fulham-vs-hull-city-luc-2100-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001792228782-0-0-a78d37d94ab4c4c724f26fd8d03879c6"
+            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001792230585-0-0-1dd81988ecd0890cc27d607b2c38f01e"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "8f36c6745aa3:server:2:cd198c7b",
+          "instance_id": "8f36c6745aa3:server:2:56194427",
           "index": 2,
           "name": "TOM",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://globaldispatchespodcast.com/truc-tiep/fulham-vs-hull-city-luc-2100-ngay-17-10-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=b66e65ca5577dd3bebf80e737e224c4b&wsABSTime=1792271983"
+            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=d2618067da8df2a101787168bd0d15ed&wsABSTime=1792273786"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "8f36c6745aa3:server:3:43e00422",
+          "instance_id": "8f36c6745aa3:server:3:195d25c2",
           "index": 3,
           "name": "FULL HD MAX",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://globaldispatchespodcast.com/truc-tiep/fulham-vs-hull-city-luc-2100-ngay-17-10-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001792228784-0-0-309f61f15fde60f06abd3e40fcb9c302"
+            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001792230586-0-0-581152cbd78ae598241bd91e7d2fe798"
           ],
           "status": "stream_found"
         }
@@ -805,14 +793,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "74ac10f84877:server:0:06084dd2",
+          "instance_id": "74ac10f84877:server:0:d972c48d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/furia-vs-aurora-luc-2100-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel74.flv?wsSecret=300fef998292a1b6796940bd531283ed&wsABSTime=1792271977"
+            "https://live1.quickscoreboardz.com/live/channel74.flv?wsSecret=49d5f2be447dcab12d229a626512680c&wsABSTime=1792273782"
           ],
           "status": "stream_found"
         }
@@ -825,7 +813,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7dfa6692df96:server:0:1c870561",
+          "instance_id": "7dfa6692df96:server:0:e44367b4",
           "index": 0,
           "name": "RAVEN",
           "server": "Server 1",
@@ -837,46 +825,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "7dfa6692df96:server:1:088c3f11",
+          "instance_id": "7dfa6692df96:server:1:8833742d",
           "index": 1,
           "name": "HD RAVEN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/garudayaksa-fc-vs-arema-fc-luc-1530-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001792228785-0-0-728b374f578069bfe26331346fe72570"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP GIMPO FC VS PAJU FRONTIER FC VÀO LÚC 14:30, NGÀY 17/10/2026",
-      "url": "https://globaldispatchespodcast.com/truc-tiep/gimpo-fc-vs-paju-frontier-fc-luc-1430-ngay-17-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "741b7fda1662:server:0:b4171e63",
-          "index": 0,
-          "name": "ZANE",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/gimpo-fc-vs-paju-frontier-fc-luc-1430-ngay-17-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel22.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "741b7fda1662:server:1:8221ead8",
-          "index": 1,
-          "name": "HD ZANE",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/gimpo-fc-vs-paju-frontier-fc-luc-1430-ngay-17-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-22.flv?auth_key=3000001792228790-0-0-09ef8d826304af010c26dc46f928051d"
+            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001792230590-0-0-19dcb9c4831f80f0f0a30d0b56e4188c"
           ],
           "status": "stream_found"
         }
@@ -889,7 +845,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0780414c9b44:server:0:558639fe",
+          "instance_id": "0780414c9b44:server:0:97033d91",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -901,46 +857,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0780414c9b44:server:1:79f05a05",
+          "instance_id": "0780414c9b44:server:1:b1b2d766",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/guangsha-lions-vs-shanxi-loongs-fenjiu-luc-1835-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001792228793-0-0-b8b5b1ea8c6dabef3b13412646d411e2"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP GYEONGNAM FC VS CHUNGNAM ASAN VÀO LÚC 14:30, NGÀY 17/10/2026",
-      "url": "https://globaldispatchespodcast.com/truc-tiep/gyeongnam-fc-vs-chungnam-asan-luc-1430-ngay-17-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "2991b5912d37:server:0:ebab3f68",
-          "index": 0,
-          "name": "XMEN",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/gyeongnam-fc-vs-chungnam-asan-luc-1430-ngay-17-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel13.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "2991b5912d37:server:1:5707b67e",
-          "index": 1,
-          "name": "HD XMEN",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/gyeongnam-fc-vs-chungnam-asan-luc-1430-ngay-17-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-13.flv?auth_key=3000001792228794-0-0-5f27009b35a7d13aead11c12cb0cde3d"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001792230594-0-0-93797dba8dd030037ec3aced06c312fc"
           ],
           "status": "stream_found"
         }
@@ -953,14 +877,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0c51739f796b:server:0:c3bb12ab",
+          "instance_id": "0c51739f796b:server:0:d6064c65",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/halkbank-vs-galatasaray-luc-2000-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=5928c16b1febe0ee980634274bc05d6f&wsABSTime=1792271991"
+            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=4b6695568a7a496bcde162a73e902c02&wsABSTime=1792273789"
           ],
           "status": "stream_found"
         }
@@ -973,14 +897,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d779be4ecbe6:server:0:601969ce",
+          "instance_id": "d779be4ecbe6:server:0:857587e4",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/hinata-suzuki-nao-yamakita-vs-sumire-nakade-miyu-takahashi-luc-1900-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=5ca7a33a63da575c9724167122fe4181&wsABSTime=1792271994"
+            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=52b90b5fd6bab08f28daf55dd9d55712&wsABSTime=1792273792"
           ],
           "status": "stream_found"
         }
@@ -993,14 +917,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0f672c2b86ca:server:0:f74ee012",
+          "instance_id": "0f672c2b86ca:server:0:8e235dbb",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/iga-swiatek-vs-maja-chwalinska-luc-1730-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel56.flv?wsSecret=fcd2cddfc394ef24b5ce719afa9b6379&wsABSTime=1792271996"
+            "https://live1.quickscoreboardz.com/live/channel56.flv?wsSecret=47307aa7a2aad9f71ecad351d42235e4&wsABSTime=1792273796"
           ],
           "status": "stream_found"
         }
@@ -1013,14 +937,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7a008a3b7d8a:server:0:932f6c18",
+          "instance_id": "7a008a3b7d8a:server:0:329d2f97",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/jiangsu-dragons-vs-fujian-jinjiang-tourism-luc-1835-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=c4db5c20c6c9be3bc3c108b5227202c5&wsABSTime=1792271999"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=23ae1bda830d6fca710c21c1688241c0&wsABSTime=1792273796"
           ],
           "status": "stream_found"
         }
@@ -1033,14 +957,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0d77c1f60d1f:server:0:c2760a2c",
+          "instance_id": "0d77c1f60d1f:server:0:e86cda1c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/juan-manuel-la-serna-vs-hugo-dellien-luc-0200-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel51.flv?wsSecret=1c7d90a74cf4d0c192f085cbb4c164ba&wsABSTime=1792272001"
+            "https://live1.quickscoreboardz.com/live/channel51.flv?wsSecret=bcad5c355258fcd758c0377cd4012288&wsABSTime=1792273798"
           ],
           "status": "stream_found"
         }
@@ -1053,7 +977,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "89a087945147:server:0:b08fb7e1",
+          "instance_id": "89a087945147:server:0:643d154e",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -1065,14 +989,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "89a087945147:server:1:d15962fa",
+          "instance_id": "89a087945147:server:1:469f1e7a",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/kedzierzyn-kozle-vs-politechnika-lublin-luc-2000-ngay-18-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792228809-0-0-4f36edb681eadd358129530624fd3433"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792230609-0-0-ec3afaf288222fe6cdbe86e0c6895b1f"
           ],
           "status": "stream_found"
         }
@@ -1085,14 +1009,34 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f8365dd07561:server:0:24a8e42e",
+          "instance_id": "f8365dd07561:server:0:d572c96e",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/kimmer-coppejans-vs-andrea-guerrieri-luc-1950-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel58.flv?wsSecret=8853e8a71c22686c40610af85ab40702&wsABSTime=1792272005"
+            "https://live1.quickscoreboardz.com/live/channel58.flv?wsSecret=7d26737c97a3602895f4acb059bc8377&wsABSTime=1792273803"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP KIRIVONG CHEY VS VISAKHA FC VÀO LÚC 15:45, NGÀY 17/10/2026",
+      "url": "https://globaldispatchespodcast.com/truc-tiep/kirivong-chey-vs-visakha-fc-luc-1545-ngay-17-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "195c93b1c4f8:server:0:3ab0324a",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://globaldispatchespodcast.com/truc-tiep/kirivong-chey-vs-visakha-fc-luc-1545-ngay-17-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel24.flv?wsSecret=7ef9e5a194655ee4454c7fc0184dcfd4&wsABSTime=1792273806"
           ],
           "status": "stream_found"
         }
@@ -1105,14 +1049,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "87b402e33a0b:server:0:6ff93e96",
+          "instance_id": "87b402e33a0b:server:0:24a182c8",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/lai-victor-vs-alex-lanier-luc-2040-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=117940a201d5d928a862201c907811d0&wsABSTime=1792272008"
+            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=4ec5b86b2b0447850eb08765bb25a765&wsABSTime=1792273810"
           ],
           "status": "stream_found"
         }
@@ -1125,7 +1069,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "ac1288d8e440:server:0:62238327",
+          "instance_id": "ac1288d8e440:server:0:a18891af",
           "index": 0,
           "name": "HIRO",
           "server": "Server 1",
@@ -1137,14 +1081,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "ac1288d8e440:server:1:bd3fcfff",
+          "instance_id": "ac1288d8e440:server:1:ee5154a4",
           "index": 1,
           "name": "HD HIRO",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/lam-dong-vs-van-hien-luc-1530-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001792228817-0-0-167714617d8ec0dd50b1e34920a5eae6"
+            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001792230618-0-0-586b25497627e2af15194cb79e343f8c"
           ],
           "status": "stream_found"
         }
@@ -1157,14 +1101,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0afbbc5f3e1f:server:0:5caa6596",
+          "instance_id": "0afbbc5f3e1f:server:0:1fdf3915",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/lozova-vs-fc-trostianets-luc-1530-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=9d997cb083bc1ca8897fdb0394b0996b&wsABSTime=1792272013"
+            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=ea01b244c9ebd6b2ff7a62340d62c0f9&wsABSTime=1792273813"
           ],
           "status": "stream_found"
         }
@@ -1177,7 +1121,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "bee701f9d16f:server:0:5cc13e20",
+          "instance_id": "bee701f9d16f:server:0:afa3bbce",
           "index": 0,
           "name": "ROY",
           "server": "Server 1",
@@ -1189,43 +1133,43 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "bee701f9d16f:server:1:cdc8893b",
+          "instance_id": "bee701f9d16f:server:1:b00de4dd",
           "index": 1,
           "name": "HD ROY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/manchester-city-vs-ipswich-town-luc-2100-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792228822-0-0-55d82df34f02cdbe02d26fd02ac02ef6"
+            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792230623-0-0-28f90fa8c2138e6f60c7946cc0566093"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "bee701f9d16f:server:2:296c4d87",
+          "instance_id": "bee701f9d16f:server:2:ea337b2d",
           "index": 2,
           "name": "FELIX",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://globaldispatchespodcast.com/truc-tiep/manchester-city-vs-ipswich-town-luc-2100-ngay-17-10-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel24.flv?wsSecret=d4250d3858130059854c95d76330edc9&wsABSTime=1792272022"
+            "https://live1.quickscoreboardz.com/live/channel24.flv?wsSecret=6cf19d085be4fddc5ce4befb1d5d614b&wsABSTime=1792273823"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "bee701f9d16f:server:3:b4f5e442",
+          "instance_id": "bee701f9d16f:server:3:6af01738",
           "index": 3,
           "name": "HD FELIX",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://globaldispatchespodcast.com/truc-tiep/manchester-city-vs-ipswich-town-luc-2100-ngay-17-10-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001792228823-0-0-83cc5865ead4069a69fcadaaaa33dd12"
+            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001792230624-0-0-678735d672ea3bd97e970b58b1918649"
           ],
           "status": "stream_found"
         },
         {
-          "instance_id": "bee701f9d16f:server:4:461e10b3",
+          "instance_id": "bee701f9d16f:server:4:659978a1",
           "index": 4,
           "name": "FABIO",
           "server": "Server 5",
@@ -1237,14 +1181,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "bee701f9d16f:server:5:1e96fb94",
+          "instance_id": "bee701f9d16f:server:5:bb87b1de",
           "index": 5,
           "name": "HD FABIO",
           "server": "Server 6",
           "data_link": "5",
           "href": "https://globaldispatchespodcast.com/truc-tiep/manchester-city-vs-ipswich-town-luc-2100-ngay-17-10-2026/link/5",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=98c63ff4fc2c6f92091987561b6449d8&wsABSTime=1792272024"
+            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=cab390a1b56aa1a4a7da6046918f9328&wsABSTime=1792273825"
           ],
           "status": "stream_found"
         }
@@ -1257,14 +1201,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e8c9999e5c33:server:0:72b0c150",
+          "instance_id": "e8c9999e5c33:server:0:2d79142b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/martin-damm-jr-vs-buvaysar-gadamauri-luc-2100-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel59.flv?wsSecret=cddbfc196343352171ef2ca7e763483c&wsABSTime=1792272018"
+            "https://live1.quickscoreboardz.com/live/channel59.flv?wsSecret=a34fe846f1898be3a6f42875ae208c70&wsABSTime=1792273820"
           ],
           "status": "stream_found"
         }
@@ -1277,14 +1221,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "caa9d0416592:server:0:14142354",
+          "instance_id": "caa9d0416592:server:0:c3474c23",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/martin-landaluce-vs-liam-draxl-luc-1540-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel54.flv?wsSecret=811e7c0bacd5e8bcfeefc2d018d12d13&wsABSTime=1792272020"
+            "https://live1.quickscoreboardz.com/live/channel54.flv?wsSecret=fe4184cb34340acd7fbc66ddea162449&wsABSTime=1792273821"
           ],
           "status": "stream_found"
         }
@@ -1297,14 +1241,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "ee69fdfd908a:server:0:375c136e",
+          "instance_id": "ee69fdfd908a:server:0:f876da9b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/mattia-bellucci-vs-shintaro-mochizuki-luc-1430-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel53.flv?wsSecret=0a7ab6de7a50153d50964348f605e123&wsABSTime=1792272025"
+            "https://live1.quickscoreboardz.com/live/channel53.flv?wsSecret=6c3b1def0d5016a02d2bc30e0099d142&wsABSTime=1792273827"
           ],
           "status": "stream_found"
         }
@@ -1317,14 +1261,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f28ba1882335:server:0:00771926",
+          "instance_id": "f28ba1882335:server:0:9fc1ac5e",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/mogi-das-cruzes-vs-corinthians-luc-0200-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=3e8072a1d59b6aeede60c005d4d7b360&wsABSTime=1792272026"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=ced87241e024c58b4fd78c78edb131aa&wsABSTime=1792273827"
           ],
           "status": "stream_found"
         }
@@ -1337,14 +1281,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d0fe0693c5e7:server:0:b0ed7032",
+          "instance_id": "d0fe0693c5e7:server:0:8656cb0b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/monteros-vs-boca-juniors-luc-0400-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel82.flv?wsSecret=8e9bbd58f7391bdd562eb900322a4027&wsABSTime=1792272027"
+            "https://live1.quickscoreboardz.com/live/channel82.flv?wsSecret=fb06333b92fec9626cd9423c8cc90096&wsABSTime=1792273829"
           ],
           "status": "stream_found"
         }
@@ -1357,7 +1301,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "18548fb20be8:server:0:cee5dfe2",
+          "instance_id": "18548fb20be8:server:0:2b080e93",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -1369,14 +1313,46 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "18548fb20be8:server:1:104832c2",
+          "instance_id": "18548fb20be8:server:1:d54f6db8",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/mvk-esports-vs-furia-esports-luc-0100-ngay-18-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792228838-0-0-11862cc85a062c0760b231fa18f3ef33"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792230639-0-0-566645a67446f15760d14403feb07057"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP NEGERI SEMBILAN VS SABAH VÀO LÚC 16:00, NGÀY 17/10/2026",
+      "url": "https://globaldispatchespodcast.com/truc-tiep/negeri-sembilan-vs-sabah-luc-1600-ngay-17-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "60ceace35575:server:0:5d49d5e9",
+          "index": 0,
+          "name": "TONI",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://globaldispatchespodcast.com/truc-tiep/negeri-sembilan-vs-sabah-luc-1600-ngay-17-10-2026/",
+          "stream_urls": [
+            "https://live2.jorvakstreamcache.com/live/channel9.flv"
+          ],
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "60ceace35575:server:1:1bdc174b",
+          "index": 1,
+          "name": "HD TONI",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://globaldispatchespodcast.com/truc-tiep/negeri-sembilan-vs-sabah-luc-1600-ngay-17-10-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-9.flv?auth_key=3000001792230641-0-0-6046b4cce80c0357a767d01751e2b806"
           ],
           "status": "stream_found"
         }
@@ -1389,7 +1365,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d13a9b831c8e:server:0:562330be",
+          "instance_id": "d13a9b831c8e:server:0:453fd2c1",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -1401,14 +1377,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "d13a9b831c8e:server:1:f43a8a78",
+          "instance_id": "d13a9b831c8e:server:1:01bcb0db",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/ningbo-rockets-vs-beijing-royal-luc-1835-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001792228840-0-0-8eae3fe7ce433c618359a21dfb001681"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001792230643-0-0-2e13e11caec6c3dac0397613adc2f9c3"
           ],
           "status": "stream_found"
         }
@@ -1421,14 +1397,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "ca9379fd6bf3:server:0:6edb1b5d",
+          "instance_id": "ca9379fd6bf3:server:0:f77a7dea",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/ninjas-in-pyjamas-vs-heroic-luc-1500-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=5ae3a72ef872beba91b768b90e4c125c&wsABSTime=1792272036"
+            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=ddfd93a4642d9046a6b11f7113e3dc15&wsABSTime=1792273841"
           ],
           "status": "stream_found"
         }
@@ -1441,14 +1417,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8237ddad591d:server:0:28da677d",
+          "instance_id": "8237ddad591d:server:0:b92e416c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-atenea-vs-nu-latino-amisa-luc-0245-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=7df92280fa881e545c13743363ac3161&wsABSTime=1792272040"
+            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=ccaa159b667876aea618a49c269eaed3&wsABSTime=1792273843"
           ],
           "status": "stream_found"
         }
@@ -1461,7 +1437,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "cd07dbecdd1d:server:0:152d7a76",
+          "instance_id": "cd07dbecdd1d:server:0:bcc3a066",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -1473,14 +1449,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "cd07dbecdd1d:server:1:f8ee3f20",
+          "instance_id": "cd07dbecdd1d:server:1:993bda22",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-bc-thong-tin-vs-nu-xmls-thanh-hoa-luc-1700-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792228848-0-0-fb0ffc8fc31bb4979cd60357ab6d44c8"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792230651-0-0-e02ddc2d371782e06369aad6862ac441"
           ],
           "status": "stream_found"
         }
@@ -1493,14 +1469,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "fe1522f9ac6b:server:0:be717580",
+          "instance_id": "fe1522f9ac6b:server:0:62446ff4",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-bydgoszcz-vs-nu-mks-kalisz-luc-1700-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=312a4ce71dafb2c51e9de715edb54e04&wsABSTime=1792272043"
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=43934c1e51ebc3538a2b23777b5b9979&wsABSTime=1792273848"
           ],
           "status": "stream_found"
         }
@@ -1513,14 +1489,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c43b3638dd25:server:0:509accf3",
+          "instance_id": "c43b3638dd25:server:0:ee453f3f",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-erfurt-vs-nu-stuttgart-luc-2330-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=8d1877676d2262a5cf4de97a5976718c&wsABSTime=1792272047"
+            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=70a9b32596830852cca6686d77f41805&wsABSTime=1792273851"
           ],
           "status": "stream_found"
         }
@@ -1533,14 +1509,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "3ffbe86ae0a8:server:0:d09f5c75",
+          "instance_id": "3ffbe86ae0a8:server:0:4f42881c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-golden-state-vs-nu-atlanta-dream-luc-0230-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=2f7a6beb27f762d8668081c3dda5d194&wsABSTime=1792272050"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=88b7c273ef08620d3a3c32650ac81d07&wsABSTime=1792273853"
           ],
           "status": "stream_found"
         }
@@ -1553,7 +1529,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a7867bad456a:server:0:f60ba5c8",
+          "instance_id": "a7867bad456a:server:0:bcaae4a8",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -1565,46 +1541,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "a7867bad456a:server:1:865b297b",
+          "instance_id": "a7867bad456a:server:1:c02ee224",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-ha-noi-tasco-vs-nu-lpb-ninh-binh-luc-1200-ngay-18-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792228857-0-0-15dda18a2cf2feedf18f80a2bd2e5123"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP NỮ HCĐG LÀO CAI VS NỮ LPB NINH BÌNH VÀO LÚC 14:30, NGÀY 17/10/2026",
-      "url": "https://globaldispatchespodcast.com/truc-tiep/nu-hcdg-lao-cai-vs-nu-lpb-ninh-binh-luc-1440-ngay-16-10-2026/",
-      "sport_name": "volleyball",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "eca5e9c9c74c:server:0:6d19c008",
-          "index": 0,
-          "name": "TYSON",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/nu-hcdg-lao-cai-vs-nu-lpb-ninh-binh-luc-1440-ngay-16-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel33.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "eca5e9c9c74c:server:1:f5c6c1fc",
-          "index": 1,
-          "name": "HD TYSON",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/nu-hcdg-lao-cai-vs-nu-lpb-ninh-binh-luc-1440-ngay-16-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792228859-0-0-a23eacbbaf176098eca2df52bf199cf0"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792230660-0-0-d9a1dcdf3d7160fed2225346e126ae0a"
           ],
           "status": "stream_found"
         }
@@ -1617,7 +1561,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "6ea8035e877f:server:0:7917f5d6",
+          "instance_id": "6ea8035e877f:server:0:a2c6c8dd",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -1629,14 +1573,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "6ea8035e877f:server:1:0652073f",
+          "instance_id": "6ea8035e877f:server:1:2a661f45",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-hcdg-lao-cai-vs-nu-vtv-bd-long-an-luc-1700-ngay-18-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792228863-0-0-8497e374861d7614ee3cdf220066cca5"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792230663-0-0-ba21827a7b08a0a23db926a933cdef96"
           ],
           "status": "stream_found"
         }
@@ -1649,14 +1593,34 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "df835fd99f74:server:0:cb60448c",
+          "instance_id": "df835fd99f74:server:0:642400d2",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-mulhouse-vs-nu-chamalierois-luc-0100-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=116abe98d739d93a9023f12766936d7a&wsABSTime=1792272059"
+            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=ce2297a6b1509f34e937f84fa4e80649&wsABSTime=1792273859"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP NỮ NORTHERN KAHU VS NỮ MID-NORTH VÀO LÚC 09:00, NGÀY 18/10/2026",
+      "url": "https://globaldispatchespodcast.com/truc-tiep/nu-northern-kahu-vs-nu-mid-north-luc-0900-ngay-18-10-2026/",
+      "sport_name": "basketball",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "10dbd2ec11a8:server:0:3b819e65",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://globaldispatchespodcast.com/truc-tiep/nu-northern-kahu-vs-nu-mid-north-luc-0900-ngay-18-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=3b1950ac53091554ad9fb9f2db4dacc2&wsABSTime=1792273862"
           ],
           "status": "stream_found"
         }
@@ -1669,14 +1633,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0f4fe1e8cbb8:server:0:e019d9fa",
+          "instance_id": "0f4fe1e8cbb8:server:0:cf99a68c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-perth-lynx-vs-nu-townsville-fire-luc-1500-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=6461104cd82efcf63fa30abf3024faa7&wsABSTime=1792272061"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=6482a083e0b3fc3e8ef1b3f154398da8&wsABSTime=1792273864"
           ],
           "status": "stream_found"
         }
@@ -1689,14 +1653,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8f268f895a4e:server:0:cea8d7a7",
+          "instance_id": "8f268f895a4e:server:0:52bc18d7",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-rzeszow-vs-nu-radom-luc-0130-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=5cf782271afef60efda62c2c59235ead&wsABSTime=1792272064"
+            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=09a87c5c2d0cc035f269e91ae2672ccb&wsABSTime=1792273866"
           ],
           "status": "stream_found"
         }
@@ -1709,7 +1673,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "51c35ab9170b:server:0:beb2a626",
+          "instance_id": "51c35ab9170b:server:0:5588ef30",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -1721,14 +1685,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "51c35ab9170b:server:1:0eda7270",
+          "instance_id": "51c35ab9170b:server:1:fa8db477",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-sydney-uni-vs-nu-adelaide-lightning-luc-0900-ngay-18-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001792228872-0-0-5fd81af0e059692061a6d2df5c142035"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001792230674-0-0-ffcd7e340b423ceca76de49876e8f3e8"
           ],
           "status": "stream_found"
         }
@@ -1741,14 +1705,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b3a0a326c6b4:server:0:7047614f",
+          "instance_id": "b3a0a326c6b4:server:0:d18c0de0",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-taichung-blue-vs-nu-hualien-luc-1500-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=1733e29ed08854b66c963235c82637db&wsABSTime=1792272068"
+            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=dae8f177035cad28e46a3ebc7a030630&wsABSTime=1792273871"
           ],
           "status": "stream_found"
         }
@@ -1761,14 +1725,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5588fed78871:server:0:38e4f5c1",
+          "instance_id": "5588fed78871:server:0:676d98ca",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-taipei-brao-vs-nu-hang-yuan-luc-1530-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel16.flv?wsSecret=7ded404d23fcbd7c18ea47ee2fdcc08d&wsABSTime=1792272072"
+            "https://live1.quickscoreboardz.com/live/channel16.flv?wsSecret=65b9bfdceebc0a133289f157ad632e07&wsABSTime=1792273873"
           ],
           "status": "stream_found"
         }
@@ -1781,7 +1745,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "365d8745c4b5:server:0:ba10a479",
+          "instance_id": "365d8745c4b5:server:0:b9fea08b",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -1793,14 +1757,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "365d8745c4b5:server:1:73c9ac5d",
+          "instance_id": "365d8745c4b5:server:1:0982a66a",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/nu-vietinbank-vs-thanh-hoa-w-luc-1430-ngay-18-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792228880-0-0-00072c45c02ec659332b2a6082aef77a"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792230682-0-0-78855e9bd6f5910f00282f97becef9e6"
           ],
           "status": "stream_found"
         }
@@ -1813,14 +1777,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "321bb2d3a783:server:0:c4fde180",
+          "instance_id": "321bb2d3a783:server:0:88d2631b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/paris-vs-nazaire-luc-0000-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel82.flv?wsSecret=bf8340518b4df3379b5479b205bd7f63&wsABSTime=1792272076"
+            "https://live1.quickscoreboardz.com/live/channel82.flv?wsSecret=e88b50327f0bde63cc9a46dbb719ef88&wsABSTime=1792273878"
           ],
           "status": "stream_found"
         }
@@ -1833,14 +1797,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "cf76f8ec6bcf:server:0:ac10fe2b",
+          "instance_id": "cf76f8ec6bcf:server:0:15b6ed72",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/parma-perm-vs-dynamo-vladivostok-luc-1800-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=aeb3f3a8b94d93a3815ad03be9944442&wsABSTime=1792272078"
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=3b9364c7fffb9cf3d4497db5a2be7b04&wsABSTime=1792273880"
           ],
           "status": "stream_found"
         }
@@ -1853,14 +1817,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0e79554f80a5:server:0:8d723fb2",
+          "instance_id": "0e79554f80a5:server:0:e7250ffc",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/puckchamp-vs-inner-circle-x-insanity-luc-1700-ngay-13-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel77.flv?wsSecret=15b2306e4c94cd63942a492420b5cff9&wsABSTime=1792272081"
+            "https://live1.quickscoreboardz.com/live/channel77.flv?wsSecret=77123ef410bfa242f75fdeaaafbd40ca&wsABSTime=1792273883"
           ],
           "status": "stream_found"
         }
@@ -1873,7 +1837,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b206ec8f5e6d:server:0:e21e31e4",
+          "instance_id": "b206ec8f5e6d:server:0:c284e4d7",
           "index": 0,
           "name": "VIC",
           "server": "Server 1",
@@ -1885,14 +1849,34 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "b206ec8f5e6d:server:1:aa0110c9",
+          "instance_id": "b206ec8f5e6d:server:1:5ce59259",
           "index": 1,
           "name": "HD VIC",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/rafael-jodar-vs-daniil-medvedev-luc-1800-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001792228889-0-0-b185a19f43bd80c147328c4c3bd98f32"
+            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001792230691-0-0-4afa5e1c7eedca5ba4b78400254d6c03"
+          ],
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP RAHMATGONJ MFS VS BROTHERS UNION VÀO LÚC 15:45, NGÀY 17/10/2026",
+      "url": "https://globaldispatchespodcast.com/truc-tiep/rahmatgonj-mfs-vs-brothers-union-luc-1545-ngay-17-10-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "7ac3d6b0f81f:server:0:ac5c59dd",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://globaldispatchespodcast.com/truc-tiep/rahmatgonj-mfs-vs-brothers-union-luc-1545-ngay-17-10-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel21.flv?wsSecret=a228cf22e8f012b0876136207a791fc9&wsABSTime=1792273887"
           ],
           "status": "stream_found"
         }
@@ -1905,34 +1889,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d252971ce088:server:0:104651b0",
+          "instance_id": "d252971ce088:server:0:ada89d9f",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/royan-vs-montpellier-luc-0200-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=65b9c113995f71a72aae7e44aede9b8e&wsABSTime=1792272085"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP SHANGHAI SECOND VS GUANGDONG MINGTU VÀO LÚC 14:30, NGÀY 17/10/2026",
-      "url": "https://globaldispatchespodcast.com/truc-tiep/shanghai-second-vs-guangdong-mingtu-luc-1430-ngay-17-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "ebe57fd9eb04:server:0:c173662f",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/shanghai-second-vs-guangdong-mingtu-luc-1430-ngay-17-10-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel8.flv?wsSecret=afebee4f3e6f36dd267eb55b66c19f13&wsABSTime=1792272088"
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=4c02cbffd2a5d1c5325f50f829799efe&wsABSTime=1792273890"
           ],
           "status": "stream_found"
         }
@@ -1945,14 +1909,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0519ad8dbf6a:server:0:c46a27ed",
+          "instance_id": "0519ad8dbf6a:server:0:59a3f43d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/sichuan-blue-whales-vs-tianjin-pioneers-luc-1835-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=1c99059746d44c27be4a57d68adffed7&wsABSTime=1792272090"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=266d2ff64f2a7038c6bf39493d3ac3d9&wsABSTime=1792273893"
           ],
           "status": "stream_found"
         }
@@ -1965,14 +1929,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "32f5ff1d99d5:server:0:12b8f97f",
+          "instance_id": "32f5ff1d99d5:server:0:5b1fe79f",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/sonay-kartal-vs-jelena-ostapenko-luc-1600-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel55.flv?wsSecret=0a048d14915b7c393227ac394b81aab4&wsABSTime=1792272092"
+            "https://live1.quickscoreboardz.com/live/channel55.flv?wsSecret=401abdbabefa699b357215868f7d3a4f&wsABSTime=1792273894"
           ],
           "status": "stream_found"
         }
@@ -1985,14 +1949,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "621714de2c5b:server:0:9b5dfd47",
+          "instance_id": "621714de2c5b:server:0:794b1ed0",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/sporting-cp-vs-benfica-luc-2200-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=9249e78f5e841ab68af90712be32fc93&wsABSTime=1792272095"
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=f3a9394c60a5ebd332ac0a15a0611b86&wsABSTime=1792273898"
           ],
           "status": "stream_found"
         }
@@ -2005,14 +1969,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "11e45d0dadc2:server:0:50a60ad2",
+          "instance_id": "11e45d0dadc2:server:0:1a7b54e5",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/stray-team-vs-korb3n-team-luc-2200-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=5f43ec52be66be54b44715a5ca572335&wsABSTime=1792272097"
+            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=f94c246179acbf70c4d39b9536330332&wsABSTime=1792273900"
           ],
           "status": "stream_found"
         }
@@ -2025,7 +1989,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "998183cd4b1d:server:0:5bbc7344",
+          "instance_id": "998183cd4b1d:server:0:c9a2e638",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -2037,14 +2001,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "998183cd4b1d:server:1:ae142ffd",
+          "instance_id": "998183cd4b1d:server:1:086aeaa6",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/sydney-kings-vs-perth-wildcats-luc-1530-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001792228905-0-0-f7292c9e0ffef1c0757037914c51b52c"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001792230708-0-0-2a20398be56e1ecd72f9c95358441e15"
           ],
           "status": "stream_found"
         }
@@ -2057,46 +2021,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5079b7650932:server:0:dd69b5b3",
+          "instance_id": "5079b7650932:server:0:3cdbb685",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/team-tidebound-vs-team-resilience-luc-1500-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=c90f659447a514fecccaace280fae57c&wsABSTime=1792272102"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP ULSAN HYUNDAI VS BUCHEON 1995 VÀO LÚC 14:30, NGÀY 17/10/2026",
-      "url": "https://globaldispatchespodcast.com/truc-tiep/ulsan-hyundai-vs-bucheon-1995-luc-1430-ngay-17-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "ce319f952820:server:0:8c250596",
-          "index": 0,
-          "name": "RIO",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/ulsan-hyundai-vs-bucheon-1995-luc-1430-ngay-17-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel16.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "ce319f952820:server:1:b04e4131",
-          "index": 1,
-          "name": "HD RIO",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/ulsan-hyundai-vs-bucheon-1995-luc-1430-ngay-17-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001792228910-0-0-c80b0e58f71bcc937c6f778d727fbfcc"
+            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=e7baea4f4a52fb39e66d819ba7bd97f1&wsABSTime=1792273907"
           ],
           "status": "stream_found"
         }
@@ -2109,14 +2041,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "cab5f1855c1d:server:0:fde3cde5",
+          "instance_id": "cab5f1855c1d:server:0:25808fe9",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/unifacisa-vs-osasco-basket-luc-0430-ngay-18-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=e4c83a503988dc82bb776de65c908f2d&wsABSTime=1792272107"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=8cffc237536005605753ef039b1b2d42&wsABSTime=1792273907"
           ],
           "status": "stream_found"
         }
@@ -2129,7 +2061,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "ec9055ea2903:server:0:e215db1e",
+          "instance_id": "ec9055ea2903:server:0:a546b516",
           "index": 0,
           "name": "TYSON",
           "server": "Server 1",
@@ -2141,14 +2073,14 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "ec9055ea2903:server:1:2224f179",
+          "instance_id": "ec9055ea2903:server:1:7b3176e9",
           "index": 1,
           "name": "HD TYSON",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://globaldispatchespodcast.com/truc-tiep/verona-vs-lube-civitanova-luc-2300-ngay-17-10-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792228915-0-0-38b06042ff52d13b3cd52c3321ea4579"
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792230715-0-0-1443df51614d0b2acbd64db62c94352b"
           ],
           "status": "stream_found"
         }
@@ -2161,14 +2093,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "aac5ffcbf18a:server:0:6390503a",
+          "instance_id": "aac5ffcbf18a:server:0:a1dfa33d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/victoria-mykolaivka-vs-fc-chernigiv-luc-1500-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=d6e13e2c0eb454de3b92aec466b7ee8a&wsABSTime=1792272112"
+            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=f6f46221cf7a69f564680db831385bd0&wsABSTime=1792273917"
           ],
           "status": "stream_found"
         }
@@ -2181,26 +2113,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0baad73cbe9c:server:0:49791f3a",
+          "instance_id": "0baad73cbe9c:server:0:0d370ed5",
           "index": 0,
-          "name": "KOBE",
+          "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/xinjiang-flying-tigers-vs-qingdao-guoxin-luc-1900-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel27.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "0baad73cbe9c:server:1:af2044d3",
-          "index": 1,
-          "name": "HD KOBE",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/xinjiang-flying-tigers-vs-qingdao-guoxin-luc-1900-ngay-17-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001792228920-0-0-bf405020090d716b4e991e9aa31df90b"
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=a67a9a3783d073c8880e9a0324e2c7f3&wsABSTime=1792273914"
           ],
           "status": "stream_found"
         }
@@ -2213,14 +2133,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a948d51624da:server:0:00d93820",
+          "instance_id": "a948d51624da:server:0:36dfd37b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/yamaguchi-akane-vs-wang-zhiyi-luc-1810-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=d0a0a2ca7e78b5896161739d80dd48fa&wsABSTime=1792272117"
+            "https://live1.quickscoreboardz.com/live/channel68.flv?wsSecret=e9b535ef97173740f9783cb5b88cb583&wsABSTime=1792273917"
           ],
           "status": "stream_found"
         }
@@ -2233,14 +2153,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "397bec545d64:server:0:b531af31",
+          "instance_id": "397bec545d64:server:0:e45078a5",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/yellow-submarine-vs-team-spirit-academy-luc-2000-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=8156588e9b15bb67b0f77a4066993252&wsABSTime=1792272119"
+            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=bfa5612b53dc03dc37d7d8d6d844c551&wsABSTime=1792273921"
           ],
           "status": "stream_found"
         }
@@ -2253,46 +2173,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "4ecc1f1e7658:server:0:f0295370",
+          "instance_id": "4ecc1f1e7658:server:0:792db055",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/yenisey-krasnoyarsk-vs-torpedo-moscow-luc-1530-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel15.flv?wsSecret=c0866b9d6b501a9a39857f305ed66922&wsABSTime=1792272122"
-          ],
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP YONGIN FC VS ANSAN GREENERS VÀO LÚC 14:30, NGÀY 17/10/2026",
-      "url": "https://globaldispatchespodcast.com/truc-tiep/yongin-fc-vs-ansan-greeners-luc-1430-ngay-17-10-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "a7bd6b25a0c1:server:0:29b474b5",
-          "index": 0,
-          "name": "TOM",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/yongin-fc-vs-ansan-greeners-luc-1430-ngay-17-10-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel4.flv"
-          ],
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "a7bd6b25a0c1:server:1:7d27b0e7",
-          "index": 1,
-          "name": "HD TOM",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://globaldispatchespodcast.com/truc-tiep/yongin-fc-vs-ansan-greeners-luc-1430-ngay-17-10-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001792228930-0-0-bd35fbf6eefe4259996873a4480145f2"
+            "https://live1.quickscoreboardz.com/live/channel15.flv?wsSecret=79c1576a78d4e6cb00c655449bf8d357&wsABSTime=1792273924"
           ],
           "status": "stream_found"
         }
@@ -2305,14 +2193,14 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "1b6124814dbd:server:0:664c3468",
+          "instance_id": "1b6124814dbd:server:0:f92674d0",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://globaldispatchespodcast.com/truc-tiep/zero-tenacity-vs-inner-circle-x-insanity-luc-2300-ngay-17-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel72.flv?wsSecret=47006a004f3766093a5572d5f404bba5&wsABSTime=1792272126"
+            "https://live1.quickscoreboardz.com/live/channel72.flv?wsSecret=e8a5161ec23a234198f2515648088566&wsABSTime=1792273930"
           ],
           "status": "stream_found"
         }
