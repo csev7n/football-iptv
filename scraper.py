@@ -56,6 +56,47 @@ PLAYER_SELECTOR = "a.player-link"
 
 def activate_tabs_and_load_more(page):
 
+    all_match_urls = set()
+
+    def collect_match_urls(tab_id):
+        """Thu thập URL trận từ DOM hiện tại."""
+        anchors = page.locator("a[href*='/truc-tiep/']")
+        count = anchors.count()
+        collected = 0
+
+        for i in range(count):
+            try:
+                href = anchors.nth(i).get_attribute("href")
+
+                if not href or "/truc-tiep/" not in href:
+                    continue
+
+                full_url = urljoin(page.url, href)
+                parsed = urlparse(full_url)
+
+                if parsed.scheme not in ("http", "https"):
+                    continue
+
+                normalized = normalize_match_url(full_url)
+
+                if normalized:
+                    all_match_urls.add(normalized)
+                    collected += 1
+
+            except Exception as error:
+                print(
+                    f"[COLLECT ERROR] tab={tab_id}: {error}",
+                    flush=True,
+                )
+
+        print(
+            f"[COLLECT] tab={tab_id} "
+            f"dom_links={count} "
+            f"collected={collected} "
+            f"total_unique={len(all_match_urls)}",
+            flush=True,
+        )
+
     tabs = page.locator("button.nav-link")
     tab_count = tabs.count()
 
@@ -65,6 +106,8 @@ def activate_tabs_and_load_more(page):
     )
 
     for tab_index in range(tab_count):
+
+        tab_id = "unknown"
 
         try:
             tab = page.locator(
@@ -78,6 +121,15 @@ def activate_tabs_and_load_more(page):
 
             tab.scroll_into_view_if_needed()
             tab.click(timeout=5000)
+
+            try:
+                page.wait_for_load_state(
+                    "networkidle",
+                    timeout=3000,
+                )
+            except Exception:
+                pass
+
             page.wait_for_timeout(1500)
 
             print(
@@ -85,101 +137,110 @@ def activate_tabs_and_load_more(page):
                 flush=True,
             )
 
-            # Chỉ lấy nút tải thêm thuộc tab đang hiển thị.
-            buttons = page.locator(
-                "a.btn-loadmore:visible"
-            )
+            # Thu thập các trận đã có trước khi click Load More.
+            collect_match_urls(tab_id)
 
-            button_count = buttons.count()
+            # Chỉ click nút đang hiển thị trong tab hiện tại.
+            for click_index in range(MAX_LOADMORE_CLICKS):
 
-            print(
-                f"[LOADMORE] tab={tab_id} "
-                f"visible_buttons={button_count}",
-                flush=True,
-            )
+                buttons = page.locator(
+                    "a.btn-loadmore:visible"
+                )
 
-            for button_index in range(button_count):
-                try:
-                    button = page.locator(
-                        "a.btn-loadmore:visible"
-                    ).nth(button_index)
+                target = None
 
-                    if not button.is_visible():
+                for button_index in range(buttons.count()):
+                    candidate = buttons.nth(button_index)
+
+                    try:
+                        if not candidate.is_visible():
+                            continue
+
+                        sport = (
+                            candidate.get_attribute("data-sport")
+                            or "unknown"
+                        ).strip()
+
+                        # Chọn nút có data-sport tương ứng tab.
+                        if (
+                            tab_id.endswith("-tab")
+                            and sport != "unknown"
+                            and sport != tab_id[:-4]
+                        ):
+                            continue
+
+                        target = candidate
+                        break
+
+                    except Exception:
                         continue
 
+                if target is None:
+                    print(
+                        f"[LOADMORE] tab={tab_id} "
+                        "no visible matching button",
+                        flush=True,
+                    )
+                    break
+
+                try:
                     sport = (
-                        button.get_attribute("data-sport")
+                        target.get_attribute("data-sport")
                         or "unknown"
                     )
 
-                    for click_index in range(
-                        MAX_LOADMORE_CLICKS
-                    ):
-                        current_buttons = page.locator(
-                            "a.btn-loadmore:visible"
+                    target.scroll_into_view_if_needed()
+                    target.click(timeout=5000)
+
+                    try:
+                        page.wait_for_load_state(
+                            "networkidle",
+                            timeout=3000,
                         )
+                    except Exception:
+                        pass
 
-                        # Tìm lại nút sau mỗi lần DOM cập nhật.
-                        candidates = []
+                    page.wait_for_timeout(1500)
 
-                        for j in range(current_buttons.count()):
-                            candidate = current_buttons.nth(j)
-
-                            if (
-                                candidate.get_attribute("data-sport")
-                                or "unknown"
-                            ) == sport:
-                                candidates.append(j)
-
-                        if not candidates:
-                            break
-
-                        current = current_buttons.nth(
-                            candidates[0]
-                        )
-
-                        try:
-                            current.scroll_into_view_if_needed()
-                            current.click(timeout=5000)
-
-                            page.wait_for_timeout(1500)
-
-                            print(
-                                f"[LOADMORE CLICK] "
-                                f"tab={tab_id} "
-                                f"sport={sport} "
-                                f"round={click_index + 1}",
-                                flush=True,
-                            )
-
-                        except Exception as e:
-                            print(
-                                f"[LOADMORE ERROR] "
-                                f"tab={tab_id} "
-                                f"sport={sport}: {e}",
-                                flush=True,
-                            )
-                            break
-
-                except Exception as e:
                     print(
-                        f"[LOADMORE ERROR] "
-                        f"tab={tab_id}: {e}",
+                        f"[LOADMORE CLICK] "
+                        f"tab={tab_id} "
+                        f"sport={sport} "
+                        f"round={click_index + 1}",
                         flush=True,
                     )
 
+                    # Thu thập ngay sau mỗi lần tải thêm.
+                    collect_match_urls(tab_id)
+
+                except Exception as error:
+                    print(
+                        f"[LOADMORE ERROR] "
+                        f"tab={tab_id}: {error}",
+                        flush=True,
+                    )
+                    break
+
             print(
-                f"[TAB CONTENT] {tab_id} "
-                f"visible_links="
-                f"{page.locator('a[href*=\"/truc-tiep/\"]:visible').count()}",
+                f"[TAB DONE] tab={tab_id} "
+                f"total_unique={len(all_match_urls)}",
                 flush=True,
             )
 
-        except Exception as e:
+        except Exception as error:
             print(
-                f"[TAB FAILED] {tab_id}: {e}",
+                f"[TAB FAILED] tab={tab_id}: {error}",
                 flush=True,
             )
+
+    results = sorted(all_match_urls)
+
+    print(
+        f"[TABS SUMMARY] unique_match_urls={len(results)}",
+        flush=True,
+    )
+
+    return results
 
 def get_home_page():
 
@@ -198,67 +259,65 @@ def get_home_page():
             user_agent=HEADERS["User-Agent"],
         )
 
-        page.goto(
-            HOME_URL,
-            wait_until="domcontentloaded",
-            timeout=30000,
-        )
-
         try:
-            page.wait_for_load_state(
-                "networkidle",
-                timeout=10000,
-            )
-        except Exception:
-            pass
-
-        page.wait_for_timeout(3000)
-
-        last_height = 0
-
-        for _ in range(5):
-
-            height = page.evaluate(
-                "document.body.scrollHeight"
+            page.goto(
+                HOME_URL,
+                wait_until="domcontentloaded",
+                timeout=30000,
             )
 
-            if height == last_height:
-                break
+            try:
+                page.wait_for_load_state(
+                    "networkidle",
+                    timeout=10000,
+                )
+            except Exception:
+                pass
 
-            page.evaluate(
-                "window.scrollTo(0, document.body.scrollHeight)"
+            page.wait_for_timeout(3000)
+
+            # Cuộn trang để kích hoạt nội dung tải lười.
+            last_height = 0
+
+            for _ in range(5):
+
+                height = page.evaluate(
+                    "document.body.scrollHeight"
+                )
+
+                if height == last_height:
+                    break
+
+                page.evaluate(
+                    "window.scrollTo(0, document.body.scrollHeight)"
+                )
+
+                page.wait_for_timeout(1500)
+                last_height = height
+
+            # Kích hoạt từng tab, click Load More,
+            # thu thập và gộp URL của tất cả các tab.
+            match_urls = activate_tabs_and_load_more(
+                page
             )
 
-            page.wait_for_timeout(1500)
+            final_url = page.url
 
-            last_height = height
+            print(
+                f"[HOME] Final URL: {final_url}",
+                flush=True,
+            )
 
-        activate_tabs_and_load_more(page)
-        
-        total_links = page.locator(
-            "a[href*='/truc-tiep/']"
-        ).count()
-        print(
-            f"[HOME] Match links after loadmore: "
-            f"{total_links}",
-            flush=True,
-        )
-        
-        html = page.content()
+            print(
+                f"[HOME] Total unique match URLs: "
+                f"{len(match_urls)}",
+                flush=True,
+            )
 
-        # Lấy URL cuối cùng sau khi chuyển hướng
-        final_url = page.url
-        print(
-            f"[HOME] Final URL: {final_url}",
-            flush=True,
-        )
+            return match_urls, final_url
 
-        browser.close()
-
-        return (
-            html,
-            final_url,
-        )
+        finally:
+            browser.close()
 
 
 def normalize_match_url(url):
@@ -2282,11 +2341,11 @@ def save_results(results):
 def main():
     started = time.time()
 
-    html, final_home_url = get_home_page()
+    match_urls, final_home_url = get_home_page()
 
-    match_urls = find_match_urls(
-        html,
-        final_home_url,
+    print(
+        f"[HOME] Found {len(match_urls)} links",
+        flush=True,
     )
 
     print(
