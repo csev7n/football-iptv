@@ -136,6 +136,10 @@ def activate_tabs_and_load_more(page):
                 f"[TAB] Active={tab_id}",
                 flush=True,
             )
+            
+            # DEBUG: kiểm tra riêng nội dung của tab tennis
+            if tab_id == "tennis-tab":
+                debug_tab_links(page, tab_id)
 
             # Thu thập các trận đã có trước khi click Load More.
             collect_match_urls(tab_id)
@@ -324,6 +328,56 @@ def normalize_match_url(url):
     url = re.sub(r"/link/\d+/?$", "/", url)
     return url.rstrip("/") + "/"
 
+
+def debug_tab_links(page, tab_id):
+    tab = page.locator(f"#{tab_id}")
+    target = tab.get_attribute("data-target")
+
+    if not target:
+        target = "#" + (
+            tab.get_attribute("aria-controls") or ""
+        )
+
+    if not target or target == "#":
+        print(
+            f"[TAB DEBUG] {tab_id}: no content target",
+            flush=True,
+        )
+        return
+
+    panel = page.locator(target)
+
+    if panel.count() == 0:
+        print(
+            f"[TAB DEBUG] {tab_id}: "
+            f"panel={target} not found",
+            flush=True,
+        )
+        return
+
+    links = panel.locator(
+        "a[href*='/truc-tiep/']"
+    )
+
+    urls = set()
+
+    for i in range(links.count()):
+        href = links.nth(i).get_attribute("href")
+
+        if href:
+            urls.add(
+                normalize_match_url(
+                    urljoin(page.url, href)
+                )
+            )
+
+    print(
+        f"[TAB DEBUG] tab={tab_id} "
+        f"panel={target} "
+        f"links={links.count()} "
+        f"unique={len(urls)}",
+        flush=True,
+    )
 
 def find_match_urls(html, base_url):
     soup = BeautifulSoup(html, "html.parser")
