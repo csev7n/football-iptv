@@ -2423,21 +2423,6 @@ def main():
     )
 
     print(
-    f"[HOME] Found {len(match_urls)} links",
-    flush=True,
-    )
-
-    for url in match_urls:
-        if (
-            "persib" in url.lower()
-            or "viettel" in url.lower()
-        ):
-            print(
-              f"[FOUND TARGET] {url}",
-              flush=True,
-            )
-    
-    print(
         f"[MAIN] Found {len(match_urls)} unique matches.",
         flush=True,
     )
