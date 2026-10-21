@@ -21,7 +21,7 @@ from playwright.sync_api import sync_playwright
 # CONFIG
 # ============================================================
 
-HOME_URL = "https://xoilacz.io/"
+HOME_URL = "https://xoilacz.vip/"
 OUTPUT_FILE = Path("matches.json")
 
 MAX_WORKERS = 3
