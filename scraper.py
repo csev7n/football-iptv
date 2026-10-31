@@ -24,7 +24,7 @@ from playwright.sync_api import sync_playwright
 HOME_URL = "https://xoilacz.vip/"
 OUTPUT_FILE = Path("matches.json")
 
-MAX_WORKERS = 3
+MAX_WORKERS = 1
 PAGE_TIMEOUT = 20000
 
 PLAYER_DISCOVERY_TIMEOUT_MS = 12000
@@ -148,7 +148,7 @@ def activate_tabs_and_load_more(page):
 
             try:
                 page.wait_for_load_state(
-                    "networkidle",
+                    "domcontentloaded",
                     timeout=3000,
                 )
             except Exception:
@@ -218,7 +218,7 @@ def activate_tabs_and_load_more(page):
 
                     try:
                         page.wait_for_load_state(
-                            "networkidle",
+                            "domcontentloaded",
                             timeout=3000,
                         )
                     except Exception:
@@ -277,6 +277,12 @@ def get_home_page():
 
         browser = p.chromium.launch(
             headless=True,
+            args=[
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-dev-shm-usage",  # <-- Thêm dòng này để tránh tràn bộ nhớ tạm /dev/shm trên Linux
+                "--disable-gpu",
+            ]
         )
 
         page = browser.new_page(
@@ -292,7 +298,7 @@ def get_home_page():
 
             try:
                 page.wait_for_load_state(
-                    "networkidle",
+                    "domcontentloaded",
                     timeout=10000,
                 )
             except Exception:
@@ -2180,7 +2186,15 @@ def scrape_one_match(
 
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
+            browser = p.chromium.launch(
+                headless=True,
+                args=[
+                    "--no-sandbox",
+                    "--disable-setuid-sandbox",
+                    "--disable-dev-shm-usage",  # <-- Thêm dòng này tương tự
+                    "--disable-gpu",
+                ]
+            )
 
             context = browser.new_context(
                 user_agent=HEADERS["User-Agent"],
