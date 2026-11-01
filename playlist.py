@@ -898,6 +898,17 @@ def build_playlist(data):
                 list,
             ):
                 continue
+                
+            # Lấy HTTP Headers riêng của từng stream URL.
+            headers_by_url = player.get(
+                "stream_headers",
+                {}
+            )
+
+            # Đảm bảo dữ liệu Headers đúng định dạng.
+            if not isinstance(headers_by_url, dict):
+                headers_by_url = {}
+
 
             # =================================================
             # CHANNEL TITLE
@@ -915,9 +926,22 @@ def build_playlist(data):
 
             for stream_url in streams:
 
-                stream_url = normalize_text(
-                    stream_url
+                # Giữ nguyên URL gốc để tra cứu Headers.
+                raw_stream_url = stream_url
+
+                # Lấy Headers đúng với URL này.
+                stream_headers = headers_by_url.get(
+                    raw_stream_url,
+                    {}
                 )
+
+                if not isinstance(stream_headers, dict):
+                    stream_headers = {}
+
+                # Chuẩn hóa URL theo logic hiện tại.
+                stream_url = str(
+                    raw_stream_url or ""
+                ).strip()
 
                 if not stream_url:
                     continue
@@ -959,6 +983,7 @@ def build_playlist(data):
                         get_group_title(match),
                         title,
                         stream_url,
+                        dict(stream_headers),
                     )
                 )
 
@@ -992,6 +1017,7 @@ def build_playlist(data):
         group_title,
         title,
         stream_url,
+        stream_headers,
     ) in channels:
 
         lines.append(
@@ -1000,6 +1026,18 @@ def build_playlist(data):
             f'{title}'
         )
 
+        # Xuất HTTP Headers nếu channel có cấu hình.
+        if stream_headers:
+
+            lines.append(
+                "#EXTHTTP:" + json.dumps(
+                    stream_headers,
+                    ensure_ascii=False,
+                    separators=(",", ":")
+                )
+            )
+
+        # URL luôn nằm cuối cùng.
         lines.append(
             stream_url
         )
