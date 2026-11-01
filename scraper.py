@@ -640,6 +640,9 @@ def make_instance(info, match_id, occurrence):
 
         # URL được ánh xạ riêng cho instance này.
         "stream_urls": [],
+        
+        # HTTP Headers riêng của từng stream URL.
+        "stream_headers": {},
 
         # Trạng thái xử lý.
         "status": "discovered",
@@ -838,6 +841,50 @@ def is_instance_playing(
         == instance["instance_id"]
     )
 
+def get_stream_headers(request):
+    """
+    Lấy HTTP Headers của riêng request FLV.
+    Chỉ lưu các header cần thiết cho việc phát stream.
+    Không lưu Cookie hoặc Authorization.
+    """
+
+    try:
+        raw_headers = request.headers or {}
+    except Exception as error:
+        print(
+            f"[HEADER ERROR] Cannot read headers: {error}",
+            flush=True,
+        )
+        return {}
+
+    allowed_headers = {
+        "referer": "Referer",
+        "origin": "Origin",
+        "user-agent": "User-Agent",
+    }
+
+    result = {}
+
+    for key, value in raw_headers.items():
+
+        header_name = allowed_headers.get(
+            str(key).lower()
+        )
+
+        if not header_name:
+            continue
+
+        value = str(value).strip()
+
+        if not value:
+            continue
+
+        if "\r" in value or "\n" in value:
+            continue
+
+        result[header_name] = value
+
+    return result
 
 # ============================================================
 # FLV COLLECTOR — SESSION OWNERSHIP
@@ -896,6 +943,7 @@ class FLVCollector:
             "started_at": time.monotonic(),
             "ended_at": None,
             "streams": [],
+            "stream_headers": {},
         }
 
         self.current_session = session
@@ -925,6 +973,15 @@ class FLVCollector:
 
         if not is_flv_url(url):
             return
+            
+        headers = get_stream_headers(request)
+        print(
+            f"[FLV HEADERS] "
+            f"Referer={bool(headers.get('Referer'))} "
+            f"Origin={bool(headers.get('Origin'))} "
+            f"User-Agent={bool(headers.get('User-Agent'))}",
+            flush=True,
+        )
 
         now = time.monotonic()
         session = self.current_session
@@ -949,6 +1006,7 @@ class FLVCollector:
             "type": "request",
             "request_id": id(request),
             "url": url,
+            "headers": headers,
             "time": now,
             "session_id": session_id,
             "instance_id": instance_id,
@@ -960,6 +1018,10 @@ class FLVCollector:
 
         if session is not None:
             unique_append(session["streams"], url)
+            # Lưu HTTP Headers theo đúng URL
+            session["stream_headers"][url] = dict(
+                event.get("headers") or {}
+            )
 
             print(
                 f"[FLV REQUEST] session={session_id} "
@@ -1151,20 +1213,42 @@ class FLVCollector:
 # STREAM ASSIGNMENT
 # ============================================================
 
-def assign_streams(instance, urls, source):
+def assign_streams(
+    instance,
+    urls,
+    source,
+    headers_by_url=None,
+):
     """
-    Gán URL cho đúng instance, không sử dụng tên player
-    hoặc server làm khóa.
+    Gán URL và HTTP Headers cho đúng instance.
+
+    Headers được lưu theo từng URL riêng biệt.
+    Không sử dụng tên player hoặc server làm khóa.
     """
+
+    headers_by_url = headers_by_url or {}
+
+    # Đảm bảo instance có nơi lưu HTTP Headers.
+    instance.setdefault("stream_headers", {})
+
     added = []
 
     for url in urls:
+
         if not url:
             continue
 
+        # Lưu URL nếu chưa tồn tại.
         if url not in instance["stream_urls"]:
             instance["stream_urls"].append(url)
             added.append(url)
+
+        # Lấy Headers tương ứng với URL.
+        headers = headers_by_url.get(url)
+
+        # Chỉ ghi đè khi có Headers hợp lệ.
+        if isinstance(headers, dict) and headers:
+            instance["stream_headers"][url] = dict(headers)
 
     if instance["stream_urls"]:
         instance["status"] = "stream_found"
@@ -1239,11 +1323,19 @@ def map_auto_play(page, collector, registry):
 
     if not urls:
         return False
+        
+    # Lấy Headers tương ứng với từng URL auto-play.
+    headers_by_url = {
+        event["url"]: event.get("headers") or {}
+        for event in events
+        if event.get("url")
+    }
 
     assign_streams(
         active_before,
         urls,
         source="auto-play",
+        headers_by_url=headers_by_url,
     )
 
     print(
@@ -1340,6 +1432,7 @@ def capture_click_session(
         instance,
         session["streams"],
         source=f"click-session-{session['id']}",
+        headers_by_url=session["stream_headers"],
     )
 
     if instance["stream_urls"]:
@@ -1478,6 +1571,7 @@ def process_instance(
         instance,
         session["streams"],
         source=f"click-session-{session['id']}",
+        headers_by_url=session["stream_headers"],
     )
 
     if instance["stream_urls"]:
@@ -1638,6 +1732,7 @@ def switch_to_another_server(
             candidate,
             session["streams"],
             source=f"switch-session-{session['id']}",
+            headers_by_url=session["stream_headers"],
         )
 
         if not clicked:
@@ -1978,11 +2073,19 @@ def map_new_auto_requests(
 
     if not urls:
         return False
+        
+    # Lấy Headers của các request auto-play mới.
+    headers_by_url = {
+        event["url"]: event.get("headers") or {}
+        for event in events
+        if event.get("url")
+    }
 
     assign_streams(
         active,
         urls,
         source="reload-auto-play",
+        headers_by_url=headers_by_url,
     )
 
     print(
@@ -2125,6 +2228,34 @@ def recover_single_server(
 # ------------------------------------------------------------
 
 def output_player(instance):
+
+    # Lấy danh sách URL, loại bỏ URL trùng.
+    stream_urls = list(
+        dict.fromkeys(
+            instance.get("stream_urls", [])
+        )
+    )
+
+    # Lấy HTTP Headers theo từng URL.
+    headers_by_url = instance.get(
+        "stream_headers",
+        {}
+    )
+
+    if not isinstance(headers_by_url, dict):
+        headers_by_url = {}
+
+    # Chỉ xuất Headers thuộc các URL thực sự được ghi nhận.
+    output_headers = {}
+
+    for url in stream_urls:
+
+        headers = headers_by_url.get(url)
+
+        if isinstance(headers, dict) and headers:
+
+            output_headers[url] = dict(headers)
+
     return {
         "instance_id": instance["instance_id"],
         "index": instance["original_index"],
@@ -2132,12 +2263,16 @@ def output_player(instance):
         "server": instance["server"],
         "data_link": instance["data_link"],
         "href": instance["href"],
-        "stream_urls": list(
-            dict.fromkeys(instance["stream_urls"])
-        ),
+
+        # Danh sách URL stream.
+        "stream_urls": stream_urls,
+
+        # HTTP Headers riêng của từng URL.
+        "stream_headers": output_headers,
+
         "status": (
             "stream_found"
-            if instance["stream_urls"]
+            if stream_urls
             else instance["status"]
         ),
     }
