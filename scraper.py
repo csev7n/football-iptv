@@ -2578,7 +2578,12 @@ def main():
 
     if not match_urls:
         print("[MAIN] No matches found.", flush=True)
-        return
+        print(
+            "[QUALITY GATE] FAIL: "
+            "Không tìm thấy trận nào; giữ nguyên matches.json hiện tại.",
+            flush=True,
+        )
+        raise SystemExit(1)
 
     results = []
 
@@ -2621,9 +2626,7 @@ def main():
 
     results.sort(key=lambda item: item["url"])
 
-    # Lưu cả khi một số trận lỗi, để không mất dữ liệu
-    # từ các trận đã xử lý thành công.
-    save_results(results)
+
 
     total_servers = sum(
         len(match["players"])
@@ -2678,11 +2681,15 @@ def main():
     if len(results) != len(match_urls):
         print(
             "[QUALITY GATE] FAIL: "
-            "Một số trận chưa scrape được.",
+            "Một số trận chưa scrape được. "
+            "Giữ nguyên matches.json hiện tại.",
             flush=True,
         )
-    else:
-        print("[QUALITY GATE] PASS", flush=True)
+        raise SystemExit(1)
+
+    print("[QUALITY GATE] PASS", flush=True)
+
+    save_results(results)
 
 
 # ------------------------------------------------------------
