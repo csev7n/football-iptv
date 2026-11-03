@@ -24,7 +24,7 @@ from playwright.sync_api import sync_playwright
 HOME_URL = "https://xoilacz.vip/"
 OUTPUT_FILE = Path("matches.json")
 
-MAX_WORKERS = 1
+MAX_WORKERS = 2
 PAGE_TIMEOUT = 20000
 
 PLAYER_DISCOVERY_TIMEOUT_MS = 12000
