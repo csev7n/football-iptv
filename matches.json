@@ -1,6 +1,6 @@
 {
-  "generated_at": 1793824552,
-  "match_count": 90,
+  "generated_at": 1793827586,
+  "match_count": 68,
   "matches": [
     {
       "title": "PHÁT TRỰC TIẾP ANADOLU EFES1976 VS PARIS VÀO LÚC 00:15, NGÀY 06/11/2026",
@@ -9,7 +9,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e1d293319562:server:0:c267ea6c",
+          "instance_id": "e1d293319562:server:0:b0b6b2f7",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -27,17 +27,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "e1d293319562:server:1:1167a2f1",
+          "instance_id": "e1d293319562:server:1:85c6d75c",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/anadolu-efes1976-vs-paris-luc-0015-ngay-06-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793823958-0-0-7bdd936441c6db668a99c8872ea3dd46"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793827120-0-0-7f933cf417a62adc8bef563927f85798"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793823958-0-0-7bdd936441c6db668a99c8872ea3dd46": {
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793827120-0-0-7f933cf417a62adc8bef563927f85798": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-29/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -53,17 +53,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "fabb7e3f8b86:server:0:22c91f2a",
+          "instance_id": "fabb7e3f8b86:server:0:a8fb6719",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/arthur-fils-vs-tomas-machac-luc-0230-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel58.flv?wsSecret=8c9968b771f0155c16732421d0c09f64&wsABSTime=1793867159"
+            "https://live1.quickscoreboardz.com/live/channel58.flv?wsSecret=f698ef8524468790566b3815b8433e28&wsABSTime=1793870322"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel58.flv?wsSecret=8c9968b771f0155c16732421d0c09f64&wsABSTime=1793867159": {
+            "https://live1.quickscoreboardz.com/live/channel58.flv?wsSecret=f698ef8524468790566b3815b8433e28&wsABSTime=1793870322": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel58/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -79,62 +79,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "6db758622757:server:0:a174e68a",
+          "instance_id": "6db758622757:server:0:01f0d14c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/as-far-rabat-vs-raja-casablanca-luc-0300-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel30.flv?wsSecret=1eb6cce05fa3b411108738c6247e5bf2&wsABSTime=1793867166"
+            "https://live1.quickscoreboardz.com/live/channel30.flv?wsSecret=699642bda20efb5ad6d6248cfa9090fd&wsABSTime=1793870328"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel30.flv?wsSecret=1eb6cce05fa3b411108738c6247e5bf2&wsABSTime=1793867166": {
+            "https://live1.quickscoreboardz.com/live/channel30.flv?wsSecret=699642bda20efb5ad6d6248cfa9090fd&wsABSTime=1793870328": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel30/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP ATL. PARANAENSE VS VASCO DA GAMA VÀO LÚC 05:30, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/atl-paranaense-vs-vasco-da-gama-luc-0530-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "eee16ab41c20:server:0:dea47e35",
-          "index": 0,
-          "name": "TONI",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/atl-paranaense-vs-vasco-da-gama-luc-0530-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel9.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel9.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel9/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "eee16ab41c20:server:1:da7e27db",
-          "index": 1,
-          "name": "HD TONI",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcl.tv/truc-tiep/atl-paranaense-vs-vasco-da-gama-luc-0530-ngay-05-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-9.flv?auth_key=3000001793823977-0-0-af201bcef4808d92c3c0b484557ac935"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-9.flv?auth_key=3000001793823977-0-0-af201bcef4808d92c3c0b484557ac935": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-9/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -149,17 +105,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "fbd30342089f:server:0:b4c77fcd",
+          "instance_id": "fbd30342089f:server:0:9e3065bb",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/bc-barnaul-altayskiy-kray-vs-dome-springs-izhevsk-luc-1900-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=54edea3c37efd6a42b63b6ba66324dff&wsABSTime=1793867179"
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=257beb08ef1b104774c4e257eadb90d5&wsABSTime=1793870335"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=54edea3c37efd6a42b63b6ba66324dff&wsABSTime=1793867179": {
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=257beb08ef1b104774c4e257eadb90d5&wsABSTime=1793870335": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel44/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -175,7 +131,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "309dd064b0ef:server:0:5e3a8dda",
+          "instance_id": "309dd064b0ef:server:0:f5f71f7f",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -193,17 +149,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "309dd064b0ef:server:1:194af38f",
+          "instance_id": "309dd064b0ef:server:1:a95e80a6",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/bc-novosibirsk-vs-tambov-luc-1930-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793823991-0-0-81a0ff3cdd5316b0ce0be3e5cce494fc"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793827146-0-0-40ce3d2118816a96ab2d0f9fb1b72b49"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793823991-0-0-81a0ff3cdd5316b0ce0be3e5cce494fc": {
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793827146-0-0-40ce3d2118816a96ab2d0f9fb1b72b49": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-25/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -219,7 +175,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d1b6d840f90b:server:0:ac0ff05f",
+          "instance_id": "d1b6d840f90b:server:0:74de873f",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -237,62 +193,18 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "d1b6d840f90b:server:1:9bfd2a07",
+          "instance_id": "d1b6d840f90b:server:1:23b5e392",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/boston-celtics-vs-milwaukee-bucks-luc-0730-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793823997-0-0-ae047b4ff3b9272a4224cb134fb21454"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793827154-0-0-14dd1096a4b58bb9b88c4edd81be08bd"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793823997-0-0-ae047b4ff3b9272a4224cb134fb21454": {
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793827154-0-0-14dd1096a4b58bb9b88c4edd81be08bd": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-29/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP BOTAFOGO RJ VS ATLÉTICO MINEIRO VÀO LÚC 07:30, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/botafogo-rj-vs-atletico-mineiro-luc-0730-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "8883e5cbe79e:server:0:d303d430",
-          "index": 0,
-          "name": "POLO",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/botafogo-rj-vs-atletico-mineiro-luc-0730-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel10.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel10.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel10/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "8883e5cbe79e:server:1:9a892311",
-          "index": 1,
-          "name": "HD POLO",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcl.tv/truc-tiep/botafogo-rj-vs-atletico-mineiro-luc-0730-ngay-05-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-10.flv?auth_key=3000001793824005-0-0-52e02b9cafede36678bc7b46212c95e2"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-10.flv?auth_key=3000001793824005-0-0-52e02b9cafede36678bc7b46212c95e2": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-10/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -307,7 +219,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a8c59b7a4b79:server:0:0f7befb5",
+          "instance_id": "a8c59b7a4b79:server:0:15651703",
           "index": 0,
           "name": "HIRO",
           "server": "Server 1",
@@ -325,17 +237,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "a8c59b7a4b79:server:1:eee16100",
+          "instance_id": "a8c59b7a4b79:server:1:2a3b347d",
           "index": 1,
           "name": "HD HIRO",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/bristol-city-vs-wolverhampton-luc-0300-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793824011-0-0-d33ff274643d3ff6bb8481a6b1b1fd51"
+            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793827161-0-0-d0fec397a914741b8ff3a3779a2e9360"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793824011-0-0-d33ff274643d3ff6bb8481a6b1b1fd51": {
+            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793827161-0-0-d0fec397a914741b8ff3a3779a2e9360": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-14/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -351,17 +263,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e56050cf0630:server:0:6120b410",
+          "instance_id": "e56050cf0630:server:0:5b95bc7b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/brooklyn-nets-vs-charlotte-hornets-luc-0730-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=03d81bcb97a5cdf60471c3dc36de7021&wsABSTime=1793867213"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=634e9afa9398dc682924700dac7b5f5e&wsABSTime=1793870363"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=03d81bcb97a5cdf60471c3dc36de7021&wsABSTime=1793867213": {
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=634e9afa9398dc682924700dac7b5f5e&wsABSTime=1793870363": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel42/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -377,7 +289,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7669c9459255:server:0:80eab090",
+          "instance_id": "7669c9459255:server:0:e214e439",
           "index": 0,
           "name": "KOBE",
           "server": "Server 1",
@@ -395,17 +307,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "7669c9459255:server:1:8c64e1d6",
+          "instance_id": "7669c9459255:server:1:7469efbf",
           "index": 1,
           "name": "HD KOBE",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/busan-kcc-egis-vs-hou-chon-luc-1710-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793824025-0-0-581c001089f70b37189eb8e970ca3775"
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827174-0-0-a285f3fffe5ac2f7429c362c9e68fb0e"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793824025-0-0-581c001089f70b37189eb8e970ca3775": {
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827174-0-0-a285f3fffe5ac2f7429c362c9e68fb0e": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-27/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -421,7 +333,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "93259deb7908:server:0:c9025366",
+          "instance_id": "93259deb7908:server:0:a775693e",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -439,17 +351,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "93259deb7908:server:1:7d325395",
+          "instance_id": "93259deb7908:server:1:7d44d8fe",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/cairns-taipans-vs-lllawarra-hawks-luc-1530-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793824031-0-0-ec560c7754d422d2aaa98bfebf144d72"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793827181-0-0-2d1ad407e6118796cc7b8302cc8c1a4f"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793824031-0-0-ec560c7754d422d2aaa98bfebf144d72": {
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793827181-0-0-2d1ad407e6118796cc7b8302cc8c1a4f": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-29/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -465,7 +377,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d8c72d9ee8c5:server:0:358c4955",
+          "instance_id": "d8c72d9ee8c5:server:0:154735e2",
           "index": 0,
           "name": "RAVEN",
           "server": "Server 1",
@@ -483,17 +395,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "d8c72d9ee8c5:server:1:ea71478e",
+          "instance_id": "d8c72d9ee8c5:server:1:3dc0bdff",
           "index": 1,
           "name": "HD RAVEN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/cardiff-city-vs-west-ham-luc-0245-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001793824038-0-0-abb524869aa79868c65348fa92fec962"
+            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001793827188-0-0-00e6323884e3809f1c36a05ce8c39e67"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001793824038-0-0-abb524869aa79868c65348fa92fec962": {
+            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001793827188-0-0-00e6323884e3809f1c36a05ce8c39e67": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-21/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -509,70 +421,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e70fc3832323:server:0:98c9153e",
+          "instance_id": "e70fc3832323:server:0:fdbf8bdb",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/cardiff-metropolitan-u19-vs-stabaek-u19-luc-0245-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=f20e89787788f9531be78846770d237a&wsABSTime=1793867240"
+            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=248ca16946b33fd31d35e8e893231546&wsABSTime=1793870390"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=f20e89787788f9531be78846770d237a&wsABSTime=1793867240": {
+            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=248ca16946b33fd31d35e8e893231546&wsABSTime=1793870390": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel10/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP CD ARGUAL (W) VS NỮ MADRID CFF VÀO LÚC 02:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/cd-argual-w-vs-nu-madrid-cff-luc-0200-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "12ed1430a235:server:0:e84ce6ab",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/cd-argual-w-vs-nu-madrid-cff-luc-0200-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel3.flv?wsSecret=ecd7743c02313cf6dfac31fb87f45f3a&wsABSTime=1793867246"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel3.flv?wsSecret=ecd7743c02313cf6dfac31fb87f45f3a&wsABSTime=1793867246": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel3/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP COOMAN TEAM VS STRAY TEAM VÀO LÚC 01:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/cooman-team-vs-stray-team-luc-0100-ngay-05-11-2026/",
-      "sport_name": "esports",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "f4ec4311c5bc:server:0:20bf931e",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/cooman-team-vs-stray-team-luc-0100-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=0cd7373b1517cf41eeb7d39b810ad95c&wsABSTime=1793867252"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=0cd7373b1517cf41eeb7d39b810ad95c&wsABSTime=1793867252": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel70/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -587,17 +447,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "33d3a659ebc9:server:0:f335d70e",
+          "instance_id": "33d3a659ebc9:server:0:2c56d654",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/cs-puertollano-vs-albacete-luc-0245-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=c8d92ee02a591971c4809a7399cce2fa&wsABSTime=1793867259"
+            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=925e53c91a66f48ba91d8a5b667df7c2&wsABSTime=1793870396"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=c8d92ee02a591971c4809a7399cce2fa&wsABSTime=1793867259": {
+            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=925e53c91a66f48ba91d8a5b667df7c2&wsABSTime=1793870396": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel11/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -613,62 +473,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d37b477e2fd8:server:0:b2680e9f",
+          "instance_id": "d37b477e2fd8:server:0:92ccb4ca",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/csjl-knight-vs-general-eac-luc-1400-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=c3ef1bda04499ccf29645ddb0758b1bc&wsABSTime=1793867265"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=dad2a9aab7d4366e4f8bbd95731f0fc3&wsABSTime=1793870403"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=c3ef1bda04499ccf29645ddb0758b1bc&wsABSTime=1793867265": {
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=dad2a9aab7d4366e4f8bbd95731f0fc3&wsABSTime=1793870403": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel40/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP CUCUTA DEPORTIVO VS IND. SANTA FE VÀO LÚC 06:30, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/cucuta-deportivo-vs-ind-santa-fe-luc-0630-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "70f1955cc9dc:server:0:e437ab1d",
-          "index": 0,
-          "name": "SILVA",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/cucuta-deportivo-vs-ind-santa-fe-luc-0630-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel20.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel20.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel20/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "70f1955cc9dc:server:1:14c5544e",
-          "index": 1,
-          "name": "HD SILVA",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcl.tv/truc-tiep/cucuta-deportivo-vs-ind-santa-fe-luc-0630-ngay-05-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-20.flv?auth_key=3000001793824077-0-0-b05aa286380caf553815a0f61377fc24"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-20.flv?auth_key=3000001793824077-0-0-b05aa286380caf553815a0f61377fc24": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-20/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -683,44 +499,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "156be7ce686b:server:0:b3f5e591",
+          "instance_id": "156be7ce686b:server:0:ed4411c4",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/denver-nuggets-vs-toronto-raptors-luc-0900-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=fb95c4f18e5a5e5ed1a933d4078d0a9a&wsABSTime=1793867278"
+            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=5afa768fd053d8c7497d8195feefbe00&wsABSTime=1793870409"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=fb95c4f18e5a5e5ed1a933d4078d0a9a&wsABSTime=1793867278": {
+            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=5afa768fd053d8c7497d8195feefbe00&wsABSTime=1793870409": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel49/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP DEPORTIVO METROPOLITANO VS CARABOBO VÀO LÚC 06:30, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/deportivo-metropolitano-vs-carabobo-luc-0630-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "4501006a127d:server:0:5499a518",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/deportivo-metropolitano-vs-carabobo-luc-0630-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel9.flv?wsSecret=c4270e1d9f1095d90748f00880510c2d&wsABSTime=1793867285"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel9.flv?wsSecret=c4270e1d9f1095d90748f00880510c2d&wsABSTime=1793867285": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel9/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -735,17 +525,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "52afc9125bdf:server:0:3014dd38",
+          "instance_id": "52afc9125bdf:server:0:e8bfe394",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/detroit-pistons-vs-philadelphia-76ers-luc-0700-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=6f305644bf73352a60ad810d7d97d952&wsABSTime=1793867291"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=3547280e25cf009b4bb5faea0916c062&wsABSTime=1793870415"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=6f305644bf73352a60ad810d7d97d952&wsABSTime=1793867291": {
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=3547280e25cf009b4bb5faea0916c062&wsABSTime=1793870415": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel40/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -761,7 +551,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8fade1925d4a:server:0:37715db5",
+          "instance_id": "8fade1925d4a:server:0:d26e80eb",
           "index": 0,
           "name": "BRADY",
           "server": "Server 1",
@@ -779,17 +569,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "8fade1925d4a:server:1:0d7d8ed6",
+          "instance_id": "8fade1925d4a:server:1:cdbe7418",
           "index": 1,
           "name": "TOM",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/dortmund-vs-real-betis-luc-0300-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001793824103-0-0-c6fecf07689437e3bb7cfd697b7b546a"
+            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001793827227-0-0-b4a5cec298fd4c05fedebf428f3a7946"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001793824103-0-0-c6fecf07689437e3bb7cfd697b7b546a": {
+            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001793827227-0-0-b4a5cec298fd4c05fedebf428f3a7946": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-4/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -797,17 +587,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "8fade1925d4a:server:2:030e91d4",
+          "instance_id": "8fade1925d4a:server:2:a54e1fd3",
           "index": 2,
           "name": "TOM",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://xoilaczcl.tv/truc-tiep/dortmund-vs-real-betis-luc-0300-ngay-05-11-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=2b9bff2a3c618a27d9665c489779e92b&wsABSTime=1793867303"
+            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=a64b7f2eedc4ac0c2a461ff886488bca&wsABSTime=1793870428"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=2b9bff2a3c618a27d9665c489779e92b&wsABSTime=1793867303": {
+            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=a64b7f2eedc4ac0c2a461ff886488bca&wsABSTime=1793870428": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel4/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -815,17 +605,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "8fade1925d4a:server:3:0d196eaf",
+          "instance_id": "8fade1925d4a:server:3:1991ebf3",
           "index": 3,
           "name": "FULL HD BRADY",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcl.tv/truc-tiep/dortmund-vs-real-betis-luc-0300-ngay-05-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001793824104-0-0-08c4459322b9e08f44f46639dd5866d4"
+            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001793827228-0-0-ea6dfee48b220da6a1610addde44ee5e"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001793824104-0-0-08c4459322b9e08f44f46639dd5866d4": {
+            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001793827228-0-0-ea6dfee48b220da6a1610addde44ee5e": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-15/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -841,7 +631,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0948d17838b6:server:0:aa76d01e",
+          "instance_id": "0948d17838b6:server:0:87b4d942",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -859,17 +649,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0948d17838b6:server:1:ac036a4a",
+          "instance_id": "0948d17838b6:server:1:e6db8d90",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/dplus-vs-bilibili-gaming-luc-0500-ngay-06-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793824111-0-0-f9fbe3a50ae20c4e0ec00b7101299250"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793827237-0-0-37a8e261f144b5d94c659898470a0854"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793824111-0-0-f9fbe3a50ae20c4e0ec00b7101299250": {
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793827237-0-0-37a8e261f144b5d94c659898470a0854": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-30/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -879,24 +669,24 @@
       ]
     },
     {
-      "title": "PHÁT TRỰC TIẾP ESTRELLA ROJA VS CD MOTAGUA VÀO LÚC 06:15, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/estrella-roja-vs-cd-motagua-luc-0615-ngay-05-11-2026/",
+      "title": "PHÁT TRỰC TIẾP EXPORT SEBACO FC VS MATAGALPA FC VÀO LÚC 04:00, NGÀY 05/11/2026",
+      "url": "https://xoilaczcl.tv/truc-tiep/export-sebaco-fc-vs-matagalpa-fc-luc-0400-ngay-22-10-2026/",
       "sport_name": "football",
       "status": "ready",
       "players": [
         {
-          "instance_id": "e1401b20d243:server:0:4d4b7a20",
+          "instance_id": "76ca594e418e:server:0:b5041e01",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/estrella-roja-vs-cd-motagua-luc-0615-ngay-05-11-2026/",
+          "href": "https://xoilaczcl.tv/truc-tiep/export-sebaco-fc-vs-matagalpa-fc-luc-0400-ngay-22-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel8.flv?wsSecret=e09eb66aea7ae1edaad92affe9cfab38&wsABSTime=1793867312"
+            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=3c6e2f6be8dc285e35d9a245540825df&wsABSTime=1793870439"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel8.flv?wsSecret=e09eb66aea7ae1edaad92affe9cfab38&wsABSTime=1793867312": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel8/off-tvc?is_off_add=false",
+            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=3c6e2f6be8dc285e35d9a245540825df&wsABSTime=1793870439": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel7/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -911,7 +701,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "89c8b6199f78:server:0:48d2e8ee",
+          "instance_id": "89c8b6199f78:server:0:e9051cd4",
           "index": 0,
           "name": "FELIX",
           "server": "Server 1",
@@ -929,17 +719,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "89c8b6199f78:server:1:746b774d",
+          "instance_id": "89c8b6199f78:server:1:0fbbc6a6",
           "index": 1,
           "name": "NEMO",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/fc-porto-vs-napoli-luc-0300-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-17.flv?auth_key=3000001793824124-0-0-9fa99ad5513f95cdb53e39f5ab0edce4"
+            "https://live2.domaincdn.cc/livecdn/channel-17.flv?auth_key=3000001793827251-0-0-dd31e61fd6550b090cf279889f242768"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-17.flv?auth_key=3000001793824124-0-0-9fa99ad5513f95cdb53e39f5ab0edce4": {
+            "https://live2.domaincdn.cc/livecdn/channel-17.flv?auth_key=3000001793827251-0-0-dd31e61fd6550b090cf279889f242768": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-17/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -947,17 +737,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "89c8b6199f78:server:2:44a7712f",
+          "instance_id": "89c8b6199f78:server:2:7102aa8d",
           "index": 2,
           "name": "NEMO",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://xoilaczcl.tv/truc-tiep/fc-porto-vs-napoli-luc-0300-ngay-05-11-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel17.flv?wsSecret=66b04b6a57567acdafc7fe85b960efb5&wsABSTime=1793867325"
+            "https://live1.quickscoreboardz.com/live/channel17.flv?wsSecret=dd415791c39b5e67a19a492dc6088e92&wsABSTime=1793870451"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel17.flv?wsSecret=66b04b6a57567acdafc7fe85b960efb5&wsABSTime=1793867325": {
+            "https://live1.quickscoreboardz.com/live/channel17.flv?wsSecret=dd415791c39b5e67a19a492dc6088e92&wsABSTime=1793870451": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel17/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -965,17 +755,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "89c8b6199f78:server:3:f8ff874b",
+          "instance_id": "89c8b6199f78:server:3:9c15e67d",
           "index": 3,
           "name": "FULL HD FELIX",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcl.tv/truc-tiep/fc-porto-vs-napoli-luc-0300-ngay-05-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001793824126-0-0-22670fe75070be9065e62b46f0a62fa5"
+            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001793827252-0-0-fdf7d3482bf6a96ff6a64b640a5fbbd8"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001793824126-0-0-22670fe75070be9065e62b46f0a62fa5": {
+            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001793827252-0-0-fdf7d3482bf6a96ff6a64b640a5fbbd8": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-24/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -991,88 +781,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "4603640600fe:server:0:e1007dc4",
+          "instance_id": "4603640600fe:server:0:542a55e3",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/fenerbahce-istanbul-vs-baskonia-vitoria-luc-0100-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=051880e143fc4e81b89cb30c5720e70f&wsABSTime=1793867327"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=e4a0819ef5a8313260fb420d83f2a76a&wsABSTime=1793870453"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=051880e143fc4e81b89cb30c5720e70f&wsABSTime=1793867327": {
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=e4a0819ef5a8313260fb420d83f2a76a&wsABSTime=1793870453": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel42/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP FERRO CARRIL VS NACIONAL MONTEVIDEO VÀO LÚC 07:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/ferro-carril-vs-nacional-montevideo-luc-0700-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "34b07a3a5b2c:server:0:2127e736",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/ferro-carril-vs-nacional-montevideo-luc-0700-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=74f6638f6410e20f844234c50fcbe761&wsABSTime=1793867334"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=74f6638f6410e20f844234c50fcbe761&wsABSTime=1793867334": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel12/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP FLAMENGO RJ VS GRÊMIO RS VÀO LÚC 05:30, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/flamengo-rj-vs-gremio-rs-luc-0530-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "d506fb701270:server:0:35253f8e",
-          "index": 0,
-          "name": "NEMO",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/flamengo-rj-vs-gremio-rs-luc-0530-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel17.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel17.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel17/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "d506fb701270:server:1:87634bfd",
-          "index": 1,
-          "name": "HD NEMO",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcl.tv/truc-tiep/flamengo-rj-vs-gremio-rs-luc-0530-ngay-05-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-17.flv?auth_key=3000001793824145-0-0-4f1f59566029047e16a91fdff63aa745"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-17.flv?auth_key=3000001793824145-0-0-4f1f59566029047e16a91fdff63aa745": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-17/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1087,7 +807,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "74027050a60c:server:0:3045f6a4",
+          "instance_id": "74027050a60c:server:0:d81d9ea0",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -1105,44 +825,18 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "74027050a60c:server:1:4a4b8991",
+          "instance_id": "74027050a60c:server:1:95be0e63",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/gen-g-esports-vs-lyon-gaming-luc-0500-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793824152-0-0-e43fa0137458656ddf8c606247f3b772"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793827265-0-0-6b0f2703bc580128760520befcc7223b"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793824152-0-0-e43fa0137458656ddf8c606247f3b772": {
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793827265-0-0-6b0f2703bc580128760520befcc7223b": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-30/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP GLASGOW RANGERS U19 VS DINAMO KYIV U19 VÀO LÚC 02:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/glasgow-rangers-u19-vs-dinamo-kyiv-u19-luc-0200-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "e90fa08a93d8:server:0:0e2cc79c",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/glasgow-rangers-u19-vs-dinamo-kyiv-u19-luc-0200-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel1.flv?wsSecret=a653f9d8f3fcbb71defdf164c1970713&wsABSTime=1793867354"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel1.flv?wsSecret=a653f9d8f3fcbb71defdf164c1970713&wsABSTime=1793867354": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel1/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1157,17 +851,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "869aec173ef4:server:0:c5a9f466",
+          "instance_id": "869aec173ef4:server:0:37d280c3",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/grsa-itabom-bauru-vs-pitagoras-minas-luc-0530-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=ef8673164c57758de6b22ebc147e1081&wsABSTime=1793867360"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=a8342c9eb6244d1306fa6875c9a3b715&wsABSTime=1793870467"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=ef8673164c57758de6b22ebc147e1081&wsABSTime=1793867360": {
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=a8342c9eb6244d1306fa6875c9a3b715&wsABSTime=1793870467": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel40/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1183,17 +877,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8d2164043338:server:0:795fd9df",
+          "instance_id": "8d2164043338:server:0:489a5cc2",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/hapoel-jerusalem-vs-aris-thessaloniki-b-c-luc-0200-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=836ad0b020c6b24634b97ab6f18cb2e7&wsABSTime=1793867367"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=fc279f178271d20f285f0f20461ef689&wsABSTime=1793870474"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=836ad0b020c6b24634b97ab6f18cb2e7&wsABSTime=1793867367": {
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=fc279f178271d20f285f0f20461ef689&wsABSTime=1793870474": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel40/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1209,7 +903,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2153c072fff8:server:0:f0d7ba1f",
+          "instance_id": "2153c072fff8:server:0:4b6589aa",
           "index": 0,
           "name": "KOBE",
           "server": "Server 1",
@@ -1227,17 +921,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "2153c072fff8:server:1:e1a70eb8",
+          "instance_id": "2153c072fff8:server:1:d40ab41f",
           "index": 1,
           "name": "HD KOBE",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/hapoel-tel-aviv-vs-barcelona-luc-0145-ngay-06-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793824179-0-0-f899523dfcdbadcb641ea48641ad7865"
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827286-0-0-daf62fd46ec93eaab988a7fd37cde2dc"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793824179-0-0-f899523dfcdbadcb641ea48641ad7865": {
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827286-0-0-daf62fd46ec93eaab988a7fd37cde2dc": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-27/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1253,17 +947,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "4eabef98631d:server:0:559eeeaf",
+          "instance_id": "4eabef98631d:server:0:cdf820b1",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/houston-rockets-vs-minnesota-timberwolves-luc-0830-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=3f8115daeba5261220d98db32c181f71&wsABSTime=1793867380"
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=c2f0e61be268d4f5872f14efca4ad391&wsABSTime=1793870488"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=3f8115daeba5261220d98db32c181f71&wsABSTime=1793867380": {
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=c2f0e61be268d4f5872f14efca4ad391&wsABSTime=1793870488": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel48/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1279,7 +973,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "dd063c927612:server:0:d6b0b2dd",
+          "instance_id": "dd063c927612:server:0:9c790e23",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -1297,17 +991,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "dd063c927612:server:1:119fcef3",
+          "instance_id": "dd063c927612:server:1:79a33697",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/karmine-corp-vs-t1-luc-0500-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793824192-0-0-48cb0bbb35dc500737b088c569a63e67"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793827299-0-0-703f78def6cdff0fc69389bf1ee4bf1e"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793824192-0-0-48cb0bbb35dc500737b088c569a63e67": {
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793827299-0-0-703f78def6cdff0fc69389bf1ee4bf1e": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-30/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1323,17 +1017,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "9a583a051dfa:server:0:5c83771d",
+          "instance_id": "9a583a051dfa:server:0:240bb291",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/khimki-moscow-region-vs-metallurg-magnitogorsk-luc-2300-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=83e62505246f2eedf5bdeec100cd52e2&wsABSTime=1793867393"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=d9a26a7745b3fdffd3c4956317494785&wsABSTime=1793870501"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=83e62505246f2eedf5bdeec100cd52e2&wsABSTime=1793867393": {
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=d9a26a7745b3fdffd3c4956317494785&wsABSTime=1793870501": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel40/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1349,44 +1043,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5253d6824aed:server:0:6693de8c",
+          "instance_id": "5253d6824aed:server:0:b40f7752",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/kv-kortrijk-vs-kv-mechelen-luc-0230-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel25.flv?wsSecret=694ab1e558b617f909ef32aed35071f2&wsABSTime=1793867399"
+            "https://live1.quickscoreboardz.com/live/channel25.flv?wsSecret=9abfa470ee5275fc1a97183bf6e545f4&wsABSTime=1793870507"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel25.flv?wsSecret=694ab1e558b617f909ef32aed35071f2&wsABSTime=1793867399": {
+            "https://live1.quickscoreboardz.com/live/channel25.flv?wsSecret=9abfa470ee5275fc1a97183bf6e545f4&wsABSTime=1793870507": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel25/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP LDU QUITO VS UNIVERSIDAD CATÓLICA VÀO LÚC 07:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/ldu-quito-vs-universidad-catolica-luc-0700-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "c77e31288121:server:0:008026cc",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/ldu-quito-vs-universidad-catolica-luc-0700-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=86874d8d8accac96b68396c22ff9ae1a&wsABSTime=1793867406"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=86874d8d8accac96b68396c22ff9ae1a&wsABSTime=1793867406": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel10/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1401,7 +1069,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "059338def224:server:0:cdd4e93f",
+          "instance_id": "059338def224:server:0:68336e5c",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -1419,44 +1087,18 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "059338def224:server:1:7aedfca2",
+          "instance_id": "059338def224:server:1:bffad434",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/los-angeles-clippers-vs-miami-heat-luc-1030-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793824218-0-0-da161105b0199776644eb0ca82c64d46"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793827319-0-0-904bf497850f242b94af190139d4d2e5"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793824218-0-0-da161105b0199776644eb0ca82c64d46": {
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793827319-0-0-904bf497850f242b94af190139d4d2e5": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-25/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP LUIS ANGEL FIRPO VS ALIANZA SALVADOR VÀO LÚC 08:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/luis-angel-firpo-vs-alianza-salvador-luc-0800-ngay-17-09-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "526f8da487e3:server:0:3bc5aa9e",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/luis-angel-firpo-vs-alianza-salvador-luc-0800-ngay-17-09-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=9fac2e2c13345e62479eddd81fe50721&wsABSTime=1793867421"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=9fac2e2c13345e62479eddd81fe50721&wsABSTime=1793867421": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel14/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1471,17 +1113,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7288e7e78599:server:0:9e8b5c86",
+          "instance_id": "7288e7e78599:server:0:34cf3fc6",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/lyon-villeurbanne-vs-bayern-munchen-luc-0200-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=4372e3fc4cddecddd2dc04e2da235648&wsABSTime=1793867427"
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=e93eaf6163e0e2ce275893b8382ba2ef&wsABSTime=1793870521"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=4372e3fc4cddecddd2dc04e2da235648&wsABSTime=1793867427": {
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=e93eaf6163e0e2ce275893b8382ba2ef&wsABSTime=1793870521": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel44/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1497,44 +1139,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2402d9eec72c:server:0:e7dd9360",
+          "instance_id": "2402d9eec72c:server:0:0976600b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/memphis-grizzlies-vs-indiana-pacers-luc-0800-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=e249bddbe4666e8aef33334cf9931c52&wsABSTime=1793867434"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=560f6a2f4f75448337bcbd863ddc99a1&wsABSTime=1793870528"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=e249bddbe4666e8aef33334cf9931c52&wsABSTime=1793867434": {
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=560f6a2f4f75448337bcbd863ddc99a1&wsABSTime=1793870528": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel46/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP MUNICIPAL LIMENO VS FUERTE SAN FRANCISCO VÀO LÚC 08:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/municipal-limeno-vs-fuerte-san-francisco-luc-0800-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "8c26d9f71e1a:server:0:54db2ed4",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/municipal-limeno-vs-fuerte-san-francisco-luc-0800-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel34.flv?wsSecret=73270d5313e00f3804fa872b186b83d9&wsABSTime=1793867440"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel34.flv?wsSecret=73270d5313e00f3804fa872b186b83d9&wsABSTime=1793867440": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel34/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1549,17 +1165,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "42023b8fe45d:server:0:05b2db65",
+          "instance_id": "42023b8fe45d:server:0:33884864",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/nacional-potosi-vs-oriente-petrolero-luc-0500-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=478be985e86e9f39d42bc5847d55f1ab&wsABSTime=1793867446"
+            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=13c13684349bb0993746651059c7e6d1&wsABSTime=1793870534"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=478be985e86e9f39d42bc5847d55f1ab&wsABSTime=1793867446": {
+            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=13c13684349bb0993746651059c7e6d1&wsABSTime=1793870534": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel7/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1575,17 +1191,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "07ba2c406ec5:server:0:4108927d",
+          "instance_id": "07ba2c406ec5:server:0:2799d5aa",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/new-orleans-pelicans-vs-utah-jazz-luc-0800-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=80c8fa3cf02174f4f61ffa4c05974a83&wsABSTime=1793867453"
+            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=8656d50aaf68ed7ba498eb26c40bcc8a&wsABSTime=1793870540"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=80c8fa3cf02174f4f61ffa4c05974a83&wsABSTime=1793867453": {
+            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=8656d50aaf68ed7ba498eb26c40bcc8a&wsABSTime=1793870540": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel47/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1601,17 +1217,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "488245c11b18:server:0:a82c4a3c",
+          "instance_id": "488245c11b18:server:0:065e22cc",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/new-york-knicks-vs-chicago-bulls-luc-0730-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=1a618f679f1dfe118bee8dd612139eb1&wsABSTime=1793867459"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=f5310bd7a3dce4d09707540e26fa4b9c&wsABSTime=1793870547"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=1a618f679f1dfe118bee8dd612139eb1&wsABSTime=1793867459": {
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=f5310bd7a3dce4d09707540e26fa4b9c&wsABSTime=1793870547": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel43/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1627,44 +1243,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "20aab697e900:server:0:9b52e4e0",
+          "instance_id": "20aab697e900:server:0:1709686b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/nu-benfica-vs-nu-olympiacos-piraeus-luc-0345-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel85.flv?wsSecret=826c7f73bed062a04ab70be5955b7fc1&wsABSTime=1793867466"
+            "https://live1.quickscoreboardz.com/live/channel85.flv?wsSecret=2d60fe15f2c5e4d43e72139e56dfdf34&wsABSTime=1793870553"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel85.flv?wsSecret=826c7f73bed062a04ab70be5955b7fc1&wsABSTime=1793867466": {
+            "https://live1.quickscoreboardz.com/live/channel85.flv?wsSecret=2d60fe15f2c5e4d43e72139e56dfdf34&wsABSTime=1793870553": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel85/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP NỮ CACERENO VS NỮ ALAVES VÀO LÚC 03:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/nu-cacereno-vs-nu-alaves-luc-0300-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "03ae7cfb81a6:server:0:ad93cc66",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/nu-cacereno-vs-nu-alaves-luc-0300-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=5abcafb682a56aff4834d0afad9ffd46&wsABSTime=1793867472"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=5abcafb682a56aff4834d0afad9ffd46&wsABSTime=1793867472": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel14/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1679,44 +1269,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b18789c11bdb:server:0:de98f43b",
+          "instance_id": "b18789c11bdb:server:0:fc570b69",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/nu-fujian-zhongteng-vs-nu-beijing-ducks-luc-1830-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=48256fe9c2179b78a731d159fb737beb&wsABSTime=1793867478"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=a081040973d4128c24443a15bf1d1eb6&wsABSTime=1793870559"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=48256fe9c2179b78a731d159fb737beb&wsABSTime=1793867478": {
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=a081040973d4128c24443a15bf1d1eb6&wsABSTime=1793870559": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel43/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP NỮ HEBEI HENGSHUIHU VS NỮ DONGGUAN VÀO LÚC 15:30, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/nu-hebei-hengshuihu-vs-nu-dongguan-luc-1530-ngay-05-11-2026/",
-      "sport_name": "basketball",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "05bbc816cac6:server:0:c73c61fa",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/nu-hebei-hengshuihu-vs-nu-dongguan-luc-1530-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=cb72f26370cf334bfcf4883f693ef3a1&wsABSTime=1793867484"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=cb72f26370cf334bfcf4883f693ef3a1&wsABSTime=1793867484": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel44/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1731,44 +1295,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b69365cd529c:server:0:7594d9b1",
+          "instance_id": "b69365cd529c:server:0:14f9a033",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/nu-hk-kopavogur-vs-nu-throttur-reykjavik-luc-0315-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=efa140690b3e688ea12242837f1838e0&wsABSTime=1793867491"
+            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=b02049d2a3845d93b355d30b2fb8f510&wsABSTime=1793870566"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=efa140690b3e688ea12242837f1838e0&wsABSTime=1793867491": {
+            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=b02049d2a3845d93b355d30b2fb8f510&wsABSTime=1793870566": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel84/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP NỮ INTERNACIONAL VS NỮ BRAGANTINO VÀO LÚC 05:30, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/nu-internacional-vs-nu-bragantino-luc-0400-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "e90df0ea8550:server:0:4538cb02",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/nu-internacional-vs-nu-bragantino-luc-0400-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel28.flv?wsSecret=ef8393a73f0ca83ce1a6a7ab1dfd4f75&wsABSTime=1793867497"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel28.flv?wsSecret=ef8393a73f0ca83ce1a6a7ab1dfd4f75&wsABSTime=1793867497": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel28/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1783,17 +1321,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a7294023e935:server:0:e55330dd",
+          "instance_id": "a7294023e935:server:0:2d23c9a4",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/nu-jiangxi-ganxing-vs-nu-sichuan-jinqiang-luc-1400-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=c9ae3ccc274cc29854a8c5f24a6658e9&wsABSTime=1793867503"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=9351fae4917025f926fb99f0b9056577&wsABSTime=1793870572"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=c9ae3ccc274cc29854a8c5f24a6658e9&wsABSTime=1793867503": {
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=9351fae4917025f926fb99f0b9056577&wsABSTime=1793870572": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel41/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1809,17 +1347,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0377fad63eb1:server:0:f1449094",
+          "instance_id": "0377fad63eb1:server:0:ac62e10d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/nu-liaoning-hengye-vs-nu-wuhan-sheng-luc-1600-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=1f1943ea5f3cf752f3adcb60859c3879&wsABSTime=1793867510"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=83d01fb310f8a229c8734658c743f32d&wsABSTime=1793870579"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=1f1943ea5f3cf752f3adcb60859c3879&wsABSTime=1793867510": {
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=83d01fb310f8a229c8734658c743f32d&wsABSTime=1793870579": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel46/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1835,17 +1373,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b0351b2365b9:server:0:06dcd857",
+          "instance_id": "b0351b2365b9:server:0:a3585696",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/nu-melbourne-boomers-vs-nu-townsville-fire-luc-1500-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=f0ff2f2f840da41a60d0eebc092ee952&wsABSTime=1793867516"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=be9c3edfa1e1e5ce2eadfee058b801a5&wsABSTime=1793870585"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=f0ff2f2f840da41a60d0eebc092ee952&wsABSTime=1793867516": {
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=be9c3edfa1e1e5ce2eadfee058b801a5&wsABSTime=1793870585": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel42/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1861,17 +1399,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "04b254f1d458:server:0:79b18f22",
+          "instance_id": "04b254f1d458:server:0:2f63132f",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/nu-shanxi-zhuyeqing-vs-nu-henan-yaoxin-luc-1830-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=fc03465331dc4b084810be09c17847f5&wsABSTime=1793867522"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=01794e08c5aa2d7e718f1079b5be4862&wsABSTime=1793870592"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=fc03465331dc4b084810be09c17847f5&wsABSTime=1793867522": {
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=01794e08c5aa2d7e718f1079b5be4862&wsABSTime=1793870592": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel42/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1887,17 +1425,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "902c843539a0:server:0:70ae07f4",
+          "instance_id": "902c843539a0:server:0:d1d67658",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/nu-xinjiang-tianshan-vs-nu-hefei-culture-luc-1830-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=6c4a0e2a9491a2c1ef08c101b83065ca&wsABSTime=1793867528"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=fbe8c1de1d55fc70d4e2167c610e5512&wsABSTime=1793870598"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=6c4a0e2a9491a2c1ef08c101b83065ca&wsABSTime=1793867528": {
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=fbe8c1de1d55fc70d4e2167c610e5512&wsABSTime=1793870598": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel41/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1913,7 +1451,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "882eb50e29e6:server:0:72e0cdac",
+          "instance_id": "882eb50e29e6:server:0:7ca142a8",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -1931,17 +1469,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "882eb50e29e6:server:1:defe4686",
+          "instance_id": "882eb50e29e6:server:1:17d903c6",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/oklahoma-city-thunder-vs-cleveland-cavaliers-luc-0800-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793824340-0-0-80b591366da41c3cd3d676368fa32bc9"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793827410-0-0-259872e3fbe138a8a5631aa3002b0b07"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793824340-0-0-80b591366da41c3cd3d676368fa32bc9": {
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793827410-0-0-259872e3fbe138a8a5631aa3002b0b07": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-25/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1951,24 +1489,24 @@
       ]
     },
     {
-      "title": "PHÁT TRỰC TIẾP OLIMPIA ASUNCION VS DEPORTIVO RECOLETA VÀO LÚC 07:15, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/olimpia-asuncion-vs-deportivo-recoleta-luc-0715-ngay-05-11-2026/",
+      "title": "PHÁT TRỰC TIẾP OLANCHO FC VS LOBOS UPNFM VÀO LÚC 04:00, NGÀY 05/11/2026",
+      "url": "https://xoilaczcl.tv/truc-tiep/olancho-fc-vs-lobos-upnfm-luc-0400-ngay-05-11-2026/",
       "sport_name": "football",
       "status": "ready",
       "players": [
         {
-          "instance_id": "da3c2fefd001:server:0:c648d5f0",
+          "instance_id": "1a7d184d3455:server:0:04561a9a",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/olimpia-asuncion-vs-deportivo-recoleta-luc-0715-ngay-05-11-2026/",
+          "href": "https://xoilaczcl.tv/truc-tiep/olancho-fc-vs-lobos-upnfm-luc-0400-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=8af204c939fa473768cbd2062a41db79&wsABSTime=1793867543"
+            "https://live1.quickscoreboardz.com/live/channel3.flv?wsSecret=ff3f43cbfc60413e644bb6657398f8ac&wsABSTime=1793870612"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=8af204c939fa473768cbd2062a41db79&wsABSTime=1793867543": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel33/off-tvc?is_off_add=false",
+            "https://live1.quickscoreboardz.com/live/channel3.flv?wsSecret=ff3f43cbfc60413e644bb6657398f8ac&wsABSTime=1793870612": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel3/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1983,17 +1521,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "6eac0e26425f:server:0:7a335ede",
+          "instance_id": "6eac0e26425f:server:0:3e4234cf",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/olimpia-milano-vs-valencia-luc-0230-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=7b11a6320a4d061ff30d3c67567c87b9&wsABSTime=1793867549"
+            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=d9d1bc43843a77df747a1c9647876e27&wsABSTime=1793870620"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=7b11a6320a4d061ff30d3c67567c87b9&wsABSTime=1793867549": {
+            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=d9d1bc43843a77df747a1c9647876e27&wsABSTime=1793870620": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel45/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2009,17 +1547,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b01e4c81545f:server:0:6b770aa6",
+          "instance_id": "b01e4c81545f:server:0:e214620b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/osasco-basket-vs-sao-jose-luc-0600-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=56e3348c82c759b077e74ea264aa9582&wsABSTime=1793867556"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=dbfd9fb8b29cefa5fb424f435383ac37&wsABSTime=1793870625"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=56e3348c82c759b077e74ea264aa9582&wsABSTime=1793867556": {
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=dbfd9fb8b29cefa5fb424f435383ac37&wsABSTime=1793870625": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel41/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2035,17 +1573,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "928492b1785a:server:0:7011941b",
+          "instance_id": "928492b1785a:server:0:e528d9dd",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/oxford-united-vs-reading-luc-0245-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel26.flv?wsSecret=d42a0c8b592146db36ea8dbaece77f6d&wsABSTime=1793867562"
+            "https://live1.quickscoreboardz.com/live/channel26.flv?wsSecret=7a610985d66e1ef6c12c0a28db9ea344&wsABSTime=1793870631"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel26.flv?wsSecret=d42a0c8b592146db36ea8dbaece77f6d&wsABSTime=1793867562": {
+            "https://live1.quickscoreboardz.com/live/channel26.flv?wsSecret=7a610985d66e1ef6c12c0a28db9ea344&wsABSTime=1793870631": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel26/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2061,17 +1599,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "58728af1811a:server:0:7164ece0",
+          "instance_id": "58728af1811a:server:0:261b9fa2",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/phoenix-suns-vs-portland-trail-blazers-luc-0900-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel50.flv?wsSecret=79819cf64522c18aa2c05d5e348dbd04&wsABSTime=1793867568"
+            "https://live1.quickscoreboardz.com/live/channel50.flv?wsSecret=22ccd8f31dc60d4b3d7676983b332d3a&wsABSTime=1793870638"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel50.flv?wsSecret=79819cf64522c18aa2c05d5e348dbd04&wsABSTime=1793867568": {
+            "https://live1.quickscoreboardz.com/live/channel50.flv?wsSecret=22ccd8f31dc60d4b3d7676983b332d3a&wsABSTime=1793870638": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel50/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2087,44 +1625,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "6f130830e066:server:0:3a8535d5",
+          "instance_id": "6f130830e066:server:0:c5779078",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/politechnika-lublin-vs-belchatow-luc-0230-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=87a6b88ba24daec105d77ac3b36a4205&wsABSTime=1793867574"
+            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=0e94655f2c42c3da81063b18a8476744&wsABSTime=1793870644"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=87a6b88ba24daec105d77ac3b36a4205&wsABSTime=1793867574": {
+            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=0e94655f2c42c3da81063b18a8476744&wsABSTime=1793870644": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel83/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP PORTUGALETE VS REAL UNION VÀO LÚC 01:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/portugalete-vs-real-union-luc-0100-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "38062de84150:server:0:8a6c834d",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/portugalete-vs-real-union-luc-0100-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=d907b83a2a2653bef958f2ddd8aa9e24&wsABSTime=1793867581"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=d907b83a2a2653bef958f2ddd8aa9e24&wsABSTime=1793867581": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel14/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -2139,17 +1651,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "6b2b037c7d32:server:0:c7db93be",
+          "instance_id": "6b2b037c7d32:server:0:77315d2e",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/portuguesa-fc-vs-dep-la-guaira-luc-0430-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=fadd27df3f6014315307499bf88d48fb&wsABSTime=1793867587"
+            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=8c6cd729859c00626fb4dac21d9433a9&wsABSTime=1793870651"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=fadd27df3f6014315307499bf88d48fb&wsABSTime=1793867587": {
+            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=8c6cd729859c00626fb4dac21d9433a9&wsABSTime=1793870651": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel33/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2165,17 +1677,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "884e3c0d25e8:server:0:141cf2c4",
+          "instance_id": "884e3c0d25e8:server:0:bac47ceb",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/prestige-vs-maybe-luc-0100-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=2e417f81b503a656a614857078966c33&wsABSTime=1793867593"
+            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=0f208b2c1f711e7208a25acc26fd4f48&wsABSTime=1793870657"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=2e417f81b503a656a614857078966c33&wsABSTime=1793867593": {
+            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=0f208b2c1f711e7208a25acc26fd4f48&wsABSTime=1793870657": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel75/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2191,7 +1703,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "acb05cb40fa7:server:0:fdbca976",
+          "instance_id": "acb05cb40fa7:server:0:11225edd",
           "index": 0,
           "name": "RIO",
           "server": "Server 1",
@@ -2209,17 +1721,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "acb05cb40fa7:server:1:a4f1ba8a",
+          "instance_id": "acb05cb40fa7:server:1:db32b30f",
           "index": 1,
           "name": "XMEN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/psv-eindhoven-vs-club-brugge-luc-0300-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-13.flv?auth_key=3000001793824405-0-0-aa8a47512b63bf5de603f7e6772c5e5e"
+            "https://live2.domaincdn.cc/livecdn/channel-13.flv?auth_key=3000001793827469-0-0-155d89b0ed07409e02e0c2f0e004a25e"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-13.flv?auth_key=3000001793824405-0-0-aa8a47512b63bf5de603f7e6772c5e5e": {
+            "https://live2.domaincdn.cc/livecdn/channel-13.flv?auth_key=3000001793827469-0-0-155d89b0ed07409e02e0c2f0e004a25e": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-13/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2227,17 +1739,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "acb05cb40fa7:server:2:37cc8039",
+          "instance_id": "acb05cb40fa7:server:2:340c7730",
           "index": 2,
           "name": "XMEN",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://xoilaczcl.tv/truc-tiep/psv-eindhoven-vs-club-brugge-luc-0300-ngay-05-11-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=7fde0d7f2b9ad058492c4514e0f2c904&wsABSTime=1793867606"
+            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=775e15a4e2688bd0167edf2a787968a7&wsABSTime=1793870670"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=7fde0d7f2b9ad058492c4514e0f2c904&wsABSTime=1793867606": {
+            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=775e15a4e2688bd0167edf2a787968a7&wsABSTime=1793870670": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel13/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2245,44 +1757,18 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "acb05cb40fa7:server:3:404f5052",
+          "instance_id": "acb05cb40fa7:server:3:d90c74dd",
           "index": 3,
           "name": "FULL HD RIO",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcl.tv/truc-tiep/psv-eindhoven-vs-club-brugge-luc-0300-ngay-05-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793824406-0-0-b483d72ab41d3200fb5712afaeeb57a5"
+            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793827470-0-0-e7816b9ef5236f4fd31b474b3cb2767b"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793824406-0-0-b483d72ab41d3200fb5712afaeeb57a5": {
+            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793827470-0-0-e7816b9ef5236f4fd31b474b3cb2767b": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-16/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP PUNTARENAS FC VS AD SAN CARLOS VÀO LÚC 07:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/puntarenas-fc-vs-ad-san-carlos-luc-0700-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "beb2c67b085d:server:0:c54c1b6b",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/puntarenas-fc-vs-ad-san-carlos-luc-0700-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=fb3171a9e80f548db65b6c48f3271c8b&wsABSTime=1793867608"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=fb3171a9e80f548db65b6c48f3271c8b&wsABSTime=1793867608": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel11/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -2297,17 +1783,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c93d5cd5e62d:server:0:9d0b6425",
+          "instance_id": "c93d5cd5e62d:server:0:1ec8762f",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/quezon-huskers-vs-binan-tatak-gel-luc-1700-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=e4e1514450291580136e858307dc7945&wsABSTime=1793867614"
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=421248ed7760d21096c7f6f0b0753603&wsABSTime=1793870672"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=e4e1514450291580136e858307dc7945&wsABSTime=1793867614": {
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=421248ed7760d21096c7f6f0b0753603&wsABSTime=1793870672": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel48/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2323,17 +1809,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f9d3ccc4a513:server:0:72883f4d",
+          "instance_id": "f9d3ccc4a513:server:0:6fcd1803",
           "index": 0,
           "name": "NICK",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/rb-leipzig-vs-manchester-city-luc-0300-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=9e1de3d71bb02fb8116a3c5a70eef9bf&wsABSTime=1793867620"
+            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=844fe747e5c399e1377b2ac8b898f061&wsABSTime=1793870679"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=9e1de3d71bb02fb8116a3c5a70eef9bf&wsABSTime=1793867620": {
+            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=844fe747e5c399e1377b2ac8b898f061&wsABSTime=1793870679": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel5/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2341,25 +1827,25 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "f9d3ccc4a513:server:1:ac737229",
+          "instance_id": "f9d3ccc4a513:server:1:e1cb0570",
           "index": 1,
           "name": "HD NICK",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/rb-leipzig-vs-manchester-city-luc-0300-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=9e1de3d71bb02fb8116a3c5a70eef9bf&wsABSTime=1793867620"
+            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793827484-0-0-3e395ea7af9fc9f29632d42a97f24a92"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=9e1de3d71bb02fb8116a3c5a70eef9bf&wsABSTime=1793867620": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel5/off-tvc?is_off_add=false",
+            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793827484-0-0-3e395ea7af9fc9f29632d42a97f24a92": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-5/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
           "status": "stream_found"
         },
         {
-          "instance_id": "f9d3ccc4a513:server:2:c9c8bbb8",
+          "instance_id": "f9d3ccc4a513:server:2:17d82dba",
           "index": 2,
           "name": "ASTRA",
           "server": "Server 3",
@@ -2377,17 +1863,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "f9d3ccc4a513:server:3:0697cd2a",
+          "instance_id": "f9d3ccc4a513:server:3:2fcf7e50",
           "index": 3,
           "name": "HD ASTRA",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcl.tv/truc-tiep/rb-leipzig-vs-manchester-city-luc-0300-ngay-05-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001793824427-0-0-bcace6b450e93570e1f202e0d3fac096"
+            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001793827486-0-0-058719387620fb2fa0a335f0f152eb58"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001793824427-0-0-bcace6b450e93570e1f202e0d3fac096": {
+            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001793827486-0-0-058719387620fb2fa0a335f0f152eb58": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-11/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2395,17 +1881,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "f9d3ccc4a513:server:4:2b241fab",
+          "instance_id": "f9d3ccc4a513:server:4:a331f2c4",
           "index": 4,
           "name": "FILIP",
           "server": "Server 5",
           "data_link": "4",
           "href": "https://xoilaczcl.tv/truc-tiep/rb-leipzig-vs-manchester-city-luc-0300-ngay-05-11-2026/link/4",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel19.flv?wsSecret=c3bf646a4d1c62b884b9d548b81112f3&wsABSTime=1793867627"
+            "https://live1.quickscoreboardz.com/live/channel19.flv?wsSecret=66da690d9767975950c1bbc879419bea&wsABSTime=1793870687"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel19.flv?wsSecret=c3bf646a4d1c62b884b9d548b81112f3&wsABSTime=1793867627": {
+            "https://live1.quickscoreboardz.com/live/channel19.flv?wsSecret=66da690d9767975950c1bbc879419bea&wsABSTime=1793870687": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel19/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2413,17 +1899,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "f9d3ccc4a513:server:5:a9be7fcd",
+          "instance_id": "f9d3ccc4a513:server:5:b8a7f784",
           "index": 5,
           "name": "HD FILIP",
           "server": "Server 6",
           "data_link": "5",
           "href": "https://xoilaczcl.tv/truc-tiep/rb-leipzig-vs-manchester-city-luc-0300-ngay-05-11-2026/link/5",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-19.flv?auth_key=3000001793824428-0-0-7146a1e61a52fc456cc976ba5435d235"
+            "https://live2.domaincdn.cc/livecdn/channel-19.flv?auth_key=3000001793827487-0-0-2cc097f4aea9e219a27807c0f5807a9c"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-19.flv?auth_key=3000001793824428-0-0-7146a1e61a52fc456cc976ba5435d235": {
+            "https://live2.domaincdn.cc/livecdn/channel-19.flv?auth_key=3000001793827487-0-0-2cc097f4aea9e219a27807c0f5807a9c": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-19/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2439,17 +1925,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2cc449f255dc:server:0:629e6b68",
+          "instance_id": "2cc449f255dc:server:0:c99f28cd",
           "index": 0,
           "name": "FABIO",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/rc-lens-vs-como-luc-0300-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=3bfc809d7af936210d9df420efa1de5d&wsABSTime=1793867629"
+            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=cf37162c1f61d1a0a21fbca08e978a49&wsABSTime=1793870689"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=3bfc809d7af936210d9df420efa1de5d&wsABSTime=1793867629": {
+            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=cf37162c1f61d1a0a21fbca08e978a49&wsABSTime=1793870689": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel2/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2457,17 +1943,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "2cc449f255dc:server:1:da76f1db",
+          "instance_id": "2cc449f255dc:server:1:f8799010",
           "index": 1,
           "name": "ZANE",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/rc-lens-vs-como-luc-0300-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-22.flv?auth_key=3000001793824435-0-0-d10064d850edbc703ca9b8e1de311eaa"
+            "https://live2.domaincdn.cc/livecdn/channel-22.flv?auth_key=3000001793827495-0-0-8279812d8defe5553eff37681ebb9342"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-22.flv?auth_key=3000001793824435-0-0-d10064d850edbc703ca9b8e1de311eaa": {
+            "https://live2.domaincdn.cc/livecdn/channel-22.flv?auth_key=3000001793827495-0-0-8279812d8defe5553eff37681ebb9342": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-22/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2475,7 +1961,7 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "2cc449f255dc:server:2:0bdae16c",
+          "instance_id": "2cc449f255dc:server:2:56e386d4",
           "index": 2,
           "name": "ZANE",
           "server": "Server 3",
@@ -2493,17 +1979,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "2cc449f255dc:server:3:ed3d260b",
+          "instance_id": "2cc449f255dc:server:3:d2bec086",
           "index": 3,
           "name": "FULL HD FABIO",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcl.tv/truc-tiep/rc-lens-vs-como-luc-0300-ngay-05-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001793824436-0-0-6e87e53f43bf833ec8d18139769c6bb3"
+            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001793827498-0-0-96e4df12bbb98f48c78e969f5ab66731"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001793824436-0-0-6e87e53f43bf833ec8d18139769c6bb3": {
+            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001793827498-0-0-96e4df12bbb98f48c78e969f5ab66731": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-2/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2519,17 +2005,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "756a4df6dd39:server:0:a52afb43",
+          "instance_id": "756a4df6dd39:server:0:a9d8e721",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/real-madrid-vs-panathinaikos-aktor-b-c-luc-0245-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=7363699b84d81d3a4b9a471f040f79f6&wsABSTime=1793867637"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=690dcab6b49e5b3c7593db11eb78c481&wsABSTime=1793870700"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=7363699b84d81d3a4b9a471f040f79f6&wsABSTime=1793867637": {
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=690dcab6b49e5b3c7593db11eb78c481&wsABSTime=1793870700": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel41/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2545,7 +2031,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "fca695a0fd83:server:0:ba6a6f9d",
+          "instance_id": "fca695a0fd83:server:0:cfe34163",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -2563,17 +2049,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "fca695a0fd83:server:1:bfe1e65b",
+          "instance_id": "fca695a0fd83:server:1:b77ce89d",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/sacramento-kings-vs-los-angeles-lakers-luc-1000-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793824449-0-0-e5614f5032cb48f05551a2f5ac4a16bd"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793827511-0-0-461d751611898aea2accf86bb6d81501"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793824449-0-0-e5614f5032cb48f05551a2f5ac4a16bd": {
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793827511-0-0-461d751611898aea2accf86bb6d81501": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-29/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2589,7 +2075,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "4808984d192c:server:0:83c7ee91",
+          "instance_id": "4808984d192c:server:0:90b6f478",
           "index": 0,
           "name": "KOBE",
           "server": "Server 1",
@@ -2607,17 +2093,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "4808984d192c:server:1:4e9f4ba2",
+          "instance_id": "4808984d192c:server:1:42e78b8e",
           "index": 1,
           "name": "HD KOBE",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/san-antonio-spurs-vs-dallas-mavericks-luc-0930-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793824456-0-0-79f755dfe729e805ca624407106c1b79"
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827518-0-0-382be8bbe292090a55776800d90fe9af"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793824456-0-0-79f755dfe729e805ca624407106c1b79": {
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827518-0-0-382be8bbe292090a55776800d90fe9af": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-27/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2633,88 +2119,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d4a0de8c44c2:server:0:c07c5e31",
+          "instance_id": "d4a0de8c44c2:server:0:022a081d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/san-beda-red-lions-vs-lpu-pirate-luc-1600-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=675d7492478da7824a934fe21e376f13&wsABSTime=1793867657"
+            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=2757bb7190631e55bb5311f1541cd3ca&wsABSTime=1793870720"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=675d7492478da7824a934fe21e376f13&wsABSTime=1793867657": {
+            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=2757bb7190631e55bb5311f1541cd3ca&wsABSTime=1793870720": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel45/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP SÃO PAULO VS CORINTHIANS SP VÀO LÚC 07:30, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/sao-paulo-vs-corinthians-sp-luc-0730-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "abc573b0799a:server:0:9e6f11fe",
-          "index": 0,
-          "name": "BEE",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/sao-paulo-vs-corinthians-sp-luc-0730-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel8.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel8.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel8/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "abc573b0799a:server:1:e7549032",
-          "index": 1,
-          "name": "HD BEE",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcl.tv/truc-tiep/sao-paulo-vs-corinthians-sp-luc-0730-ngay-05-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-8.flv?auth_key=3000001793824469-0-0-c73c745230b4de092dce1f4a327c7b57"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-8.flv?auth_key=3000001793824469-0-0-c73c745230b4de092dce1f4a327c7b57": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-8/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP SCHAFFHAUSEN VS FC BIEL-BIENNE 1896 VÀO LÚC 02:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/schaffhausen-vs-fc-biel-bienne-1896-luc-0200-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "f65a809dc24c:server:0:051dcd43",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/schaffhausen-vs-fc-biel-bienne-1896-luc-0200-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel31.flv?wsSecret=8c180333590c6d7d6ec37ecc595301c9&wsABSTime=1793867670"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel31.flv?wsSecret=8c180333590c6d7d6ec37ecc595301c9&wsABSTime=1793867670": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel31/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -2729,7 +2145,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "310ba9b2ea1a:server:0:beca807b",
+          "instance_id": "310ba9b2ea1a:server:0:dab33dcd",
           "index": 0,
           "name": "ROY",
           "server": "Server 1",
@@ -2747,17 +2163,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "310ba9b2ea1a:server:1:e25d474d",
+          "instance_id": "310ba9b2ea1a:server:1:0aeffe3d",
           "index": 1,
           "name": "HD ROY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/sk-slavia-praha-vs-arsenal-luc-0300-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793824482-0-0-248b39eba070a218f98d03c8229a6979"
+            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793827532-0-0-c0c4d1778ee8897b46ecbe778b2a12b2"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793824482-0-0-248b39eba070a218f98d03c8229a6979": {
+            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793827532-0-0-c0c4d1778ee8897b46ecbe778b2a12b2": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-1/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2765,17 +2181,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "310ba9b2ea1a:server:2:2ec362e7",
+          "instance_id": "310ba9b2ea1a:server:2:778c71aa",
           "index": 2,
           "name": "MAX",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://xoilaczcl.tv/truc-tiep/sk-slavia-praha-vs-arsenal-luc-0300-ngay-05-11-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=2ef8f2a6328fc476e0ebb4dc158113b1&wsABSTime=1793867683"
+            "https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=f26df1e1f18ec0055787e47599be8c22&wsABSTime=1793870733"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=2ef8f2a6328fc476e0ebb4dc158113b1&wsABSTime=1793867683": {
+            "https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=f26df1e1f18ec0055787e47599be8c22&wsABSTime=1793870733": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel6/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2783,17 +2199,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "310ba9b2ea1a:server:3:312c1e79",
+          "instance_id": "310ba9b2ea1a:server:3:9ce5445b",
           "index": 3,
           "name": "HD MAX",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcl.tv/truc-tiep/sk-slavia-praha-vs-arsenal-luc-0300-ngay-05-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001793824483-0-0-f81b32af1113bfb2c5f459b9afc5d417"
+            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001793827534-0-0-2c0d71ee9d1c8a2b8aaed94e93c1f19d"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001793824483-0-0-f81b32af1113bfb2c5f459b9afc5d417": {
+            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001793827534-0-0-2c0d71ee9d1c8a2b8aaed94e93c1f19d": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-6/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2801,7 +2217,7 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "310ba9b2ea1a:server:4:cfed07e2",
+          "instance_id": "310ba9b2ea1a:server:4:84827869",
           "index": 4,
           "name": "JOHAN",
           "server": "Server 5",
@@ -2819,96 +2235,18 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "310ba9b2ea1a:server:5:cfa62de0",
+          "instance_id": "310ba9b2ea1a:server:5:d7044fe7",
           "index": 5,
           "name": "HD JOHAN",
           "server": "Server 6",
           "data_link": "5",
           "href": "https://xoilaczcl.tv/truc-tiep/sk-slavia-praha-vs-arsenal-luc-0300-ngay-05-11-2026/link/5",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=60f53df32035371bf69a65657ef8900f&wsABSTime=1793867684"
+            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=030335ce47b5b709ddccc7b61c15334b&wsABSTime=1793870735"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=60f53df32035371bf69a65657ef8900f&wsABSTime=1793867684": {
+            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=030335ce47b5b709ddccc7b61c15334b&wsABSTime=1793870735": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel12/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP SV CORONIE BOYS VS SV TRANSVAAL VÀO LÚC 06:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/sv-coronie-boys-vs-sv-transvaal-luc-0600-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "c47000983715:server:0:7a28acde",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/sv-coronie-boys-vs-sv-transvaal-luc-0600-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel31.flv?wsSecret=427fb651d114fac7445c9ecbc1ee1ed7&wsABSTime=1793867686"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel31.flv?wsSecret=427fb651d114fac7445c9ecbc1ee1ed7&wsABSTime=1793867686": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel31/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP THE STRONGEST VS ALWAYS READY VÀO LÚC 07:30, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/the-strongest-vs-always-ready-luc-0730-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "f98c8a1cb597:server:0:b3a20997",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/the-strongest-vs-always-ready-luc-0730-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=ee44f65b2a416c5e950e261795f0c7d8&wsABSTime=1793867693"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=ee44f65b2a416c5e950e261795f0c7d8&wsABSTime=1793867693": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel13/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP THIAGO AGUSTIN TIRANTE VS JAN-LENNARD STRUFF VÀO LÚC 22:00, NGÀY 04/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/thiago-agustin-tirante-vs-jan-lennard-struff-luc-2200-ngay-04-11-2026/",
-      "sport_name": "tennis",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "cb07911a9063:server:0:7e8da065",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/thiago-agustin-tirante-vs-jan-lennard-struff-luc-2200-ngay-04-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel55.flv?wsSecret=7c9f68ec39d2bf5dccd07b0e23c8fcc2&wsABSTime=1793867699"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel55.flv?wsSecret=7c9f68ec39d2bf5dccd07b0e23c8fcc2&wsABSTime=1793867699": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel55/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -2923,7 +2261,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5c3fa1fd40be:server:0:23d3b8aa",
+          "instance_id": "5c3fa1fd40be:server:0:7f7fd2ae",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -2941,17 +2279,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "5c3fa1fd40be:server:1:3d1b5774",
+          "instance_id": "5c3fa1fd40be:server:1:9e4e8a57",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/ulsan-phoebus-vs-seoul-thunders-luc-1700-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793824510-0-0-b174bca9c92e895a369d7d5b57d6e2a0"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793827543-0-0-26a4bfdfdbf71d94627e799b27c4749b"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793824510-0-0-b174bca9c92e895a369d7d5b57d6e2a0": {
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793827543-0-0-26a4bfdfdbf71d94627e799b27c4749b": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-25/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2967,62 +2305,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b6c78db7a313:server:0:dab6bf1b",
+          "instance_id": "b6c78db7a313:server:0:da17f9a6",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/union-la-calera-vs-coquimbo-unido-luc-0600-ngay-21-10-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel29.flv?wsSecret=7d4e2c15022d9e86d59ea5510e323355&wsABSTime=1793867712"
+            "https://live1.quickscoreboardz.com/live/channel29.flv?wsSecret=3a2719ab6df6b05e19bc7180ca4fc35b&wsABSTime=1793870744"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel29.flv?wsSecret=7d4e2c15022d9e86d59ea5510e323355&wsABSTime=1793867712": {
+            "https://live1.quickscoreboardz.com/live/channel29.flv?wsSecret=3a2719ab6df6b05e19bc7180ca4fc35b&wsABSTime=1793870744": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel29/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP VENADOS FC YUCATÁN VS ATLETICO MORELIA VÀO LÚC 06:00, NGÀY 05/11/2026",
-      "url": "https://xoilaczcl.tv/truc-tiep/venados-fc-yucatan-vs-atletico-morelia-luc-0600-ngay-05-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "1b2cee43746b:server:0:cb9d42cf",
-          "index": 0,
-          "name": "RAVEN",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://xoilaczcl.tv/truc-tiep/venados-fc-yucatan-vs-atletico-morelia-luc-0600-ngay-05-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel21.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel21.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel21/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "1b2cee43746b:server:1:426f086d",
-          "index": 1,
-          "name": "HD RAVEN",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://xoilaczcl.tv/truc-tiep/venados-fc-yucatan-vs-atletico-morelia-luc-0600-ngay-05-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001793824524-0-0-908c0ba215a2df39aae8d2586c4cb5e1"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001793824524-0-0-908c0ba215a2df39aae8d2586c4cb5e1": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-21/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -3037,17 +2331,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "ed7344240144:server:0:8423beb5",
+          "instance_id": "ed7344240144:server:0:5999cca8",
           "index": 0,
           "name": "KEN",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/viking-vs-sabah-fk-luc-0300-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=5c5c16a8f81a894d4cbbf86b79f6e886&wsABSTime=1793867725"
+            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=6bc7cfbee462354f1957a1001f425b0e&wsABSTime=1793870751"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=5c5c16a8f81a894d4cbbf86b79f6e886&wsABSTime=1793867725": {
+            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=6bc7cfbee462354f1957a1001f425b0e&wsABSTime=1793870751": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel18/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3055,17 +2349,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "ed7344240144:server:1:e18e9a7c",
+          "instance_id": "ed7344240144:server:1:e856d53f",
           "index": 1,
           "name": "TONI",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/viking-vs-sabah-fk-luc-0300-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-9.flv?auth_key=3000001793824531-0-0-af0772767bf8718d51d7b402ececa96c"
+            "https://live2.domaincdn.cc/livecdn/channel-9.flv?auth_key=3000001793827556-0-0-868ff6c18e2578bdec7117bd52f2862e"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-9.flv?auth_key=3000001793824531-0-0-af0772767bf8718d51d7b402ececa96c": {
+            "https://live2.domaincdn.cc/livecdn/channel-9.flv?auth_key=3000001793827556-0-0-868ff6c18e2578bdec7117bd52f2862e": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-9/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3073,7 +2367,7 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "ed7344240144:server:2:e839d52b",
+          "instance_id": "ed7344240144:server:2:3e30024b",
           "index": 2,
           "name": "TONI",
           "server": "Server 3",
@@ -3091,18 +2385,62 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "ed7344240144:server:3:119736ec",
+          "instance_id": "ed7344240144:server:3:2f460178",
           "index": 3,
           "name": "FULL HD KEN",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://xoilaczcl.tv/truc-tiep/viking-vs-sabah-fk-luc-0300-ngay-05-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-18.flv?auth_key=3000001793824532-0-0-f23db86b1d3459d102e89fbce14ebcc4"
+            "https://live2.domaincdn.cc/livecdn/channel-18.flv?auth_key=3000001793827558-0-0-8ac656fba81b55edfc62a05bd88c8fce"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-18.flv?auth_key=3000001793824532-0-0-f23db86b1d3459d102e89fbce14ebcc4": {
+            "https://live2.domaincdn.cc/livecdn/channel-18.flv?auth_key=3000001793827558-0-0-8ac656fba81b55edfc62a05bd88c8fce": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-18/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP VIVO FRANCA VS CRUZEIRO VÀO LÚC 06:00, NGÀY 06/11/2026",
+      "url": "https://xoilaczcl.tv/truc-tiep/vivo-franca-vs-cruzeiro-luc-0600-ngay-06-11-2026/",
+      "sport_name": "basketball",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "c487235ddd0e:server:0:3e38e73e",
+          "index": 0,
+          "name": "KOBE",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://xoilaczcl.tv/truc-tiep/vivo-franca-vs-cruzeiro-luc-0600-ngay-06-11-2026/",
+          "stream_urls": [
+            "https://live2.jorvakstreamcache.com/live/channel27.flv"
+          ],
+          "stream_headers": {
+            "https://live2.jorvakstreamcache.com/live/channel27.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel27/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "c487235ddd0e:server:1:7b6deef3",
+          "index": 1,
+          "name": "HD KOBE",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://xoilaczcl.tv/truc-tiep/vivo-franca-vs-cruzeiro-luc-0600-ngay-06-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827566-0-0-321cc56dcbf7b76e0936a04d3dfc4b37"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827566-0-0-321cc56dcbf7b76e0936a04d3dfc4b37": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-27/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -3117,7 +2455,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a966af42768c:server:0:e495829e",
+          "instance_id": "a966af42768c:server:0:ef2dfb56",
           "index": 0,
           "name": "KOBE",
           "server": "Server 1",
@@ -3135,17 +2473,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "a966af42768c:server:1:bc103d54",
+          "instance_id": "a966af42768c:server:1:1cb07fc7",
           "index": 1,
           "name": "HD KOBE",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/washington-wizards-vs-atlanta-hawks-luc-0700-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793824539-0-0-9d69478b9a687ed68633a816f739f6f8"
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827573-0-0-fd24f545f2222bb43751b5d1f495493d"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793824539-0-0-9d69478b9a687ed68633a816f739f6f8": {
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793827573-0-0-fd24f545f2222bb43751b5d1f495493d": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-27/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3161,7 +2499,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "05d7c38b271c:server:0:2b1c5b96",
+          "instance_id": "05d7c38b271c:server:0:5ea013dc",
           "index": 0,
           "name": "POLO",
           "server": "Server 1",
@@ -3179,17 +2517,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "05d7c38b271c:server:1:74421e66",
+          "instance_id": "05d7c38b271c:server:1:e58142e3",
           "index": 1,
           "name": "HD POLO",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://xoilaczcl.tv/truc-tiep/wrexham-vs-middlesbrough-luc-0245-ngay-05-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-10.flv?auth_key=3000001793824545-0-0-c49ccd86471324182f078bc928ac16a8"
+            "https://live2.domaincdn.cc/livecdn/channel-10.flv?auth_key=3000001793827580-0-0-2ea775222a12574dcc4dd18314ee86b7"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-10.flv?auth_key=3000001793824545-0-0-c49ccd86471324182f078bc928ac16a8": {
+            "https://live2.domaincdn.cc/livecdn/channel-10.flv?auth_key=3000001793827580-0-0-2ea775222a12574dcc4dd18314ee86b7": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-10/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3205,17 +2543,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "58fe8166c82f:server:0:f991e719",
+          "instance_id": "58fe8166c82f:server:0:e6757e6c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://xoilaczcl.tv/truc-tiep/yugra-surgut-vs-olimp-chelyabinsk-luc-2100-ngay-05-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=ceb664e58cec09c18828f888a53be109&wsABSTime=1793867747"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=5bd99ad568cd5997d5efc17859d5306e&wsABSTime=1793870781"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=ceb664e58cec09c18828f888a53be109&wsABSTime=1793867747": {
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=5bd99ad568cd5997d5efc17859d5306e&wsABSTime=1793870781": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel46/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
