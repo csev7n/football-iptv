@@ -1,6 +1,6 @@
 {
-  "generated_at": 1793986906,
-  "match_count": 113,
+  "generated_at": 1793989819,
+  "match_count": 112,
   "matches": [
     {
       "title": "PHÁT TRỰC TIẾP AB AKADEMISK VS VENDSYSSEL VÀO LÚC 01:00, NGÀY 07/11/2026",
@@ -9,17 +9,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8e07ff95a781:server:0:46e5d539",
+          "instance_id": "8e07ff95a781:server:0:c3d55ea1",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/ab-akademisk-vs-vendsyssel-luc-0100-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=e166a4e05a1c59bea2f8590daa301d48&wsABSTime=1794029378"
+            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=d1f494b97f391b2aace43a96830c5faf&wsABSTime=1794032305"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=e166a4e05a1c59bea2f8590daa301d48&wsABSTime=1794029378": {
+            "https://live1.quickscoreboardz.com/live/channel14.flv?wsSecret=d1f494b97f391b2aace43a96830c5faf&wsABSTime=1794032305": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel14/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -35,18 +35,36 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e54d9a1b7045:server:0:11aef5e2",
+          "instance_id": "e54d9a1b7045:server:0:157261a2",
           "index": 0,
-          "name": "HD 1",
+          "name": "TOMMY",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/abra-weavers-vs-san-juan-knights-luc-1730-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=38bc85057912a9c8aa72390715d29262&wsABSTime=1794029385"
+            "https://live2.jorvakstreamcache.com/live/channel29.flv"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=38bc85057912a9c8aa72390715d29262&wsABSTime=1794029385": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel42/off-tvc?is_off_add=false",
+            "https://live2.jorvakstreamcache.com/live/channel29.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel29/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "e54d9a1b7045:server:1:c0c6123a",
+          "index": 1,
+          "name": "HD TOMMY",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/abra-weavers-vs-san-juan-knights-luc-1730-ngay-07-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793989116-0-0-988f61ee7e940e3585f3adc9f3914c55"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793989116-0-0-988f61ee7e940e3585f3adc9f3914c55": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-29/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -61,17 +79,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "93919e453f94:server:0:6995359a",
+          "instance_id": "93919e453f94:server:0:18ad1dd0",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/adelaide-36ers-vs-lllawarra-hawks-luc-1330-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=309d64bfd4d309e14c15609c5c2b58e1&wsABSTime=1794029391"
+            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=842959cc7e74741bc613c31060af52d3&wsABSTime=1794032317"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=309d64bfd4d309e14c15609c5c2b58e1&wsABSTime=1794029391": {
+            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=842959cc7e74741bc613c31060af52d3&wsABSTime=1794032317": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel45/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -87,17 +105,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "06158efc384c:server:0:96d585bf",
+          "instance_id": "06158efc384c:server:0:4b17f520",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/aek-larnaca-vs-karmiotissa-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=f1f4a6b9e1734097c1c0e979a46716c1&wsABSTime=1794029397"
+            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=c452174f016e77c404e3075b5d826555&wsABSTime=1794032324"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=f1f4a6b9e1734097c1c0e979a46716c1&wsABSTime=1794029397": {
+            "https://live1.quickscoreboardz.com/live/channel7.flv?wsSecret=c452174f016e77c404e3075b5d826555&wsABSTime=1794032324": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel7/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -113,7 +131,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "93a684c25a11:server:0:c3fbbaeb",
+          "instance_id": "93a684c25a11:server:0:6184340f",
           "index": 0,
           "name": "FELIX",
           "server": "Server 1",
@@ -131,44 +149,18 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "93a684c25a11:server:1:0eb042ad",
+          "instance_id": "93a684c25a11:server:1:40a2c265",
           "index": 1,
           "name": "HD FELIX",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/al-baqs-vs-al-wehdat-luc-2330-ngay-06-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001793986208-0-0-7fcfa47f3da22a2416916fa55a33d4dd"
+            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001793989135-0-0-1d13ad92f4ee19851446ebd60afd520e"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001793986208-0-0-7fcfa47f3da22a2416916fa55a33d4dd": {
+            "https://live2.domaincdn.cc/livecdn/channel-24.flv?auth_key=3000001793989135-0-0-1d13ad92f4ee19851446ebd60afd520e": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-24/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP AL KARMA VS NAFT MISSAN VÀO LÚC 22:30, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/al-karma-vs-naft-missan-luc-2230-ngay-06-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "29bdb49726f2:server:0:a1a37530",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/al-karma-vs-naft-missan-luc-2230-ngay-06-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel16.flv?wsSecret=5724ca4d2dcefe6a4d9bc5f8caadbe4f&wsABSTime=1794029410"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel16.flv?wsSecret=5724ca4d2dcefe6a4d9bc5f8caadbe4f&wsABSTime=1794029410": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel16/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -183,17 +175,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "cefc80975178:server:0:d9de2ea4",
+          "instance_id": "cefc80975178:server:0:4f5807a8",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/al-shababkuw-vs-al-ttadamon-luc-2340-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel22.flv?wsSecret=b58e0de55bf6cd9ec12a7488c2c7ec10&wsABSTime=1794029416"
+            "https://live1.quickscoreboardz.com/live/channel22.flv?wsSecret=7ad66daf269d427a2658f7de79412c7f&wsABSTime=1794032336"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel22.flv?wsSecret=b58e0de55bf6cd9ec12a7488c2c7ec10&wsABSTime=1794029416": {
+            "https://live1.quickscoreboardz.com/live/channel22.flv?wsSecret=7ad66daf269d427a2658f7de79412c7f&wsABSTime=1794032336": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel22/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -209,7 +201,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0c4d03a8ca3e:server:0:0adc9fe2",
+          "instance_id": "0c4d03a8ca3e:server:0:73f4de97",
           "index": 0,
           "name": "HIRO",
           "server": "Server 1",
@@ -227,17 +219,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0c4d03a8ca3e:server:1:3a7396ed",
+          "instance_id": "0c4d03a8ca3e:server:1:fecb43cf",
           "index": 1,
           "name": "HD HIRO",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/al-wakrah-sports-club-vs-al-shahaniya-sports-club-luc-2330-ngay-06-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793986227-0-0-a6f3838f6630b582ac7d15614cb5bf67"
+            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793989148-0-0-e4c622668be3bf9dd4a4e18083c749c1"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793986227-0-0-a6f3838f6630b582ac7d15614cb5bf67": {
+            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793989148-0-0-e4c622668be3bf9dd4a4e18083c749c1": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-14/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -253,17 +245,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8372966d2ebb:server:0:f084768a",
+          "instance_id": "8372966d2ebb:server:0:f2cdd629",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/alba-berlin-vs-phoenix-hagen-luc-0200-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=b44103d86c18ffc04c3361b649e96164&wsABSTime=1794029428"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=6974213a7bbeafb9765c85eb703268da&wsABSTime=1794032349"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=b44103d86c18ffc04c3361b649e96164&wsABSTime=1794029428": {
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=6974213a7bbeafb9765c85eb703268da&wsABSTime=1794032349": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel42/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -279,18 +271,44 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "88aa9c558572:server:0:98eaeda0",
+          "instance_id": "88aa9c558572:server:0:52fc4586",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/antalyaspor-vs-bursaspor-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel8.flv?wsSecret=196194cf35381c0a1ba13b38ff82def5&wsABSTime=1794029435"
+            "https://live1.quickscoreboardz.com/live/channel8.flv?wsSecret=b924ac23b85c5cd3e92fe7c4c2a62c96&wsABSTime=1794032355"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel8.flv?wsSecret=196194cf35381c0a1ba13b38ff82def5&wsABSTime=1794029435": {
+            "https://live1.quickscoreboardz.com/live/channel8.flv?wsSecret=b924ac23b85c5cd3e92fe7c4c2a62c96&wsABSTime=1794032355": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel8/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP ARGES VS DINAMO BUCURESTI VÀO LÚC 01:30, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/arges-vs-dinamo-bucuresti-luc-0130-ngay-07-11-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "3e924512a589:server:0:db53e28e",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://multicastmedia.com/truc-tiep/arges-vs-dinamo-bucuresti-luc-0130-ngay-07-11-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel35.flv?wsSecret=ec60333a57741d1323213bfad192a478&wsABSTime=1794032361"
+          ],
+          "stream_headers": {
+            "https://live1.quickscoreboardz.com/live/channel35.flv?wsSecret=ec60333a57741d1323213bfad192a478&wsABSTime=1794032361": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel35/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -305,18 +323,36 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "54242f61b426:server:0:56cee95b",
+          "instance_id": "54242f61b426:server:0:f9b6f957",
           "index": 0,
-          "name": "HD 1",
+          "name": "KOBE",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/atlanta-hawks-vs-brooklyn-nets-luc-0730-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=aa289a3f12e588d8b7888a2e30a7ea63&wsABSTime=1794029441"
+            "https://live2.jorvakstreamcache.com/live/channel27.flv"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=aa289a3f12e588d8b7888a2e30a7ea63&wsABSTime=1794029441": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel41/off-tvc?is_off_add=false",
+            "https://live2.jorvakstreamcache.com/live/channel27.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel27/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "54242f61b426:server:1:2b6f4d68",
+          "index": 1,
+          "name": "HD KOBE",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/atlanta-hawks-vs-brooklyn-nets-luc-0730-ngay-08-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793989173-0-0-77a27bbd809fb4d788962717ea7d12c3"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793989173-0-0-77a27bbd809fb4d788962717ea7d12c3": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-27/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -331,17 +367,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "47423a0185f6:server:0:a5f35385",
+          "instance_id": "47423a0185f6:server:0:74a5671d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/atlanta-hawks-vs-washington-wizards-luc-0700-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=f6c2d36298055b0d6ec93c25a8dba233&wsABSTime=1794029447"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=3206086a955107b21d712fdfe22edbc0&wsABSTime=1794032374"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=f6c2d36298055b0d6ec93c25a8dba233&wsABSTime=1794029447": {
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=3206086a955107b21d712fdfe22edbc0&wsABSTime=1794032374": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel40/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -357,18 +393,44 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "129b0ee80486:server:0:c392452b",
+          "instance_id": "129b0ee80486:server:0:e3905e71",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/austria-vienna-y-vs-first-vienna-fc-1894-luc-0030-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=2561e55c3e6d2420111d618d82028405&wsABSTime=1794029454"
+            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=d3fc4b299bab0b33d5ef84701b0be10b&wsABSTime=1794032380"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=2561e55c3e6d2420111d618d82028405&wsABSTime=1794029454": {
+            "https://live1.quickscoreboardz.com/live/channel10.flv?wsSecret=d3fc4b299bab0b33d5ef84701b0be10b&wsABSTime=1794032380": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel10/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP AVS FUTEBOL VS VIZELA VÀO LÚC 01:45, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/avs-futebol-vs-vizela-luc-0145-ngay-07-11-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "cf97d8e48c99:server:0:2d8f6f43",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://multicastmedia.com/truc-tiep/avs-futebol-vs-vizela-luc-0145-ngay-07-11-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel17.flv?wsSecret=ba7798c6324ca09091f02015a9f2a13f&wsABSTime=1794032386"
+          ],
+          "stream_headers": {
+            "https://live1.quickscoreboardz.com/live/channel17.flv?wsSecret=ba7798c6324ca09091f02015a9f2a13f&wsABSTime=1794032386": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel17/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -383,17 +445,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "35ec808611fd:server:0:5a0afb7b",
+          "instance_id": "35ec808611fd:server:0:7df2e6e2",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/bedzin-vs-mckis-jaworzno-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel82.flv?wsSecret=2ba0591c3b022275757a844c99f23a85&wsABSTime=1794029461"
+            "https://live1.quickscoreboardz.com/live/channel82.flv?wsSecret=bb8248ae4d7ae86f0af231c7369aed42&wsABSTime=1794032392"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel82.flv?wsSecret=2ba0591c3b022275757a844c99f23a85&wsABSTime=1794029461": {
+            "https://live1.quickscoreboardz.com/live/channel82.flv?wsSecret=bb8248ae4d7ae86f0af231c7369aed42&wsABSTime=1794032392": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel82/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -409,7 +471,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c1e66614e5e8:server:0:9aab815c",
+          "instance_id": "c1e66614e5e8:server:0:e48647ae",
           "index": 0,
           "name": "KOBE",
           "server": "Server 1",
@@ -427,18 +489,62 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "c1e66614e5e8:server:1:10aeffb1",
+          "instance_id": "c1e66614e5e8:server:1:d14268b5",
           "index": 1,
           "name": "HD KOBE",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/besiktas-vs-zalgiris-kaunas-luc-0000-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793986272-0-0-58492f24f51127ee6fd152b7f8ff8795"
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793989203-0-0-68476fccb27876cc758d262548017c52"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793986272-0-0-58492f24f51127ee6fd152b7f8ff8795": {
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793989203-0-0-68476fccb27876cc758d262548017c52": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-27/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP BIÊN PHÒNG MB VS LP BANK NINH BÌNH VÀO LÚC 14:30, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/bien-phong-mb-vs-lp-bank-ninh-binh-luc-1430-ngay-07-11-2026/",
+      "sport_name": "volleyball",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "e53f70907e6c:server:0:43dc3c13",
+          "index": 0,
+          "name": "TYSON",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://multicastmedia.com/truc-tiep/bien-phong-mb-vs-lp-bank-ninh-binh-luc-1430-ngay-07-11-2026/",
+          "stream_urls": [
+            "https://live2.jorvakstreamcache.com/live/channel33.flv"
+          ],
+          "stream_headers": {
+            "https://live2.jorvakstreamcache.com/live/channel33.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel33/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "e53f70907e6c:server:1:4913eaf8",
+          "index": 1,
+          "name": "HD TYSON",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/bien-phong-mb-vs-lp-bank-ninh-binh-luc-1430-ngay-07-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989210-0-0-d5b86d784215356b753aad1550544f56"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989210-0-0-d5b86d784215356b753aad1550544f56": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-33/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -453,17 +559,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "54c8ad2a7bf2:server:0:77861f14",
+          "instance_id": "54c8ad2a7bf2:server:0:b93e6b54",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/bks-visla-bydgoszcz-vs-sparta-grodzisk-luc-0030-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=9d25034154e103ea3e1f797f85e1b684&wsABSTime=1794029473"
+            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=16632cf835c4aa09a0d22b0070fdc75b&wsABSTime=1794032411"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=9d25034154e103ea3e1f797f85e1b684&wsABSTime=1794029473": {
+            "https://live1.quickscoreboardz.com/live/channel83.flv?wsSecret=16632cf835c4aa09a0d22b0070fdc75b&wsABSTime=1794032411": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel83/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -479,7 +585,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "9a2bfb5a1126:server:0:fd238ab7",
+          "instance_id": "9a2bfb5a1126:server:0:ab6c927a",
           "index": 0,
           "name": "JOHAN",
           "server": "Server 1",
@@ -497,17 +603,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "9a2bfb5a1126:server:1:6228c635",
+          "instance_id": "9a2bfb5a1126:server:1:85f1149e",
           "index": 1,
           "name": "HD JOHAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/botev-plovdiv-vs-fc-dunav-ruse-luc-0015-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001793986285-0-0-d3eb4862fb66822e9cfb424e367e5e0d"
+            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001793989223-0-0-0f609e697b9cd1688bc4fee61fcaa5eb"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001793986285-0-0-d3eb4862fb66822e9cfb424e367e5e0d": {
+            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001793989223-0-0-0f609e697b9cd1688bc4fee61fcaa5eb": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-12/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -523,17 +629,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "016a1f5fb40d:server:0:95bd4404",
+          "instance_id": "016a1f5fb40d:server:0:3add9577",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/bursaspor-vs-fenerbahce-istanbul-luc-0030-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=0662b6a573efffcef637ed88146acfa7&wsABSTime=1794029487"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=8ff8cb27c0643fd35d304cd68087a491&wsABSTime=1794032424"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=0662b6a573efffcef637ed88146acfa7&wsABSTime=1794029487": {
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=8ff8cb27c0643fd35d304cd68087a491&wsABSTime=1794032424": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel40/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -549,17 +655,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "9f22a2337f38:server:0:8fd4b660",
+          "instance_id": "9f22a2337f38:server:0:5b360235",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/ca-barracas-central-vs-racing-club-luc-0100-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel24.flv?wsSecret=0553c4f9c39563c282b81efce35a441d&wsABSTime=1794029494"
+            "https://live1.quickscoreboardz.com/live/channel24.flv?wsSecret=554dd1eb71b798a8db0bfd90d5ab3945&wsABSTime=1794032430"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel24.flv?wsSecret=0553c4f9c39563c282b81efce35a441d&wsABSTime=1794029494": {
+            "https://live1.quickscoreboardz.com/live/channel24.flv?wsSecret=554dd1eb71b798a8db0bfd90d5ab3945&wsABSTime=1794032430": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel24/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -575,17 +681,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b6dcf11d63ab:server:0:dda1dc8b",
+          "instance_id": "b6dcf11d63ab:server:0:65fda320",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/casper-ruud-vs-nuno-borges-luc-0230-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel55.flv?wsSecret=e63a1eb2587a9eb9c3c2d2d99ef3c336&wsABSTime=1794029500"
+            "https://live1.quickscoreboardz.com/live/channel55.flv?wsSecret=3b4af34f52d710df0b972820e0addb84&wsABSTime=1794032436"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel55.flv?wsSecret=e63a1eb2587a9eb9c3c2d2d99ef3c336&wsABSTime=1794029500": {
+            "https://live1.quickscoreboardz.com/live/channel55.flv?wsSecret=3b4af34f52d710df0b972820e0addb84&wsABSTime=1794032436": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel55/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -601,17 +707,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5ae41852f0fb:server:0:c9fa2160",
+          "instance_id": "5ae41852f0fb:server:0:9d949e67",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/changwon-lg-sakers-vs-goyang-sono-luc-1200-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=7264f973122ddc2238b8b9ac949a9dd4&wsABSTime=1794029507"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=090c631fcf77ced0183d5ed9f53d5faf&wsABSTime=1794032443"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=7264f973122ddc2238b8b9ac949a9dd4&wsABSTime=1794029507": {
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=090c631fcf77ced0183d5ed9f53d5faf&wsABSTime=1794032443": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel42/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -627,7 +733,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c964b0b15e0b:server:0:2cd7824d",
+          "instance_id": "c964b0b15e0b:server:0:d820f6f5",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -645,17 +751,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "c964b0b15e0b:server:1:e67dab5f",
+          "instance_id": "c964b0b15e0b:server:1:11a7c3d3",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/charlotte-hornets-vs-boston-celtics-luc-0700-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793986318-0-0-e8cb8fc273b89cb0ec20a9a582d8b27b"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793989254-0-0-3d8473cc48bd594b650afceb95d0189f"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793986318-0-0-e8cb8fc273b89cb0ec20a9a582d8b27b": {
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793989254-0-0-3d8473cc48bd594b650afceb95d0189f": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-29/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -671,17 +777,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "291399ab8c63:server:0:9f102ef8",
+          "instance_id": "291399ab8c63:server:0:3f5ada14",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/cleveland-cavaliers-vs-new-york-knicks-luc-0800-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=1e63a331fccd9bceb8b8ff3f31f85a73&wsABSTime=1794029520"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=93df3a44ad257e22a96b2710a30211dc&wsABSTime=1794032455"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=1e63a331fccd9bceb8b8ff3f31f85a73&wsABSTime=1794029520": {
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=93df3a44ad257e22a96b2710a30211dc&wsABSTime=1794032455": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel43/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -697,7 +803,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5bb52b01c29b:server:0:de68fa98",
+          "instance_id": "5bb52b01c29b:server:0:170956f8",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -715,17 +821,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "5bb52b01c29b:server:1:bd561b16",
+          "instance_id": "5bb52b01c29b:server:1:f909c1e6",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/cleveland-cavaliers-vs-philadelphia-76ers-luc-0730-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793986331-0-0-16004af96581b7ec948b71c050139f26"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989267-0-0-69ea1ea6fe82b1d6e4d8cf39cf47fbc8"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793986331-0-0-16004af96581b7ec948b71c050139f26": {
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989267-0-0-69ea1ea6fe82b1d6e4d8cf39cf47fbc8": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-25/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -741,17 +847,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "6857b8dda906:server:0:49c263cc",
+          "instance_id": "6857b8dda906:server:0:7cd30b22",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/cyberhero-vs-team-lynx-luc-0200-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=5cdfa93d19ac6f06177beac95661184a&wsABSTime=1794029532"
+            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=c0aa76ae05b4df5deacb024f710e2fb3&wsABSTime=1794032468"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=5cdfa93d19ac6f06177beac95661184a&wsABSTime=1794029532": {
+            "https://live1.quickscoreboardz.com/live/channel70.flv?wsSecret=c0aa76ae05b4df5deacb024f710e2fb3&wsABSTime=1794032468": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel70/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -767,17 +873,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "ee66645b8e68:server:0:05e9e019",
+          "instance_id": "ee66645b8e68:server:0:d5ede25f",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/dallas-mavericks-vs-utah-jazz-luc-0800-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=64cafd37db5443a48564592825f5e42e&wsABSTime=1794029539"
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=ed59d62f4a04adee1d42604b51d6dd5a&wsABSTime=1794032474"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=64cafd37db5443a48564592825f5e42e&wsABSTime=1794029539": {
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=ed59d62f4a04adee1d42604b51d6dd5a&wsABSTime=1794032474": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel44/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -793,17 +899,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "06b6f02bb563:server:0:60475213",
+          "instance_id": "06b6f02bb563:server:0:8ac5efbc",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/drama-vs-misa-luc-0100-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel76.flv?wsSecret=a296dc9c07f7bf352fb336c7a38e9ef3&wsABSTime=1794029545"
+            "https://live1.quickscoreboardz.com/live/channel76.flv?wsSecret=d4f35f7fa9b789f855af4598c86795a0&wsABSTime=1794032481"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel76.flv?wsSecret=a296dc9c07f7bf352fb336c7a38e9ef3&wsABSTime=1794029545": {
+            "https://live1.quickscoreboardz.com/live/channel76.flv?wsSecret=d4f35f7fa9b789f855af4598c86795a0&wsABSTime=1794032481": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel76/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -819,17 +925,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8a50a3b42dc7:server:0:31811cde",
+          "instance_id": "8a50a3b42dc7:server:0:edda8af4",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/drama-vs-ryvex-luc-2200-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel79.flv?wsSecret=93a2acb0d717b1e5b873a6c51a791679&wsABSTime=1794029551"
+            "https://live1.quickscoreboardz.com/live/channel79.flv?wsSecret=b5cafb8c3e6863ade93a796293a888f8&wsABSTime=1794032487"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel79.flv?wsSecret=93a2acb0d717b1e5b873a6c51a791679&wsABSTime=1794029551": {
+            "https://live1.quickscoreboardz.com/live/channel79.flv?wsSecret=b5cafb8c3e6863ade93a796293a888f8&wsABSTime=1794032487": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel79/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -845,7 +951,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "35e67dab9b3f:server:0:8f69ccdf",
+          "instance_id": "35e67dab9b3f:server:0:421afc3c",
           "index": 0,
           "name": "TOM",
           "server": "Server 1",
@@ -863,17 +969,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "35e67dab9b3f:server:1:93cc8aa5",
+          "instance_id": "35e67dab9b3f:server:1:aee68e80",
           "index": 1,
           "name": "HD TOM",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/dynamo-dresden-vs-greuther-furth-luc-0030-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001793986363-0-0-e67e93ed457dbe4e57041eac8ab2ac57"
+            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001793989298-0-0-9eb65dc9fd00df520d365434df0ab320"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001793986363-0-0-e67e93ed457dbe4e57041eac8ab2ac57": {
+            "https://live2.domaincdn.cc/livecdn/channel-4.flv?auth_key=3000001793989298-0-0-9eb65dc9fd00df520d365434df0ab320": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-4/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -889,7 +995,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0d6d4216e4da:server:0:a5bd691f",
+          "instance_id": "0d6d4216e4da:server:0:32d284ae",
           "index": 0,
           "name": "ASTRA",
           "server": "Server 1",
@@ -907,17 +1013,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0d6d4216e4da:server:1:6476d598",
+          "instance_id": "0d6d4216e4da:server:1:9dd81bfd",
           "index": 1,
           "name": "HD ASTRA",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/e-braunschweig-vs-energie-cottbus-luc-0030-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001793986369-0-0-794bd53797cb3b1df9a6d089f32cb7a8"
+            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001793989305-0-0-2ecf38c8dd2fd6a90f056724432b04b6"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001793986369-0-0-794bd53797cb3b1df9a6d089f32cb7a8": {
+            "https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001793989305-0-0-2ecf38c8dd2fd6a90f056724432b04b6": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-11/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -933,17 +1039,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b20cb35a0f2b:server:0:39f96f7e",
+          "instance_id": "b20cb35a0f2b:server:0:be49e008",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/enisey-vs-dynamo-vladivostok-luc-1600-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=f7f481237a9723a2ff7ee775eef33b12&wsABSTime=1794029571"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=a49dafbf797270347727371f3656f4f1&wsABSTime=1794032506"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=f7f481237a9723a2ff7ee775eef33b12&wsABSTime=1794029571": {
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=a49dafbf797270347727371f3656f4f1&wsABSTime=1794032506": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel41/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -959,7 +1065,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "131598e22c7b:server:0:4f8dab1e",
+          "instance_id": "131598e22c7b:server:0:2941ab8b",
           "index": 0,
           "name": "ROY",
           "server": "Server 1",
@@ -977,17 +1083,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "131598e22c7b:server:1:42a77983",
+          "instance_id": "131598e22c7b:server:1:88e6e7fb",
           "index": 1,
           "name": "JOHAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/everton-vs-coventry-city-luc-0300-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001793986383-0-0-5304b0d5487c0ba4fd4667e3a4215d3e"
+            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001793989317-0-0-84013bda73bd72ce1c80b035386dac28"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001793986383-0-0-5304b0d5487c0ba4fd4667e3a4215d3e": {
+            "https://live2.domaincdn.cc/livecdn/channel-12.flv?auth_key=3000001793989317-0-0-84013bda73bd72ce1c80b035386dac28": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-12/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -995,17 +1101,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "131598e22c7b:server:2:4235022d",
+          "instance_id": "131598e22c7b:server:2:c2b3fdde",
           "index": 2,
           "name": "JOHAN",
           "server": "Server 3",
           "data_link": "2",
           "href": "https://multicastmedia.com/truc-tiep/everton-vs-coventry-city-luc-0300-ngay-07-11-2026/link/2",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=010bb5f3b935252073643e19f0e73533&wsABSTime=1794029583"
+            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=660e0c31c459ade1588871b644a1a9d4&wsABSTime=1794032518"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=010bb5f3b935252073643e19f0e73533&wsABSTime=1794029583": {
+            "https://live1.quickscoreboardz.com/live/channel12.flv?wsSecret=660e0c31c459ade1588871b644a1a9d4&wsABSTime=1794032518": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel12/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1013,17 +1119,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "131598e22c7b:server:3:85428fd4",
+          "instance_id": "131598e22c7b:server:3:20b3d958",
           "index": 3,
           "name": "FULL HD ROY",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://multicastmedia.com/truc-tiep/everton-vs-coventry-city-luc-0300-ngay-07-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793986384-0-0-2deba02944456e3c586d569b91fb4ebf"
+            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793989318-0-0-ff28c72a9c6185a5d2b314507cb6af4d"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793986384-0-0-2deba02944456e3c586d569b91fb4ebf": {
+            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793989318-0-0-ff28c72a9c6185a5d2b314507cb6af4d": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-1/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1039,106 +1145,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "971debb7f76e:server:0:6eeea6bf",
+          "instance_id": "971debb7f76e:server:0:85a0f6fe",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/fc-liefering-vs-sv-austria-salzburg-luc-0030-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=361e6597a299fe24b97b175c947c73a1&wsABSTime=1794029586"
+            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=43d4f27f6cf165f8c1d703a5e60ee6f7&wsABSTime=1794032519"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=361e6597a299fe24b97b175c947c73a1&wsABSTime=1794029586": {
+            "https://live1.quickscoreboardz.com/live/channel11.flv?wsSecret=43d4f27f6cf165f8c1d703a5e60ee6f7&wsABSTime=1794032519": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel11/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP FC NEFTCI BAKU VS FK KAPAZ GANCA VÀO LÚC 23:00, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/fc-neftci-baku-vs-fk-kapaz-ganca-luc-2300-ngay-06-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "5fe67e86aa27:server:0:0021de1d",
-          "index": 0,
-          "name": "RAVEN",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/fc-neftci-baku-vs-fk-kapaz-ganca-luc-2300-ngay-06-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel21.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel21.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel21/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "5fe67e86aa27:server:1:b4b3e560",
-          "index": 1,
-          "name": "HD RAVEN",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://multicastmedia.com/truc-tiep/fc-neftci-baku-vs-fk-kapaz-ganca-luc-2300-ngay-06-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001793986397-0-0-d247ae792b61b50145f280c07986e0e6"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001793986397-0-0-d247ae792b61b50145f280c07986e0e6": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-21/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP FC UT ARAD VS PETROLUL VÀO LÚC 22:30, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/fc-ut-arad-vs-petrolul-luc-2230-ngay-06-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "690f25d3fbd9:server:0:58ae7c74",
-          "index": 0,
-          "name": "KEN",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/fc-ut-arad-vs-petrolul-luc-2230-ngay-06-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel18.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel18.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel18/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "690f25d3fbd9:server:1:bc7dedd3",
-          "index": 1,
-          "name": "HD KEN",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://multicastmedia.com/truc-tiep/fc-ut-arad-vs-petrolul-luc-2230-ngay-06-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-18.flv?auth_key=3000001793986404-0-0-1b02bc27d1c112a0f571b7bd3589397e"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-18.flv?auth_key=3000001793986404-0-0-1b02bc27d1c112a0f571b7bd3589397e": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-18/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1153,18 +1171,62 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0c4172dc359f:server:0:876fd00d",
+          "instance_id": "0c4172dc359f:server:0:5bc6a63e",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/fc-vysocina-jihlava-vs-mfk-karvina-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel31.flv?wsSecret=8105e1a0b17fad60b397615c5cd0d1fc&wsABSTime=1794029606"
+            "https://live1.quickscoreboardz.com/live/channel31.flv?wsSecret=ba27f658d90d2f7ae6a8f651567a9f82&wsABSTime=1794032525"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel31.flv?wsSecret=8105e1a0b17fad60b397615c5cd0d1fc&wsABSTime=1794029606": {
+            "https://live1.quickscoreboardz.com/live/channel31.flv?wsSecret=ba27f658d90d2f7ae6a8f651567a9f82&wsABSTime=1794032525": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel31/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP FENERBAHCE VS GEBZE VÀO LÚC 23:00, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/fenerbahce-vs-gebze-luc-2300-ngay-07-11-2026/",
+      "sport_name": "volleyball",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "c63f3a17731e:server:0:138bcc04",
+          "index": 0,
+          "name": "TYSON",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://multicastmedia.com/truc-tiep/fenerbahce-vs-gebze-luc-2300-ngay-07-11-2026/",
+          "stream_urls": [
+            "https://live2.jorvakstreamcache.com/live/channel33.flv"
+          ],
+          "stream_headers": {
+            "https://live2.jorvakstreamcache.com/live/channel33.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel33/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "c63f3a17731e:server:1:29cc046c",
+          "index": 1,
+          "name": "HD TYSON",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/fenerbahce-vs-gebze-luc-2300-ngay-07-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989337-0-0-6de8baef8ab85bcadb33eaa2432d7240"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989337-0-0-6de8baef8ab85bcadb33eaa2432d7240": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-33/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1179,44 +1241,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b0daccf23843:server:0:ffe98309",
+          "instance_id": "b0daccf23843:server:0:24005d0a",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/fk-dukla-praha-vs-fotbal-pribram-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel32.flv?wsSecret=c32cc41c9374e9e45e2550fc7fdada93&wsABSTime=1794029612"
+            "https://live1.quickscoreboardz.com/live/channel32.flv?wsSecret=68db6cbebc96972c4d2aa0d8047f9e59&wsABSTime=1794032538"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel32.flv?wsSecret=c32cc41c9374e9e45e2550fc7fdada93&wsABSTime=1794029612": {
+            "https://live1.quickscoreboardz.com/live/channel32.flv?wsSecret=68db6cbebc96972c4d2aa0d8047f9e59&wsABSTime=1794032538": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel32/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP FK POHRONIE VS BANIK LEHOTA VÀO LÚC 23:00, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/fk-pohronie-vs-banik-lehota-luc-2300-ngay-06-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "ebe8a7b8c78e:server:0:286e174b",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/fk-pohronie-vs-banik-lehota-luc-2300-ngay-06-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel19.flv?wsSecret=9c821bbc526a0392595a004012cfe0a2&wsABSTime=1794029618"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel19.flv?wsSecret=9c821bbc526a0392595a004012cfe0a2&wsABSTime=1794029618": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel19/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1231,17 +1267,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "504ef77f071f:server:0:b7acdaac",
+          "instance_id": "504ef77f071f:server:0:d8fae33f",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/galatasaray-2-vs-fenerbahce-2-luc-2300-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=5d2a5d9f7280e88b246e4cf9245ea7f1&wsABSTime=1794029624"
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=72ab4863a13a59df76bd58cf53c89176&wsABSTime=1794032544"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=5d2a5d9f7280e88b246e4cf9245ea7f1&wsABSTime=1794029624": {
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=72ab4863a13a59df76bd58cf53c89176&wsABSTime=1794032544": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel80/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1257,7 +1293,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "3b677cf48fab:server:0:a24e638d",
+          "instance_id": "3b677cf48fab:server:0:9688c4c7",
           "index": 0,
           "name": "FABIO",
           "server": "Server 1",
@@ -1275,17 +1311,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "3b677cf48fab:server:1:1489e3dd",
+          "instance_id": "3b677cf48fab:server:1:43ef4253",
           "index": 1,
           "name": "HD FABIO",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/gaziantep-futbol-kulubu-vs-kasimpasa-luc-0000-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001793986435-0-0-df5d4a8ca63d686382da8949dfa66ae4"
+            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001793989356-0-0-f04150b7889741ec8af633fe99a6cf81"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001793986435-0-0-df5d4a8ca63d686382da8949dfa66ae4": {
+            "https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001793989356-0-0-f04150b7889741ec8af633fe99a6cf81": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-2/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1301,18 +1337,36 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "3c6be0e556f3:server:0:db944955",
+          "instance_id": "3c6be0e556f3:server:0:2fef9cb8",
           "index": 0,
-          "name": "HD 1",
+          "name": "ALAN",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/golden-state-warriors-vs-orlando-magic-luc-0830-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=36ee22eabe52a82acaece8015b63de85&wsABSTime=1794029637"
+            "https://live2.jorvakstreamcache.com/live/channel25.flv"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=36ee22eabe52a82acaece8015b63de85&wsABSTime=1794029637": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel45/off-tvc?is_off_add=false",
+            "https://live2.jorvakstreamcache.com/live/channel25.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel25/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "3c6be0e556f3:server:1:d41a86f7",
+          "index": 1,
+          "name": "HD ALAN",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/golden-state-warriors-vs-orlando-magic-luc-0830-ngay-08-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989362-0-0-84bcefd5591a446c43af598c8fed5faa"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989362-0-0-84bcefd5591a446c43af598c8fed5faa": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-25/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1327,7 +1381,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "3ef972404aff:server:0:00775598",
+          "instance_id": "3ef972404aff:server:0:681d58c9",
           "index": 0,
           "name": "MAX",
           "server": "Server 1",
@@ -1345,17 +1399,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "3ef972404aff:server:1:ddd8d392",
+          "instance_id": "3ef972404aff:server:1:67a44cc1",
           "index": 1,
           "name": "HD MAX",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/hamburger-sv-vs-b-monchengladbach-luc-0230-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001793986449-0-0-6bc686c38a527e5a131ce078bf83ebeb"
+            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001793989368-0-0-dba3621055d5b2d7bf87eeac7e0d5fd7"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001793986449-0-0-6bc686c38a527e5a131ce078bf83ebeb": {
+            "https://live2.domaincdn.cc/livecdn/channel-6.flv?auth_key=3000001793989368-0-0-dba3621055d5b2d7bf87eeac7e0d5fd7": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-6/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1371,17 +1425,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "86774f74fcf0:server:0:0157a902",
+          "instance_id": "86774f74fcf0:server:0:7ade00a4",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/hammarby-vs-elfsborg-luc-0100-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel34.flv?wsSecret=8cf39648cd772810e0e82c31e2d38e34&wsABSTime=1794029651"
+            "https://live1.quickscoreboardz.com/live/channel34.flv?wsSecret=a437f34d91cc3ec110b0762971050055&wsABSTime=1794032570"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel34.flv?wsSecret=8cf39648cd772810e0e82c31e2d38e34&wsABSTime=1794029651": {
+            "https://live1.quickscoreboardz.com/live/channel34.flv?wsSecret=a437f34d91cc3ec110b0762971050055&wsABSTime=1794032570": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel34/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1397,7 +1451,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f9350d69ba56:server:0:3de35079",
+          "instance_id": "f9350d69ba56:server:0:6e205ae0",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -1415,17 +1469,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "f9350d69ba56:server:1:1867eded",
+          "instance_id": "f9350d69ba56:server:1:674709c8",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/hanjin-brion-academy-vs-hanwha-life-esports-challengers-luc-1600-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793986463-0-0-669fd525bc1d4ffbfc952c27e304c179"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793989381-0-0-aad90476c126122f058ae981f0e74131"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793986463-0-0-669fd525bc1d4ffbfc952c27e304c179": {
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793989381-0-0-aad90476c126122f058ae981f0e74131": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-30/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1441,17 +1495,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "fa2578b139a7:server:0:9c9949bf",
+          "instance_id": "fa2578b139a7:server:0:afc80e70",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/harri-heliovaara-henry-patten-vs-benjamin-bonzi-arthur-rinderknech-luc-2330-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel54.flv?wsSecret=32e40d107a04dc62e862e6687b840e58&wsABSTime=1794029664"
+            "https://live1.quickscoreboardz.com/live/channel54.flv?wsSecret=fea4d1b44b96f2c24fc619ec55bd0b23&wsABSTime=1794032582"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel54.flv?wsSecret=32e40d107a04dc62e862e6687b840e58&wsABSTime=1794029664": {
+            "https://live1.quickscoreboardz.com/live/channel54.flv?wsSecret=fea4d1b44b96f2c24fc619ec55bd0b23&wsABSTime=1794032582": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel54/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1467,17 +1521,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "64f0afec435a:server:0:08676438",
+          "instance_id": "64f0afec435a:server:0:80d8f09d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/hassania-agadir-vs-rs-berkane-luc-0100-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=e3ba6f4f367d12a3993d9a9efbe9dec3&wsABSTime=1794029670"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=8f60fcd89edcbef3128b81561474bf28&wsABSTime=1794032588"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=e3ba6f4f367d12a3993d9a9efbe9dec3&wsABSTime=1794029670": {
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=8f60fcd89edcbef3128b81561474bf28&wsABSTime=1794032588": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel41/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1493,17 +1547,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "4b579c09c6d8:server:0:76cafab3",
+          "instance_id": "4b579c09c6d8:server:0:40b209e4",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/hb-koge-vs-aalborg-luc-0100-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel36.flv?wsSecret=aee4a2cdc6b8389778216c269528a7c8&wsABSTime=1794029677"
+            "https://live1.quickscoreboardz.com/live/channel36.flv?wsSecret=0885d8ece1094be12ad0d7e848809254&wsABSTime=1794032594"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel36.flv?wsSecret=aee4a2cdc6b8389778216c269528a7c8&wsABSTime=1794029677": {
+            "https://live1.quickscoreboardz.com/live/channel36.flv?wsSecret=0885d8ece1094be12ad0d7e848809254&wsABSTime=1794032594": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel36/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1519,18 +1573,36 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f93540ef4c86:server:0:bf2ea7cf",
+          "instance_id": "f93540ef4c86:server:0:d6a40246",
           "index": 0,
-          "name": "HD 1",
+          "name": "ALAN",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/indiana-pacers-vs-denver-nuggets-luc-0500-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793986483-0-0-d00b91e97c3794bb1fd417e3af02fd08"
+            "https://live2.jorvakstreamcache.com/live/channel25.flv"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001793986483-0-0-d00b91e97c3794bb1fd417e3af02fd08": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-1/off-tvc?is_off_add=false",
+            "https://live2.jorvakstreamcache.com/live/channel25.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel25/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "f93540ef4c86:server:1:66aed6c1",
+          "index": 1,
+          "name": "HD ALAN",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/indiana-pacers-vs-denver-nuggets-luc-0500-ngay-08-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989406-0-0-ecde64666e2b09f0cd4963d7e0ea8f1b"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989406-0-0-ecde64666e2b09f0cd4963d7e0ea8f1b": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-25/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1545,17 +1617,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "e5ac115d53a7:server:0:f1c6726f",
+          "instance_id": "e5ac115d53a7:server:0:576c2fd5",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/interactive-philippines-vs-amaru-gaming-luc-0200-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=5adc2fcca0ce1b79858e47b21a8bf1c1&wsABSTime=1794029689"
+            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=82fdbb454a89f82fa1246db98318a0ae&wsABSTime=1794032607"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=5adc2fcca0ce1b79858e47b21a8bf1c1&wsABSTime=1794029689": {
+            "https://live1.quickscoreboardz.com/live/channel75.flv?wsSecret=82fdbb454a89f82fa1246db98318a0ae&wsABSTime=1794032607": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel75/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1571,17 +1643,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "780d6f6435fc:server:0:4366043a",
+          "instance_id": "780d6f6435fc:server:0:69d5452d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/interactive-philippines-vs-zero-tenacity-luc-2300-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel72.flv?wsSecret=b3c6427d87dc6cfa4da37ae89d6cbe10&wsABSTime=1794029695"
+            "https://live1.quickscoreboardz.com/live/channel72.flv?wsSecret=7be624582b5b31a00e7daa8d00723447&wsABSTime=1794032613"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel72.flv?wsSecret=b3c6427d87dc6cfa4da37ae89d6cbe10&wsABSTime=1794029695": {
+            "https://live1.quickscoreboardz.com/live/channel72.flv?wsSecret=7be624582b5b31a00e7daa8d00723447&wsABSTime=1794032613": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel72/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1597,7 +1669,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "86b91b0028f8:server:0:36d1b371",
+          "instance_id": "86b91b0028f8:server:0:91b9f34a",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -1615,44 +1687,18 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "86b91b0028f8:server:1:517ae26f",
+          "instance_id": "86b91b0028f8:server:1:6e603baf",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/invictus-gaming-vs-gen-g-esports-luc-0500-ngay-08-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793986507-0-0-c909db4efc50bd4164ed208af07617f0"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793989425-0-0-5c0cde58af87cd9d3ca91b0a8c73f096"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793986507-0-0-c909db4efc50bd4164ed208af07617f0": {
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793989425-0-0-5c0cde58af87cd9d3ca91b0a8c73f096": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-30/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP KARLOVAC VS VUKOVAR 1991 VÀO LÚC 23:00, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/karlovac-vs-vukovar-1991-luc-2300-ngay-06-11-2026/",
-      "sport_name": "football",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "c35533bae960:server:0:1d4448c4",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/karlovac-vs-vukovar-1991-luc-2300-ngay-06-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=32eed1ae16d81641640a911187f1186b&wsABSTime=1794029708"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=32eed1ae16d81641640a911187f1186b&wsABSTime=1794029708": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel18/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1667,7 +1713,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "6b54ade14f37:server:0:3d13dc6b",
+          "instance_id": "6b54ade14f37:server:0:fb278f57",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -1685,17 +1731,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "6b54ade14f37:server:1:7e8ca80c",
+          "instance_id": "6b54ade14f37:server:1:809eb2a1",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/karmine-corp-vs-t1-luc-0500-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793986519-0-0-92ad4a1b50d654273f1c5e954c11a7a2"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793989431-0-0-3e07c2a561a6e3d4cab3bdcca4143263"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793986519-0-0-92ad4a1b50d654273f1c5e954c11a7a2": {
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793989431-0-0-3e07c2a561a6e3d4cab3bdcca4143263": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-30/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1711,17 +1757,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b9ca8adb153e:server:0:8cdb4b4f",
+          "instance_id": "b9ca8adb153e:server:0:c2ffaae9",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/l1ga-team-vs-yakutou-brothers-luc-2300-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=3aa210294de004eaf7ec7fe0f3d63a7f&wsABSTime=1794029720"
+            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=dfb2726f7b3d91f41a094f0b535a263b&wsABSTime=1794032633"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=3aa210294de004eaf7ec7fe0f3d63a7f&wsABSTime=1794029720": {
+            "https://live1.quickscoreboardz.com/live/channel71.flv?wsSecret=dfb2726f7b3d91f41a094f0b535a263b&wsABSTime=1794032633": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel71/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1737,17 +1783,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "ad1c634216c1:server:0:a7ee895f",
+          "instance_id": "ad1c634216c1:server:0:f9090579",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/lokomotiv-kuban-vs-parma-perm-luc-2000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=d1f3e4b6217c158a8b039615d7a45d31&wsABSTime=1794029727"
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=25ca4ef5e2423eea9fc84fad3800087f&wsABSTime=1794032639"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=d1f3e4b6217c158a8b039615d7a45d31&wsABSTime=1794029727": {
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=25ca4ef5e2423eea9fc84fad3800087f&wsABSTime=1794032639": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel48/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1763,7 +1809,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "618f14447e8c:server:0:4dd8a231",
+          "instance_id": "618f14447e8c:server:0:93dafca2",
           "index": 0,
           "name": "NICK",
           "server": "Server 1",
@@ -1781,17 +1827,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "618f14447e8c:server:1:28966043",
+          "instance_id": "618f14447e8c:server:1:4cbd0cea",
           "index": 1,
           "name": "HD NICK",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/lokomotiv-moscow-vs-rubin-kazan-luc-2330-ngay-06-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793986539-0-0-57b962aa9773b156234e2ca0024de3f1"
+            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793989450-0-0-b7029dc09ce883c712e1298ee5b55804"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793986539-0-0-57b962aa9773b156234e2ca0024de3f1": {
+            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793989450-0-0-b7029dc09ce883c712e1298ee5b55804": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-5/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1807,17 +1853,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5e19b31ff7c5:server:0:697a399b",
+          "instance_id": "5e19b31ff7c5:server:0:df58a582",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/lokomotiva-zagreb-vs-rudes-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=74e3d97c1911441491ca80617c0b50d0&wsABSTime=1794029740"
+            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=0e38b0667406bf831d23064835083bf9&wsABSTime=1794032651"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=74e3d97c1911441491ca80617c0b50d0&wsABSTime=1794029740": {
+            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=0e38b0667406bf831d23064835083bf9&wsABSTime=1794032651": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel5/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1833,7 +1879,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "dffdca67a853:server:0:e08eec73",
+          "instance_id": "dffdca67a853:server:0:bf548d85",
           "index": 0,
           "name": "TOMMY",
           "server": "Server 1",
@@ -1851,62 +1897,18 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "dffdca67a853:server:1:35d92582",
+          "instance_id": "dffdca67a853:server:1:5420cfb2",
           "index": 1,
           "name": "HD TOMMY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/los-angeles-lakers-vs-portland-trail-blazers-luc-1000-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793986551-0-0-77ee2984791068014586e07f9ad5bd96"
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793989463-0-0-1abee58e1ccd2e5d7295aebbdde89449"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793986551-0-0-77ee2984791068014586e07f9ad5bd96": {
+            "https://live2.domaincdn.cc/livecdn/channel-29.flv?auth_key=3000001793989463-0-0-1abee58e1ccd2e5d7295aebbdde89449": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-29/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP LUCA VAN ASSCHE VS RINKY HIJIKATA VÀO LÚC 22:15, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/luca-van-assche-vs-rinky-hijikata-luc-2110-ngay-06-11-2026/",
-      "sport_name": "tennis",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "0f0ca358b85a:server:0:6e7078cc",
-          "index": 0,
-          "name": "VIC",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/luca-van-assche-vs-rinky-hijikata-luc-2110-ngay-06-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel32.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel32.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel32/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "0f0ca358b85a:server:1:9354b14c",
-          "index": 1,
-          "name": "HD VIC",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://multicastmedia.com/truc-tiep/luca-van-assche-vs-rinky-hijikata-luc-2110-ngay-06-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001793986558-0-0-355a2bb6237a42c23f7dba6262876286"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-32.flv?auth_key=3000001793986558-0-0-355a2bb6237a42c23f7dba6262876286": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-32/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1921,17 +1923,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d222646eaf16:server:0:5172e593",
+          "instance_id": "d222646eaf16:server:0:0293a985",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/medical-trabzonspor-vs-petkim-spor-luc-2200-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=d104d9ebb1b5853a27b77aedb8c1bd8a&wsABSTime=1794029760"
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=462c2568bb57cc283b3e419d4f685843&wsABSTime=1794032664"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=d104d9ebb1b5853a27b77aedb8c1bd8a&wsABSTime=1794029760": {
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=462c2568bb57cc283b3e419d4f685843&wsABSTime=1794032664": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel48/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1947,17 +1949,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "77d441c904b8:server:0:a70c9f23",
+          "instance_id": "77d441c904b8:server:0:27132f6b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/meia-noite-vs-rush-luc-0500-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel78.flv?wsSecret=4f1896cce8841047dff735f8745378b1&wsABSTime=1794029766"
+            "https://live1.quickscoreboardz.com/live/channel78.flv?wsSecret=2667fa4a7b9292527f55d4a687a57e71&wsABSTime=1794032672"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel78.flv?wsSecret=4f1896cce8841047dff735f8745378b1&wsABSTime=1794029766": {
+            "https://live1.quickscoreboardz.com/live/channel78.flv?wsSecret=2667fa4a7b9292527f55d4a687a57e71&wsABSTime=1794032672": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel78/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -1973,18 +1975,36 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "94f65491c865:server:0:2df22b3b",
+          "instance_id": "94f65491c865:server:0:6bc0c76e",
           "index": 0,
-          "name": "HD 1",
+          "name": "ALAN",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/melbourne-united-vs-brisbane-bullets-luc-1530-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=3b9f4557c0efca931de53870f3f7835d&wsABSTime=1794029773"
+            "https://live2.jorvakstreamcache.com/live/channel25.flv"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=3b9f4557c0efca931de53870f3f7835d&wsABSTime=1794029773": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel40/off-tvc?is_off_add=false",
+            "https://live2.jorvakstreamcache.com/live/channel25.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel25/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "94f65491c865:server:1:fe3647af",
+          "index": 1,
+          "name": "HD ALAN",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/melbourne-united-vs-brisbane-bullets-luc-1530-ngay-07-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989483-0-0-1ffbf3decbdb5833f7b5c0131f5b9124"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989483-0-0-1ffbf3decbdb5833f7b5c0131f5b9124": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-25/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -1999,17 +2019,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "6e97c9a393d3:server:0:98c3ee75",
+          "instance_id": "6e97c9a393d3:server:0:009ebe9d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/memphis-grizzlies-vs-oklahoma-city-thunder-luc-0800-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=f6c898e283e8138a84b22aa2e4bda523&wsABSTime=1794029779"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=1abca9924c28aa27ecb8ad3ab97634e7&wsABSTime=1794032684"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=f6c898e283e8138a84b22aa2e4bda523&wsABSTime=1794029779": {
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=1abca9924c28aa27ecb8ad3ab97634e7&wsABSTime=1794032684": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel43/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2025,7 +2045,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "db68693581b5:server:0:c11bd74a",
+          "instance_id": "db68693581b5:server:0:97b12b62",
           "index": 0,
           "name": "KOBE",
           "server": "Server 1",
@@ -2043,17 +2063,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "db68693581b5:server:1:80b3890c",
+          "instance_id": "db68693581b5:server:1:00bc78d1",
           "index": 1,
           "name": "HD KOBE",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/milwaukee-bucks-vs-toronto-raptors-luc-0800-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793986590-0-0-33579c01a9b337f8c5fd8913e515f524"
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793989498-0-0-3c43ba207cb0ae02bc4804bc887f7c74"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793986590-0-0-33579c01a9b337f8c5fd8913e515f524": {
+            "https://live2.domaincdn.cc/livecdn/channel-27.flv?auth_key=3000001793989498-0-0-3c43ba207cb0ae02bc4804bc887f7c74": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-27/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2069,7 +2089,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "94d6f1801054:server:0:28e1a073",
+          "instance_id": "94d6f1801054:server:0:d6010f52",
           "index": 0,
           "name": "RIO",
           "server": "Server 1",
@@ -2087,17 +2107,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "94d6f1801054:server:1:9224b1d7",
+          "instance_id": "94d6f1801054:server:1:40d63774",
           "index": 1,
           "name": "HD RIO",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/motor-lublin-vs-wisla-plock-luc-0000-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793986597-0-0-e408f2591b26aab203ccc175bd47ec43"
+            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793989505-0-0-03cfa257d4f6360689f95dd7908afa49"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793986597-0-0-e408f2591b26aab203ccc175bd47ec43": {
+            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793989505-0-0-03cfa257d4f6360689f95dd7908afa49": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-16/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2113,17 +2133,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8f4fc35096a9:server:0:c31a0a02",
+          "instance_id": "8f4fc35096a9:server:0:673c0f99",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/municipal-galati-vs-bc-steaua-bucuresti-luc-2300-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=cdcbc6b7276d2cc02ac317a462c16a5d&wsABSTime=1794029798"
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=1dfdaa36dc12faf0e1c18c83c57a6c21&wsABSTime=1794032706"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=cdcbc6b7276d2cc02ac317a462c16a5d&wsABSTime=1794029798": {
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=1dfdaa36dc12faf0e1c18c83c57a6c21&wsABSTime=1794032706": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel48/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2139,17 +2159,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "74002d2669b4:server:0:9edc1498",
+          "instance_id": "74002d2669b4:server:0:6f3d78e4",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nea-salamis-vs-omonia-aradippou-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=d1e5c02e293373866181549453639a46&wsABSTime=1794029804"
+            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=d09212d196d20bd63f39e0a49e9c8022&wsABSTime=1794032712"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=d1e5c02e293373866181549453639a46&wsABSTime=1794029804": {
+            "https://live1.quickscoreboardz.com/live/channel4.flv?wsSecret=d09212d196d20bd63f39e0a49e9c8022&wsABSTime=1794032712": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel4/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2165,17 +2185,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "cde9b76751c0:server:0:3c0cf993",
+          "instance_id": "cde9b76751c0:server:0:c4e71165",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/new-orleans-pelicans-vs-minnesota-timberwolves-luc-0800-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=9a34ec64c3442e9e8dd11fd359636519&wsABSTime=1794029810"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=7192aa1f593060e1df7d9c580e8f4fd1&wsABSTime=1794032720"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=9a34ec64c3442e9e8dd11fd359636519&wsABSTime=1794029810": {
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=7192aa1f593060e1df7d9c580e8f4fd1&wsABSTime=1794032720": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel46/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2191,17 +2211,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "222c2e17a942:server:0:6ff6e532",
+          "instance_id": "222c2e17a942:server:0:7e13bfe9",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nk-nafta-1903-vs-olimpija-ljubljana-luc-2330-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel23.flv?wsSecret=95e87c556d8a4277efad3e83e843c9a9&wsABSTime=1794029816"
+            "https://live1.quickscoreboardz.com/live/channel23.flv?wsSecret=8e87528905575842a3ae46a624514eea&wsABSTime=1794032726"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel23.flv?wsSecret=95e87c556d8a4277efad3e83e843c9a9&wsABSTime=1794029816": {
+            "https://live1.quickscoreboardz.com/live/channel23.flv?wsSecret=8e87528905575842a3ae46a624514eea&wsABSTime=1794032726": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel23/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2217,17 +2237,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c146ad0de10b:server:0:37a4b38c",
+          "instance_id": "c146ad0de10b:server:0:2ef00175",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-bayern-munchen-vs-nu-werder-bremen-luc-0030-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel37.flv?wsSecret=236daeae91befa897aeb2f54586e399c&wsABSTime=1794029822"
+            "https://live1.quickscoreboardz.com/live/channel37.flv?wsSecret=cd3023520ec81fb91a1fda911a73e8fd&wsABSTime=1794032733"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel37.flv?wsSecret=236daeae91befa897aeb2f54586e399c&wsABSTime=1794029822": {
+            "https://live1.quickscoreboardz.com/live/channel37.flv?wsSecret=cd3023520ec81fb91a1fda911a73e8fd&wsABSTime=1794032733": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel37/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2243,62 +2263,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2d3ab5a8238c:server:0:c3995aae",
+          "instance_id": "2d3ab5a8238c:server:0:58a0e189",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-bendigo-spirit-vs-nu-uc-capitals-luc-1500-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=f84870d303b4af579e1732e1b6724d30&wsABSTime=1794029829"
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=f397fde476d93864b38addc7e9012676&wsABSTime=1794032738"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=f84870d303b4af579e1732e1b6724d30&wsABSTime=1794029829": {
+            "https://live1.quickscoreboardz.com/live/channel48.flv?wsSecret=f397fde476d93864b38addc7e9012676&wsABSTime=1794032738": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel48/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP NỮ CHEMIK POLICE VS NỮ RZESZOW VÀO LÚC 23:30, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/nu-chemik-police-vs-nu-rzeszow-luc-2330-ngay-06-11-2026/",
-      "sport_name": "volleyball",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "47a43a160b07:server:0:721e2e47",
-          "index": 0,
-          "name": "TYSON",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/nu-chemik-police-vs-nu-rzeszow-luc-2330-ngay-06-11-2026/",
-          "stream_urls": [
-            "https://live2.jorvakstreamcache.com/live/channel33.flv"
-          ],
-          "stream_headers": {
-            "https://live2.jorvakstreamcache.com/live/channel33.flv": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel33/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        },
-        {
-          "instance_id": "47a43a160b07:server:1:f47cc958",
-          "index": 1,
-          "name": "HD TYSON",
-          "server": "Server 2",
-          "data_link": "1",
-          "href": "https://multicastmedia.com/truc-tiep/nu-chemik-police-vs-nu-rzeszow-luc-2330-ngay-06-11-2026/link/1",
-          "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793986640-0-0-27bfe42cfda42a39112b188b951d2ce4"
-          ],
-          "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793986640-0-0-27bfe42cfda42a39112b188b951d2ce4": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-33/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -2313,17 +2289,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "32d73e08081d:server:0:4f982bfa",
+          "instance_id": "32d73e08081d:server:0:e4f3ec9b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-chouzhou-bank-vs-nu-guizhou-jiguang-luc-1530-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=eaea9dc5c5b347cf9d41e86523fc5e33&wsABSTime=1794029841"
+            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=4e70b0c1d0e6bfa8a970347c9b36cb34&wsABSTime=1794032745"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=eaea9dc5c5b347cf9d41e86523fc5e33&wsABSTime=1794029841": {
+            "https://live1.quickscoreboardz.com/live/channel49.flv?wsSecret=4e70b0c1d0e6bfa8a970347c9b36cb34&wsABSTime=1794032745": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel49/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2339,17 +2315,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f2471d38462d:server:0:6c9194c0",
+          "instance_id": "f2471d38462d:server:0:532aa7d9",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-dongguan-vs-nu-henan-yaoxin-luc-1830-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=86d59e5831cc0f052493706fb9300a3a&wsABSTime=1794029848"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=5ab032acc0d002a2dc2760c93cae694d&wsABSTime=1794032751"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=86d59e5831cc0f052493706fb9300a3a&wsABSTime=1794029848": {
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=5ab032acc0d002a2dc2760c93cae694d&wsABSTime=1794032751": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel46/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2365,17 +2341,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "34fcf17c66f1:server:0:5fe2fd32",
+          "instance_id": "34fcf17c66f1:server:0:7ed2558d",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-fluminense-vs-nu-osasco-luc-0700-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=f1dcbe34874568d2eaffaf950c45c04f&wsABSTime=1794029854"
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=a5dfbf464a193f917b551bb51659c34d&wsABSTime=1794032757"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=f1dcbe34874568d2eaffaf950c45c04f&wsABSTime=1794029854": {
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=a5dfbf464a193f917b551bb51659c34d&wsABSTime=1794032757": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel80/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2391,44 +2367,18 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "db73e3e25376:server:0:73f8f3b3",
+          "instance_id": "db73e3e25376:server:0:0c201e9a",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-jiansu-nangang-vs-nu-beijing-ducks-luc-1830-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=42b8d4c75f0526c3ded8aa58269cb55e&wsABSTime=1794029861"
+            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=b1b400ecae9cdb521c4280b6d02e91a6&wsABSTime=1794032764"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=42b8d4c75f0526c3ded8aa58269cb55e&wsABSTime=1794029861": {
+            "https://live1.quickscoreboardz.com/live/channel45.flv?wsSecret=b1b400ecae9cdb521c4280b6d02e91a6&wsABSTime=1794032764": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel45/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP NỮ LP VIESTI SALO VS NỮ KANGASALA VÀO LÚC 23:30, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/nu-lp-viesti-salo-vs-nu-kangasala-luc-2330-ngay-06-11-2026/",
-      "sport_name": "volleyball",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "0af12b17ba90:server:0:5702ac59",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/nu-lp-viesti-salo-vs-nu-kangasala-luc-2330-ngay-06-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=fea4ede4d0b515d570d09778ed5e3672&wsABSTime=1794029867"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=fea4ede4d0b515d570d09778ed5e3672&wsABSTime=1794029867": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel81/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -2443,17 +2393,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c76b6ffab672:server:0:96d0741b",
+          "instance_id": "c76b6ffab672:server:0:d6e9b2bf",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-mks-kalisz-vs-nu-lks-lodz-luc-0230-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=92f7aed67d55301d92fd761b06922a49&wsABSTime=1794029873"
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=4009520a1e3491392e1c70312a99c6d9&wsABSTime=1794032770"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=92f7aed67d55301d92fd761b06922a49&wsABSTime=1794029873": {
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=4009520a1e3491392e1c70312a99c6d9&wsABSTime=1794032770": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel80/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2469,17 +2419,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "5395c3a2fb53:server:0:a77bcbe1",
+          "instance_id": "5395c3a2fb53:server:0:d6697f9e",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-pfu-blue-cats-vs-nu-hitachi-luc-1105-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=068923658ea77e0414b57cb25c932f90&wsABSTime=1794029879"
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=2dfc0812bdd67ee77f9ecb0e2dfbaa8a&wsABSTime=1794032776"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=068923658ea77e0414b57cb25c932f90&wsABSTime=1794029879": {
+            "https://live1.quickscoreboardz.com/live/channel80.flv?wsSecret=2dfc0812bdd67ee77f9ecb0e2dfbaa8a&wsABSTime=1794032776": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel80/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2495,18 +2445,62 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "d13d5c82bc3f:server:0:29e39d15",
+          "instance_id": "d13d5c82bc3f:server:0:bb39b82c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-sydney-uni-vs-nu-southside-luc-0830-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=f27aab5705d9b3336af2ea6d1bacb819&wsABSTime=1794029886"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=4f8be8ed17a788ae75f8e2d947ca22e7&wsABSTime=1794032782"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=f27aab5705d9b3336af2ea6d1bacb819&wsABSTime=1794029886": {
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=4f8be8ed17a788ae75f8e2d947ca22e7&wsABSTime=1794032782": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel46/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP NỮ TORAY ARROWS VS NỮ GREEN WINGS VÀO LÚC 11:05, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/nu-toray-arrows-vs-nu-green-wings-luc-1105-ngay-07-11-2026/",
+      "sport_name": "volleyball",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "977b3432683b:server:0:8d1cbc6f",
+          "index": 0,
+          "name": "TYSON",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://multicastmedia.com/truc-tiep/nu-toray-arrows-vs-nu-green-wings-luc-1105-ngay-07-11-2026/",
+          "stream_urls": [
+            "https://live2.jorvakstreamcache.com/live/channel33.flv"
+          ],
+          "stream_headers": {
+            "https://live2.jorvakstreamcache.com/live/channel33.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel33/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "977b3432683b:server:1:f4c6239d",
+          "index": 1,
+          "name": "HD TYSON",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/nu-toray-arrows-vs-nu-green-wings-luc-1105-ngay-07-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989594-0-0-18bf73879f457eb49913bc94dd1ace09"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989594-0-0-18bf73879f457eb49913bc94dd1ace09": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-33/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -2521,17 +2515,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "b8e1ed8dde9c:server:0:0c42354e",
+          "instance_id": "b8e1ed8dde9c:server:0:3f3bdae2",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-unilife-maringa-vs-nu-sesc-rj-flamengo-luc-0430-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=1dcecf3f7207857315bca22aceda2305&wsABSTime=1794029892"
+            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=95491105bc9518383a0808e142681dd6&wsABSTime=1794032796"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=1dcecf3f7207857315bca22aceda2305&wsABSTime=1794029892": {
+            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=95491105bc9518383a0808e142681dd6&wsABSTime=1794032796": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel81/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2547,17 +2541,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "36888e5c7eb5:server:0:43475e65",
+          "instance_id": "36888e5c7eb5:server:0:81f226ed",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-woori-wibee-vs-nu-samsunglife-blueminx-luc-1400-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=e87867e66596244e1def6d7a729898ea&wsABSTime=1794029898"
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=cb4a7f74f1e472e16a277ef378986b4e&wsABSTime=1794032802"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=e87867e66596244e1def6d7a729898ea&wsABSTime=1794029898": {
+            "https://live1.quickscoreboardz.com/live/channel46.flv?wsSecret=cb4a7f74f1e472e16a277ef378986b4e&wsABSTime=1794032802": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel46/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2573,17 +2567,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0a5ea23d4692:server:0:1ad34175",
+          "instance_id": "0a5ea23d4692:server:0:e4313fb3",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/nu-wuhan-sheng-vs-nu-hefei-culture-luc-1830-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=2275297c63c7e3db9e5ae0e5a5dd3125&wsABSTime=1794029904"
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=8676acf66ea6f289ccc839cb1df13de3&wsABSTime=1794032809"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=2275297c63c7e3db9e5ae0e5a5dd3125&wsABSTime=1794029904": {
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=8676acf66ea6f289ccc839cb1df13de3&wsABSTime=1794032809": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel44/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2599,17 +2593,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a31ccc2bb6c0:server:0:a0c38037",
+          "instance_id": "a31ccc2bb6c0:server:0:f757ba47",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/oklahoma-city-thunder-vs-washington-wizards-luc-0800-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=fa162ab154c5552de47111539b2a15ca&wsABSTime=1794029911"
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=33f8db4c7f24410176297c032c309127&wsABSTime=1794032815"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=fa162ab154c5552de47111539b2a15ca&wsABSTime=1794029911": {
+            "https://live1.quickscoreboardz.com/live/channel42.flv?wsSecret=33f8db4c7f24410176297c032c309127&wsABSTime=1794032815": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel42/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2625,17 +2619,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "27aa2db3a21d:server:0:24698dd3",
+          "instance_id": "27aa2db3a21d:server:0:b5264445",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/pato-vs-flamengo-luc-0500-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=a5b872bcd03cae6a36a9cb1811496ac7&wsABSTime=1794029918"
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=907ad8c83b0e944b5e5288555ce7b33b&wsABSTime=1794032821"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=a5b872bcd03cae6a36a9cb1811496ac7&wsABSTime=1794029918": {
+            "https://live1.quickscoreboardz.com/live/channel40.flv?wsSecret=907ad8c83b0e944b5e5288555ce7b33b&wsABSTime=1794032821": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel40/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2651,17 +2645,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "377ba3cb57ea:server:0:7fe12bdb",
+          "instance_id": "377ba3cb57ea:server:0:254e5ebd",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/poitiers-vs-paris-luc-0130-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=0f13eeae98a82cef0fbc2a53f1196b55&wsABSTime=1794029924"
+            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=c334efb1cd05bb273b430074916827a3&wsABSTime=1794032827"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=0f13eeae98a82cef0fbc2a53f1196b55&wsABSTime=1794029924": {
+            "https://live1.quickscoreboardz.com/live/channel84.flv?wsSecret=c334efb1cd05bb273b430074916827a3&wsABSTime=1794032827": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel84/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2671,24 +2665,24 @@
       ]
     },
     {
-      "title": "PHÁT TRỰC TIẾP POTN9KI- VS POWER RANGERS VÀO LÚC 20:00, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/potn9ki-vs-power-rangers-luc-2000-ngay-06-11-2026/",
-      "sport_name": "esports",
+      "title": "PHÁT TRỰC TIẾP PUSZCZA VS MIEDZ LEGNICA VÀO LÚC 00:00, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/puszcza-vs-miedz-legnica-luc-0000-ngay-07-11-2026/",
+      "sport_name": "football",
       "status": "ready",
       "players": [
         {
-          "instance_id": "3013ec7c22ed:server:0:6be06808",
+          "instance_id": "10fbeaf8a427:server:0:3a8f0aaf",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/potn9ki-vs-power-rangers-luc-2000-ngay-06-11-2026/",
+          "href": "https://multicastmedia.com/truc-tiep/puszcza-vs-miedz-legnica-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=200e848d0c99cf3891638906a7183493&wsABSTime=1794029930"
+            "https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=da6d2c50a793bd8cda865628df105aa6&wsABSTime=1794032833"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=200e848d0c99cf3891638906a7183493&wsABSTime=1794029930": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel73/off-tvc?is_off_add=false",
+            "https://live1.quickscoreboardz.com/live/channel6.flv?wsSecret=da6d2c50a793bd8cda865628df105aa6&wsABSTime=1794032833": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel6/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -2703,7 +2697,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "377cbff8c0a1:server:0:2b84f472",
+          "instance_id": "377cbff8c0a1:server:0:9f17d99a",
           "index": 0,
           "name": "LUCAS",
           "server": "Server 1",
@@ -2721,44 +2715,18 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "377cbff8c0a1:server:1:20e9244a",
+          "instance_id": "377cbff8c0a1:server:1:05e7f485",
           "index": 1,
           "name": "HD LUCAS",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/qf7-vs-carlos-alcaraz-garfia-luc-0100-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-31.flv?auth_key=3000001793986741-0-0-4cda0534e57940d07fe49a12247ffee4"
+            "https://live2.domaincdn.cc/livecdn/channel-31.flv?auth_key=3000001793989645-0-0-becdb1d2bcb443b900dffeaef44e9ddc"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-31.flv?auth_key=3000001793986741-0-0-4cda0534e57940d07fe49a12247ffee4": {
+            "https://live2.domaincdn.cc/livecdn/channel-31.flv?auth_key=3000001793989645-0-0-becdb1d2bcb443b900dffeaef44e9ddc": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-31/off-tvc?is_off_add=false",
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
-            }
-          },
-          "status": "stream_found"
-        }
-      ]
-    },
-    {
-      "title": "PHÁT TRỰC TIẾP QUENTIN HALYS/PIERRE HUGUES HERBERT VS THEO ARRIBAGE/ALBANO OLIVETTI VÀO LÚC 22:20, NGÀY 06/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/quentin-halys-pierre-hugues-herbert-vs-theo-arribage-albano-olivetti-luc-2220-ngay-06-11-2026/",
-      "sport_name": "tennis",
-      "status": "ready",
-      "players": [
-        {
-          "instance_id": "d11cb7fd18b2:server:0:f25971d1",
-          "index": 0,
-          "name": "HD 1",
-          "server": "Server 1",
-          "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/quentin-halys-pierre-hugues-herbert-vs-theo-arribage-albano-olivetti-luc-2220-ngay-06-11-2026/",
-          "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel53.flv?wsSecret=79a20cdf913e26fbb5b418655b4c0be4&wsABSTime=1794029943"
-          ],
-          "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel53.flv?wsSecret=79a20cdf913e26fbb5b418655b4c0be4&wsABSTime=1794029943": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel53/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -2773,7 +2741,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8a6cd85a3836:server:0:de42957e",
+          "instance_id": "8a6cd85a3836:server:0:2dd92ab0",
           "index": 0,
           "name": "ALAN",
           "server": "Server 1",
@@ -2791,17 +2759,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "8a6cd85a3836:server:1:0a2233f5",
+          "instance_id": "8a6cd85a3836:server:1:c207f453",
           "index": 1,
           "name": "HD ALAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/sacramento-kings-vs-san-antonio-spurs-luc-1000-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793986754-0-0-c23fb08a27d93797ed9238e001fc33aa"
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989652-0-0-2d7918474c784e6d426e67f9d95ed918"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793986754-0-0-c23fb08a27d93797ed9238e001fc33aa": {
+            "https://live2.domaincdn.cc/livecdn/channel-25.flv?auth_key=3000001793989652-0-0-2d7918474c784e6d426e67f9d95ed918": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-25/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2817,17 +2785,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c6c5f3f4d0c3:server:0:864a81c1",
+          "instance_id": "c6c5f3f4d0c3:server:0:f38c6eda",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/sariyer-vs-igdir-fk-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=81fe3a4bb7b7d9fa8ed348a00fd749f0&wsABSTime=1794029955"
+            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=9d243954c238ae4b46581a6baa3611b4&wsABSTime=1794032853"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=81fe3a4bb7b7d9fa8ed348a00fd749f0&wsABSTime=1794029955": {
+            "https://live1.quickscoreboardz.com/live/channel2.flv?wsSecret=9d243954c238ae4b46581a6baa3611b4&wsABSTime=1794032853": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel2/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2843,17 +2811,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "3a476e7ada3e:server:0:0b778255",
+          "instance_id": "3a476e7ada3e:server:0:18de9b4f",
           "index": 0,
           "name": "NICK",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/sevilla-vs-alaves-luc-0300-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=e87f6cb18ca88113957e6d181a802dd2&wsABSTime=1794029961"
+            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=40cb4ed677ae7e15d6c5584eff9ba94c&wsABSTime=1794032859"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=e87f6cb18ca88113957e6d181a802dd2&wsABSTime=1794029961": {
+            "https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=40cb4ed677ae7e15d6c5584eff9ba94c&wsABSTime=1794032859": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel5/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2861,17 +2829,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "3a476e7ada3e:server:1:45a5e878",
+          "instance_id": "3a476e7ada3e:server:1:857c3844",
           "index": 1,
           "name": "HIRO",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/sevilla-vs-alaves-luc-0300-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793986767-0-0-a0185f87532aa3fc68daa8aa4ba83191"
+            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793989664-0-0-8509511316173d3cac7f53f17025974a"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793986767-0-0-a0185f87532aa3fc68daa8aa4ba83191": {
+            "https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001793989664-0-0-8509511316173d3cac7f53f17025974a": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-14/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2879,7 +2847,7 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "3a476e7ada3e:server:2:df7a5310",
+          "instance_id": "3a476e7ada3e:server:2:6218f22f",
           "index": 2,
           "name": "HIRO",
           "server": "Server 3",
@@ -2897,17 +2865,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "3a476e7ada3e:server:3:ee7b933a",
+          "instance_id": "3a476e7ada3e:server:3:171216f1",
           "index": 3,
           "name": "FULL HD NICK",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://multicastmedia.com/truc-tiep/sevilla-vs-alaves-luc-0300-ngay-07-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793986768-0-0-32db6441658e289071aff73c418f4566"
+            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793989665-0-0-a2878742775ba1d2d3ee75ad0c7cc51e"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793986768-0-0-32db6441658e289071aff73c418f4566": {
+            "https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001793989665-0-0-a2878742775ba1d2d3ee75ad0c7cc51e": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-5/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2923,7 +2891,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "0f1792c1d49a:server:0:1baa34e2",
+          "instance_id": "0f1792c1d49a:server:0:96b1ab2c",
           "index": 0,
           "name": "ZANE",
           "server": "Server 1",
@@ -2941,17 +2909,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "0f1792c1d49a:server:1:d85ce490",
+          "instance_id": "0f1792c1d49a:server:1:4295d4ba",
           "index": 1,
           "name": "HD ZANE",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/silkeborg-vs-lyngby-bk-luc-0100-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-22.flv?auth_key=3000001793986776-0-0-f98de1871a16fc297c9438841ee70a40"
+            "https://live2.domaincdn.cc/livecdn/channel-22.flv?auth_key=3000001793989672-0-0-f30bfc12df853165ffb54e731109fe61"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-22.flv?auth_key=3000001793986776-0-0-f98de1871a16fc297c9438841ee70a40": {
+            "https://live2.domaincdn.cc/livecdn/channel-22.flv?auth_key=3000001793989672-0-0-f30bfc12df853165ffb54e731109fe61": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-22/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -2967,7 +2935,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "029a51c1410e:server:0:b4ebe358",
+          "instance_id": "029a51c1410e:server:0:7eae6c55",
           "index": 0,
           "name": "LOGAN",
           "server": "Server 1",
@@ -2985,17 +2953,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "029a51c1410e:server:1:6462cbf0",
+          "instance_id": "029a51c1410e:server:1:40fa1a46",
           "index": 1,
           "name": "HD LOGAN",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/sk-rapid-wien-vs-wolfsberger-ac-luc-0130-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-23.flv?auth_key=3000001793986783-0-0-4b12c8e9a4f51cbe2b17039542e4438e"
+            "https://live2.domaincdn.cc/livecdn/channel-23.flv?auth_key=3000001793989679-0-0-6d6372718cf7a9368f360e7ba2d38d10"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-23.flv?auth_key=3000001793986783-0-0-4b12c8e9a4f51cbe2b17039542e4438e": {
+            "https://live2.domaincdn.cc/livecdn/channel-23.flv?auth_key=3000001793989679-0-0-6d6372718cf7a9368f360e7ba2d38d10": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-23/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3011,17 +2979,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "21e776c26379:server:0:7ae9e5d6",
+          "instance_id": "21e776c26379:server:0:7953e419",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/slezsky-fc-opava-vs-fc-sellier-and-bellot-vlasim-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=25a5b109c0518c0251b462c17edb06b1&wsABSTime=1794029985"
+            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=9ec31dd3f524dc3e275748039bc200f9&wsABSTime=1794032880"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=25a5b109c0518c0251b462c17edb06b1&wsABSTime=1794029985": {
+            "https://live1.quickscoreboardz.com/live/channel33.flv?wsSecret=9ec31dd3f524dc3e275748039bc200f9&wsABSTime=1794032880": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel33/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3037,17 +3005,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "1745600426fd:server:0:2fcf2db4",
+          "instance_id": "1745600426fd:server:0:255c3a89",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/stockton-kings-vs-santa-cruz-warriors-luc-0800-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=1c96e6d8de730f6947de864280344d98&wsABSTime=1794029992"
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=9a00843d86925efdad9f62fc789a5447&wsABSTime=1794032886"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=1c96e6d8de730f6947de864280344d98&wsABSTime=1794029992": {
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=9a00843d86925efdad9f62fc789a5447&wsABSTime=1794032886": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel44/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3063,17 +3031,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "00413d60500a:server:0:95a473a8",
+          "instance_id": "00413d60500a:server:0:30b39383",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/suwon-sonicboom-vs-daegu-kogas-luc-1430-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=fb76ae161198283e31e4fe8b523cc9ee&wsABSTime=1794029998"
+            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=320af3d64101cf1e8c690286871f5339&wsABSTime=1794032893"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=fb76ae161198283e31e4fe8b523cc9ee&wsABSTime=1794029998": {
+            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=320af3d64101cf1e8c690286871f5339&wsABSTime=1794032893": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel47/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3089,7 +3057,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "fa46519af58c:server:0:f7de871c",
+          "instance_id": "fa46519af58c:server:0:613735dc",
           "index": 0,
           "name": "MARTY",
           "server": "Server 1",
@@ -3107,17 +3075,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "fa46519af58c:server:1:b05e607f",
+          "instance_id": "fa46519af58c:server:1:c2bbfcb7",
           "index": 1,
           "name": "HD MARTY",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/t1-esports-academy-vs-dwg-kia-academy-luc-1200-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793986810-0-0-bb01fc5a29fb13cbb0d250dcf7325937"
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793989704-0-0-050f7362fab2880b56b04271420a45fc"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793986810-0-0-bb01fc5a29fb13cbb0d250dcf7325937": {
+            "https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001793989704-0-0-050f7362fab2880b56b04271420a45fc": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-30/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3133,17 +3101,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7f9e2a6f390c:server:0:0cdd15be",
+          "instance_id": "7f9e2a6f390c:server:0:f5dfcd0e",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/team-iltw-vs-team-lens-luc-0100-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=d706017c08cb26a6d8bc80dc308a72fa&wsABSTime=1794030011"
+            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=5aafb1778c4fe22a355000a49448a218&wsABSTime=1794032906"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=d706017c08cb26a6d8bc80dc308a72fa&wsABSTime=1794030011": {
+            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=5aafb1778c4fe22a355000a49448a218&wsABSTime=1794032906": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel73/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3159,17 +3127,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "fa4bbbd0f64d:server:0:ee89b1a6",
+          "instance_id": "fa4bbbd0f64d:server:0:bea2d4c7",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/team-rostikfacekid-vs-stray-team-luc-2130-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel74.flv?wsSecret=c64e85b897f6b85cb0292342554f356c&wsABSTime=1794030017"
+            "https://live1.quickscoreboardz.com/live/channel74.flv?wsSecret=b6551a23d1d92750f3516ec90c91983c&wsABSTime=1794032912"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel74.flv?wsSecret=c64e85b897f6b85cb0292342554f356c&wsABSTime=1794030017": {
+            "https://live1.quickscoreboardz.com/live/channel74.flv?wsSecret=b6551a23d1d92750f3516ec90c91983c&wsABSTime=1794032912": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel74/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3185,17 +3153,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "42ea923230ea:server:0:885d8bc8",
+          "instance_id": "42ea923230ea:server:0:15791d00",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/team-synapse-vs-allied-luc-0200-ngay-06-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=570b5bd9b11978ffe36181e02c7db202&wsABSTime=1794030023"
+            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=adde48eee797a0d44a980f95b8d8c938&wsABSTime=1794032918"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=570b5bd9b11978ffe36181e02c7db202&wsABSTime=1794030023": {
+            "https://live1.quickscoreboardz.com/live/channel73.flv?wsSecret=adde48eee797a0d44a980f95b8d8c938&wsABSTime=1794032918": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel73/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3211,17 +3179,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "ab7ab9ea70f1:server:0:396e6b21",
+          "instance_id": "ab7ab9ea70f1:server:0:bccfd41c",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/telekom-baskets-bonn-vs-lowen-braunschweig-luc-0200-ngay-08-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=69ac13563efc5125a0722fe4d210c9a3&wsABSTime=1794030030"
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=34ad02ce34212f796cb0d2f1a07bdc04&wsABSTime=1794032924"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=69ac13563efc5125a0722fe4d210c9a3&wsABSTime=1794030030": {
+            "https://live1.quickscoreboardz.com/live/channel41.flv?wsSecret=34ad02ce34212f796cb0d2f1a07bdc04&wsABSTime=1794032924": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel41/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3231,24 +3199,42 @@
       ]
     },
     {
-      "title": "PHÁT TRỰC TIẾP TENIKA MCGIFFIN/ALEXANDRA OSBORNE VS VALENTINA MEDIORREAL ARIAS/MARIA PAULINA PEREZ GARCIA VÀO LÚC 00:00, NGÀY 07/11/2026",
-      "url": "https://multicastmedia.com/truc-tiep/tenika-mcgiffin-alexandra-osborne-vs-valentina-mediorreal-arias-maria-paulina-perez-garcia-luc-0500-ngay-06-11-2026/",
-      "sport_name": "tennis",
+      "title": "PHÁT TRỰC TIẾP THỂ CÔNG TÂN CẢNG VS CÔNG AN TPHCM VÀO LÚC 19:30, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/the-cong-tan-cang-vs-cong-an-tphcm-luc-1930-ngay-07-11-2026/",
+      "sport_name": "volleyball",
       "status": "ready",
       "players": [
         {
-          "instance_id": "bda8320ea766:server:0:14a7c921",
+          "instance_id": "4f8b6dabee78:server:0:18b3cce2",
           "index": 0,
-          "name": "HD 1",
+          "name": "TYSON",
           "server": "Server 1",
           "data_link": "0",
-          "href": "https://multicastmedia.com/truc-tiep/tenika-mcgiffin-alexandra-osborne-vs-valentina-mediorreal-arias-maria-paulina-perez-garcia-luc-0500-ngay-06-11-2026/",
+          "href": "https://multicastmedia.com/truc-tiep/the-cong-tan-cang-vs-cong-an-tphcm-luc-1930-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel52.flv?wsSecret=1cc51b94c5c98f348a96c71b0a9e73f8&wsABSTime=1794030036"
+            "https://live2.jorvakstreamcache.com/live/channel33.flv"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel52.flv?wsSecret=1cc51b94c5c98f348a96c71b0a9e73f8&wsABSTime=1794030036": {
-              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel52/off-tvc?is_off_add=false",
+            "https://live2.jorvakstreamcache.com/live/channel33.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel33/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "4f8b6dabee78:server:1:37e3577f",
+          "index": 1,
+          "name": "HD TYSON",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/the-cong-tan-cang-vs-cong-an-tphcm-luc-1930-ngay-07-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989736-0-0-cd3f39beac11e74dd3b9677b62bbc33e"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989736-0-0-cd3f39beac11e74dd3b9677b62bbc33e": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-33/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -3263,18 +3249,62 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "7a9ea13f8629:server:0:15a2cff3",
+          "instance_id": "7a9ea13f8629:server:0:ad8fd97b",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/toyama-grouses-vs-nagoya-diamond-dolphins-luc-1305-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=3d42311f1f78f788dfdfd238f9729cad&wsABSTime=1794030042"
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=c85e5cb326aef6c9ebca2e9c2f416b9a&wsABSTime=1794032937"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=3d42311f1f78f788dfdfd238f9729cad&wsABSTime=1794030042": {
+            "https://live1.quickscoreboardz.com/live/channel44.flv?wsSecret=c85e5cb326aef6c9ebca2e9c2f416b9a&wsABSTime=1794032937": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel44/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP TP. HỒ CHÍ MINH VS SANEST KHÁNH HÒA VÀO LÚC 17:00, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/tp-ho-chi-minh-vs-sanest-khanh-hoa-luc-1700-ngay-07-11-2026/",
+      "sport_name": "volleyball",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "e39fa8cee9aa:server:0:efba18d8",
+          "index": 0,
+          "name": "TYSON",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://multicastmedia.com/truc-tiep/tp-ho-chi-minh-vs-sanest-khanh-hoa-luc-1700-ngay-07-11-2026/",
+          "stream_urls": [
+            "https://live2.jorvakstreamcache.com/live/channel33.flv"
+          ],
+          "stream_headers": {
+            "https://live2.jorvakstreamcache.com/live/channel33.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel33/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "e39fa8cee9aa:server:1:ac443c9e",
+          "index": 1,
+          "name": "HD TYSON",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/tp-ho-chi-minh-vs-sanest-khanh-hoa-luc-1700-ngay-07-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989748-0-0-ae4934c0d8093609d0f3772f10c53366"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001793989748-0-0-ae4934c0d8093609d0f3772f10c53366": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-33/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -3289,17 +3319,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "de6bcca40b7c:server:0:826fd98d",
+          "instance_id": "de6bcca40b7c:server:0:29f2b237",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/turk-telekom-vs-glint-korfez-basket-luc-1930-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=065df5314376962fc0bcd48128dd05ab&wsABSTime=1794030049"
+            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=a8e0b3afec4b1fe1df62a1e468409098&wsABSTime=1794032950"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=065df5314376962fc0bcd48128dd05ab&wsABSTime=1794030049": {
+            "https://live1.quickscoreboardz.com/live/channel47.flv?wsSecret=a8e0b3afec4b1fe1df62a1e468409098&wsABSTime=1794032950": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel47/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3315,18 +3345,44 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2ea7948409af:server:0:bd342ecd",
+          "instance_id": "2ea7948409af:server:0:ef199821",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/uralmash-vs-mba-moscow-luc-1800-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=0fa5a944529d4fb674d6cfd2cbb040d7&wsABSTime=1794030056"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=31b71be81c240f2259a689566ee21526&wsABSTime=1794032956"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=0fa5a944529d4fb674d6cfd2cbb040d7&wsABSTime=1794030056": {
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=31b71be81c240f2259a689566ee21526&wsABSTime=1794032956": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel43/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP USL DUNKERQUE VS GUINGAMP VÀO LÚC 02:00, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/usl-dunkerque-vs-guingamp-luc-0200-ngay-07-11-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "f133e98d725b:server:0:b97f80a3",
+          "index": 0,
+          "name": "HD 1",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://multicastmedia.com/truc-tiep/usl-dunkerque-vs-guingamp-luc-0200-ngay-07-11-2026/",
+          "stream_urls": [
+            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=cfb2dcb90b06d8844df8bbc878e5353b&wsABSTime=1794032962"
+          ],
+          "stream_headers": {
+            "https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=cfb2dcb90b06d8844df8bbc878e5353b&wsABSTime=1794032962": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel18/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -3341,17 +3397,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "8c8c702334ec:server:0:52f0253c",
+          "instance_id": "8c8c702334ec:server:0:6289d817",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/usti-nad-labem-vs-fk-viktoria-zizkov-luc-0000-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel30.flv?wsSecret=60afad195ed06d13838081e85d0b42f1&wsABSTime=1794030062"
+            "https://live1.quickscoreboardz.com/live/channel30.flv?wsSecret=f8680c288aa58bed9d313181b28322c5&wsABSTime=1794032968"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel30.flv?wsSecret=60afad195ed06d13838081e85d0b42f1&wsABSTime=1794030062": {
+            "https://live1.quickscoreboardz.com/live/channel30.flv?wsSecret=f8680c288aa58bed9d313181b28322c5&wsABSTime=1794032968": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel30/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3367,7 +3423,7 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "c1f8cad83f38:server:0:44e1f423",
+          "instance_id": "c1f8cad83f38:server:0:6ef67683",
           "index": 0,
           "name": "OLER",
           "server": "Server 1",
@@ -3385,17 +3441,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "c1f8cad83f38:server:1:7305b9a2",
+          "instance_id": "c1f8cad83f38:server:1:3ad3a15e",
           "index": 1,
           "name": "HD OLER",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/vejle-vs-fredericia-luc-0000-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-28.flv?auth_key=3000001793986873-0-0-e6ccf3b42d396b755c67bbb2d1024955"
+            "https://live2.domaincdn.cc/livecdn/channel-28.flv?auth_key=3000001793989779-0-0-ad76f0e4781220933c8abe7ea655d5d7"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-28.flv?auth_key=3000001793986873-0-0-e6ccf3b42d396b755c67bbb2d1024955": {
+            "https://live2.domaincdn.cc/livecdn/channel-28.flv?auth_key=3000001793989779-0-0-ad76f0e4781220933c8abe7ea655d5d7": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-28/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3411,17 +3467,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "3fe61f4335c1:server:0:1fbb477d",
+          "instance_id": "3fe61f4335c1:server:0:e2ae39e5",
           "index": 0,
           "name": "BRADY",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/venezia-vs-udinese-luc-0245-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel15.flv?wsSecret=db3db1ee3dad4ab8c54cd743f60d609a&wsABSTime=1794030075"
+            "https://live1.quickscoreboardz.com/live/channel15.flv?wsSecret=2a9b30c5d1b93cfa14458fd59163a61b&wsABSTime=1794032981"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel15.flv?wsSecret=db3db1ee3dad4ab8c54cd743f60d609a&wsABSTime=1794030075": {
+            "https://live1.quickscoreboardz.com/live/channel15.flv?wsSecret=2a9b30c5d1b93cfa14458fd59163a61b&wsABSTime=1794032981": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel15/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3429,17 +3485,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "3fe61f4335c1:server:1:d67a8474",
+          "instance_id": "3fe61f4335c1:server:1:95b16377",
           "index": 1,
           "name": "RIO",
           "server": "Server 2",
           "data_link": "1",
           "href": "https://multicastmedia.com/truc-tiep/venezia-vs-udinese-luc-0245-ngay-07-11-2026/link/1",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793986880-0-0-83771453d88c31b42d58b4e1b98107bc"
+            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793989786-0-0-ac777ad5e330cf9a7b9a5cbd1fab76e2"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793986880-0-0-83771453d88c31b42d58b4e1b98107bc": {
+            "https://live2.domaincdn.cc/livecdn/channel-16.flv?auth_key=3000001793989786-0-0-ac777ad5e330cf9a7b9a5cbd1fab76e2": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-16/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3447,7 +3503,7 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "3fe61f4335c1:server:2:f94c12d7",
+          "instance_id": "3fe61f4335c1:server:2:2008afa8",
           "index": 2,
           "name": "RIO",
           "server": "Server 3",
@@ -3465,17 +3521,17 @@
           "status": "stream_found"
         },
         {
-          "instance_id": "3fe61f4335c1:server:3:eefe0ee3",
+          "instance_id": "3fe61f4335c1:server:3:ba3c04f2",
           "index": 3,
           "name": "FULL HD BRADY",
           "server": "Server 4",
           "data_link": "3",
           "href": "https://multicastmedia.com/truc-tiep/venezia-vs-udinese-luc-0245-ngay-07-11-2026/link/3",
           "stream_urls": [
-            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001793986881-0-0-4fd2c0fdd1970fedd5f8519f680956af"
+            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001793989787-0-0-eef56df8a13db758413cadad23959087"
           ],
           "stream_headers": {
-            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001793986881-0-0-4fd2c0fdd1970fedd5f8519f680956af": {
+            "https://live2.domaincdn.cc/livecdn/channel-15.flv?auth_key=3000001793989787-0-0-eef56df8a13db758413cadad23959087": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-15/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3491,18 +3547,62 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "a8bb12566094:server:0:4cfa72ea",
+          "instance_id": "a8bb12566094:server:0:b32ecfc9",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/voreas-hokkaido-vs-fragolad-kagoshima-luc-1135-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=44e5fa119c9fd2d56344d6a123626b90&wsABSTime=1794030082"
+            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=09b91585137b7c086b930d2523bc54c9&wsABSTime=1794032988"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=44e5fa119c9fd2d56344d6a123626b90&wsABSTime=1794030082": {
+            "https://live1.quickscoreboardz.com/live/channel81.flv?wsSecret=09b91585137b7c086b930d2523bc54c9&wsABSTime=1794032988": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel81/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        }
+      ]
+    },
+    {
+      "title": "PHÁT TRỰC TIẾP WILLEM II VS PEC ZWOLLE VÀO LÚC 02:00, NGÀY 07/11/2026",
+      "url": "https://multicastmedia.com/truc-tiep/willem-ii-vs-pec-zwolle-luc-0200-ngay-07-11-2026/",
+      "sport_name": "football",
+      "status": "ready",
+      "players": [
+        {
+          "instance_id": "a563ae392c29:server:0:1859dc55",
+          "index": 0,
+          "name": "TONI",
+          "server": "Server 1",
+          "data_link": "0",
+          "href": "https://multicastmedia.com/truc-tiep/willem-ii-vs-pec-zwolle-luc-0200-ngay-07-11-2026/",
+          "stream_urls": [
+            "https://live2.jorvakstreamcache.com/live/channel9.flv"
+          ],
+          "stream_headers": {
+            "https://live2.jorvakstreamcache.com/live/channel9.flv": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/8/link/channel9/off-tvc?is_off_add=false",
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
+            }
+          },
+          "status": "stream_found"
+        },
+        {
+          "instance_id": "a563ae392c29:server:1:94083575",
+          "index": 1,
+          "name": "HD TONI",
+          "server": "Server 2",
+          "data_link": "1",
+          "href": "https://multicastmedia.com/truc-tiep/willem-ii-vs-pec-zwolle-luc-0200-ngay-07-11-2026/link/1",
+          "stream_urls": [
+            "https://live2.domaincdn.cc/livecdn/channel-9.flv?auth_key=3000001793989800-0-0-aea5224ac962dcd3d721a87b44ad2a9d"
+          ],
+          "stream_headers": {
+            "https://live2.domaincdn.cc/livecdn/channel-9.flv?auth_key=3000001793989800-0-0-aea5224ac962dcd3d721a87b44ad2a9d": {
+              "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/5/link/channel-9/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
           },
@@ -3517,17 +3617,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "665277c93414:server:0:8e8644ba",
+          "instance_id": "665277c93414:server:0:1c877af1",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/wonju-dongbu-promy-vs-seoul-thunders-luc-1200-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=84d802976bca3a4864425c664a09d7e4&wsABSTime=1794030088"
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=2d68d85dec7153c3c283ffbcebc651b3&wsABSTime=1794033001"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=84d802976bca3a4864425c664a09d7e4&wsABSTime=1794030088": {
+            "https://live1.quickscoreboardz.com/live/channel43.flv?wsSecret=2d68d85dec7153c3c283ffbcebc651b3&wsABSTime=1794033001": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel43/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3543,17 +3643,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "2f714c1ae764:server:0:04820be9",
+          "instance_id": "2f714c1ae764:server:0:e1bef4fc",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/your-end-vs-low-cortisol-luc-0200-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel77.flv?wsSecret=fccf3de09ef80fc339b95c5cd1903844&wsABSTime=1794030094"
+            "https://live1.quickscoreboardz.com/live/channel77.flv?wsSecret=3092338ba862534afc179f819a52a126&wsABSTime=1794033007"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel77.flv?wsSecret=fccf3de09ef80fc339b95c5cd1903844&wsABSTime=1794030094": {
+            "https://live1.quickscoreboardz.com/live/channel77.flv?wsSecret=3092338ba862534afc179f819a52a126&wsABSTime=1794033007": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel77/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
@@ -3569,17 +3669,17 @@
       "status": "ready",
       "players": [
         {
-          "instance_id": "f2d726cdf28a:server:0:9045366c",
+          "instance_id": "f2d726cdf28a:server:0:fca225ef",
           "index": 0,
           "name": "HD 1",
           "server": "Server 1",
           "data_link": "0",
           "href": "https://multicastmedia.com/truc-tiep/zamalek-vs-misr-insurance-fc-luc-0100-ngay-07-11-2026/",
           "stream_urls": [
-            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=cdad9da5d8f8c86de8a8ff0f948114fc&wsABSTime=1794030101"
+            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=1ac01ad7102d0bf590678b6c7319d6ee&wsABSTime=1794033014"
           ],
           "stream_headers": {
-            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=cdad9da5d8f8c86de8a8ff0f948114fc&wsABSTime=1794030101": {
+            "https://live1.quickscoreboardz.com/live/channel13.flv?wsSecret=1ac01ad7102d0bf590678b6c7319d6ee&wsABSTime=1794033014": {
               "Referer": "https://xlz.domainkqt.cc/ajax/chanel/type/7/link/channel13/off-tvc?is_off_add=false",
               "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
             }
