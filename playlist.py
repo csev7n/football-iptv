@@ -1026,9 +1026,33 @@ def build_playlist(data):
             f'{title}'
         )
 
-        # Xuất HTTP Headers nếu channel có cấu hình.
+        # Xuất VLC-compatible HTTP options và EXTHTTP.
         if stream_headers:
 
+            vlc_header_mapping = {
+                "Referer": "http-referrer",
+                "User-Agent": "http-user-agent",
+                "Origin": "http-origin",
+            }
+
+            # Xuất từng Header tương ứng cho EXTVLCOPT.
+            for header_name, vlc_option in vlc_header_mapping.items():
+
+                value = str(
+                    stream_headers.get(header_name) or ""
+                ).strip()
+
+                if not value:
+                    continue
+
+                if "\r" in value or "\n" in value:
+                    continue
+
+                lines.append(
+                    f"#EXTVLCOPT:{vlc_option}={value}"
+                )
+
+            # Giữ nguyên toàn bộ Headers trong EXTHTTP.
             lines.append(
                 "#EXTHTTP:" + json.dumps(
                     stream_headers,
@@ -1036,8 +1060,8 @@ def build_playlist(data):
                     separators=(",", ":")
                 )
             )
-
-        # URL luôn nằm cuối cùng.
+            
+        # URL stream luôn nằm cuối mỗi channel.
         lines.append(
             stream_url
         )
