@@ -34,6 +34,10 @@ POLL_MS = 100
 
 MAX_LOADMORE_CLICKS = 3
 
+LOADMORE_TIMEOUT_MS = 10000
+LOADMORE_POLL_MS = 250
+LOADMORE_STABLE_MS = 750
+
 MAX_CLICK_RETRIES = 1
 MAX_RELOAD_RETRIES = 1
 RELOAD_AUTO_WAIT_MS = 2000
@@ -146,15 +150,27 @@ def activate_tabs_and_load_more(page):
             tab.scroll_into_view_if_needed()
             tab.click(timeout=5000)
 
-            try:
-                page.wait_for_load_state(
-                    "domcontentloaded",
-                    timeout=3000,
+            # Xác định panel tương ứng với tab.
+            panel_target = (
+                tab.get_attribute("data-target")
+                or "#" + (
+                    tab.get_attribute("aria-controls") or ""
                 )
-            except Exception:
-                pass
+            )
 
-            page.wait_for_timeout(1500)
+            # Chờ panel thực sự hiển thị.
+            if panel_target and panel_target != "#":
+                try:
+                    page.locator(panel_target).wait_for(
+                        state="visible",
+                        timeout=5000,
+                    )
+                except Exception as error:
+                    print(
+                        f"[TAB WAIT WARNING] "
+                        f"tab={tab_id}: {error}",
+                        flush=True,
+                    )
 
             print(
                 f"[TAB] Active={tab_id}",
@@ -213,18 +229,14 @@ def activate_tabs_and_load_more(page):
                         or "unknown"
                     )
 
+                    # Ghi nhận URL trước khi click Load More.
+                    previous_urls = get_tab_match_urls(
+                        page,
+                        tab_id,
+                    )
+
                     target.scroll_into_view_if_needed()
                     target.click(timeout=5000)
-
-                    try:
-                        page.wait_for_load_state(
-                            "domcontentloaded",
-                            timeout=3000,
-                        )
-                    except Exception:
-                        pass
-
-                    page.wait_for_timeout(1500)
 
                     print(
                         f"[LOADMORE CLICK] "
@@ -234,7 +246,40 @@ def activate_tabs_and_load_more(page):
                         flush=True,
                     )
 
-                    # Thu thập ngay sau mỗi lần tải thêm.
+                    # Chờ URL mới xuất hiện và danh sách ổn định.
+                    loaded = wait_for_new_tab_match_urls(
+                        page,
+                        tab_id,
+                        previous_urls,
+                    )
+
+                    # Kiểm tra lại danh sách URL sau khi chờ.
+                    current_urls = get_tab_match_urls(
+                        page,
+                        tab_id,
+                    )
+
+                    new_urls = current_urls - previous_urls
+
+                    if loaded:
+                        print(
+                            f"[LOADMORE SUCCESS] "
+                            f"tab={tab_id} "
+                            f"round={click_index + 1} "
+                            f"new_links={len(new_urls)}",
+                            flush=True,
+                        )
+                    else:
+                        print(
+                            f"[LOADMORE RESULT] "
+                            f"tab={tab_id} "
+                            f"round={click_index + 1} "
+                            f"new_links={len(new_urls)} "
+                            f"stable=False",
+                            flush=True,
+                        )
+
+                    # Thu thập cả khi hết thời gian chờ.
                     collect_match_urls(tab_id)
 
                 except Exception as error:
@@ -354,6 +399,202 @@ def normalize_match_url(url):
     url = re.sub(r"/link/\d+/?$", "/", url)
     return url.rstrip("/") + "/"
 
+def get_tab_match_urls(page, tab_id):
+    tab = page.locator(f"#{tab_id}")
+
+    if tab.count() == 0:
+        return set()
+
+    target = (
+        tab.get_attribute("data-target")
+        or "#" + (tab.get_attribute("aria-controls") or "")
+    )
+
+    if not target or target == "#":
+        return set()
+
+    panel = page.locator(target)
+
+    if panel.count() == 0:
+        return set()
+
+    anchors = panel.locator("a[href*='/truc-tiep/']")
+
+    urls = set()
+
+    for i in range(anchors.count()):
+        try:
+            href = anchors.nth(i).get_attribute("href")
+
+            if not href:
+                continue
+
+            full_url = urljoin(page.url, href)
+            parsed = urlparse(full_url)
+
+            if parsed.scheme not in ("http", "https"):
+                continue
+
+            normalized = normalize_match_url(full_url)
+
+            if normalized:
+                urls.add(normalized)
+
+        except Exception:
+            continue
+
+    return urls
+
+def wait_for_new_tab_match_urls(page, tab_id, previous_urls):
+
+    try:
+        page.wait_for_function(
+            """
+            ({ tabId, previousUrls, stableMs }) => {
+
+                const tab = document.getElementById(tabId);
+
+                if (!tab) {
+                    return false;
+                }
+
+                const target =
+                    tab.getAttribute("data-target")
+                    || "#" + (
+                        tab.getAttribute("aria-controls") || ""
+                    );
+
+                if (!target || target === "#") {
+                    return false;
+                }
+
+                const panel = document.querySelector(target);
+
+                if (!panel) {
+                    return false;
+                }
+
+                const previous = new Set(previousUrls);
+                const current = new Set();
+
+                const anchors = panel.querySelectorAll(
+                    "a[href*='/truc-tiep/']"
+                );
+
+                for (const anchor of anchors) {
+
+                    const href = anchor.getAttribute("href");
+
+                    if (!href) {
+                        continue;
+                    }
+
+                    try {
+                        const url = new URL(
+                            href,
+                            window.location.href
+                        );
+
+                        if (
+                            url.protocol !== "http:"
+                            && url.protocol !== "https:"
+                        ) {
+                            continue;
+                        }
+
+                        let normalized = url.href.replace(
+                            new RegExp("/link/[0-9]+/?$"),
+                            "/"
+                        );
+
+                        normalized = (
+                            normalized.replace(/\\/+$/, "") + "/"
+                        );
+
+                        current.add(normalized);
+
+                    } catch (error) {
+                        continue;
+                    }
+                }
+
+                const newUrls = Array.from(current)
+                    .filter(url => !previous.has(url))
+                    .sort();
+
+                window.__scraperLoadMoreWatch =
+                    window.__scraperLoadMoreWatch || {};
+
+                if (newUrls.length === 0) {
+                    delete window.__scraperLoadMoreWatch[tabId];
+                    return false;
+                }
+
+                const signature = newUrls.join("\\n");
+                const now = performance.now();
+
+                const state =
+                    window.__scraperLoadMoreWatch[tabId];
+
+                if (
+                    !state
+                    || state.signature !== signature
+                ) {
+                    window.__scraperLoadMoreWatch[tabId] = {
+                        signature: signature,
+                        changedAt: now
+                    };
+
+                    return false;
+                }
+
+                if (now - state.changedAt >= stableMs) {
+                    delete window.__scraperLoadMoreWatch[tabId];
+                    return true;
+                }
+
+                return false;
+            }
+            """,
+            arg={
+                "tabId": tab_id,
+                "previousUrls": list(previous_urls),
+                "stableMs": LOADMORE_STABLE_MS,
+            },
+            timeout=LOADMORE_TIMEOUT_MS,
+            polling=LOADMORE_POLL_MS,
+        )
+
+        return True
+
+    except Exception as error:
+
+        try:
+            page.evaluate(
+                """
+                (tabId) => {
+                    if (window.__scraperLoadMoreWatch) {
+                        delete window.__scraperLoadMoreWatch[tabId];
+                    }
+                }
+                """,
+                tab_id,
+            )
+        except Exception:
+            pass
+
+        if "Timeout" in type(error).__name__:
+            print(
+                f"[LOADMORE WAIT TIMEOUT] tab={tab_id}",
+                flush=True,
+            )
+        else:
+            print(
+                f"[LOADMORE WAIT ERROR] tab={tab_id}: {error}",
+                flush=True,
+            )
+
+        return False
 
 def debug_tab_links(page, tab_id):
     tab = page.locator(f"#{tab_id}")
