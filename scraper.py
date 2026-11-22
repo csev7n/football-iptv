@@ -2598,7 +2598,7 @@ def scrape_one_match(
                     f"[{index}/{total_matches}] NO PLAYERS",
                     flush=True,
                 )
-                return None
+                return {"_skip_reason": "no_players", "url": match_url}
                 
             sport_name = get_sport_name(page)
             
@@ -2827,6 +2827,8 @@ def main():
         raise SystemExit(1)
 
     results = []
+    no_player_matches = []
+    error_count = 0
 
     print(
         f"[MAIN] Workers={MAX_WORKERS}",
@@ -2856,10 +2858,14 @@ def main():
             try:
                 result = future.result()
 
-                if result is not None:
+                if isinstance(result, dict) and result.get("_skip_reason") == "no_players":
+                    no_player_matches.append(result["url"])
+                elif result is not None:
                     results.append(result)
 
             except Exception as error:
+                error_count += 1
+
                 print(
                     f"[WORKER ERROR] {match_url}: {error}",
                     flush=True,
@@ -2909,6 +2915,8 @@ def main():
     print("=" * 60)
     print(f"Events found:       {len(match_urls)}")
     print(f"Events processed:   {len(results)}")
+    print(f"No-player matches:  {len(no_player_matches)}")
+    print(f"Errors:             {error_count}")
     print(f"Servers discovered: {total_servers}")
     print(f"Servers with FLV:   {mapped_servers}")
     print(f"Total FLV URLs:     {total_streams}")
@@ -2919,10 +2927,10 @@ def main():
     print(f"Output:             {OUTPUT_FILE}")
     print("=" * 60)
 
-    if len(results) != len(match_urls):
+    if error_count > 0:
         print(
             "[QUALITY GATE] FAIL: "
-            "Một số trận chưa scrape được. "
+            f"Có {error_count} lỗi khi scrape. "
             "Giữ nguyên matches.json hiện tại.",
             flush=True,
         )
