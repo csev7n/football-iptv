@@ -2862,6 +2862,8 @@ def main():
                     no_player_matches.append(result["url"])
                 elif result is not None:
                     results.append(result)
+                else:
+                    error_count += 1
 
             except Exception as error:
                 error_count += 1
